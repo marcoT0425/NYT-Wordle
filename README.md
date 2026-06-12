@@ -18,5 +18,7 @@ CARLE, CARNE, CARSE, TRICE, TORSE, SATER, TASER, CARET, CARTE, TARED
 Easy mode (Guesses and answer = 2315)
 | Starters | Avg guesses    |
 | -------- | -------------- |
+| SLATE    | 7973  / 3.4441 |
 | TRACE    | 7975  / 3.4449 |
 | CRATE    | 7976  / 3.4454 |
+| CRANE    | 7982  / 3.4479 |
