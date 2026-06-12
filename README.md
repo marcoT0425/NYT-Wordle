@@ -6,3 +6,4 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | -------- | -------------- |
 | TARSE    | 10442 / 3.5111 |
 | SALET    | 10470 / 3.5205 |
+| REAST    | 10475 / 3.5222 |
