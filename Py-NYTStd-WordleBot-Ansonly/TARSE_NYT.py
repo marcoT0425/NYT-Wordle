@@ -1,8845 +1,8903 @@
 def play_wordle_generated():
     print("--- Wordle ---")
-    current_guess = "TARSE"
+    current_state = "TARSE_1"
 
     while True:
+        # Extract the real word from the turn-tracked state label
+        current_guess = current_state.split("_")[0]
         print(f"Current Guess: {current_guess}")
         feedback = input(f"Enter feedback for {current_guess}: ").strip().lower()
         if feedback == "ggggg":
             print(f"SOLVED! Word is {current_guess}")
             return
 
-        if current_guess == "AARGH":
+        if current_state == "AARGH_3":
             if feedback == "gyy__":
-                current_guess = "AWARD"
+                current_state = "AWARD_4"
             elif feedback == "y_y__":
-                current_guess = "FRAUD"
+                current_state = "FRAUD_4"
             elif feedback == "y_y_y":
-                current_guess = "CHARD"
+                current_state = "CHARD_4"
             elif feedback == "y_yy_":
-                current_guess = "GUARD"
+                current_state = "GUARD_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABACK":
+        elif current_state == "ABACK_3":
             if feedback == "__g__":
-                current_guess = "GLAND"
+                current_state = "GLAND_4"
             elif feedback == "__g_g":
-                current_guess = "FLANK"
+                current_state = "FLANK_4"
             elif feedback == "_yg__":
-                current_guess = "BLAND"
+                current_state = "BLAND_4"
             elif feedback == "_yg_g":
-                current_guess = "BLANK"
+                current_state = "BLANK_4"
             elif feedback == "g____":
-                current_guess = "ANNUL"
+                current_state = "ANNUL_4"
             elif feedback == "g_y__":
-                current_guess = "ANNAL"
+                current_state = "ANNAL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABACS":
+        elif current_state == "ABACS_2":
             if feedback == "__g_g":
-                current_guess = "GRASS"
+                current_state = "GRASS_3"
             elif feedback == "__g_y":
-                current_guess = "GRASP"
+                current_state = "GRASP_3"
             elif feedback == "__gyg":
-                current_guess = "CRASS"
+                current_state = "CRASS_3"
             elif feedback == "__gyy":
-                current_guess = "CRASH"
+                current_state = "CRASH_3"
             elif feedback == "_yg_g":
-                current_guess = "BRASS"
+                current_state = "BRASS_3"
             elif feedback == "_yg_y":
-                current_guess = "BRASH"
+                current_state = "BRASH_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABAFT":
+        elif current_state == "ABAFT_3":
             if feedback == "_____":
-                current_guess = "PLUSH"
+                current_state = "PLUSH_4"
             elif feedback == "___y_":
-                current_guess = "FLUSH"
+                current_state = "FLUSH_4"
             elif feedback == "_y___":
-                current_guess = "BLUSH"
+                current_state = "BLUSH_4"
             elif feedback == "g__gg":
-                current_guess = "ALOFT"
+                current_state = "ALOFT_4"
             elif feedback == "y___g":
-                current_guess = "GLOAT"
+                current_state = "GLOAT_4"
             elif feedback == "y___y":
-                current_guess = "TATTY"
+                current_state = "TATTY_4"
             elif feedback == "y__gy":
-                current_guess = "TAFFY"
+                current_state = "TAFFY_4"
             elif feedback == "y__yg":
-                current_guess = "FLOAT"
+                current_state = "FLOAT_4"
             elif feedback == "yy__g":
-                current_guess = "BLOAT"
+                current_state = "BLOAT_4"
             elif feedback == "yy__y":
-                current_guess = "TABBY"
+                current_state = "TABBY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABETS":
+        elif current_state == "ABETS_3":
             if feedback == "___g_":
-                current_guess = "TUFTY"
+                current_state = "TUFTY_4"
             elif feedback == "___y_":
-                current_guess = "TUMMY"
+                current_state = "TUMMY_4"
             elif feedback == "_y_y_":
-                current_guess = "TUBBY"
+                current_state = "TUBBY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABHOR":
+        elif current_state == "ABHOR_3":
             if feedback == "_____":
-                current_guess = "MUGGY"
+                current_state = "MUGGY_4"
             elif feedback == "___y_":
-                current_guess = "FUNGO"
+                current_state = "FUNGO_4"
             elif feedback == "__y__":
-                current_guess = "HUGGY"
+                current_state = "HUGGY_4"
             elif feedback == "_y___":
-                current_guess = "BUGGY"
+                current_state = "BUGGY_4"
             elif feedback == "gy_gg":
-                current_guess = "ARBOR"
+                current_state = "ARBOR_4"
             elif feedback == "yy_yy":
-                current_guess = "COBRA"
+                current_state = "COBRA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABIDE":
+        elif current_state == "ABIDE_3":
             if feedback == "gg_gg":
-                current_guess = "ABODE"
+                current_state = "ABODE_4"
             elif feedback == "gy_yg":
-                current_guess = "ADOBE"
+                current_state = "ADOBE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABJUD":
+        elif current_state == "ABJUD_3":
             if feedback == "g____":
-                current_guess = "AVAIL"
+                current_state = "AVAIL_4"
             elif feedback == "y____":
-                current_guess = "FLAIL"
+                current_state = "FLAIL_4"
             elif feedback == "y___g":
-                current_guess = "PLAID"
+                current_state = "PLAID_4"
             elif feedback == "y__y_":
-                current_guess = "QUAIL"
+                current_state = "QUAIL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABLET":
+        elif current_state == "ABLET_3":
             if feedback == "___y_":
-                current_guess = "PROVE"
+                current_state = "PROVE_4"
             elif feedback == "__yy_":
-                current_guess = "PROLE"
+                current_state = "PROLE_4"
             elif feedback == "_y_y_":
-                current_guess = "PROBE"
+                current_state = "PROBE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABLOW":
+        elif current_state == "ABLOW_3":
             if feedback == "__g__":
-                current_guess = "FILLY"
+                current_state = "FILLY_4"
             elif feedback == "__g_y":
-                current_guess = "WILLY"
+                current_state = "WILLY_4"
             elif feedback == "__y__":
-                current_guess = "IMPLY"
+                current_state = "IMPLY_4"
             elif feedback == "_yg__":
-                current_guess = "BILLY"
+                current_state = "BILLY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABOMA":
+        elif current_state == "ABOMA_2":
             if feedback == "g____":
-                current_guess = "ACUTE"
+                current_state = "ACUTE_3"
             elif feedback == "g___y":
-                current_guess = "AGATE"
+                current_state = "AGATE_3"
             elif feedback == "g_g__":
-                current_guess = "ATONE"
+                current_state = "ATONE_3"
             elif feedback == "gg__y":
-                current_guess = "ABATE"
+                current_state = "ABATE_3"
             elif feedback == "y____":
-                current_guess = "ELATE"
+                current_state = "ELATE_3"
             elif feedback == "y_y__":
-                current_guess = "OVATE"
+                current_state = "OVATE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABOUT":
+        elif current_state == "ABOUT_3":
             if feedback == "g_g_g":
-                current_guess = "AFOOT"
+                current_state = "AFOOT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABOVE":
+        elif current_state == "ABOVE_3":
             if feedback == "g_g_g":
-                current_guess = "AWOKE"
+                current_state = "AWOKE_4"
             elif feedback == "y___g":
-                current_guess = "PUPAE"
+                current_state = "PUPAE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ABYSM":
+        elif current_state == "ABYSM_3":
             if feedback == "y____":
-                current_guess = "LADLE"
+                current_state = "LADLE_4"
             elif feedback == "y___y":
-                current_guess = "MAPLE"
+                current_state = "MAPLE_4"
             elif feedback == "yy___":
-                current_guess = "FABLE"
+                current_state = "FABLE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ACCOY":
+        elif current_state == "ACCOY_3":
             if feedback == "___y_":
-                current_guess = "MOUTH"
+                current_state = "MOUTH_4"
             elif feedback == "___yg":
-                current_guess = "POUTY"
+                current_state = "POUTY_4"
             elif feedback == "___yy":
-                current_guess = "YOUTH"
+                current_state = "YOUTH_4"
             elif feedback == "_y_y_":
-                current_guess = "COUTH"
+                current_state = "COUTH_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ACHED":
+        elif current_state == "ACHED_2":
             if feedback == "___y_":
-                current_guess = "PRESS"
+                current_state = "PRESS_3"
             elif feedback == "___yy":
-                current_guess = "DRESS"
+                current_state = "DRESS_3"
             elif feedback == "__yy_":
-                current_guess = "FRESH"
+                current_state = "FRESH_3"
             elif feedback == "_y_y_":
-                current_guess = "CRESS"
+                current_state = "CRESS_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ACING":
+        elif current_state == "ACING_2":
             if feedback == "y____":
-                current_guess = "ORATE"
+                current_state = "ORATE_3"
             elif feedback == "y___y":
-                current_guess = "GRATE"
+                current_state = "GRATE_3"
             elif feedback == "y_y__":
-                current_guess = "IRATE"
+                current_state = "IRATE_3"
             elif feedback == "yy___":
-                current_guess = "CRATE"
+                current_state = "CRATE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ACMES":
+        elif current_state == "ACMES_3":
             if feedback == "_____":
-                current_guess = "FOUNT"
+                current_state = "FOUNT_4"
             elif feedback == "___y_":
-                current_guess = "PRIZE"
+                current_state = "PRIZE_4"
             elif feedback == "__y__":
-                current_guess = "MOUNT"
+                current_state = "MOUNT_4"
             elif feedback == "__yy_":
-                current_guess = "PRIME"
+                current_state = "PRIME_4"
             elif feedback == "_y___":
-                current_guess = "COUNT"
+                current_state = "COUNT_4"
             elif feedback == "_y_y_":
-                current_guess = "PRICE"
+                current_state = "PRICE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ACORN":
+        elif current_state == "ACORN_3":
             if feedback == "y_gyg":
-                current_guess = "GROAN"
+                current_state = "GROAN_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADAPT":
+        elif current_state == "ADAPT_3":
             if feedback == "g____":
-                current_guess = "AGING"
+                current_state = "AGING_4"
             elif feedback == "g__y_":
-                current_guess = "APING"
+                current_state = "APING_4"
             elif feedback == "g_y__":
-                current_guess = "ANIMA"
+                current_state = "ANIMA_4"
             elif feedback == "y____":
-                current_guess = "NINJA"
+                current_state = "NINJA_4"
             elif feedback == "yy___":
-                current_guess = "KINDA"
+                current_state = "KINDA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADEEM":
+        elif current_state == "ADEEM_3":
             if feedback == "_____":
-                current_guess = "STUCK"
+                current_state = "STUCK_4"
             elif feedback == "____y":
-                current_guess = "STUMP"
+                current_state = "STUMP_4"
             elif feedback == "__y__":
-                current_guess = "SLICE"
+                current_state = "SLICE_4"
             elif feedback == "__y_y":
-                current_guess = "SLIME"
+                current_state = "SLIME_4"
             elif feedback == "_y___":
-                current_guess = "STUDY"
+                current_state = "STUDY_4"
             elif feedback == "_yy__":
-                current_guess = "SLIDE"
+                current_state = "SLIDE_4"
             elif feedback == "y__g_":
-                current_guess = "RATER"
+                current_state = "RATER_4"
             elif feedback == "y_yg_":
-                current_guess = "EATER"
+                current_state = "EATER_4"
             elif feedback == "yy_g_":
-                current_guess = "DATER"
+                current_state = "DATER_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADEPT":
+        elif current_state == "ADEPT_3":
             if feedback == "y_yyg":
-                current_guess = "EXPAT"
+                current_state = "EXPAT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADIOS":
+        elif current_state == "ADIOS_3":
             if feedback == "g___y":
-                current_guess = "ASSAY"
+                current_state = "ASSAY_4"
             elif feedback == "y___y":
-                current_guess = "SQUAB"
+                current_state = "SQUAB_4"
             elif feedback == "y_g_y":
-                current_guess = "SHIVA"
+                current_state = "SHIVA_4"
             elif feedback == "y_y_y":
-                current_guess = "SIGMA"
+                current_state = "SIGMA_4"
             elif feedback == "yy__y":
-                current_guess = "SQUAD"
+                current_state = "SQUAD_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADLIB":
+        elif current_state == "ADLIB_3":
             if feedback == "_____":
-                current_guess = "GUSTY"
+                current_state = "GUSTY_4"
             elif feedback == "____y":
-                current_guess = "BUSTY"
+                current_state = "BUSTY_4"
             elif feedback == "___y_":
-                current_guess = "SITUP"
+                current_state = "SITUP_4"
             elif feedback == "__y__":
-                current_guess = "LUSTY"
+                current_state = "LUSTY_4"
             elif feedback == "_y___":
-                current_guess = "DUSTY"
+                current_state = "DUSTY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADMIN":
+        elif current_state == "ADMIN_3":
             if feedback == "g__gg":
-                current_guess = "AGAIN"
+                current_state = "AGAIN_4"
             elif feedback == "gg___":
-                current_guess = "ADDER"
+                current_state = "ADDER_4"
             elif feedback == "gy___":
-                current_guess = "ALDER"
+                current_state = "ALDER_4"
             elif feedback == "gy_y_":
-                current_guess = "AIDER"
+                current_state = "AIDER_4"
             elif feedback == "y____":
-                current_guess = "PAYEE"
+                current_state = "PAYEE_4"
             elif feedback == "y__y_":
-                current_guess = "WAIVE"
+                current_state = "WAIVE_4"
             elif feedback == "y__yy":
-                current_guess = "NAIVE"
+                current_state = "NAIVE_4"
             elif feedback == "y_y__":
-                current_guess = "MAYBE"
+                current_state = "MAYBE_4"
             elif feedback == "y_yy_":
-                current_guess = "MAIZE"
+                current_state = "MAIZE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADMIT":
+        elif current_state == "ADMIT_2":
             if feedback == "g___g":
-                current_guess = "ASSET"
-            elif feedback == "g__gg":
-                current_guess = "AWAIT"
+                current_state = "ASSET_3"
+            elif feedback == "y___g":
+                current_state = "SWEAT_3"
+            elif feedback == "y___y":
+                current_state = "STEAK_3"
+            elif feedback == "y_y_y":
+                current_state = "STEAM_3"
+            elif feedback == "yy__y":
+                current_state = "STEAD_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ADMIT_3":
+            if feedback == "g__gg":
+                current_state = "AWAIT_4"
             elif feedback == "g_ygg":
-                current_guess = "AMBIT"
+                current_state = "AMBIT_4"
             elif feedback == "gy_gg":
-                current_guess = "AUDIT"
-            elif feedback == "y___g":
-                current_guess = "SWEAT"
-            elif feedback == "y___y":
-                current_guess = "STEAK"
-            elif feedback == "y_y_y":
-                current_guess = "STEAM"
-            elif feedback == "yy__y":
-                current_guess = "STEAD"
+                current_state = "AUDIT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADSUM":
+        elif current_state == "ADSUM_3":
             if feedback == "__gy_":
-                current_guess = "HUSKY"
+                current_state = "HUSKY_4"
             elif feedback == "__gyy":
-                current_guess = "MUSKY"
+                current_state = "MUSKY_4"
             elif feedback == "_ygy_":
-                current_guess = "DUSKY"
+                current_state = "DUSKY_4"
             elif feedback == "_yyy_":
-                current_guess = "KUDOS"
+                current_state = "KUDOS_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ADVEW":
+        elif current_state == "ADVEW_3":
             if feedback == "___g_":
-                current_guess = "LONER"
+                current_state = "LONER_4"
             elif feedback == "___gy":
-                current_guess = "LOWER"
+                current_state = "LOWER_4"
             elif feedback == "__gg_":
-                current_guess = "LOVER"
+                current_state = "LOVER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ADVEW_4":
+            if feedback == "___g_":
+                current_state = "RIPER_5"
+            elif feedback == "___gy":
+                current_state = "WIPER_5"
             elif feedback == "__yg_":
-                current_guess = "VIPER"
+                current_state = "VIPER_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AERIE":
+        elif current_state == "AERIE_2":
             if feedback == "gyg_g":
-                current_guess = "AGREE"
+                current_state = "AGREE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFALD":
+        elif current_state == "AFALD_3":
             if feedback == "g__gg":
-                current_guess = "AHOLD"
+                current_state = "AHOLD_4"
             elif feedback == "g__yg":
-                current_guess = "ALOUD"
+                current_state = "ALOUD_4"
             elif feedback == "g_yy_":
-                current_guess = "ALOHA"
+                current_state = "ALOHA_4"
             elif feedback == "gg_y_":
-                current_guess = "AFOUL"
+                current_state = "AFOUL_4"
             elif feedback == "gy_y_":
-                current_guess = "ALOOF"
+                current_state = "ALOOF_4"
             elif feedback == "y__y_":
-                current_guess = "GLOAM"
+                current_state = "GLOAM_4"
             elif feedback == "yg_y_":
-                current_guess = "OFFAL"
+                current_state = "OFFAL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFFIX":
+        elif current_state == "AFFIX_3":
             if feedback == "g__g_":
-                current_guess = "APHID"
+                current_state = "APHID_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFFLY":
+        elif current_state == "AFFLY_2":
             if feedback == "y____":
-                current_guess = "BEAST"
+                current_state = "BEAST_3"
             elif feedback == "y___y":
-                current_guess = "YEAST"
+                current_state = "YEAST_3"
             elif feedback == "y__y_":
-                current_guess = "LEAST"
+                current_state = "LEAST_3"
             elif feedback == "yy___":
-                current_guess = "FEAST"
+                current_state = "FEAST_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFION":
+        elif current_state == "AFION_3":
             if feedback == "__g__":
-                current_guess = "PLIER"
+                current_state = "PLIER_4"
             elif feedback == "__y__":
-                current_guess = "LIVER"
+                current_state = "LIVER_4"
             elif feedback == "__y_y":
-                current_guess = "LINER"
+                current_state = "LINER_4"
             elif feedback == "_yg__":
-                current_guess = "FLIER"
+                current_state = "FLIER_4"
             elif feedback == "_yy__":
-                current_guess = "LIFER"
+                current_state = "LIFER_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFIRE":
+        elif current_state == "AFIRE_3":
             if feedback == "g__gg":
-                current_guess = "AZURE"
+                current_state = "AZURE_4"
             elif feedback == "gg_gg":
-                current_guess = "AFORE"
+                current_state = "AFORE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFLAJ":
+        elif current_state == "AFLAJ_3":
             if feedback == "_____":
-                current_guess = "PUDGY"
+                current_state = "PUDGY_4"
             elif feedback == "____y":
-                current_guess = "JUDGY"
+                current_state = "JUDGY_4"
             elif feedback == "_y___":
-                current_guess = "FUDGY"
+                current_state = "FUDGY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AFLOW":
-            if feedback == "_____":
-                current_guess = "CINCH"
-            elif feedback == "____y":
-                current_guess = "WINCH"
-            elif feedback == "_y___":
-                current_guess = "FINCH"
-            elif feedback == "y____":
-                current_guess = "CREAK"
-            elif feedback == "y___y":
-                current_guess = "WREAK"
-            elif feedback == "y_y__":
-                current_guess = "CLEAR"
-            elif feedback == "yy___":
-                current_guess = "FREAK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "AFOAM":
+        elif current_state == "AFLOW_3":
             if feedback == "y____":
-                current_guess = "WALTZ"
+                current_state = "CREAK_4"
             elif feedback == "y___y":
-                current_guess = "MALTY"
-            elif feedback == "y__g_":
-                current_guess = "NATAL"
-            elif feedback == "yy_g_":
-                current_guess = "FATAL"
+                current_state = "WREAK_4"
+            elif feedback == "y_y__":
+                current_state = "CLEAR_4"
+            elif feedback == "yy___":
+                current_state = "FREAK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGAPE":
+        elif current_state == "AFLOW_4":
+            if feedback == "_____":
+                current_state = "CINCH_5"
+            elif feedback == "____y":
+                current_state = "WINCH_5"
+            elif feedback == "_y___":
+                current_state = "FINCH_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "AFOAM_3":
+            if feedback == "y____":
+                current_state = "WALTZ_4"
+            elif feedback == "y___y":
+                current_state = "MALTY_4"
+            elif feedback == "y__g_":
+                current_state = "NATAL_4"
+            elif feedback == "yy_g_":
+                current_state = "FATAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "AGAPE_3":
             if feedback == "_yg_g":
-                current_guess = "IMAGE"
+                current_state = "IMAGE_4"
             elif feedback == "_ygyg":
-                current_guess = "PHAGE"
+                current_state = "PHAGE_4"
             elif feedback == "ggg_g":
-                current_guess = "AGAVE"
+                current_state = "AGAVE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGBAS":
+        elif current_state == "AGBAS_3":
             if feedback == "_____":
-                current_guess = "QUILT"
+                current_state = "QUILT_4"
             elif feedback == "__g__":
-                current_guess = "CUBIT"
+                current_state = "CUBIT_4"
             elif feedback == "__y__":
-                current_guess = "BUILT"
+                current_state = "BUILT_4"
             elif feedback == "_y___":
-                current_guess = "GUILT"
+                current_state = "GUILT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGING":
+        elif current_state == "AGING_4":
             if feedback == "g_ggg":
-                current_guess = "AXING"
+                current_state = "AXING_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGITA":
+        elif current_state == "AGITA_3":
             if feedback == "g_gg_":
-                current_guess = "AMITY"
+                current_state = "AMITY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGLEY":
+        elif current_state == "AGLEY_3":
             if feedback == "y__y_":
-                current_guess = "RECAP"
+                current_state = "RECAP_4"
             elif feedback == "y__yg":
-                current_guess = "REPAY"
+                current_state = "REPAY_4"
             elif feedback == "y_gy_":
-                current_guess = "RELAX"
+                current_state = "RELAX_4"
             elif feedback == "y_gyg":
-                current_guess = "RELAY"
+                current_state = "RELAY_4"
             elif feedback == "y_yy_":
-                current_guess = "RENAL"
+                current_state = "RENAL_4"
             elif feedback == "yyyy_":
-                current_guess = "REGAL"
+                current_state = "REGAL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGLOW":
+        elif current_state == "AGLOW_3":
             if feedback == "g_gg_":
-                current_guess = "ALLOY"
+                current_state = "ALLOY_4"
             elif feedback == "g_ggg":
-                current_guess = "ALLOW"
+                current_state = "ALLOW_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGONY":
+        elif current_state == "AGONY_3":
             if feedback == "g_yyg":
-                current_guess = "ANNOY"
+                current_state = "ANNOY_4"
             elif feedback == "gygg_":
-                current_guess = "AMONG"
+                current_state = "AMONG_4"
             elif feedback == "yyyg_":
-                current_guess = "GUANO"
+                current_state = "GUANO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGORA":
+        elif current_state == "AGORA_3":
             if feedback == "g_gy_":
-                current_guess = "AMOUR"
+                current_state = "AMOUR_4"
             elif feedback == "g_gyg":
-                current_guess = "AROMA"
+                current_state = "AROMA_4"
             elif feedback == "y_gy_":
-                current_guess = "CROAK"
+                current_state = "CROAK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AGUED":
+        elif current_state == "AGUED_3":
             if feedback == "y____":
-                current_guess = "SAVVY"
+                current_state = "SAVVY_4"
             elif feedback == "y_g__":
-                current_guess = "SAUCY"
+                current_state = "SAUCY_4"
             elif feedback == "yy___":
-                current_guess = "SAGGY"
+                current_state = "SAGGY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AHEAD":
+        elif current_state == "AHEAD_3":
             if feedback == "__ggg":
-                current_guess = "KNEAD"
+                current_state = "KNEAD_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AHING":
+        elif current_state == "AHING_3":
             if feedback == "_____":
-                current_guess = "MOOSE"
+                current_state = "MOOSE_4"
             elif feedback == "____y":
-                current_guess = "GOOSE"
+                current_state = "GOOSE_4"
             elif feedback == "___y_":
-                current_guess = "NOOSE"
+                current_state = "NOOSE_4"
             elif feedback == "_g___":
-                current_guess = "WHOSE"
+                current_state = "WHOSE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AIOLI":
+        elif current_state == "AIOLI_3":
             if feedback == "yggg_":
-                current_guess = "VIOLA"
+                current_state = "VIOLA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALARM":
+        elif current_state == "ALARM_3":
             if feedback == "_ggy_":
-                current_guess = "FLAIR"
+                current_state = "FLAIR_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALERT":
+        elif current_state == "ALERT_2":
             if feedback == "g_ggg":
-                current_guess = "AVERT"
+                current_state = "AVERT_3"
             elif feedback == "g_yyy":
-                current_guess = "AFTER"
+                current_state = "AFTER_3"
             elif feedback == "ggyyy":
-                current_guess = "ALTER"
+                current_state = "ALTER_3"
             elif feedback == "y_gyg":
-                current_guess = "GREAT"
+                current_state = "GREAT_3"
             elif feedback == "y_ygg":
-                current_guess = "HEART"
+                current_state = "HEART_3"
             elif feedback == "y_ygy":
-                current_guess = "EXTRA"
+                current_state = "EXTRA_3"
             elif feedback == "y_yyg":
-                current_guess = "REACT"
+                current_state = "REACT_3"
             elif feedback == "y_yyy":
-                current_guess = "RETAG"
+                current_state = "RETAG_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALIBI":
+        elif current_state == "ALIBI_3":
             if feedback == "gyg__":
-                current_guess = "AXIAL"
+                current_state = "AXIAL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALIEN":
+        elif current_state == "ALIEN_3":
             if feedback == "gg_g_":
-                current_guess = "ALLEY"
+                current_state = "ALLEY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALIKE":
+        elif current_state == "ALIKE_3":
             if feedback == "ggg_g":
-                current_guess = "ALIVE"
+                current_state = "ALIVE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALLAY":
+        elif current_state == "ALLAY_3":
             if feedback == "__gg_":
-                current_guess = "GULAG"
+                current_state = "GULAG_4"
             elif feedback == "__ggy":
-                current_guess = "BYLAW"
+                current_state = "BYLAW_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ALOIN":
+        elif current_state == "ALOIN_2":
             if feedback == "g____":
-                current_guess = "ARRAY"
+                current_state = "ARRAY_3"
             elif feedback == "g__g_":
-                current_guess = "ACRID"
+                current_state = "ACRID_3"
             elif feedback == "g_y__":
-                current_guess = "ARROW"
+                current_state = "ARROW_3"
             elif feedback == "g_y_g":
-                current_guess = "APRON"
+                current_state = "APRON_3"
             elif feedback == "gy___":
-                current_guess = "AURAL"
+                current_state = "AURAL_3"
             elif feedback == "y____":
-                current_guess = "BURKA"
+                current_state = "BURKA_3"
             elif feedback == "y___g":
-                current_guess = "QURAN"
+                current_state = "QURAN_3"
             elif feedback == "y__g_":
-                current_guess = "CURIA"
+                current_state = "CURIA_3"
             elif feedback == "y__y_":
-                current_guess = "CIRCA"
+                current_state = "CIRCA_3"
             elif feedback == "y_y__":
-                current_guess = "FORAY"
+                current_state = "FORAY_3"
             elif feedback == "y_y_g":
-                current_guess = "KORAN"
+                current_state = "KORAN_3"
             elif feedback == "yy___":
-                current_guess = "MURAL"
+                current_state = "MURAL_3"
             elif feedback == "yy_y_":
-                current_guess = "VIRAL"
+                current_state = "VIRAL_3"
             elif feedback == "yyy__":
-                current_guess = "CORAL"
+                current_state = "CORAL_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMASS":
+        elif current_state == "AMASS_3":
             if feedback == "_yggy":
-                current_guess = "SPASM"
+                current_state = "SPASM_4"
             elif feedback == "gg_gg":
-                current_guess = "AMISS"
+                current_state = "AMISS_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMBAN":
+        elif current_state == "AMBAN_3":
             if feedback == "_____":
-                current_guess = "GUPPY"
+                current_state = "GUPPY_4"
             elif feedback == "____y":
-                current_guess = "GUNKY"
+                current_state = "GUNKY_4"
             elif feedback == "_y___":
-                current_guess = "GUMMY"
+                current_state = "GUMMY_4"
             elif feedback == "_yy__":
-                current_guess = "GUMBO"
+                current_state = "GUMBO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMBLE":
+        elif current_state == "AMBLE_3":
             if feedback == "g__gg":
-                current_guess = "APPLE"
+                current_state = "APPLE_4"
             elif feedback == "gg_gg":
-                current_guess = "AMPLE"
+                current_state = "AMPLE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMBRY":
+        elif current_state == "AMBRY_3":
             if feedback == "___gg":
-                current_guess = "FERRY"
+                current_state = "FERRY_4"
             elif feedback == "___yg":
-                current_guess = "JERKY"
+                current_state = "JERKY_4"
             elif feedback == "__ygg":
-                current_guess = "BERRY"
+                current_state = "BERRY_4"
             elif feedback == "__yyg":
-                current_guess = "DERBY"
+                current_state = "DERBY_4"
             elif feedback == "_y_gg":
-                current_guess = "MERRY"
+                current_state = "MERRY_4"
             elif feedback == "_y_yg":
-                current_guess = "GERMY"
+                current_state = "GERMY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMEND":
+        elif current_state == "AMEND_3":
             if feedback == "yyg_y":
-                current_guess = "EDEMA"
+                current_state = "EDEMA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMIGO":
+        elif current_state == "AMIGO_3":
             if feedback == "gyg_y":
-                current_guess = "AXIOM"
+                current_state = "AXIOM_4"
             elif feedback == "y_g_y":
-                current_guess = "OUIJA"
+                current_state = "OUIJA_4"
             elif feedback == "y_y_y":
-                current_guess = "OKAPI"
+                current_state = "OKAPI_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMINO":
+        elif current_state == "AMINO_3":
             if feedback == "y_ygg":
-                current_guess = "PIANO"
+                current_state = "PIANO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMPED":
+        elif current_state == "AMPED_3":
             if feedback == "y__y_":
-                current_guess = "SHAVE"
+                current_state = "SHAVE_4"
             elif feedback == "y__yy":
-                current_guess = "SHADE"
+                current_state = "SHADE_4"
             elif feedback == "y_yy_":
-                current_guess = "SHAPE"
+                current_state = "SHAPE_4"
             elif feedback == "yy_y_":
-                current_guess = "SHAME"
+                current_state = "SHAME_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMPLY":
+        elif current_state == "AMPLY_3":
             if feedback == "g__y_":
-                current_guess = "AWFUL"
+                current_state = "AWFUL_4"
             elif feedback == "g_ggg":
-                current_guess = "APPLY"
+                current_state = "APPLY_4"
             elif feedback == "g_gy_":
-                current_guess = "ALPHA"
+                current_state = "ALPHA_4"
             elif feedback == "gy_y_":
-                current_guess = "ALBUM"
+                current_state = "ALBUM_4"
             elif feedback == "y__g_":
-                current_guess = "UVULA"
+                current_state = "UVULA_4"
             elif feedback == "y__y_":
-                current_guess = "FUGAL"
+                current_state = "FUGAL_4"
             elif feedback == "y__yg":
-                current_guess = "FLAKY"
+                current_state = "FLAKY_4"
             elif feedback == "y_yy_":
-                current_guess = "PLAZA"
+                current_state = "PLAZA_4"
             elif feedback == "y_yyy":
-                current_guess = "PLAYA"
+                current_state = "PLAYA_4"
             elif feedback == "yy_g_":
-                current_guess = "QUALM"
+                current_state = "QUALM_4"
             elif feedback == "yy_y_":
-                current_guess = "LLAMA"
+                current_state = "LLAMA_4"
             elif feedback == "yyyy_":
-                current_guess = "GLAMP"
+                current_state = "GLAMP_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AMUCK":
+        elif current_state == "AMUCK_3":
             if feedback == "g__gg":
-                current_guess = "ABACK"
+                current_state = "ABACK_4"
             elif feedback == "y__gg":
-                current_guess = "WHACK"
+                current_state = "WHACK_4"
             elif feedback == "y_yg_":
-                current_guess = "YUCCA"
+                current_state = "YUCCA_4"
             elif feedback == "y_ygg":
-                current_guess = "QUACK"
+                current_state = "QUACK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANCHO":
+        elif current_state == "ANCHO_2":
             if feedback == "y____":
-                current_guess = "SPARE"
+                current_state = "SPARE_3"
             elif feedback == "y__y_":
-                current_guess = "SHARE"
+                current_state = "SHARE_3"
             elif feedback == "y_y__":
-                current_guess = "SCARE"
+                current_state = "SCARE_3"
             elif feedback == "yg___":
-                current_guess = "SNARE"
+                current_state = "SNARE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANGER":
+        elif current_state == "ANGER_3":
             if feedback == "g_ggg":
-                current_guess = "AUGER"
+                current_state = "AUGER_4"
             elif feedback == "gy_yy":
-                current_guess = "ARENA"
+                current_state = "ARENA_4"
             elif feedback == "y__yy":
-                current_guess = "OPERA"
+                current_state = "OPERA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANGRY":
+        elif current_state == "ANGRY_3":
             if feedback == "yg_g_":
-                current_guess = "UNARM"
+                current_state = "UNARM_4"
             elif feedback == "yy_y_":
-                current_guess = "PRAWN"
+                current_state = "PRAWN_4"
             elif feedback == "yyyy_":
-                current_guess = "GRAIN"
+                current_state = "GRAIN_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANKLE":
+        elif current_state == "ANKLE_3":
             if feedback == "gg_gg":
-                current_guess = "ANOLE"
+                current_state = "ANOLE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANNEX":
+        elif current_state == "ANNEX_3":
             if feedback == "g__g_":
-                current_guess = "ABBEY"
+                current_state = "ABBEY_4"
             elif feedback == "g_gg_":
-                current_guess = "APNEA"
+                current_state = "APNEA_4"
             elif feedback == "yy_y_":
-                current_guess = "HYENA"
+                current_state = "HYENA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANTIC":
+        elif current_state == "ANTIC_3":
             if feedback == "g_ggg":
-                current_guess = "ATTIC"
+                current_state = "ATTIC_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ANVIL":
+        elif current_state == "ANVIL_2":
             if feedback == "y____":
-                current_guess = "SABER"
+                current_state = "SABER_3"
             elif feedback == "y___y":
-                current_guess = "LASER"
+                current_state = "LASER_3"
             elif feedback == "y_g__":
-                current_guess = "SAVER"
+                current_state = "SAVER_3"
             elif feedback == "yy___":
-                current_guess = "SANER"
+                current_state = "SANER_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AORTA":
+        elif current_state == "AORTA_2":
             if feedback == "g_gyg":
-                current_guess = "ATRIA"
+                current_state = "ATRIA_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "APACE":
+        elif current_state == "APACE_2":
             if feedback == "y____":
-                current_guess = "WARTY"
+                current_state = "WARTY_3"
             elif feedback == "y_y__":
-                current_guess = "KARAT"
+                current_state = "KARAT_3"
             elif feedback == "y_yy_":
-                current_guess = "CARAT"
+                current_state = "CARAT_3"
             elif feedback == "yy___":
-                current_guess = "PARTY"
+                current_state = "PARTY_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "APAYD":
+        elif current_state == "APAYD_2":
             if feedback == "y____":
-                current_guess = "STRAW"
+                current_state = "STRAW_3"
             elif feedback == "y__y_":
-                current_guess = "STRAY"
+                current_state = "STRAY_3"
             elif feedback == "yy___":
-                current_guess = "STRAP"
+                current_state = "STRAP_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "APEEK":
+        elif current_state == "APEEK_3":
             if feedback == "__g__":
-                current_guess = "CHEWY"
+                current_state = "CHEWY_4"
             elif feedback == "__gy_":
-                current_guess = "BEEFY"
+                current_state = "BEEFY_4"
             elif feedback == "__gyy":
-                current_guess = "GEEKY"
+                current_state = "GEEKY_4"
             elif feedback == "_gy__":
-                current_guess = "EPOXY"
+                current_state = "EPOXY_4"
             elif feedback == "_ygy_":
-                current_guess = "WEEPY"
+                current_state = "WEEPY_4"
             elif feedback == "_yy__":
-                current_guess = "PEPPY"
+                current_state = "PEPPY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "APHID":
+        elif current_state == "APHID_3":
             if feedback == "_____":
-                current_guess = "SMELL"
+                current_state = "SMELL_4"
             elif feedback == "__y__":
-                current_guess = "SHELL"
+                current_state = "SHELL_4"
             elif feedback == "_g___":
-                current_guess = "SPELL"
+                current_state = "SPELL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "APING":
+        elif current_state == "APING_3":
             if feedback == "y____":
-                current_guess = "FECAL"
+                current_state = "FECAL_4"
             elif feedback == "y___y":
-                current_guess = "LEGAL"
+                current_state = "LEGAL_4"
             elif feedback == "y__y_":
-                current_guess = "VENAL"
+                current_state = "VENAL_4"
             elif feedback == "yy_y_":
-                current_guess = "PENAL"
+                current_state = "PENAL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "APIOL":
+        elif current_state == "APIOL_2":
             if feedback == "_____":
-                current_guess = "REUSE"
-            elif feedback == "___g_":
-                current_guess = "STOOD"
-            elif feedback == "___gg":
-                current_guess = "STOOL"
+                current_state = "REUSE_3"
             elif feedback == "___y_":
-                current_guess = "STOCK"
-            elif feedback == "___yy":
-                current_guess = "SLOTH"
+                current_state = "ROUSE_3"
             elif feedback == "__g__":
-                current_guess = "FRISE"
+                current_state = "FRISE_3"
             elif feedback == "__y__":
-                current_guess = "RINSE"
-            elif feedback == "__yy_":
-                current_guess = "STOIC"
-            elif feedback == "_y_g_":
-                current_guess = "STOOP"
+                current_state = "RINSE_3"
             elif feedback == "_y_y_":
-                current_guess = "STOMP"
+                current_state = "PROSE_3"
             elif feedback == "_yg__":
-                current_guess = "PRISE"
+                current_state = "PRISE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ARERE":
+        elif current_state == "APIOL_3":
+            if feedback == "___g_":
+                current_state = "STOOD_4"
+            elif feedback == "___gg":
+                current_state = "STOOL_4"
+            elif feedback == "___y_":
+                current_state = "STOCK_4"
+            elif feedback == "___yy":
+                current_state = "SLOTH_4"
+            elif feedback == "__yy_":
+                current_state = "STOIC_4"
+            elif feedback == "_y_g_":
+                current_state = "STOOP_4"
+            elif feedback == "_y_y_":
+                current_state = "STOMP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ARERE_3":
             if feedback == "yyy__":
-                current_guess = "WAGER"
+                current_state = "WAGER_4"
             elif feedback == "yyy_y":
-                current_guess = "EAGER"
+                current_state = "EAGER_4"
             elif feedback == "yyyy_":
-                current_guess = "RAGER"
+                current_state = "RAGER_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ARGON":
+        elif current_state == "ARGON_3":
             if feedback == "yggyg":
-                current_guess = "ORGAN"
+                current_state = "ORGAN_4"
             elif feedback == "yy_yg":
-                current_guess = "ROMAN"
+                current_state = "ROMAN_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ARGOT":
+        elif current_state == "ARGOT_2":
             if feedback == "gy__g":
-                current_guess = "APART"
+                current_state = "APART_3"
             elif feedback == "gy__y":
-                current_guess = "ALTAR"
+                current_state = "ALTAR_3"
             elif feedback == "gy_gy":
-                current_guess = "ACTOR"
+                current_state = "ACTOR_3"
             elif feedback == "gy_yg":
-                current_guess = "ABORT"
+                current_state = "ABORT_3"
             elif feedback == "yg__g":
-                current_guess = "CRAFT"
+                current_state = "CRAFT_3"
             elif feedback == "yg__y":
-                current_guess = "WRATH"
+                current_state = "WRATH_3"
             elif feedback == "ygy_g":
-                current_guess = "GRAFT"
+                current_state = "GRAFT_3"
             elif feedback == "yy__g":
-                current_guess = "CHART"
+                current_state = "CHART_3"
             elif feedback == "yy__y":
-                current_guess = "ULTRA"
+                current_state = "ULTRA_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ARISE":
+        elif current_state == "ARISE_2":
             if feedback == "gg_gg":
-                current_guess = "AROSE"
+                current_state = "AROSE_3"
             elif feedback == "yg_gg":
-                current_guess = "ERASE"
+                current_state = "ERASE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ARSON":
+        elif current_state == "ARSON_3":
             if feedback == "yyy__":
-                current_guess = "SUGAR"
+                current_state = "SUGAR_4"
             elif feedback == "yyyyy":
-                current_guess = "SONAR"
+                current_state = "SONAR_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "ARTSY":
+        elif current_state == "ARTSY_2":
             if feedback == "yyyg_":
-                current_guess = "ROAST"
+                current_state = "ROAST_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AUDIO":
+        elif current_state == "AUDIO_3":
             if feedback == "g_ygy":
-                current_guess = "AVOID"
+                current_state = "AVOID_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AUGUR":
+        elif current_state == "AUGUR_4":
             if feedback == "y___g":
-                current_guess = "FRIAR"
+                current_state = "FRIAR_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AUMIL":
+        elif current_state == "AUMIL_3":
             if feedback == "_____":
-                current_guess = "GREET"
+                current_state = "GREET_4"
             elif feedback == "___g_":
-                current_guess = "REFIT"
+                current_state = "REFIT_4"
             elif feedback == "___gy":
-                current_guess = "RELIT"
+                current_state = "RELIT_4"
             elif feedback == "___y_":
-                current_guess = "RIVET"
+                current_state = "RIVET_4"
             elif feedback == "__gg_":
-                current_guess = "REMIT"
+                current_state = "REMIT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AUNTY":
+        elif current_state == "AUNTY_3":
             if feedback == "yggg_":
-                current_guess = "JUNTA"
+                current_state = "JUNTA_4"
             elif feedback == "yyyy_":
-                current_guess = "UNTAG"
+                current_state = "UNTAG_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AVIAN":
+        elif current_state == "AVIAN_3":
             if feedback == "_yygg":
-                current_guess = "DIVAN"
+                current_state = "DIVAN_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "AWASH":
+        elif current_state == "AWASH_3":
             if feedback == "__ggg":
-                current_guess = "GNASH"
+                current_state = "GNASH_4"
             elif feedback == "_gggg":
-                current_guess = "SWASH"
+                current_state = "SWASH_4"
             elif feedback == "g_ggg":
-                current_guess = "ABASH"
+                current_state = "ABASH_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BACCY":
+        elif current_state == "BACCY_3":
             if feedback == "_____":
-                current_guess = "FLING"
+                current_state = "FLING_4"
             elif feedback == "____y":
-                current_guess = "LYING"
+                current_state = "LYING_4"
             elif feedback == "__y__":
-                current_guess = "CLING"
+                current_state = "CLING_4"
             elif feedback == "g____":
-                current_guess = "BLING"
+                current_state = "BLING_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BADGE":
+        elif current_state == "BADGE_3":
             if feedback == "_g_gg":
-                current_guess = "MANGE"
+                current_state = "MANGE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BADLY":
+        elif current_state == "BADLY_4":
             if feedback == "_gggg":
-                current_guess = "MADLY"
+                current_state = "MADLY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BAGEL":
+        elif current_state == "BAGEL_3":
             if feedback == "_g_gg":
-                current_guess = "NAVEL"
+                current_state = "NAVEL_4"
             elif feedback == "_gygg":
-                current_guess = "GAVEL"
+                current_state = "GAVEL_4"
             elif feedback == "gg_gg":
-                current_guess = "BABEL"
+                current_state = "BABEL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BAGIE":
+        elif current_state == "BAGIE_3":
             if feedback == "_____":
-                current_guess = "FROWN"
+                current_state = "FROWN_4"
             elif feedback == "__y__":
-                current_guess = "GROWN"
+                current_state = "GROWN_4"
             elif feedback == "__yg_":
-                current_guess = "GROIN"
+                current_state = "GROIN_4"
             elif feedback == "g____":
-                current_guess = "BROWN"
+                current_state = "BROWN_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BAGUA":
+        elif current_state == "BAGUA_3":
             if feedback == "_g___":
-                current_guess = "PANKO"
+                current_state = "PANKO_4"
             elif feedback == "_g__g":
-                current_guess = "MANIA"
+                current_state = "MANIA_4"
             elif feedback == "_g__y":
-                current_guess = "NAVAL"
+                current_state = "NAVAL_4"
             elif feedback == "_gg__":
-                current_guess = "WAGON"
+                current_state = "WAGON_4"
             elif feedback == "_gg_y":
-                current_guess = "PAGAN"
+                current_state = "PAGAN_4"
             elif feedback == "_gy__":
-                current_guess = "MANGO"
+                current_state = "MANGO_4"
             elif feedback == "_gy_g":
-                current_guess = "MANGA"
+                current_state = "MANGA_4"
             elif feedback == "gg___":
-                current_guess = "BANJO"
+                current_state = "BANJO_4"
             elif feedback == "gg__y":
-                current_guess = "BANAL"
+                current_state = "BANAL_4"
             elif feedback == "yg___":
-                current_guess = "NABOB"
+                current_state = "NABOB_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BALER":
+        elif current_state == "BALER_3":
             if feedback == "_gygg":
-                current_guess = "LAYER"
+                current_state = "LAYER_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BANDY":
+        elif current_state == "BANDY_3":
             if feedback == "_gggg":
-                current_guess = "DANDY"
+                current_state = "DANDY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BASAL":
+        elif current_state == "BASAL_3":
             if feedback == "ggg_g":
-                current_guess = "BASIL"
+                current_state = "BASIL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BASIC":
+        elif current_state == "BASIC_3":
             if feedback == "gggg_":
-                current_guess = "BASIS"
+                current_state = "BASIS_4"
             elif feedback == "ygy__":
-                current_guess = "SAMBA"
+                current_state = "SAMBA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BAWDY":
+        elif current_state == "BAWDY_4":
             if feedback == "_g_gg":
-                current_guess = "GAUDY"
+                current_state = "GAUDY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEACH":
+        elif current_state == "BEACH_3":
             if feedback == "_gg_y":
-                current_guess = "HEAVY"
+                current_state = "HEAVY_4"
             elif feedback == "_gggg":
-                current_guess = "PEACH"
+                current_state = "PEACH_4"
             elif feedback == "_gy_y":
-                current_guess = "HENNA"
+                current_state = "HENNA_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEADY":
+        elif current_state == "BEADY_3":
             if feedback == "_gggg":
-                current_guess = "HEADY"
+                current_state = "HEADY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BECAP":
+        elif current_state == "BECAP_3":
             if feedback == "_y___":
-                current_guess = "WHOLE"
+                current_state = "WHOLE_4"
             elif feedback == "_y__y":
-                current_guess = "ELOPE"
+                current_state = "ELOPE_4"
             elif feedback == "_yy__":
-                current_guess = "CLOVE"
+                current_state = "CLOVE_4"
             elif feedback == "gy___":
-                current_guess = "BLOKE"
+                current_state = "BLOKE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEDEW":
+        elif current_state == "BEDEW_3":
             if feedback == "__gg_":
-                current_guess = "HIDER"
+                current_state = "HIDER_4"
             elif feedback == "__ggy":
-                current_guess = "WIDER"
+                current_state = "WIDER_4"
             elif feedback == "__yg_":
-                current_guess = "FRIED"
+                current_state = "FRIED_4"
             elif feedback == "_gg__":
-                current_guess = "REDID"
+                current_state = "REDID_4"
             elif feedback == "_gy_y":
-                current_guess = "WEIRD"
+                current_state = "WEIRD_4"
             elif feedback == "_ygg_":
-                current_guess = "EIDER"
+                current_state = "EIDER_4"
             elif feedback == "ygy__":
-                current_guess = "REBID"
+                current_state = "REBID_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEFIT":
+        elif current_state == "BEFIT_3":
             if feedback == "_g_yy":
-                current_guess = "VENTI"
+                current_state = "VENTI_4"
             elif feedback == "_gyyg":
-                current_guess = "FEINT"
+                current_state = "FEINT_4"
             elif feedback == "_y_gy":
-                current_guess = "ETHIC"
+                current_state = "ETHIC_4"
             elif feedback == "_y_yg":
-                current_guess = "EVICT"
+                current_state = "EVICT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEFOG":
+        elif current_state == "BEFOG_2":
             if feedback == "_y___":
-                current_guess = "CARVE"
+                current_state = "CARVE_3"
             elif feedback == "_y__y":
-                current_guess = "LARGE"
+                current_state = "LARGE_3"
             elif feedback == "_yy__":
-                current_guess = "FARCE"
+                current_state = "FARCE_3"
             elif feedback == "gy___":
-                current_guess = "BARRE"
+                current_state = "BARRE_3"
             elif feedback == "gy__y":
-                current_guess = "BARGE"
+                current_state = "BARGE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEGAN":
+        elif current_state == "BEGAN_3":
             if feedback == "_g_gg":
-                current_guess = "PECAN"
+                current_state = "PECAN_4"
             elif feedback == "_gggg":
-                current_guess = "VEGAN"
+                current_state = "VEGAN_4"
             elif feedback == "yg_g_":
-                current_guess = "KEBAB"
+                current_state = "KEBAB_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEGAT":
+        elif current_state == "BEGAT_3":
             if feedback == "_y_gg":
-                current_guess = "WHEAT"
+                current_state = "WHEAT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEGIN":
+        elif current_state == "BEGIN_3":
             if feedback == "_gyyg":
-                current_guess = "FEIGN"
+                current_state = "FEIGN_4"
             elif feedback == "_gyyy":
-                current_guess = "NEIGH"
+                current_state = "NEIGH_4"
             elif feedback == "_yyyy":
-                current_guess = "EKING"
+                current_state = "EKING_4"
             elif feedback == "ggg_g":
-                current_guess = "BEGUN"
+                current_state = "BEGUN_4"
             elif feedback == "ggyyy":
-                current_guess = "BEING"
+                current_state = "BEING_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEGUN":
+        elif current_state == "BEGUN_3":
             if feedback == "_g___":
-                current_guess = "REEDY"
+                current_state = "REEDY_4"
             elif feedback == "_g_g_":
-                current_guess = "REDUX"
+                current_state = "REDUX_4"
             elif feedback == "_y___":
-                current_guess = "FREED"
+                current_state = "FREED_4"
             elif feedback == "_y_y_":
-                current_guess = "RUDER"
+                current_state = "RUDER_4"
             elif feedback == "_y_yy":
-                current_guess = "UNDER"
+                current_state = "UNDER_4"
             elif feedback == "_yg__":
-                current_guess = "EDGER"
+                current_state = "EDGER_4"
             elif feedback == "_yy__":
-                current_guess = "GREED"
+                current_state = "GREED_4"
             elif feedback == "gy___":
-                current_guess = "BREED"
+                current_state = "BREED_4"
             elif feedback == "yg_g_":
-                current_guess = "REDUB"
+                current_state = "REDUB_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEIGE":
+        elif current_state == "BEIGE_3":
             if feedback == "__gyg":
-                current_guess = "GUIDE"
+                current_state = "GUIDE_4"
             elif feedback == "__ygg":
-                current_guess = "MIDGE"
+                current_state = "MIDGE_4"
             elif feedback == "__yyg":
-                current_guess = "GIMME"
+                current_state = "GIMME_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BELCH":
+        elif current_state == "BELCH_2":
             if feedback == "_y___":
-                current_guess = "PARER"
+                current_state = "PARER_3"
             elif feedback == "_y__y":
-                current_guess = "HAREM"
+                current_state = "HAREM_3"
             elif feedback == "_y_y_":
-                current_guess = "CARER"
+                current_state = "CARER_3"
             elif feedback == "_yy__":
-                current_guess = "EARLY"
+                current_state = "EARLY_3"
             elif feedback == "gy___":
-                current_guess = "BARER"
+                current_state = "BARER_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BELLY":
+        elif current_state == "BELLY_3":
             if feedback == "_gggg":
-                current_guess = "JELLY"
+                current_state = "JELLY_4"
             elif feedback == "_gy_g":
-                current_guess = "LEGGY"
+                current_state = "LEGGY_4"
             elif feedback == "_yy_g":
-                current_guess = "ELEGY"
+                current_state = "ELEGY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEMAD":
+        elif current_state == "BEMAD_2":
             if feedback == "_g_g_":
-                current_guess = "AGLEY"
+                current_state = "AGLEY_3"
             elif feedback == "_g_gy":
-                current_guess = "CEDAR"
+                current_state = "CEDAR_3"
             elif feedback == "_g_y_":
-                current_guess = "LEARN"
+                current_state = "LEARN_3"
             elif feedback == "_g_yg":
-                current_guess = "HEARD"
+                current_state = "HEARD_3"
             elif feedback == "_g_yy":
-                current_guess = "READY"
+                current_state = "READY_3"
             elif feedback == "_ggg_":
-                current_guess = "REMAP"
+                current_state = "REMAP_3"
             elif feedback == "_gyy_":
-                current_guess = "REALM"
+                current_state = "REALM_3"
             elif feedback == "_y_g_":
-                current_guess = "AFLOW"
+                current_state = "AFLOW_3"
             elif feedback == "_y_gg":
-                current_guess = "DREAD"
+                current_state = "DREAD_3"
             elif feedback == "_y_y_":
-                current_guess = "ANGER"
+                current_state = "ANGER_3"
             elif feedback == "_y_yy":
-                current_guess = "ADMIN"
+                current_state = "ADMIN_3"
             elif feedback == "_ygyg":
-                current_guess = "ARMED"
+                current_state = "ARMED_3"
             elif feedback == "_yyg_":
-                current_guess = "CREAM"
+                current_state = "CREAM_3"
             elif feedback == "_yygy":
-                current_guess = "DREAM"
+                current_state = "DREAM_3"
             elif feedback == "_yyy_":
-                current_guess = "CREMA"
+                current_state = "CREMA_3"
             elif feedback == "gg_yg":
-                current_guess = "BEARD"
+                current_state = "BEARD_3"
             elif feedback == "gy_g_":
-                current_guess = "BREAK"
+                current_state = "BREAK_3"
             elif feedback == "gy_gg":
-                current_guess = "BREAD"
+                current_state = "BREAD_3"
             elif feedback == "gyyg_":
-                current_guess = "BREAM"
+                current_state = "BREAM_3"
             elif feedback == "yg_g_":
-                current_guess = "REBAR"
+                current_state = "REBAR_3"
             elif feedback == "yg_gy":
-                current_guess = "DEBAR"
+                current_state = "DEBAR_3"
             elif feedback == "yg_y_":
-                current_guess = "ZEBRA"
+                current_state = "ZEBRA_3"
             elif feedback == "yyyy_":
-                current_guess = "AMBER"
+                current_state = "AMBER_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BERET":
+        elif current_state == "BERET_2":
             if feedback == "_gg_g":
-                current_guess = "MERIT"
+                current_state = "MERIT_3"
             elif feedback == "_gg_y":
-                current_guess = "HERTZ"
+                current_state = "HERTZ_3"
             elif feedback == "_yggg":
-                current_guess = "EGRET"
+                current_state = "EGRET_3"
             elif feedback == "ggg_y":
-                current_guess = "BERTH"
+                current_state = "BERTH_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEVER":
+        elif current_state == "BEVER_3":
             if feedback == "___gg":
-                current_guess = "FLYER"
+                current_state = "FLYER_4"
             elif feedback == "___gy":
-                current_guess = "GRUEL"
+                current_state = "GRUEL_4"
             elif feedback == "_g__g":
-                current_guess = "LEMUR"
+                current_state = "LEMUR_4"
             elif feedback == "_g__y":
-                current_guess = "REPLY"
+                current_state = "REPLY_4"
             elif feedback == "_g_gg":
-                current_guess = "LEPER"
+                current_state = "LEPER_4"
             elif feedback == "_g_gy":
-                current_guess = "REPEL"
+                current_state = "REPEL_4"
             elif feedback == "_g_yy":
-                current_guess = "LEERY"
+                current_state = "LEERY_4"
             elif feedback == "_gggg":
-                current_guess = "LEVER"
+                current_state = "LEVER_4"
             elif feedback == "_gggy":
-                current_guess = "REVEL"
+                current_state = "REVEL_4"
             elif feedback == "g__gg":
-                current_guess = "BLUER"
+                current_state = "BLUER_4"
             elif feedback == "yg_gy":
-                current_guess = "REBEL"
+                current_state = "REBEL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BEVUE":
+        elif current_state == "BEVUE_3":
             if feedback == "_g__y":
-                current_guess = "JEWEL"
+                current_state = "JEWEL_4"
             elif feedback == "_gg_y":
-                current_guess = "LEVEL"
+                current_state = "LEVEL_4"
             elif feedback == "_y___":
-                current_guess = "IMPEL"
+                current_state = "IMPEL_4"
             elif feedback == "_y__y":
-                current_guess = "EXCEL"
+                current_state = "EXCEL_4"
             elif feedback == "_y_y_":
-                current_guess = "KUGEL"
+                current_state = "KUGEL_4"
             elif feedback == "_yg__":
-                current_guess = "HOVEL"
+                current_state = "HOVEL_4"
             elif feedback == "_yy__":
-                current_guess = "VOWEL"
+                current_state = "VOWEL_4"
             elif feedback == "gg__y":
-                current_guess = "BEZEL"
+                current_state = "BEZEL_4"
             elif feedback == "ggg_y":
-                current_guess = "BEVEL"
+                current_state = "BEVEL_4"
             elif feedback == "gy___":
-                current_guess = "BOWEL"
+                current_state = "BOWEL_4"
             elif feedback == "yy___":
-                current_guess = "LIBEL"
+                current_state = "LIBEL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BHANG":
+        elif current_state == "BHANG_3":
             if feedback == "_____":
-                current_guess = "FROZE"
+                current_state = "FROZE_4"
             elif feedback == "____y":
-                current_guess = "GROVE"
+                current_state = "GROVE_4"
             elif feedback == "_g___":
-                current_guess = "CHORE"
+                current_state = "CHORE_4"
             elif feedback == "_y___":
-                current_guess = "OCHRE"
+                current_state = "OCHRE_4"
             elif feedback == "g____":
-                current_guess = "BROKE"
+                current_state = "BROKE_4"
             elif feedback == "y____":
-                current_guess = "OMBRE"
+                current_state = "OMBRE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIACH":
+        elif current_state == "BIACH_2":
             if feedback == "__g__":
-                current_guess = "LEASE"
+                current_state = "LEASE_3"
             elif feedback == "__g_y":
-                current_guess = "PHASE"
+                current_state = "PHASE_3"
             elif feedback == "__gy_":
-                current_guess = "CEASE"
+                current_state = "CEASE_3"
             elif feedback == "__gyy":
-                current_guess = "CHASE"
+                current_state = "CHASE_3"
             elif feedback == "__y__":
-                current_guess = "AMUSE"
+                current_state = "AMUSE_3"
             elif feedback == "_yy__":
-                current_guess = "ANISE"
+                current_state = "ANISE_3"
             elif feedback == "g_g__":
-                current_guess = "BLASE"
+                current_state = "BLASE_3"
             elif feedback == "y_g__":
-                current_guess = "ABASE"
+                current_state = "ABASE_3"
             elif feedback == "y_y__":
-                current_guess = "ABUSE"
+                current_state = "ABUSE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BICCY":
+        elif current_state == "BICCY_3":
             if feedback == "_y___":
-                current_guess = "OWING"
+                current_state = "OWING_4"
             elif feedback == "_y__y":
-                current_guess = "VYING"
+                current_state = "VYING_4"
             elif feedback == "_yy__":
-                current_guess = "ICING"
+                current_state = "ICING_4"
             elif feedback == "gy___":
-                current_guess = "BOING"
+                current_state = "BOING_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BICEP":
+        elif current_state == "BICEP_3":
             if feedback == "__yg_":
-                current_guess = "CHEEK"
+                current_state = "CHEEK_4"
             elif feedback == "__ygg":
-                current_guess = "CHEEP"
+                current_state = "CHEEP_4"
             elif feedback == "_yyg_":
-                current_guess = "CHIEF"
+                current_state = "CHIEF_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIFFY":
+        elif current_state == "BIFFY_2":
             if feedback == "_____":
-                current_guess = "NORTH"
+                current_state = "NORTH_3"
             elif feedback == "__y__":
-                current_guess = "FORTH"
+                current_state = "FORTH_3"
             elif feedback == "__y_g":
-                current_guess = "FORTY"
+                current_state = "FORTY_3"
             elif feedback == "_g___":
-                current_guess = "GIRTH"
+                current_state = "GIRTH_3"
             elif feedback == "_g__g":
-                current_guess = "DIRTY"
+                current_state = "DIRTY_3"
             elif feedback == "_gy__":
-                current_guess = "FIRTH"
+                current_state = "FIRTH_3"
             elif feedback == "g____":
-                current_guess = "BURNT"
+                current_state = "BURNT_3"
             elif feedback == "gg___":
-                current_guess = "BIRTH"
+                current_state = "BIRTH_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIGLY":
+        elif current_state == "BIGLY_3":
             if feedback == "_____":
-                current_guess = "HUTCH"
+                current_state = "HUTCH_4"
             elif feedback == "____g":
-                current_guess = "PUTTY"
+                current_state = "PUTTY_4"
             elif feedback == "___y_":
-                current_guess = "KLUTZ"
+                current_state = "KLUTZ_4"
             elif feedback == "__y_g":
-                current_guess = "GUTTY"
+                current_state = "GUTTY_4"
             elif feedback == "g____":
-                current_guess = "BUTCH"
+                current_state = "BUTCH_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIKER":
+        elif current_state == "BIKER_4":
             if feedback == "_gggg":
-                current_guess = "HIKER"
+                current_state = "HIKER_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BINGE":
+        elif current_state == "BINGE_3":
             if feedback == "_gggg":
-                current_guess = "HINGE"
+                current_state = "HINGE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BINGO":
+        elif current_state == "BINGO_3":
             if feedback == "_g_g_":
-                current_guess = "PIGGY"
+                current_state = "PIGGY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIOME":
+        elif current_state == "BIOME_3":
             if feedback == "_gg_g":
-                current_guess = "DIODE"
+                current_state = "DIODE_4"
             elif feedback == "_yy_g":
-                current_guess = "OXIDE"
+                current_state = "OXIDE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIONT":
+        elif current_state == "BIONT_2":
             if feedback == "____g":
-                current_guess = "CRYPT"
+                current_state = "CRYPT_3"
             elif feedback == "___gg":
-                current_guess = "GRUNT"
+                current_state = "GRUNT_3"
             elif feedback == "__g_g":
-                current_guess = "GROUT"
+                current_state = "GROUT_3"
             elif feedback == "__g_y":
-                current_guess = "FROTH"
+                current_state = "FROTH_3"
             elif feedback == "__ggg":
-                current_guess = "FRONT"
+                current_state = "FRONT_3"
             elif feedback == "__y_g":
-                current_guess = "COURT"
+                current_state = "COURT_3"
             elif feedback == "__y_y":
-                current_guess = "MOTOR"
+                current_state = "MOTOR_3"
             elif feedback == "_g__g":
-                current_guess = "RIGHT"
+                current_state = "RIGHT_3"
             elif feedback == "_g__y":
-                current_guess = "RITZY"
+                current_state = "RITZY_3"
             elif feedback == "_gy_y":
-                current_guess = "VITRO"
+                current_state = "VITRO_3"
             elif feedback == "_gyyy":
-                current_guess = "NITRO"
+                current_state = "NITRO_3"
             elif feedback == "_y__g":
-                current_guess = "DRIFT"
+                current_state = "DRIFT_3"
             elif feedback == "_y__y":
-                current_guess = "FRITZ"
+                current_state = "FRITZ_3"
             elif feedback == "_y_gg":
-                current_guess = "PRINT"
+                current_state = "PRINT_3"
             elif feedback == "_yg_g":
-                current_guess = "DROIT"
+                current_state = "DROIT_3"
             elif feedback == "_yyyy":
-                current_guess = "INTRO"
+                current_state = "INTRO_3"
             elif feedback == "g___g":
-                current_guess = "BLURT"
+                current_state = "BLURT_3"
             elif feedback == "g__gg":
-                current_guess = "BRUNT"
+                current_state = "BRUNT_3"
             elif feedback == "g_g_y":
-                current_guess = "BROTH"
+                current_state = "BROTH_3"
             elif feedback == "y_y_g":
-                current_guess = "ROBOT"
+                current_state = "ROBOT_3"
             elif feedback == "yyy_g":
-                current_guess = "ORBIT"
+                current_state = "ORBIT_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIOTA":
+        elif current_state == "BIOTA_2":
             if feedback == "___y_":
-                current_guess = "METRE"
+                current_state = "METRE_3"
             elif feedback == "__gg_":
-                current_guess = "WROTE"
+                current_state = "WROTE_3"
             elif feedback == "__yg_":
-                current_guess = "ROUTE"
+                current_state = "ROUTE_3"
             elif feedback == "__yy_":
-                current_guess = "OUTRE"
+                current_state = "OUTRE_3"
             elif feedback == "_g_y_":
-                current_guess = "LITRE"
+                current_state = "LITRE_3"
             elif feedback == "_y_g_":
-                current_guess = "WRITE"
+                current_state = "WRITE_3"
             elif feedback == "_y_y_":
-                current_guess = "RETIE"
+                current_state = "RETIE_3"
             elif feedback == "g__g_":
-                current_guess = "BRUTE"
+                current_state = "BRUTE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BIPOD":
+        elif current_state == "BIPOD_3":
             if feedback == "_g__g":
-                current_guess = "VIVID"
+                current_state = "VIVID_4"
             elif feedback == "_y_yg":
-                current_guess = "OVOID"
+                current_state = "OVOID_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BISON":
+        elif current_state == "BISON_3":
             if feedback == "__y_y":
-                current_guess = "SYNCH"
+                current_state = "SYNCH_4"
             elif feedback == "__ygg":
-                current_guess = "SWOON"
+                current_state = "SWOON_4"
             elif feedback == "__ygy":
-                current_guess = "SYNOD"
+                current_state = "SYNOD_4"
             elif feedback == "__yyg":
-                current_guess = "SHOWN"
+                current_state = "SHOWN_4"
             elif feedback == "__yyy":
-                current_guess = "SNOWY"
+                current_state = "SNOWY_4"
             elif feedback == "_yy_y":
-                current_guess = "SNIFF"
+                current_state = "SNIFF_4"
             elif feedback == "_yygg":
-                current_guess = "SCION"
+                current_state = "SCION_4"
             elif feedback == "_yyyy":
-                current_guess = "SONIC"
+                current_state = "SONIC_4"
             elif feedback == "g_ggg":
-                current_guess = "BOSON"
+                current_state = "BOSON_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BITER":
+        elif current_state == "BITER_4":
             if feedback == "_gggg":
-                current_guess = "LITER"
+                current_state = "LITER_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BITTY":
+        elif current_state == "BITTY_4":
             if feedback == "_gggg":
-                current_guess = "KITTY"
+                current_state = "KITTY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLACK":
+        elif current_state == "BLACK_3":
             if feedback == "_gggg":
-                current_guess = "FLACK"
+                current_state = "FLACK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLADE":
+        elif current_state == "BLADE_3":
             if feedback == "_gggg":
-                current_guess = "CLADE"
+                current_state = "CLADE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLARE":
+        elif current_state == "BLARE_3":
             if feedback == "__ggg":
-                current_guess = "AWARE"
+                current_state = "AWARE_4"
             elif feedback == "_gggg":
-                current_guess = "FLARE"
+                current_state = "FLARE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLEEP":
+        elif current_state == "BLEEP_3":
             if feedback == "_y_g_":
-                current_guess = "GOLEM"
+                current_state = "GOLEM_4"
             elif feedback == "_y_gg":
-                current_guess = "JULEP"
+                current_state = "JULEP_4"
             elif feedback == "yyyg_":
-                current_guess = "CELEB"
+                current_state = "CELEB_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLIMP":
+        elif current_state == "BLIMP_3":
             if feedback == "_____":
-                current_guess = "HONEY"
+                current_state = "HONEY_4"
             elif feedback == "___y_":
-                current_guess = "MONEY"
+                current_state = "MONEY_4"
             elif feedback == "__y__":
-                current_guess = "WINEY"
+                current_state = "WINEY_4"
             elif feedback == "__y_y":
-                current_guess = "PINEY"
+                current_state = "PINEY_4"
             elif feedback == "g____":
-                current_guess = "BONEY"
+                current_state = "BONEY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLINK":
+        elif current_state == "BLINK_4":
             if feedback == "_gggg":
-                current_guess = "PLINK"
+                current_state = "PLINK_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLITZ":
+        elif current_state == "BLITZ_4":
             if feedback == "_gggg":
-                current_guess = "GLITZ"
+                current_state = "GLITZ_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLOCK":
+        elif current_state == "BLOCK_4":
             if feedback == "ggg__":
-                current_guess = "BLOWN"
+                current_state = "BLOWN_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLOND":
+        elif current_state == "BLOND_2":
             if feedback == "_____":
-                current_guess = "CHARM"
+                current_state = "CHARM_3"
             elif feedback == "____g":
-                current_guess = "AARGH"
+                current_state = "AARGH_3"
             elif feedback == "____y":
-                current_guess = "DIARY"
+                current_state = "DIARY_3"
             elif feedback == "___g_":
-                current_guess = "FRANC"
+                current_state = "FRANC_3"
             elif feedback == "___gg":
-                current_guess = "GRAND"
+                current_state = "GRAND_3"
             elif feedback == "___gy":
-                current_guess = "DRANK"
+                current_state = "DRANK_3"
             elif feedback == "___y_":
-                current_guess = "ANGRY"
+                current_state = "ANGRY_3"
             elif feedback == "___yy":
-                current_guess = "DRAIN"
+                current_state = "DRAIN_3"
             elif feedback == "__g__":
-                current_guess = "AGORA"
+                current_state = "AGORA_3"
             elif feedback == "__gy_":
-                current_guess = "ACORN"
+                current_state = "ACORN_3"
             elif feedback == "__gyy":
-                current_guess = "ADORN"
+                current_state = "ADORN_3"
             elif feedback == "__y__":
-                current_guess = "HOARY"
+                current_state = "HOARY_3"
             elif feedback == "__y_g":
-                current_guess = "HOARD"
+                current_state = "HOARD_3"
             elif feedback == "__y_y":
-                current_guess = "ARDOR"
+                current_state = "ARDOR_3"
             elif feedback == "__yy_":
-                current_guess = "ARGON"
+                current_state = "ARGON_3"
             elif feedback == "_g___":
-                current_guess = "ALARM"
+                current_state = "ALARM_3"
             elif feedback == "_g_y_":
-                current_guess = "ULNAR"
+                current_state = "ULNAR_3"
             elif feedback == "_gg__":
-                current_guess = "FLORA"
-            elif feedback == "_gg_g":
-                current_guess = "FLOOD"
+                current_state = "FLORA_3"
             elif feedback == "_y___":
-                current_guess = "FRAIL"
+                current_state = "FRAIL_3"
             elif feedback == "_y__y":
-                current_guess = "DRAWL"
+                current_state = "DRAWL_3"
             elif feedback == "_y_y_":
-                current_guess = "GNARL"
+                current_state = "GNARL_3"
             elif feedback == "_yy__":
-                current_guess = "MOLAR"
+                current_state = "MOLAR_3"
             elif feedback == "g____":
-                current_guess = "BRAVA"
+                current_state = "BRAVA_3"
             elif feedback == "g___g":
-                current_guess = "BRAID"
+                current_state = "BRAID_3"
             elif feedback == "g__gg":
-                current_guess = "BRAND"
+                current_state = "BRAND_3"
             elif feedback == "g__y_":
-                current_guess = "BRAIN"
+                current_state = "BRAIN_3"
             elif feedback == "g_g_g":
-                current_guess = "BROAD"
+                current_state = "BROAD_3"
             elif feedback == "g_y__":
-                current_guess = "BRAVO"
+                current_state = "BRAVO_3"
             elif feedback == "g_y_g":
-                current_guess = "BOARD"
-            elif feedback == "ggg_g":
-                current_guess = "BLOOD"
+                current_state = "BOARD_3"
             elif feedback == "gy___":
-                current_guess = "BRAWL"
+                current_state = "BRAWL_3"
             elif feedback == "y____":
-                current_guess = "RUMBA"
+                current_state = "RUMBA_3"
             elif feedback == "y__y_":
-                current_guess = "URBAN"
+                current_state = "URBAN_3"
             elif feedback == "y_y__":
-                current_guess = "ABHOR"
+                current_state = "ABHOR_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLUFF":
+        elif current_state == "BLOND_3":
+            if feedback == "_gg_g":
+                current_state = "FLOOD_4"
+            elif feedback == "ggg_g":
+                current_state = "BLOOD_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "BLUFF_4":
             if feedback == "_gggg":
-                current_guess = "FLUFF"
+                current_state = "FLUFF_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BLUNT":
+        elif current_state == "BLUNT_3":
             if feedback == "__yyg":
-                current_guess = "UNFIT"
+                current_state = "UNFIT_4"
             elif feedback == "_yyyg":
-                current_guess = "UNLIT"
+                current_state = "UNLIT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOAST":
+        elif current_state == "BOAST_2":
             if feedback == "__ggg":
-                current_guess = "AVAST"
+                current_state = "AVAST_3"
             elif feedback == "__ggy":
-                current_guess = "STASH"
+                current_state = "STASH_3"
             elif feedback == "__ygg":
-                current_guess = "ANGST"
+                current_state = "ANGST_3"
             elif feedback == "__ygy":
-                current_guess = "ANTSY"
+                current_state = "ANTSY_3"
             elif feedback == "_gggg":
-                current_guess = "COAST"
+                current_state = "COAST_3"
             elif feedback == "g_ggg":
-                current_guess = "BLAST"
+                current_state = "BLAST_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOBBY":
+        elif current_state == "BOBBY_4":
             if feedback == "_g__g":
-                current_guess = "COCKY"
+                current_state = "COCKY_5"
             elif feedback == "gg___":
-                current_guess = "BOFFO"
+                current_state = "BOFFO_5"
             elif feedback == "gg__g":
-                current_guess = "BONNY"
+                current_state = "BONNY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOCCE":
+        elif current_state == "BOCCE_3":
             if feedback == "_gy_g":
-                current_guess = "COUPE"
+                current_state = "COUPE_4"
             elif feedback == "gg__g":
-                current_guess = "BOOZE"
+                current_state = "BOOZE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOGEY":
+        elif current_state == "BOGEY_4":
             if feedback == "_g_gg":
-                current_guess = "JOKEY"
+                current_state = "JOKEY_5"
             elif feedback == "_gggg":
-                current_guess = "FOGEY"
+                current_state = "FOGEY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOGGY":
+        elif current_state == "BOGGY_3":
             if feedback == "__g_g":
-                current_guess = "PYGMY"
+                current_state = "PYGMY_4"
             elif feedback == "_gggg":
-                current_guess = "FOGGY"
+                current_state = "FOGGY_4"
             elif feedback == "gg_g_":
-                current_guess = "BONGO"
+                current_state = "BONGO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOGUE":
+        elif current_state == "BOGUE_2":
             if feedback == "_____":
-                current_guess = "WRIST"
+                current_state = "WRIST_3"
             elif feedback == "___y_":
-                current_guess = "CRUST"
+                current_state = "CRUST_3"
             elif feedback == "__y__":
-                current_guess = "GRIST"
+                current_state = "GRIST_3"
             elif feedback == "_g___":
-                current_guess = "ROOST"
+                current_state = "ROOST_3"
             elif feedback == "_g_y_":
-                current_guess = "ROUST"
+                current_state = "ROUST_3"
             elif feedback == "_y___":
-                current_guess = "FROST"
+                current_state = "FROST_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOLUS":
+        elif current_state == "BOLUS_3":
             if feedback == "__gyy":
-                current_guess = "SULLY"
+                current_state = "SULLY_4"
             elif feedback == "_gygg":
-                current_guess = "LOCUS"
+                current_state = "LOCUS_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOOBY":
+        elif current_state == "BOOBY_4":
             if feedback == "__g__":
-                current_guess = "KNOCK"
+                current_state = "KNOCK_5"
             elif feedback == "_gg_g":
-                current_guess = "KOOKY"
+                current_state = "KOOKY_5"
             elif feedback == "ggg_g":
-                current_guess = "BOOZY"
+                current_state = "BOOZY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOOFY":
+        elif current_state == "BOOFY_3":
             if feedback == "_____":
-                current_guess = "DATUM"
+                current_state = "DATUM_4"
             elif feedback == "____g":
-                current_guess = "NATTY"
+                current_state = "NATTY_4"
             elif feedback == "___y_":
-                current_guess = "FATWA"
+                current_state = "FATWA_4"
             elif feedback == "___yg":
-                current_guess = "FATTY"
+                current_state = "FATTY_4"
             elif feedback == "_y___":
-                current_guess = "MATZO"
+                current_state = "MATZO_4"
             elif feedback == "g___g":
-                current_guess = "BATTY"
+                current_state = "BATTY_4"
             elif feedback == "gy___":
-                current_guess = "BATON"
+                current_state = "BATON_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BORED":
+        elif current_state == "BORED_3":
             if feedback == "_ggg_":
-                current_guess = "MOREL"
+                current_state = "MOREL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BORIC":
+        elif current_state == "BORIC_3":
             if feedback == "_gg_y":
-                current_guess = "PORCH"
+                current_state = "PORCH_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOUGH":
+        elif current_state == "BOUGH_3":
             if feedback == "_gggg":
-                current_guess = "COUGH"
+                current_state = "COUGH_4"
             elif feedback == "_ggy_":
-                current_guess = "YOUNG"
+                current_state = "YOUNG_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOULE":
+        elif current_state == "BOULE_3":
             if feedback == "_gggg":
-                current_guess = "JOULE"
+                current_state = "JOULE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOWER":
+        elif current_state == "BOWER_4":
             if feedback == "_gggg":
-                current_guess = "ROWER"
+                current_state = "ROWER_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BOXER":
+        elif current_state == "BOXER_5":
             if feedback == "_g_gg":
-                current_guess = "ROVER"
+                current_state = "ROVER_6"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BRAIN":
+        elif current_state == "BRAIN_3":
             if feedback == "ggg_g":
-                current_guess = "BRAWN"
+                current_state = "BRAWN_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BRAVA":
+        elif current_state == "BRAVA_3":
             if feedback == "ggy__":
-                current_guess = "BRIAR"
+                current_state = "BRIAR_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BRICK":
+        elif current_state == "BRICK_3":
             if feedback == "_ggg_":
-                current_guess = "PRICY"
+                current_state = "PRICY_4"
             elif feedback == "_gggg":
-                current_guess = "PRICK"
+                current_state = "PRICK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BRIDE":
+        elif current_state == "BRIDE_3":
             if feedback == "_ggyg":
-                current_guess = "DRIVE"
+                current_state = "DRIVE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BRIEF":
+        elif current_state == "BRIEF_4":
             if feedback == "_gggg":
-                current_guess = "GRIEF"
+                current_state = "GRIEF_5"
             elif feedback == "_yyy_":
-                current_guess = "REMIX"
+                current_state = "REMIX_5"
             elif feedback == "gggg_":
-                current_guess = "BRIER"
+                current_state = "BRIER_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BRINE":
+        elif current_state == "BRINE_3":
             if feedback == "_gggg":
-                current_guess = "URINE"
+                current_state = "URINE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BROOM":
+        elif current_state == "BROOM_3":
             if feedback == "_ggg_":
-                current_guess = "PROOF"
+                current_state = "PROOF_4"
             elif feedback == "_gggg":
-                current_guess = "GROOM"
+                current_state = "GROOM_4"
             elif feedback == "_ygg_":
-                current_guess = "FLOOR"
+                current_state = "FLOOR_4"
             elif feedback == "gggg_":
-                current_guess = "BROOK"
+                current_state = "BROOK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BUCHU":
+        elif current_state == "BUCHU_2":
             if feedback == "_____":
-                current_guess = "PASTE"
+                current_state = "PASTE_3"
             elif feedback == "___y_":
-                current_guess = "HASTE"
+                current_state = "HASTE_3"
             elif feedback == "__y__":
-                current_guess = "CASTE"
+                current_state = "CASTE_3"
             elif feedback == "_y___":
-                current_guess = "SAUTE"
+                current_state = "SAUTE_3"
             elif feedback == "g____":
-                current_guess = "BASTE"
+                current_state = "BASTE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BUGGY":
+        elif current_state == "BUGGY_3":
             if feedback == "__y__":
-                current_guess = "WRING"
+                current_state = "WRING_4"
             elif feedback == "_g___":
-                current_guess = "RUNUP"
+                current_state = "RUNUP_4"
             elif feedback == "_g__g":
-                current_guess = "RUNNY"
+                current_state = "RUNNY_4"
             elif feedback == "_gy__":
-                current_guess = "RUING"
+                current_state = "RUING_4"
             elif feedback == "_yy__":
-                current_guess = "WRUNG"
+                current_state = "WRUNG_4"
             elif feedback == "g____":
-                current_guess = "BRINK"
+                current_state = "BRINK_4"
             elif feedback == "g___g":
-                current_guess = "BRINY"
+                current_state = "BRINY_4"
             elif feedback == "g_y__":
-                current_guess = "BRING"
+                current_state = "BRING_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BUILD":
+        elif current_state == "BUILD_2":
             if feedback == "_____":
-                current_guess = "EMOTE"
+                current_state = "EMOTE_3"
             elif feedback == "__g__":
-                current_guess = "WHITE"
+                current_state = "WHITE_3"
             elif feedback == "__gy_":
-                current_guess = "ELITE"
+                current_state = "ELITE_3"
             elif feedback == "__yy_":
-                current_guess = "LITHE"
+                current_state = "LITHE_3"
             elif feedback == "_g___":
-                current_guess = "QUOTE"
+                current_state = "QUOTE_3"
             elif feedback == "_gg__":
-                current_guess = "QUITE"
+                current_state = "QUITE_3"
             elif feedback == "_gy__":
-                current_guess = "CUTIE"
+                current_state = "CUTIE_3"
             elif feedback == "_y___":
-                current_guess = "CHUTE"
+                current_state = "CHUTE_3"
             elif feedback == "_y__y":
-                current_guess = "ETUDE"
+                current_state = "ETUDE_3"
             elif feedback == "_y_y_":
-                current_guess = "FLUTE"
+                current_state = "FLUTE_3"
             elif feedback == "_yg__":
-                current_guess = "UNITE"
+                current_state = "UNITE_3"
             elif feedback == "_ygg_":
-                current_guess = "UTILE"
+                current_state = "UTILE_3"
             elif feedback == "_yy__":
-                current_guess = "UNTIE"
+                current_state = "UNTIE_3"
             elif feedback == "gg___":
-                current_guess = "BUTTE"
+                current_state = "BUTTE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BULKY":
+        elif current_state == "BULKY_3":
             if feedback == "_gg__":
-                current_guess = "MULCH"
+                current_state = "MULCH_4"
             elif feedback == "_gg_g":
-                current_guess = "PULPY"
+                current_state = "PULPY_4"
             elif feedback == "_gggg":
-                current_guess = "HULKY"
+                current_state = "HULKY_4"
             elif feedback == "_gy__":
-                current_guess = "LUNCH"
+                current_state = "LUNCH_4"
             elif feedback == "_gy_g":
-                current_guess = "LUMPY"
+                current_state = "LUMPY_4"
             elif feedback == "_gygg":
-                current_guess = "LUCKY"
+                current_state = "LUCKY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BULLY":
+        elif current_state == "BULLY_3":
             if feedback == "_gggg":
-                current_guess = "FULLY"
+                current_state = "FULLY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BUMPH":
+        elif current_state == "BUMPH_3":
             if feedback == "_____":
-                current_guess = "WEDGE"
+                current_state = "WEDGE_4"
             elif feedback == "____y":
-                current_guess = "HEDGE"
+                current_state = "HEDGE_4"
             elif feedback == "_g___":
-                current_guess = "FUDGE"
+                current_state = "FUDGE_4"
             elif feedback == "_g__g":
-                current_guess = "HUNCH"
+                current_state = "HUNCH_4"
             elif feedback == "_g__y":
-                current_guess = "HUFFY"
+                current_state = "HUFFY_4"
             elif feedback == "_g_g_":
-                current_guess = "PUPPY"
+                current_state = "PUPPY_4"
             elif feedback == "_g_y_":
-                current_guess = "PUDGE"
+                current_state = "PUDGE_4"
             elif feedback == "_g_yg":
-                current_guess = "PUNCH"
+                current_state = "PUNCH_4"
             elif feedback == "_gg__":
-                current_guess = "MUMMY"
+                current_state = "MUMMY_4"
             elif feedback == "_ggg_":
-                current_guess = "JUMPY"
+                current_state = "JUMPY_4"
             elif feedback == "_gggg":
-                current_guess = "HUMPH"
+                current_state = "HUMPH_4"
             elif feedback == "_gy__":
-                current_guess = "MUCKY"
+                current_state = "MUCKY_4"
             elif feedback == "_gy_g":
-                current_guess = "MUNCH"
+                current_state = "MUNCH_4"
             elif feedback == "_y___":
-                current_guess = "FOUND"
+                current_state = "FOUND_4"
             elif feedback == "_y__y":
-                current_guess = "HOUND"
+                current_state = "HOUND_4"
             elif feedback == "_y_y_":
-                current_guess = "POUND"
+                current_state = "POUND_4"
             elif feedback == "_yy__":
-                current_guess = "MOUND"
+                current_state = "MOUND_4"
             elif feedback == "gg___":
-                current_guess = "BUDGE"
+                current_state = "BUDGE_4"
             elif feedback == "gg__g":
-                current_guess = "BUNCH"
+                current_state = "BUNCH_4"
             elif feedback == "gggg_":
-                current_guess = "BUMPY"
+                current_state = "BUMPY_4"
             elif feedback == "ggy__":
-                current_guess = "BUXOM"
+                current_state = "BUXOM_4"
             elif feedback == "gy___":
-                current_guess = "BOUND"
+                current_state = "BOUND_4"
             elif feedback == "yg___":
-                current_guess = "CUBBY"
+                current_state = "CUBBY_4"
             elif feedback == "yg__y":
-                current_guess = "HUBBY"
+                current_state = "HUBBY_4"
             elif feedback == "ygg__":
-                current_guess = "JUMBO"
+                current_state = "JUMBO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BUNNY":
+        elif current_state == "BUNNY_4":
             if feedback == "gg__g":
-                current_guess = "BUZZY"
+                current_state = "BUZZY_5"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BURLY":
+        elif current_state == "BURLY_3":
             if feedback == "__ggg":
-                current_guess = "GIRLY"
+                current_state = "GIRLY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "BURRO":
+        elif current_state == "BURRO_3":
             if feedback == "__g_g":
-                current_guess = "FORGO"
+                current_state = "FORGO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CABAL":
+        elif current_state == "CABAL_3":
             if feedback == "gg__g":
-                current_guess = "CAVIL"
+                current_state = "CAVIL_4"
             elif feedback == "gg__y":
-                current_guess = "CAULK"
+                current_state = "CAULK_4"
             elif feedback == "gg_g_":
-                current_guess = "CACAO"
+                current_state = "CACAO_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CABBY":
+        elif current_state == "CABBY_3":
             if feedback == "gg__g":
-                current_guess = "CAMPY"
+                current_state = "CAMPY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CADRE":
+        elif current_state == "CADRE_2":
             if feedback == "_g_yg":
-                current_guess = "RANGE"
+                current_state = "RANGE_3"
             elif feedback == "_gggg":
-                current_guess = "PADRE"
+                current_state = "PADRE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CAMEO":
+        elif current_state == "CAMEO_3":
             if feedback == "_ggg_":
-                current_guess = "FAMED"
+                current_state = "FAMED_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CANON":
+        elif current_state == "CANON_3":
             if feedback == "gg__g":
-                current_guess = "CABIN"
+                current_state = "CABIN_4"
             elif feedback == "gg_gg":
-                current_guess = "CAPON"
+                current_state = "CAPON_4"
             elif feedback == "ggg__":
-                current_guess = "CANAL"
+                current_state = "CANAL_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CAPHS":
+        elif current_state == "CAPHS_3":
             if feedback == "____y":
-                current_guess = "STOUT"
+                current_state = "STOUT_4"
             elif feedback == "___yy":
-                current_guess = "SHOUT"
+                current_state = "SHOUT_4"
             elif feedback == "__y_y":
-                current_guess = "SPOUT"
+                current_state = "SPOUT_4"
             elif feedback == "y___y":
-                current_guess = "SCOUT"
+                current_state = "SCOUT_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CAPIZ":
+        elif current_state == "CAPIZ_3":
             if feedback == "_y___":
-                current_guess = "GRAVE"
+                current_state = "GRAVE_4"
             elif feedback == "_y__y":
-                current_guess = "GRAZE"
+                current_state = "GRAZE_4"
             elif feedback == "_yy__":
-                current_guess = "GRAPE"
+                current_state = "GRAPE_4"
             elif feedback == "yy___":
-                current_guess = "GRACE"
+                current_state = "GRACE_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CAPRI":
+        elif current_state == "CAPRI_3":
             if feedback == "_g_yy":
-                current_guess = "FAKIR"
+                current_state = "FAKIR_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CARET":
+        elif current_state == "CARET_2":
             if feedback == "_ggyy":
-                current_guess = "EARTH"
+                current_state = "EARTH_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CARNY":
+        elif current_state == "CARNY_3":
             if feedback == "ggg_g":
-                current_guess = "CARRY"
+                current_state = "CARRY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CARVY":
+        elif current_state == "CARVY_3":
             if feedback == "_gy__":
-                current_guess = "PAPER"
+                current_state = "PAPER_4"
             elif feedback == "_gy_y":
-                current_guess = "PAYER"
+                current_state = "PAYER_4"
             elif feedback == "_gyy_":
-                current_guess = "PAVER"
+                current_state = "PAVER_4"
             elif feedback == "ggy__":
-                current_guess = "CAPER"
+                current_state = "CAPER_4"
             elif feedback == "ygy__":
-                current_guess = "PACER"
+                current_state = "PACER_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CATCH":
+        elif current_state == "CATCH_3":
             if feedback == "ggg__":
-                current_guess = "CATTY"
+                current_state = "CATTY_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CHAFF":
+        elif current_state == "CHAFF_3":
             if feedback == "ggg__":
-                current_guess = "CHAMP"
+                current_state = "CHAMP_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CHALK":
+        elif current_state == "CHALK_2":
             if feedback == "__g__":
-                current_guess = "SPADE"
+                current_state = "SPADE_3"
             elif feedback == "__g_y":
-                current_guess = "SNAKE"
+                current_state = "SNAKE_3"
             elif feedback == "__gg_":
-                current_guess = "SWALE"
+                current_state = "SWALE_3"
             elif feedback == "__gyy":
-                current_guess = "SLAKE"
+                current_state = "SLAKE_3"
             elif feedback == "__y__":
-                current_guess = "ASIDE"
+                current_state = "ASIDE_3"
             elif feedback == "__yg_":
-                current_guess = "AISLE"
+                current_state = "AISLE_3"
             elif feedback == "_gg__":
-                current_guess = "AMPED"
+                current_state = "AMPED_3"
             elif feedback == "_gg_y":
-                current_guess = "SHAKE"
+                current_state = "SHAKE_3"
             elif feedback == "_ggg_":
-                current_guess = "SHALE"
-            elif feedback == "g_gy_":
-                current_guess = "CLAMP"
-            elif feedback == "g_gyg":
-                current_guess = "CLACK"
+                current_state = "SHALE_3"
             elif feedback == "y_g__":
-                current_guess = "SCAPE"
+                current_state = "SCAPE_3"
             elif feedback == "y_gg_":
-                current_guess = "SCALE"
+                current_state = "SCALE_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "CHANT":
-            if feedback == "__ggg":
-                current_guess = "QUANT"
-            elif feedback == "y_y_g":
-                current_guess = "DUCAT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHAOS":
-            if feedback == "y_g_y":
-                current_guess = "SMACK"
-            elif feedback == "ygg_y":
-                current_guess = "SHACK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHARM":
-            if feedback == "__gg_":
-                current_guess = "QUARK"
-            elif feedback == "__gy_":
-                current_guess = "GRAVY"
-            elif feedback == "__yy_":
-                current_guess = "AUGUR"
-            elif feedback == "__yyy":
-                current_guess = "PRIMA"
-            elif feedback == "_ggg_":
-                current_guess = "WHARF"
-            elif feedback == "_ygy_":
-                current_guess = "GRAPH"
-            elif feedback == "g_gy_":
-                current_guess = "CRACK"
-            elif feedback == "g_gyy":
-                current_guess = "CRAMP"
-            elif feedback == "g_yy_":
-                current_guess = "CIGAR"
-            elif feedback == "gggg_":
-                current_guess = "CHARY"
-            elif feedback == "gggy_":
-                current_guess = "CHAIR"
-            elif feedback == "y_gy_":
-                current_guess = "FRACK"
-            elif feedback == "y_yy_":
-                current_guess = "VICAR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHART":
-            if feedback == "__ggg":
-                current_guess = "QUART"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHAWL":
-            if feedback == "__y__":
-                current_guess = "ADEEM"
-            elif feedback == "__y_y":
-                current_guess = "LATER"
-            elif feedback == "__yy_":
-                current_guess = "WATER"
-            elif feedback == "_yy__":
-                current_guess = "HATER"
-            elif feedback == "g_y__":
-                current_guess = "CATER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHEAP":
-            if feedback == "y_gg_":
-                current_guess = "OCEAN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHEEK":
-            if feedback == "___g_":
-                current_guess = "INSET"
-            elif feedback == "__g__":
-                current_guess = "STENT"
-            elif feedback == "__gg_":
-                current_guess = "SWEET"
-            elif feedback == "__ggy":
-                current_guess = "SKEET"
-            elif feedback == "__yg_":
-                current_guess = "BESET"
-            elif feedback == "_ggg_":
-                current_guess = "SHEET"
-            elif feedback == "y_g__":
-                current_guess = "SCENT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHEEP":
-            if feedback == "__y__":
-                current_guess = "UNDUE"
-            elif feedback == "__yy_":
-                current_guess = "VENUE"
-            elif feedback == "__yyy":
-                current_guess = "PENNE"
-            elif feedback == "y_y__":
-                current_guess = "DUNCE"
-            elif feedback == "y_yy_":
-                current_guess = "FENCE"
-            elif feedback == "y_yyy":
-                current_guess = "PENCE"
-            elif feedback == "yyyy_":
-                current_guess = "HENCE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHILD":
-            if feedback == "_____":
-                current_guess = "TEPEE"
-            elif feedback == "___g_":
-                current_guess = "TULLE"
-            elif feedback == "__g__":
-                current_guess = "TWINE"
-            elif feedback == "__y__":
-                current_guess = "TINGE"
-            elif feedback == "__yg_":
-                current_guess = "TITLE"
-            elif feedback == "__yyy":
-                current_guess = "TILDE"
-            elif feedback == "_g___":
-                current_guess = "THEME"
-            elif feedback == "_gg__":
-                current_guess = "THINE"
-            elif feedback == "_yy__":
-                current_guess = "TITHE"
-            elif feedback == "y_g__":
-                current_guess = "TWICE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHILE":
-            if feedback == "__ggg":
-                current_guess = "EXILE"
-            elif feedback == "__gyg":
-                current_guess = "ELIDE"
-            elif feedback == "__ygg":
-                current_guess = "BIBLE"
-            elif feedback == "_gggg":
-                current_guess = "WHILE"
-            elif feedback == "g_gyg":
-                current_guess = "CLIME"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHILI":
-            if feedback == "gggg_":
-                current_guess = "CHILL"
-            elif feedback == "y_ggy":
-                current_guess = "ICILY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHIMB":
-            if feedback == "_____":
-                current_guess = "FLAKE"
-            elif feedback == "____y":
-                current_guess = "BLAZE"
-            elif feedback == "___g_":
-                current_guess = "FLAME"
-            elif feedback == "___gy":
-                current_guess = "BLAME"
-            elif feedback == "___y_":
-                current_guess = "MODUS"
-            elif feedback == "__g__":
-                current_guess = "FRISK"
-            elif feedback == "__g_y":
-                current_guess = "BRISK"
-            elif feedback == "__gy_":
-                current_guess = "PRISM"
-            elif feedback == "_y___":
-                current_guess = "FROSH"
-            elif feedback == "_y__y":
-                current_guess = "BRUSH"
-            elif feedback == "_y_y_":
-                current_guess = "HUMUS"
-            elif feedback == "_yy__":
-                current_guess = "SUSHI"
-            elif feedback == "g____":
-                current_guess = "CLAVE"
-            elif feedback == "g_g__":
-                current_guess = "CRISP"
-            elif feedback == "gy___":
-                current_guess = "CRUSH"
-            elif feedback == "y____":
-                current_guess = "PLACE"
-            elif feedback == "y__y_":
-                current_guess = "MUCUS"
-            elif feedback == "y_y__":
-                current_guess = "FICUS"
-            elif feedback == "y_yy_":
-                current_guess = "MUSIC"
-            elif feedback == "yy___":
-                current_guess = "HOCUS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHIRP":
-            if feedback == "g__y_":
-                current_guess = "CRUMB"
-            elif feedback == "g__yg":
-                current_guess = "CRUMP"
-            elif feedback == "g_gy_":
-                current_guess = "CRICK"
-            elif feedback == "g_gyg":
-                current_guess = "CRIMP"
-            elif feedback == "gg_g_":
-                current_guess = "CHURL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHOKE":
-            if feedback == "__ggg":
-                current_guess = "EVOKE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHOMP":
-            if feedback == "__g__":
-                current_guess = "GOOEY"
-            elif feedback == "__y__":
-                current_guess = "BOGEY"
-            elif feedback == "__y_y":
-                current_guess = "POKEY"
-            elif feedback == "__yyy":
-                current_guess = "MOPEY"
-            elif feedback == "_yg__":
-                current_guess = "HOOEY"
-            elif feedback == "_yy__":
-                current_guess = "HOKEY"
-            elif feedback == "_yyy_":
-                current_guess = "HOMEY"
-            elif feedback == "g_y__":
-                current_guess = "COVEY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHORD":
-            if feedback == "g_gyg":
-                current_guess = "CROWD"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CHYND":
-            if feedback == "_____":
-                current_guess = "MAMBA"
-            elif feedback == "____g":
-                current_guess = "VALID"
-            elif feedback == "____y":
-                current_guess = "MADAM"
-            elif feedback == "___g_":
-                current_guess = "FAUNA"
-            elif feedback == "___y_":
-                current_guess = "BAGUA"
-            elif feedback == "___yy":
-                current_guess = "PANDA"
-            elif feedback == "__g__":
-                current_guess = "LAYUP"
-            elif feedback == "__y__":
-                current_guess = "GLUME"
-            elif feedback == "__y_y":
-                current_guess = "DALED"
-            elif feedback == "__yg_":
-                current_guess = "NANNY"
-            elif feedback == "__yy_":
-                current_guess = "MANLY"
-            elif feedback == "__yyy":
-                current_guess = "BANDY"
-            elif feedback == "_y___":
-                current_guess = "HAIKU"
-            elif feedback == "_yy__":
-                current_guess = "HAMMY"
-            elif feedback == "_yyy_":
-                current_guess = "HANKY"
-            elif feedback == "_yyyy":
-                current_guess = "HANDY"
-            elif feedback == "g____":
-                current_guess = "CABAL"
-            elif feedback == "g__y_":
-                current_guess = "CANON"
-            elif feedback == "g_y__":
-                current_guess = "CABBY"
-            elif feedback == "g_y_y":
-                current_guess = "CADDY"
-            elif feedback == "g_yg_":
-                current_guess = "CANNY"
-            elif feedback == "g_yyy":
-                current_guess = "CANDY"
-            elif feedback == "y____":
-                current_guess = "MAGIC"
-            elif feedback == "y__y_":
-                current_guess = "MANIC"
-            elif feedback == "y_y__":
-                current_guess = "WACKY"
-            elif feedback == "y_yy_":
-                current_guess = "FANCY"
-            elif feedback == "yy___":
-                current_guess = "HAVOC"
-            elif feedback == "yy__y":
-                current_guess = "DACHA"
-            elif feedback == "yy_y_":
-                current_guess = "NACHO"
-            elif feedback == "yyy__":
-                current_guess = "HACKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CIDER":
-            if feedback == "___gg":
-                current_guess = "SURER"
-            elif feedback == "___gy":
-                current_guess = "SHREW"
-            elif feedback == "___yy":
-                current_guess = "SERUM"
-            elif feedback == "__ygy":
-                current_guess = "SHRED"
-            elif feedback == "_g_gy":
-                current_guess = "SIREN"
-            elif feedback == "_y_yy":
-                current_guess = "SERIF"
-            elif feedback == "gyygy":
-                current_guess = "CRIED"
-            elif feedback == "y__gy":
-                current_guess = "SCREW"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLAMP":
-            if feedback == "__g__":
-                current_guess = "SHARK"
-            elif feedback == "__g_g":
-                current_guess = "SHARP"
-            elif feedback == "__g_y":
-                current_guess = "SPARK"
-            elif feedback == "__gy_":
-                current_guess = "SMARM"
-            elif feedback == "__y__":
-                current_guess = "ARSON"
-            elif feedback == "_yg__":
-                current_guess = "SNARL"
-            elif feedback == "_yy__":
-                current_guess = "SOLAR"
-            elif feedback == "y_g__":
-                current_guess = "SCARF"
-            elif feedback == "y_g_g":
-                current_guess = "SCARP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLANG":
-            if feedback == "gggg_":
-                current_guess = "CLANK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLAPT":
-            if feedback == "__g_g":
-                current_guess = "SHAFT"
-            elif feedback == "__g_y":
-                current_guess = "STAND"
-            elif feedback == "__ggy":
-                current_guess = "STAPH"
-            elif feedback == "__gyy":
-                current_guess = "STAMP"
-            elif feedback == "__y_g":
-                current_guess = "SQUAT"
-            elif feedback == "__y_y":
-                current_guess = "STOMA"
-            elif feedback == "_gg_g":
-                current_guess = "SLANT"
-            elif feedback == "_yg_g":
-                current_guess = "SHALT"
-            elif feedback == "_yg_y":
-                current_guess = "STALK"
-            elif feedback == "_yy_y":
-                current_guess = "ATLAS"
-            elif feedback == "_yyyg":
-                current_guess = "SPLAT"
-            elif feedback == "y_g_g":
-                current_guess = "SCANT"
-            elif feedback == "y_g_y":
-                current_guess = "STACK"
-            elif feedback == "y_y_g":
-                current_guess = "ASCOT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLASP":
-            if feedback == "gggg_":
-                current_guess = "CLASS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLEAN":
-            if feedback == "_ggg_":
-                current_guess = "BLEAK"
-            elif feedback == "_gggg":
-                current_guess = "GLEAN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLERK":
-            if feedback == "gyyy_":
-                current_guess = "CRUEL"
-            elif feedback == "ygyy_":
-                current_guess = "ULCER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLINT":
-            if feedback == "____y":
-                current_guess = "TRAMP"
-            elif feedback == "__g_y":
-                current_guess = "TRIAD"
-            elif feedback == "__y_g":
-                current_guess = "TRAIT"
-            elif feedback == "__y_y":
-                current_guess = "TIARA"
-            elif feedback == "__yyy":
-                current_guess = "TRAIN"
-            elif feedback == "_y__y":
-                current_guess = "TRAWL"
-            elif feedback == "_yg_y":
-                current_guess = "TRIAL"
-            elif feedback == "_yy_y":
-                current_guess = "TRAIL"
-            elif feedback == "y___g":
-                current_guess = "TRACT"
-            elif feedback == "y___y":
-                current_guess = "TRACK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLIPT":
-            if feedback == "____g":
-                current_guess = "DOUGH"
-            elif feedback == "____y":
-                current_guess = "BOOFY"
-            elif feedback == "___yg":
-                current_guess = "KAPUT"
-            elif feedback == "___yy":
-                current_guess = "PANTY"
-            elif feedback == "__g_g":
-                current_guess = "FAINT"
-            elif feedback == "__g_y":
-                current_guess = "FAITH"
-            elif feedback == "__gyg":
-                current_guess = "PAINT"
-            elif feedback == "__y_g":
-                current_guess = "HABIT"
-            elif feedback == "__y_y":
-                current_guess = "BATIK"
-            elif feedback == "__yyy":
-                current_guess = "PATIO"
-            elif feedback == "_y__g":
-                current_guess = "FAULT"
-            elif feedback == "_y__y":
-                current_guess = "AFOAM"
-            elif feedback == "_yg_y":
-                current_guess = "LAITY"
-            elif feedback == "g___y":
-                current_guess = "CATCH"
-            elif feedback == "g__yg":
-                current_guess = "CAPUT"
-            elif feedback == "g_y_y":
-                current_guess = "CACTI"
-            elif feedback == "y___g":
-                current_guess = "YACHT"
-            elif feedback == "y___y":
-                current_guess = "EMBOW"
-            elif feedback == "y__yy":
-                current_guess = "PATCH"
-            elif feedback == "yy__y":
-                current_guess = "LATCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLOCK":
-            if feedback == "_gg__":
-                current_guess = "FLOWN"
-            elif feedback == "_gggg":
-                current_guess = "FLOCK"
-            elif feedback == "ggg__":
-                current_guess = "CLOWN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLONK":
-            if feedback == "_____":
-                current_guess = "USURP"
-            elif feedback == "____g":
-                current_guess = "SHIRK"
-            elif feedback == "____y":
-                current_guess = "RISKY"
-            elif feedback == "___y_":
-                current_guess = "SPURN"
-            elif feedback == "__g__":
-                current_guess = "SWORD"
-            elif feedback == "__g_g":
-                current_guess = "SPORK"
-            elif feedback == "__gy_":
-                current_guess = "SHORN"
-            elif feedback == "__y__":
-                current_guess = "VISOR"
-            elif feedback == "__yy_":
-                current_guess = "ROSIN"
-            elif feedback == "_g___":
-                current_guess = "SLURP"
-            elif feedback == "_y___":
-                current_guess = "SWIRL"
-            elif feedback == "y_g__":
-                current_guess = "SCOUR"
-            elif feedback == "y_gy_":
-                current_guess = "SCORN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLOTH":
-            if feedback == "___g_":
-                current_guess = "MATTE"
-            elif feedback == "___gy":
-                current_guess = "HAUTE"
-            elif feedback == "___yy":
-                current_guess = "BATHE"
-            elif feedback == "__ggy":
-                current_guess = "PHOTO"
-            elif feedback == "_y_g_":
-                current_guess = "LATTE"
-            elif feedback == "_y_y_":
-                current_guess = "LATKE"
-            elif feedback == "_y_yy":
-                current_guess = "LATHE"
-            elif feedback == "y_yy_":
-                current_guess = "OPTIC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLOUD":
-            if feedback == "_____":
-                current_guess = "GEESE"
-            elif feedback == "____y":
-                current_guess = "DENSE"
-            elif feedback == "___y_":
-                current_guess = "GUISE"
-            elif feedback == "__g__":
-                current_guess = "AHING"
-            elif feedback == "__y__":
-                current_guess = "NOISE"
-            elif feedback == "__y_y":
-                current_guess = "DOWSE"
-            elif feedback == "__yy_":
-                current_guess = "HOUSE"
-            elif feedback == "__yyy":
-                current_guess = "DOUSE"
-            elif feedback == "_y_y_":
-                current_guess = "PULSE"
-            elif feedback == "_yg__":
-                current_guess = "LOOSE"
-            elif feedback == "_yyy_":
-                current_guess = "LOUSE"
-            elif feedback == "g_g__":
-                current_guess = "CHOSE"
-            elif feedback == "g_y__":
-                current_guess = "COPSE"
-            elif feedback == "ggg__":
-                current_guess = "CLOSE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLOUT":
-            if feedback == "_gggg":
-                current_guess = "FLOUT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CLUNG":
-            if feedback == "_gggg":
-                current_guess = "FLUNG"
-            elif feedback == "_yy_y":
-                current_guess = "MOGUL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COCOA":
-            if feedback == "gg__g":
-                current_guess = "COMMA"
-            elif feedback == "gg__y":
-                current_guess = "COPAY"
-            elif feedback == "ggy_y":
-                current_guess = "COACH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CODON":
-            if feedback == "_____":
-                current_guess = "FUGLY"
-            elif feedback == "____g":
-                current_guess = "BRUIN"
-            elif feedback == "____y":
-                current_guess = "BUGGY"
-            elif feedback == "___g_":
-                current_guess = "PRIOR"
-            elif feedback == "___gg":
-                current_guess = "PRION"
-            elif feedback == "___gy":
-                current_guess = "MINOR"
-            elif feedback == "__g__":
-                current_guess = "RUDDY"
-            elif feedback == "__y__":
-                current_guess = "DRILL"
-            elif feedback == "__y_y":
-                current_guess = "DRINK"
-            elif feedback == "_g___":
-                current_guess = "ROUGH"
-            elif feedback == "_g__g":
-                current_guess = "MOURN"
-            elif feedback == "_g_gy":
-                current_guess = "HONOR"
-            elif feedback == "_g_y_":
-                current_guess = "ROOMY"
-            elif feedback == "_gy__":
-                current_guess = "DOWRY"
-            elif feedback == "_gy_y":
-                current_guess = "ROUND"
-            elif feedback == "_gygy":
-                current_guess = "DONOR"
-            elif feedback == "_y___":
-                current_guess = "GROWL"
-            elif feedback == "_y__g":
-                current_guess = "BAGIE"
-            elif feedback == "_y__y":
-                current_guess = "PRONG"
-            elif feedback == "_y_g_":
-                current_guess = "BROOM"
-            elif feedback == "_y_y_":
-                current_guess = "PROMO"
-            elif feedback == "_yg__":
-                current_guess = "HYDRO"
-            elif feedback == "_yy__":
-                current_guess = "DROID"
-            elif feedback == "_yy_g":
-                current_guess = "DROWN"
-            elif feedback == "_yy_y":
-                current_guess = "FROND"
-            elif feedback == "_yyg_":
-                current_guess = "DROOL"
-            elif feedback == "g____":
-                current_guess = "CHIRP"
-            elif feedback == "g___g":
-                current_guess = "CHURN"
-            elif feedback == "gg_g_":
-                current_guess = "COLOR"
-            elif feedback == "gy___":
-                current_guess = "CROCK"
-            elif feedback == "gy__g":
-                current_guess = "CROWN"
-            elif feedback == "gy__y":
-                current_guess = "CRONY"
-            elif feedback == "gy_g_":
-                current_guess = "CROOK"
-            elif feedback == "gy_gg":
-                current_guess = "CROON"
-            elif feedback == "gyy__":
-                current_guess = "CHORD"
-            elif feedback == "y____":
-                current_guess = "BRICK"
-            elif feedback == "y___g":
-                current_guess = "RICIN"
-            elif feedback == "y___y":
-                current_guess = "INCUR"
-            elif feedback == "yg___":
-                current_guess = "ROCKY"
-            elif feedback == "yy___":
-                current_guess = "MICRO"
-            elif feedback == "yy__y":
-                current_guess = "BRONC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COLIN":
-            if feedback == "_____":
-                current_guess = "GUAVA"
-            elif feedback == "____g":
-                current_guess = "HUMAN"
-            elif feedback == "____y":
-                current_guess = "UNJAM"
-            elif feedback == "___g_":
-                current_guess = "AFFIX"
-            elif feedback == "___gg":
-                current_guess = "ADMIN"
-            elif feedback == "___y_":
-                current_guess = "HIJAB"
-            elif feedback == "___yg":
-                current_guess = "AVIAN"
-            elif feedback == "___yy":
-                current_guess = "ADAPT"
-            elif feedback == "__g__":
-                current_guess = "ALLAY"
-            elif feedback == "__gy_":
-                current_guess = "PILAF"
-            elif feedback == "__gyy":
-                current_guess = "INLAY"
-            elif feedback == "__y__":
-                current_guess = "AMPLY"
-            elif feedback == "__y_y":
-                current_guess = "ABACK"
-            elif feedback == "__yg_":
-                current_guess = "ABJUD"
-            elif feedback == "__ygg":
-                current_guess = "PLAIN"
-            elif feedback == "__ygy":
-                current_guess = "ANVIL"
-            elif feedback == "__yy_":
-                current_guess = "ALIBI"
-            elif feedback == "__yyg":
-                current_guess = "ALIGN"
-            elif feedback == "__yyy":
-                current_guess = "FINAL"
-            elif feedback == "_g___":
-                current_guess = "DOGMA"
-            elif feedback == "_g__g":
-                current_guess = "WOMAN"
-            elif feedback == "_g__y":
-                current_guess = "GONAD"
-            elif feedback == "_gg__":
-                current_guess = "POLKA"
-            elif feedback == "_gy__":
-                current_guess = "LOAMY"
-            elif feedback == "_gy_y":
-                current_guess = "NODAL"
-            elif feedback == "_gyy_":
-                current_guess = "VOILA"
-            elif feedback == "_y___":
-                current_guess = "ADOBO"
-            elif feedback == "_y__y":
-                current_guess = "AGONY"
-            elif feedback == "_y_g_":
-                current_guess = "AUDIO"
-            elif feedback == "_y_y_":
-                current_guess = "AMIGO"
-            elif feedback == "_y_yg":
-                current_guess = "AXION"
-            elif feedback == "_y_yy":
-                current_guess = "AMINO"
-            elif feedback == "_yg__":
-                current_guess = "AGLOW"
-            elif feedback == "_yy__":
-                current_guess = "AFALD"
-            elif feedback == "_yy_y":
-                current_guess = "ALONG"
-            elif feedback == "_yyg_":
-                current_guess = "ABOIL"
-            elif feedback == "_yyy_":
-                current_guess = "AIOLI"
-            elif feedback == "g____":
-                current_guess = "CHAFF"
-            elif feedback == "g__gg":
-                current_guess = "CHAIN"
-            elif feedback == "g__yy":
-                current_guess = "CHINA"
-            elif feedback == "g_gg_":
-                current_guess = "CILIA"
-            elif feedback == "g_y__":
-                current_guess = "CHALK"
-            elif feedback == "g_y_y":
-                current_guess = "CLANG"
-            elif feedback == "g_yg_":
-                current_guess = "CLAIM"
-            elif feedback == "gg___":
-                current_guess = "COCOA"
-            elif feedback == "gg__y":
-                current_guess = "CONGA"
-            elif feedback == "gyy__":
-                current_guess = "CLOAK"
-            elif feedback == "y____":
-                current_guess = "AMUCK"
-            elif feedback == "y___y":
-                current_guess = "KNACK"
-            elif feedback == "y__yy":
-                current_guess = "ACING"
-            elif feedback == "y_gy_":
-                current_guess = "LILAC"
-            elif feedback == "y_y__":
-                current_guess = "BLACK"
-            elif feedback == "y_yy_":
-                current_guess = "ILIAC"
-            elif feedback == "yg___":
-                current_guess = "MOCHA"
-            elif feedback == "ygy__":
-                current_guess = "FALLS"
-            elif feedback == "yy___":
-                current_guess = "ACHOO"
-            elif feedback == "yy__y":
-                current_guess = "ANCHO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COMBO":
-            if feedback == "ggg__":
-                current_guess = "COMFY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COMET":
-            if feedback == "___gg":
-                current_guess = "BEGET"
-            elif feedback == "__ggg":
-                current_guess = "UNMET"
-            elif feedback == "_y_gy":
-                current_guess = "OFTEN"
-            elif feedback == "gg_gg":
-                current_guess = "COVET"
-            elif feedback == "yy_gg":
-                current_guess = "OCTET"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COMFY":
-            if feedback == "_____":
-                current_guess = "WHIZZ"
-            elif feedback == "____g":
-                current_guess = "WHINY"
-            elif feedback == "____y":
-                current_guess = "VINYL"
-            elif feedback == "___g_":
-                current_guess = "WHIFF"
-            elif feedback == "__y_g":
-                current_guess = "MILKY"
-            elif feedback == "__yyg":
-                current_guess = "FILMY"
-            elif feedback == "_g___":
-                current_guess = "POLIO"
-            elif feedback == "_g_y_":
-                current_guess = "FOLIO"
-            elif feedback == "_y___":
-                current_guess = "ONION"
-            elif feedback == "_yg__":
-                current_guess = "LIMBO"
-            elif feedback == "g____":
-                current_guess = "CHICK"
-            elif feedback == "g_y__":
-                current_guess = "CHIMP"
-            elif feedback == "gg___":
-                current_guess = "COLIC"
-            elif feedback == "gy___":
-                current_guess = "CHINO"
-            elif feedback == "y____":
-                current_guess = "WHICH"
-            elif feedback == "y__y_":
-                current_guess = "FILCH"
-            elif feedback == "yg_y_":
-                current_guess = "FOLIC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COMIC":
-            if feedback == "__ggg":
-                current_guess = "MIMIC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CONCH":
-            if feedback == "_g__y":
-                current_guess = "HOBBY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CONIC":
-            if feedback == "_gggg":
-                current_guess = "IONIC"
-            elif feedback == "_yyy_":
-                current_guess = "INBOX"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COOLY":
-            if feedback == "_g___":
-                current_guess = "MOTIF"
-            elif feedback == "_g__g":
-                current_guess = "POTTY"
-            elif feedback == "_g_gg":
-                current_guess = "HOTLY"
-            elif feedback == "_g_yg":
-                current_guess = "LOFTY"
-            elif feedback == "_gg__":
-                current_guess = "BOOTH"
-            elif feedback == "_gg_g":
-                current_guess = "BOOTY"
-            elif feedback == "_gy__":
-                current_guess = "MOTTO"
-            elif feedback == "_gyy_":
-                current_guess = "LOTTO"
-            elif feedback == "yg___":
-                current_guess = "BOTCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COPEN":
-            if feedback == "_g___":
-                current_guess = "HOKUM"
-            elif feedback == "_gg__":
-                current_guess = "POPUP"
-            elif feedback == "_y__y":
-                current_guess = "UNBOX"
-            elif feedback == "g____":
-                current_guess = "CHUCK"
-            elif feedback == "g___y":
-                current_guess = "CHUNK"
-            elif feedback == "g_y__":
-                current_guess = "CHUMP"
-            elif feedback == "gg___":
-                current_guess = "COUCH"
-            elif feedback == "gy___":
-                current_guess = "CHOUX"
-            elif feedback == "yg___":
-                current_guess = "VOUCH"
-            elif feedback == "ygy__":
-                current_guess = "POUCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CORAL":
-            if feedback == "_gggg":
-                current_guess = "MORAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CORGI":
-            if feedback == "gyg_y":
-                current_guess = "CURIO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CORKY":
-            if feedback == "ggg_g":
-                current_guess = "CORNY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COUGH":
-            if feedback == "_____":
-                current_guess = "VERSE"
-            elif feedback == "__y__":
-                current_guess = "NURSE"
-            elif feedback == "_g___":
-                current_guess = "WORSE"
-            elif feedback == "_g__y":
-                current_guess = "HORSE"
-            elif feedback == "_g_y_":
-                current_guess = "GORSE"
-            elif feedback == "g_y__":
-                current_guess = "CURSE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COURT":
-            if feedback == "___gg":
-                current_guess = "EVERT"
-            elif feedback == "___gy":
-                current_guess = "ENTRY"
-            elif feedback == "___yg":
-                current_guess = "AUMIL"
-            elif feedback == "___yy":
-                current_guess = "DENIM"
-            elif feedback == "__gyg":
-                current_guess = "ERUPT"
-            elif feedback == "__yyg":
-                current_guess = "REBUT"
-            elif feedback == "__yyy":
-                current_guess = "UTTER"
-            elif feedback == "_g_yy":
-                current_guess = "VOTER"
-            elif feedback == "_y_gg":
-                current_guess = "OVERT"
-            elif feedback == "_y_gy":
-                current_guess = "METRO"
-            elif feedback == "_y_yg":
-                current_guess = "REPOT"
-            elif feedback == "_y_yy":
-                current_guess = "OTHER"
-            elif feedback == "_yyyy":
-                current_guess = "OUTER"
-            elif feedback == "g__yg":
-                current_guess = "CREPT"
-            elif feedback == "g_gyg":
-                current_guess = "CRUET"
-            elif feedback == "g_yyy":
-                current_guess = "CUTER"
-            elif feedback == "y__yg":
-                current_guess = "ERECT"
-            elif feedback == "y__yy":
-                current_guess = "RETCH"
-            elif feedback == "y_yyg":
-                current_guess = "RECUT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COVEN":
-            if feedback == "___gg":
-                current_guess = "QUEEN"
-            elif feedback == "__ggg":
-                current_guess = "GIVEN"
-            elif feedback == "__ygg":
-                current_guess = "VIXEN"
-            elif feedback == "_g_gg":
-                current_guess = "WOKEN"
-            elif feedback == "_gggg":
-                current_guess = "WOVEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COVER":
-            if feedback == "gg_gg":
-                current_guess = "COWER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COWLS":
-            if feedback == "____g":
-                current_guess = "GUESS"
-            elif feedback == "____y":
-                current_guess = "MESSY"
-            elif feedback == "___yg":
-                current_guess = "BLESS"
-            elif feedback == "___yy":
-                current_guess = "FLESH"
-            elif feedback == "__g_y":
-                current_guess = "NEWSY"
-            elif feedback == "_g__y":
-                current_guess = "POESY"
-            elif feedback == "_g_yg":
-                current_guess = "LOESS"
-            elif feedback == "_y__y":
-                current_guess = "QUESO"
-            elif feedback == "g___g":
-                current_guess = "CHESS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "COYLY":
-            if feedback == "_g_gg":
-                current_guess = "NOBLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CRACK":
-            if feedback == "ggg__":
-                current_guess = "CRAZY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CRAFT":
-            if feedback == "_gggg":
-                current_guess = "DRAFT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CREEK":
-            if feedback == "gggg_":
-                current_guess = "CREEP"
-            elif feedback == "gy_g_":
-                current_guess = "CYBER"
-            elif feedback == "gygg_":
-                current_guess = "CHEER"
-            elif feedback == "yyy__":
-                current_guess = "RECUR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CREME":
-            if feedback == "_y__g":
-                current_guess = "RUBLE"
-            elif feedback == "_y_gg":
-                current_guess = "RHYME"
-            elif feedback == "_yg_g":
-                current_guess = "WHERE"
-            elif feedback == "_yy_g":
-                current_guess = "REVUE"
-            elif feedback == "yy__g":
-                current_guess = "LUCRE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CREPE":
-            if feedback == "_yyyg":
-                current_guess = "RUPEE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CREST":
-            if feedback == "_gggg":
-                current_guess = "WREST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CRIER":
-            if feedback == "y_ggg":
-                current_guess = "ICIER"
-            elif feedback == "y_ygg":
-                current_guess = "NICER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CRIME":
-            if feedback == "_gg_g":
-                current_guess = "BRIBE"
-            elif feedback == "_gggg":
-                current_guess = "GRIME"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CROCK":
-            if feedback == "ggg__":
-                current_guess = "CROUP"
-            elif feedback == "gyg__":
-                current_guess = "CHOIR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CUBIC":
-            if feedback == "_gggg":
-                current_guess = "PUBIC"
-            elif feedback == "gg_g_":
-                current_guess = "CUMIN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CUING":
-            if feedback == "_____":
-                current_guess = "TODDY"
-            elif feedback == "___gg":
-                current_guess = "THONG"
-            elif feedback == "__g__":
-                current_guess = "TWILL"
-            elif feedback == "__g_y":
-                current_guess = "THIGH"
-            elif feedback == "__gg_":
-                current_guess = "THINK"
-            elif feedback == "__ggg":
-                current_guess = "THING"
-            elif feedback == "__y__":
-                current_guess = "TIMID"
-            elif feedback == "__y_y":
-                current_guess = "TIGHT"
-            elif feedback == "__yg_":
-                current_guess = "TINNY"
-            elif feedback == "__yy_":
-                current_guess = "TOXIN"
-            elif feedback == "_g___":
-                current_guess = "ABETS"
-            elif feedback == "_gy__":
-                current_guess = "TULIP"
-            elif feedback == "_y___":
-                current_guess = "THUMB"
-            elif feedback == "_y__y":
-                current_guess = "TOUGH"
-            elif feedback == "y_g__":
-                current_guess = "THICK"
-            elif feedback == "y_y__":
-                current_guess = "TOPIC"
-            elif feedback == "y_yy_":
-                current_guess = "TONIC"
-            elif feedback == "ygyy_":
-                current_guess = "TUNIC"
-            elif feedback == "yy___":
-                current_guess = "TOUCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CUPID":
-            if feedback == "_g_gg":
-                current_guess = "HUMID"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CURRY":
-            if feedback == "ggg_g":
-                current_guess = "CURVY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CURVE":
-            if feedback == "_gg_g":
-                current_guess = "PUREE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "CYMOL":
-            if feedback == "_____":
-                current_guess = "PARKA"
-            elif feedback == "____y":
-                current_guess = "LARVA"
-            elif feedback == "___g_":
-                current_guess = "BARON"
-            elif feedback == "___y_":
-                current_guess = "BURRO"
-            elif feedback == "___yy":
-                current_guess = "WORLD"
-            elif feedback == "__y__":
-                current_guess = "KARMA"
-            elif feedback == "__yg_":
-                current_guess = "MORON"
-            elif feedback == "__yy_":
-                current_guess = "FORUM"
-            elif feedback == "_gy__":
-                current_guess = "MYRRH"
-            elif feedback == "_y___":
-                current_guess = "PARRY"
-            elif feedback == "_y__y":
-                current_guess = "BURLY"
-            elif feedback == "_y_y_":
-                current_guess = "DWANG"
-            elif feedback == "_y_yy":
-                current_guess = "LORDY"
-            elif feedback == "_yy__":
-                current_guess = "MARRY"
-            elif feedback == "_yyy_":
-                current_guess = "WORMY"
-            elif feedback == "g__g_":
-                current_guess = "CAROB"
-            elif feedback == "g__gg":
-                current_guess = "CAROL"
-            elif feedback == "g__y_":
-                current_guess = "CARGO"
-            elif feedback == "g_yg_":
-                current_guess = "CAROM"
-            elif feedback == "gy___":
-                current_guess = "CARNY"
-            elif feedback == "gy__y":
-                current_guess = "CURLY"
-            elif feedback == "gy_y_":
-                current_guess = "CORKY"
-            elif feedback == "y____":
-                current_guess = "PARCH"
-            elif feedback == "y___y":
-                current_guess = "LARCH"
-            elif feedback == "y__y_":
-                current_guess = "BORIC"
-            elif feedback == "y_y__":
-                current_guess = "MARCH"
-            elif feedback == "yg__y":
-                current_guess = "LYRIC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DALED":
-            if feedback == "gg___":
-                current_guess = "DAFFY"
-            elif feedback == "gg__y":
-                current_guess = "DADDY"
-            elif feedback == "ggg__":
-                current_guess = "DALLY"
-            elif feedback == "ggy__":
-                current_guess = "DAILY"
-            elif feedback == "yg___":
-                current_guess = "BAWDY"
-            elif feedback == "yg__y":
-                current_guess = "PADDY"
-            elif feedback == "ygg__":
-                current_guess = "BALDY"
-            elif feedback == "ygy__":
-                current_guess = "BADLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEALT":
-            if feedback == "_yggg":
-                current_guess = "EXALT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEATH":
-            if feedback == "_ggg_":
-                current_guess = "MEATY"
-            elif feedback == "_gggg":
-                current_guess = "HEATH"
-            elif feedback == "_ggy_":
-                current_guess = "BEAUT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEBIT":
-            if feedback == "gg_yy":
-                current_guess = "DEITY"
-            elif feedback == "yy_yg":
-                current_guess = "EDICT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEBUG":
-            if feedback == "gg__g":
-                current_guess = "DEFOG"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEBUT":
-            if feedback == "gg__y":
-                current_guess = "DETOX"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DECAF":
-            if feedback == "gggg_":
-                current_guess = "DECAY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DECOY":
-            if feedback == "gg__g":
-                current_guess = "DEIFY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEFER":
-            if feedback == "g__gg":
-                current_guess = "DRYER"
-            elif feedback == "gg__g":
-                current_guess = "DEMUR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEIGN":
-            if feedback == "gg__g":
-                current_guess = "DEMON"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DENIM":
-            if feedback == "_g___":
-                current_guess = "PETER"
-            elif feedback == "_g__y":
-                current_guess = "METER"
-            elif feedback == "_y___":
-                current_guess = "ETHER"
-            elif feedback == "_y_y_":
-                current_guess = "BITER"
-            elif feedback == "_y_yy":
-                current_guess = "MITER"
-            elif feedback == "_yy__":
-                current_guess = "ENTER"
-            elif feedback == "_yyy_":
-                current_guess = "INTER"
-            elif feedback == "gg___":
-                current_guess = "DETER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEPOT":
-            if feedback == "ggg_y":
-                current_guess = "DEPTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEVIL":
-            if feedback == "gy__g":
-                current_guess = "DWELL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DEVON":
-            if feedback == "g____":
-                current_guess = "DIPPY"
-            elif feedback == "g___y":
-                current_guess = "DINKY"
-            elif feedback == "g_g__":
-                current_guess = "DIVVY"
-            elif feedback == "y____":
-                current_guess = "BIDDY"
-            elif feedback == "y___y":
-                current_guess = "WINDY"
-            elif feedback == "y__g_":
-                current_guess = "WIDOW"
-            elif feedback == "y__y_":
-                current_guess = "KIDDO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DIARY":
-            if feedback == "g_gg_":
-                current_guess = "DWARF"
-            elif feedback == "g_gy_":
-                current_guess = "DRAMA"
-            elif feedback == "y_ygy":
-                current_guess = "HYDRA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DICEY":
-            if feedback == "g__gg":
-                current_guess = "DOPEY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DIGHT":
-            if feedback == "____g":
-                current_guess = "QUEST"
-            elif feedback == "___yg":
-                current_guess = "CHEST"
-            elif feedback == "__y_g":
-                current_guess = "GUEST"
-            elif feedback == "_y__g":
-                current_guess = "EXIST"
-            elif feedback == "_y_yg":
-                current_guess = "HEIST"
-            elif feedback == "gy__g":
-                current_guess = "DEIST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DILLY":
-            if feedback == "gg_gg":
-                current_guess = "DIMLY"
-            elif feedback == "yyygy":
-                current_guess = "IDYLL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DINER":
-            if feedback == "gg_gg":
-                current_guess = "DIVER"
-            elif feedback == "gy_gg":
-                current_guess = "DRIER"
-            elif feedback == "gy_gy":
-                current_guess = "DRIED"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DINGO":
-            if feedback == "gggg_":
-                current_guess = "DINGY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DIPPY":
-            if feedback == "gg__g":
-                current_guess = "DIZZY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DISHY":
-            if feedback == "__g__":
-                current_guess = "BOSOM"
-            elif feedback == "__y__":
-                current_guess = "SCOFF"
-            elif feedback == "__y_g":
-                current_guess = "SOGGY"
-            elif feedback == "__yyg":
-                current_guess = "SHOWY"
-            elif feedback == "_gggg":
-                current_guess = "FISHY"
-            elif feedback == "ggg__":
-                current_guess = "DISCO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DITTY":
-            if feedback == "ggg__":
-                current_guess = "DITCH"
-            elif feedback == "ggg_g":
-                current_guess = "DITZY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DODGE":
-            if feedback == "_g_gg":
-                current_guess = "GOUGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DODGY":
-            if feedback == "gg_gg":
-                current_guess = "DOGGY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOGAN":
-            if feedback == "___g_":
-                current_guess = "TUBAL"
-            elif feedback == "___gg":
-                current_guess = "TITAN"
-            elif feedback == "___y_":
-                current_guess = "TIBIA"
-            elif feedback == "___yg":
-                current_guess = "TWAIN"
-            elif feedback == "___yy":
-                current_guess = "THANK"
-            elif feedback == "__yyy":
-                current_guess = "TWANG"
-            elif feedback == "_g_g_":
-                current_guess = "TOPAZ"
-            elif feedback == "_g_gy":
-                current_guess = "TONAL"
-            elif feedback == "_gyyy":
-                current_guess = "TONGA"
-            elif feedback == "y__g_":
-                current_guess = "TIDAL"
-            elif feedback == "yg_g_":
-                current_guess = "TODAY"
-            elif feedback == "yg_y_":
-                current_guess = "TOADY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOGMA":
-            if feedback == "_g_gg":
-                current_guess = "MOMMA"
-            elif feedback == "_g_gy":
-                current_guess = "FOAMY"
-            elif feedback == "yg__g":
-                current_guess = "VODKA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOING":
-            if feedback == "g_ggg":
-                current_guess = "DYING"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOLCI":
-            if feedback == "_____":
-                current_guess = "RUMPY"
-            elif feedback == "____g":
-                current_guess = "REIKI"
-            elif feedback == "____y":
-                current_guess = "PINKY"
-            elif feedback == "___g_":
-                current_guess = "WRECK"
-            elif feedback == "___y_":
-                current_guess = "CREEK"
-            elif feedback == "___yy":
-                current_guess = "CRIER"
-            elif feedback == "__g__":
-                current_guess = "RULER"
-            elif feedback == "__g_y":
-                current_guess = "FILER"
-            elif feedback == "__gyy":
-                current_guess = "RELIC"
-            elif feedback == "__y__":
-                current_guess = "BEVER"
-            elif feedback == "__y_y":
-                current_guess = "AFION"
-            elif feedback == "__yy_":
-                current_guess = "CLERK"
-            elif feedback == "_g___":
-                current_guess = "WHOMP"
-            elif feedback == "_g_y_":
-                current_guess = "COVER"
-            elif feedback == "_gy__":
-                current_guess = "ADVEW"
-            elif feedback == "_y___":
-                current_guess = "OFFER"
-            elif feedback == "_y_y_":
-                current_guess = "OCHER"
-            elif feedback == "_yg__":
-                current_guess = "OGLER"
-            elif feedback == "_yg_y":
-                current_guess = "OILER"
-            elif feedback == "g____":
-                current_guess = "DEFER"
-            elif feedback == "g___y":
-                current_guess = "DINER"
-            elif feedback == "g__g_":
-                current_guess = "DRECK"
-            elif feedback == "g__y_":
-                current_guess = "DECRY"
-            elif feedback == "g__yy":
-                current_guess = "DICER"
-            elif feedback == "gg___":
-                current_guess = "DOPER"
-            elif feedback == "gy_y_":
-                current_guess = "DECOR"
-            elif feedback == "y____":
-                current_guess = "BEGUN"
-            elif feedback == "y___y":
-                current_guess = "BEDEW"
-            elif feedback == "y__y_":
-                current_guess = "CREED"
-            elif feedback == "y__yy":
-                current_guess = "CIDER"
-            elif feedback == "y_g_y":
-                current_guess = "IDLER"
-            elif feedback == "y_y__":
-                current_guess = "ELDER"
-            elif feedback == "yg___":
-                current_guess = "RODEO"
-            elif feedback == "yg_y_":
-                current_guess = "CODER"
-            elif feedback == "yy___":
-                current_guess = "ODDER"
-            elif feedback == "yy_y_":
-                current_guess = "CREDO"
-            elif feedback == "yyy__":
-                current_guess = "OLDER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOLLY":
-            if feedback == "yy_gg":
-                current_guess = "ODDLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOMED":
-            if feedback == "g__g_":
-                current_guess = "DWEEB"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DONUT":
-            if feedback == "____g":
-                current_guess = "FILMI"
-            elif feedback == "____y":
-                current_guess = "WIFTY"
-            elif feedback == "___gy":
-                current_guess = "CUTUP"
-            elif feedback == "___yg":
-                current_guess = "AGBAS"
-            elif feedback == "___yy":
-                current_guess = "BIGLY"
-            elif feedback == "__g_y":
-                current_guess = "MINTY"
-            elif feedback == "__y_g":
-                current_guess = "FLINT"
-            elif feedback == "__y_y":
-                current_guess = "NIFTY"
-            elif feedback == "__ygg":
-                current_guess = "INPUT"
-            elif feedback == "__yyg":
-                current_guess = "BLUNT"
-            elif feedback == "__yyy":
-                current_guess = "NUTTY"
-            elif feedback == "_g__g":
-                current_guess = "VOMIT"
-            elif feedback == "_g__y":
-                current_guess = "COOLY"
-            elif feedback == "_g_yg":
-                current_guess = "MOULT"
-            elif feedback == "_g_yy":
-                current_guess = "ACCOY"
-            elif feedback == "_gg_y":
-                current_guess = "MONTH"
-            elif feedback == "_gy_g":
-                current_guess = "JOINT"
-            elif feedback == "_gy_y":
-                current_guess = "NOTCH"
-            elif feedback == "_gyyg":
-                current_guess = "ACMES"
-            elif feedback == "_y__g":
-                current_guess = "PILOT"
-            elif feedback == "_y__y":
-                current_guess = "CLOTH"
-            elif feedback == "_y_gg":
-                current_guess = "CLOUT"
-            elif feedback == "_y_yg":
-                current_guess = "OUGHT"
-            elif feedback == "_y_yy":
-                current_guess = "OUTGO"
-            elif feedback == "_yg_g":
-                current_guess = "PINOT"
-            elif feedback == "_yg_y":
-                current_guess = "PINTO"
-            elif feedback == "_ygyy":
-                current_guess = "JUNTO"
-            elif feedback == "_yy_g":
-                current_guess = "INGOT"
-            elif feedback == "_yyyy":
-                current_guess = "FUTON"
-            elif feedback == "g___g":
-                current_guess = "DIGIT"
-            elif feedback == "g___y":
-                current_guess = "DITTY"
-            elif feedback == "g__yy":
-                current_guess = "DUTCH"
-            elif feedback == "gg__y":
-                current_guess = "DOTTY"
-            elif feedback == "gg_yg":
-                current_guess = "DOUBT"
-            elif feedback == "gy__g":
-                current_guess = "DIVOT"
-            elif feedback == "gy__y":
-                current_guess = "DITTO"
-            elif feedback == "y___y":
-                current_guess = "WIDTH"
-            elif feedback == "yy__g":
-                current_guess = "IDIOT"
-            elif feedback == "yy_yy":
-                current_guess = "OUTDO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOPER":
-            if feedback == "gg_gg":
-                current_guess = "DOZER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOUGH":
-            if feedback == "__g__":
-                current_guess = "JAUNT"
-            elif feedback == "__g_y":
-                current_guess = "HAUNT"
-            elif feedback == "__gy_":
-                current_guess = "GAUNT"
-            elif feedback == "__yy_":
-                current_guess = "GAMUT"
-            elif feedback == "g_g__":
-                current_guess = "DAUNT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DOWRY":
-            if feedback == "yg_g_":
-                current_guess = "GOURD"
-            elif feedback == "yggyg":
-                current_guess = "ROWDY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DRAIN":
-            if feedback == "ggg_g":
-                current_guess = "DRAWN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DRAKE":
-            if feedback == "ggg_g":
-                current_guess = "DRAPE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DRIFT":
-            if feedback == "_gggg":
-                current_guess = "GRIFT"
-            elif feedback == "_gyyg":
-                current_guess = "FRUIT"
-            elif feedback == "_ygyg":
-                current_guess = "FLIRT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DRILL":
-            if feedback == "gg_g_":
-                current_guess = "DRYLY"
-            elif feedback == "ggy__":
-                current_guess = "DRUID"
-            elif feedback == "yyy__":
-                current_guess = "RIGID"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DRINK":
-            if feedback == "gg_gg":
-                current_guess = "DRUNK"
-            elif feedback == "yggg_":
-                current_guess = "GRIND"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DROID":
-            if feedback == "_gg_g":
-                current_guess = "PROUD"
-            elif feedback == "_yg_g":
-                current_guess = "FJORD"
-            elif feedback == "ggg__":
-                current_guess = "DROLL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DROOL":
-            if feedback == "gggg_":
-                current_guess = "DROOP"
-            elif feedback == "yggg_":
-                current_guess = "BROOD"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DROSS":
-            if feedback == "_gggg":
-                current_guess = "GROSS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DROVE":
-            if feedback == "ygg_g":
-                current_guess = "ERODE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DUCHY":
-            if feedback == "ggg_g":
-                current_guess = "DUCKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DUMMY":
-            if feedback == "gg__g":
-                current_guess = "DUCHY"
-            elif feedback == "ggg_g":
-                current_guess = "DUMPY"
-            elif feedback == "yg___":
-                current_guess = "KUDZU"
-            elif feedback == "yg__g":
-                current_guess = "BUDDY"
-            elif feedback == "ygy_g":
-                current_guess = "MUDDY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DUMPS":
-            if feedback == "_____":
-                current_guess = "CHIVE"
-            elif feedback == "___y_":
-                current_guess = "PIECE"
-            elif feedback == "__y__":
-                current_guess = "CHIME"
-            elif feedback == "_g___":
-                current_guess = "JUICE"
-            elif feedback == "_y_y_":
-                current_guess = "PIQUE"
-            elif feedback == "_yy__":
-                current_guess = "IMBUE"
-            elif feedback == "y____":
-                current_guess = "CHIDE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DUMPY":
-            if feedback == "_____":
-                current_guess = "BELLE"
-            elif feedback == "____y":
-                current_guess = "CYCLE"
-            elif feedback == "___y_":
-                current_guess = "PLEBE"
-            elif feedback == "__y__":
-                current_guess = "MELEE"
-            elif feedback == "_y___":
-                current_guess = "FLUKE"
-            elif feedback == "_yy__":
-                current_guess = "FLUME"
-            elif feedback == "_yyy_":
-                current_guess = "PLUME"
-            elif feedback == "g____":
-                current_guess = "DELVE"
-            elif feedback == "yy___":
-                current_guess = "ELUDE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DWANG":
-            if feedback == "_____":
-                current_guess = "PORKY"
-            elif feedback == "____y":
-                current_guess = "PORGY"
-            elif feedback == "___g_":
-                current_guess = "HORNY"
-            elif feedback == "_y___":
-                current_guess = "WORRY"
-            elif feedback == "g____":
-                current_guess = "DORKY"
-            elif feedback == "yy___":
-                current_guess = "WORDY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "DYNEL":
-            if feedback == "___g_":
-                current_guess = "BICEP"
-            elif feedback == "___gg":
-                current_guess = "BEVUE"
-            elif feedback == "___gy":
-                current_guess = "BLEEP"
-            elif feedback == "___y_":
-                current_guess = "GECKO"
-            elif feedback == "___yg":
-                current_guess = "KVELL"
-            elif feedback == "___yy":
-                current_guess = "PHLOX"
-            elif feedback == "__ggy":
-                current_guess = "LINEN"
-            elif feedback == "__gy_":
-                current_guess = "VENOM"
-            elif feedback == "__yg_":
-                current_guess = "COVEN"
-            elif feedback == "__ygg":
-                current_guess = "INCEL"
-            elif feedback == "__ygy":
-                current_guess = "LIKEN"
-            elif feedback == "__yy_":
-                current_guess = "BEGIN"
-            elif feedback == "__yyg":
-                current_guess = "KNELL"
-            elif feedback == "__yyy":
-                current_guess = "FELON"
-            elif feedback == "_gyg_":
-                current_guess = "HYMEN"
-            elif feedback == "_gyy_":
-                current_guess = "EYING"
-            elif feedback == "_y_g_":
-                current_guess = "CHOMP"
-            elif feedback == "_y_gg":
-                current_guess = "YOKEL"
-            elif feedback == "_y_gy":
-                current_guess = "GLUEY"
-            elif feedback == "_y_y_":
-                current_guess = "APEEK"
-            elif feedback == "_y_yy":
-                current_guess = "BELLY"
-            elif feedback == "_ygg_":
-                current_guess = "BLIMP"
-            elif feedback == "_ygy_":
-                current_guess = "PENNY"
-            elif feedback == "_yyy_":
-                current_guess = "ENJOY"
-            elif feedback == "_yyyy":
-                current_guess = "NEWLY"
-            elif feedback == "g__g_":
-                current_guess = "DOMED"
-            elif feedback == "g__gg":
-                current_guess = "DOWEL"
-            elif feedback == "g__y_":
-                current_guess = "DEBUG"
-            elif feedback == "g__yg":
-                current_guess = "DEVIL"
-            elif feedback == "g_gy_":
-                current_guess = "DENIM"
-            elif feedback == "g_yg_":
-                current_guess = "DOZEN"
-            elif feedback == "g_yy_":
-                current_guess = "DEIGN"
-            elif feedback == "gy_g_":
-                current_guess = "DICEY"
-            elif feedback == "gy_y_":
-                current_guess = "DECOY"
-            elif feedback == "y__g_":
-                current_guess = "MOPED"
-            elif feedback == "y__gg":
-                current_guess = "MODEL"
-            elif feedback == "y__gy":
-                current_guess = "BLEED"
-            elif feedback == "y__y_":
-                current_guess = "MEDIC"
-            elif feedback == "y__yy":
-                current_guess = "FIELD"
-            elif feedback == "y_yg_":
-                current_guess = "UNFED"
-            elif feedback == "y_ygy":
-                current_guess = "OLDEN"
-            elif feedback == "y_yy_":
-                current_guess = "FIEND"
-            elif feedback == "y_yyy":
-                current_guess = "BLEND"
-            elif feedback == "yy_gg":
-                current_guess = "YODEL"
-            elif feedback == "yy_y_":
-                current_guess = "EDIFY"
-            elif feedback == "yy_yy":
-                current_guess = "YIELD"
-            elif feedback == "yygy_":
-                current_guess = "BENDY"
-            elif feedback == "yyyy_":
-                current_guess = "NEEDY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EASEL":
-            if feedback == "_gyg_":
-                current_guess = "SAMEY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EDIFY":
-            if feedback == "yy__g":
-                current_guess = "WEEDY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ELATE":
-            if feedback == "_gggg":
-                current_guess = "PLATE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EMBOW":
-            if feedback == "_____":
-                current_guess = "HATCH"
-            elif feedback == "____y":
-                current_guess = "WATCH"
-            elif feedback == "__y__":
-                current_guess = "BATCH"
-            elif feedback == "_y___":
-                current_guess = "MATCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EMCEE":
-            if feedback == "g___g":
-                current_guess = "EXUDE"
-            elif feedback == "g_y_g":
-                current_guess = "EDUCE"
-            elif feedback == "y___g":
-                current_guess = "QUEUE"
-            elif feedback == "y__yg":
-                current_guess = "PEEVE"
-            elif feedback == "y_y_g":
-                current_guess = "DEUCE"
-            elif feedback == "yy__g":
-                current_guess = "FEMME"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EMPTY":
-            if feedback == "y_yy_":
-                current_guess = "GETUP"
-            elif feedback == "yyyy_":
-                current_guess = "KEMPT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ENEMA":
-            if feedback == "__gyg":
-                current_guess = "OMEGA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ENJOY":
-            if feedback == "gg__g":
-                current_guess = "ENEMY"
-            elif feedback == "gg_gg":
-                current_guess = "ENVOY"
-            elif feedback == "gy_yg":
-                current_guess = "EBONY"
-            elif feedback == "yy__g":
-                current_guess = "VEINY"
-            elif feedback == "yy_yg":
-                current_guess = "PEONY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ENSUE":
-            if feedback == "yggyg":
-                current_guess = "UNSEE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ENTRY":
-            if feedback == "y_gg_":
-                current_guess = "PETRI"
-            elif feedback == "y_ggg":
-                current_guess = "RETRY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ESTER":
-            if feedback == "yyy_y":
-                current_guess = "STERN"
-            elif feedback == "yyygg":
-                current_guess = "STEER"
-            elif feedback == "yyygy":
-                current_guess = "RESET"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EVERT":
-            if feedback == "__ggg":
-                current_guess = "INERT"
-            elif feedback == "g_ggg":
-                current_guess = "EXERT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EXCEL":
-            if feedback == "gg_gg":
-                current_guess = "EXPEL"
-            elif feedback == "y__gg":
-                current_guess = "WHEEL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "EXULT":
-            if feedback == "g__yg":
-                current_guess = "ELECT"
-            elif feedback == "g__yy":
-                current_guess = "ETHYL"
-            elif feedback == "gg_yy":
-                current_guess = "EXTOL"
-            elif feedback == "y__gg":
-                current_guess = "KNELT"
-            elif feedback == "y__yg":
-                current_guess = "CLEFT"
-            elif feedback == "y__yy":
-                current_guess = "LEFTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FADER":
-            if feedback == "_g_gg":
-                current_guess = "RAVER"
-            elif feedback == "_g_gy":
-                current_guess = "RAVEN"
-            elif feedback == "_gggg":
-                current_guess = "WADER"
-            elif feedback == "gg_gg":
-                current_guess = "FAKER"
-            elif feedback == "yg_gg":
-                current_guess = "WAFER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FAIRY":
-            if feedback == "_gggg":
-                current_guess = "HAIRY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FALLS":
-            if feedback == "_yy__":
-                current_guess = "VOCAL"
-            elif feedback == "_yyy_":
-                current_guess = "LOCAL"
-            elif feedback == "gyy__":
-                current_guess = "FOCAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FAULT":
-            if feedback == "_gggg":
-                current_guess = "VAULT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FAUNA":
-            if feedback == "_g_gg":
-                current_guess = "MANNA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FEHME":
-            if feedback == "_____":
-                current_guess = "JOLLY"
-            elif feedback == "___y_":
-                current_guess = "MOLLY"
-            elif feedback == "__y__":
-                current_guess = "HOLLY"
-            elif feedback == "g____":
-                current_guess = "FOLLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FELON":
-            if feedback == "_gggg":
-                current_guess = "MELON"
-            elif feedback == "_gygg":
-                current_guess = "LEMON"
-            elif feedback == "yyy_g":
-                current_guess = "ELFIN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FERAL":
-            if feedback == "_ggg_":
-                current_guess = "RERAN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FETAL":
-            if feedback == "_gggg":
-                current_guess = "METAL"
-            elif feedback == "_gyyy":
-                current_guess = "DELTA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FEVER":
-            if feedback == "_g_gg":
-                current_guess = "NEWER"
-            elif feedback == "_gggg":
-                current_guess = "NEVER"
-            elif feedback == "_y_gy":
-                current_guess = "GREEN"
-            elif feedback == "gg_gg":
-                current_guess = "FEWER"
-            elif feedback == "gy_gg":
-                current_guess = "FREER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FIELD":
-            if feedback == "_gggg":
-                current_guess = "WIELD"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FIEND":
-            if feedback == "__ggg":
-                current_guess = "UPEND"
-            elif feedback == "__yyy":
-                current_guess = "ENDOW"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FILER":
-            if feedback == "_gggg":
-                current_guess = "MILER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FILLY":
-            if feedback == "_gggg":
-                current_guess = "HILLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FILMI":
-            if feedback == "_g___":
-                current_guess = "WIGHT"
-            elif feedback == "_g_y_":
-                current_guess = "MIGHT"
-            elif feedback == "_gy__":
-                current_guess = "LIGHT"
-            elif feedback == "_gy_y":
-                current_guess = "LICIT"
-            elif feedback == "_gyyy":
-                current_guess = "LIMIT"
-            elif feedback == "gg___":
-                current_guess = "FIGHT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FINER":
-            if feedback == "_gggg":
-                current_guess = "MINER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FIZZY":
-            if feedback == "yg__g":
-                current_guess = "JIFFY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLANK":
-            if feedback == "_gggg":
-                current_guess = "PLANK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLASH":
-            if feedback == "_gggg":
-                current_guess = "SLASH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLASK":
-            if feedback == "_ggg_":
-                current_guess = "GLASS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLICK":
-            if feedback == "_gg__":
-                current_guess = "BLIMP"
-            elif feedback == "_gg_g":
-                current_guess = "BLINK"
-            elif feedback == "_gggg":
-                current_guess = "CLICK"
-            elif feedback == "_ggy_":
-                current_guess = "CLIMB"
-            elif feedback == "_ggyg":
-                current_guess = "CLINK"
-            elif feedback == "yggy_":
-                current_guess = "CLIFF"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLINT":
-            if feedback == "__yyg":
-                current_guess = "NIGHT"
-            elif feedback == "_gggg":
-                current_guess = "GLINT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLOSS":
-            if feedback == "_gggg":
-                current_guess = "GLOSS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLUTE":
-            if feedback == "_gggg":
-                current_guess = "GLUTE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FLYER":
-            if feedback == "_y_gg":
-                current_guess = "LUGER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FOIST":
-            if feedback == "_gggg":
-                current_guess = "JOIST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FORAY":
-            if feedback == "_ggg_":
-                current_guess = "BORAX"
-            elif feedback == "_gggg":
-                current_guess = "MORAY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FORCE":
-            if feedback == "_gg_g":
-                current_guess = "HORDE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FORUM":
-            if feedback == "_gg_y":
-                current_guess = "MORPH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FOUND":
-            if feedback == "_gggg":
-                current_guess = "WOUND"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FOUNT":
-            if feedback == "____g":
-                current_guess = "SPILT"
-            elif feedback == "____y":
-                current_guess = "SILTY"
-            elif feedback == "___gg":
-                current_guess = "STINT"
-            elif feedback == "___gy":
-                current_guess = "STING"
-            elif feedback == "___yy":
-                current_guess = "SYNTH"
-            elif feedback == "__g_y":
-                current_guess = "ADEEM"
-            elif feedback == "__ggg":
-                current_guess = "SHUNT"
-            elif feedback == "__ggy":
-                current_guess = "STUNG"
-            elif feedback == "__y_y":
-                current_guess = "ADLIB"
-            elif feedback == "_g__g":
-                current_guess = "POSIT"
-            elif feedback == "_g__y":
-                current_guess = "SOOTH"
-            elif feedback == "_gg_y":
-                current_guess = "SOUTH"
-            elif feedback == "_gy_y":
-                current_guess = "LOTUS"
-            elif feedback == "_y__g":
-                current_guess = "SCOOT"
-            elif feedback == "_y__y":
-                current_guess = "APIOL"
-            elif feedback == "_y_gy":
-                current_guess = "STONY"
-            elif feedback == "_y_yg":
-                current_guess = "SNOOT"
-            elif feedback == "_yy_g":
-                current_guess = "CAPHS"
-            elif feedback == "_yy_y":
-                current_guess = "GUSTO"
-            elif feedback == "_yyyg":
-                current_guess = "SNOUT"
-            elif feedback == "g_y_y":
-                current_guess = "FUSTY"
-            elif feedback == "y___g":
-                current_guess = "SHIFT"
-            elif feedback == "y___y":
-                current_guess = "STIFF"
-            elif feedback == "y_g_y":
-                current_guess = "STUFF"
-            elif feedback == "yg__y":
-                current_guess = "SOFTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FRACK":
-            if feedback == "_gggg":
-                current_guess = "WRACK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FRAIL":
-            if feedback == "_gg_g":
-                current_guess = "CRAWL"
-            elif feedback == "_gggg":
-                current_guess = "GRAIL"
-            elif feedback == "_yyyg":
-                current_guess = "RIVAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FRANC":
-            if feedback == "_ggg_":
-                current_guess = "PRANK"
-            elif feedback == "_gggy":
-                current_guess = "CRANK"
-            elif feedback == "gggg_":
-                current_guess = "FRANK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FRIED":
-            if feedback == "_gggg":
-                current_guess = "PRIED"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FUDGE":
-            if feedback == "_gggg":
-                current_guess = "JUDGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FUGLY":
-            if feedback == "_____":
-                current_guess = "PRIMP"
-            elif feedback == "____g":
-                current_guess = "PRIVY"
-            elif feedback == "___g_":
-                current_guess = "KRILL"
-            elif feedback == "___gg":
-                current_guess = "WRYLY"
-            elif feedback == "___y_":
-                current_guess = "WHIRL"
-            elif feedback == "__y_g":
-                current_guess = "GRIMY"
-            elif feedback == "__yg_":
-                current_guess = "GRILL"
-            elif feedback == "_g___":
-                current_guess = "QUIRK"
-            elif feedback == "_g__g":
-                current_guess = "RUMMY"
-            elif feedback == "_gg_g":
-                current_guess = "RUGBY"
-            elif feedback == "_y_y_":
-                current_guess = "BLURB"
-            elif feedback == "_yy__":
-                current_guess = "GRUMP"
-            elif feedback == "g____":
-                current_guess = "FRIZZ"
-            elif feedback == "g__g_":
-                current_guess = "FRILL"
-            elif feedback == "gy___":
-                current_guess = "FRUMP"
-            elif feedback == "yyy__":
-                current_guess = "GRUFF"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FUNKY":
-            if feedback == "_g_gg":
-                current_guess = "YUCKY"
-            elif feedback == "_gggg":
-                current_guess = "JUNKY"
-            elif feedback == "gg__g":
-                current_guess = "FUZZY"
-            elif feedback == "ggg_g":
-                current_guess = "FUNNY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FUROR":
-            if feedback == "__gg_":
-                current_guess = "BORON"
-            elif feedback == "_gggg":
-                current_guess = "JUROR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FURRY":
-            if feedback == "_gggg":
-                current_guess = "HURRY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "FUSSY":
-            if feedback == "__ggg":
-                current_guess = "BOSSY"
-            elif feedback == "_gggg":
-                current_guess = "GUSSY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GABBY":
-            if feedback == "gg__g":
-                current_guess = "GAWKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GATOR":
-            if feedback == "_gg_y":
-                current_guess = "RATTY"
-            elif feedback == "_ggyy":
-                current_guess = "RATIO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GAUGE":
-            if feedback == "ggg_g":
-                current_guess = "GAUZE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GAYER":
-            if feedback == "gg_gg":
-                current_guess = "GAZER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GECKO":
-            if feedback == "_g__g":
-                current_guess = "MEZZO"
-            elif feedback == "_g__y":
-                current_guess = "BEBOP"
-            elif feedback == "_gy__":
-                current_guess = "BEECH"
-            elif feedback == "_y___":
-                current_guess = "EQUIP"
-            elif feedback == "_y__y":
-                current_guess = "EMOJI"
-            elif feedback == "_y_yy":
-                current_guess = "EBOOK"
-            elif feedback == "_yy_g":
-                current_guess = "CHEMO"
-            elif feedback == "_yy_y":
-                current_guess = "EPOCH"
-            elif feedback == "_yyy_":
-                current_guess = "CHECK"
-            elif feedback == "yg___":
-                current_guess = "WEIGH"
-            elif feedback == "yg__y":
-                current_guess = "BEFOG"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GEESE":
-            if feedback == "_g_gg":
-                current_guess = "SENSE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GENIO":
-            if feedback == "_g___":
-                current_guess = "VERVE"
-            elif feedback == "_g_g_":
-                current_guess = "EERIE"
-            elif feedback == "_gy__":
-                current_guess = "NERVE"
-            elif feedback == "_y___":
-                current_guess = "CURVE"
-            elif feedback == "_y__y":
-                current_guess = "FORCE"
-            elif feedback == "_yy_y":
-                current_guess = "BORNE"
-            elif feedback == "gy__y":
-                current_guess = "GORGE"
-            elif feedback == "yg___":
-                current_guess = "MERGE"
-            elif feedback == "yy___":
-                current_guess = "PURGE"
-            elif feedback == "yy__y":
-                current_guess = "FORGE"
-            elif feedback == "yy_y_":
-                current_guess = "DIRGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GIRTH":
-            if feedback == "_gggg":
-                current_guess = "MIRTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLACE":
-            if feedback == "ggg_g":
-                current_guess = "GLAZE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLAMP":
-            if feedback == "__y__":
-                current_guess = "FADER"
-            elif feedback == "__y_y":
-                current_guess = "CARVY"
-            elif feedback == "__yy_":
-                current_guess = "MAKER"
-            elif feedback == "_yy__":
-                current_guess = "BALER"
-            elif feedback == "_yy_y":
-                current_guess = "PALER"
-            elif feedback == "_yyy_":
-                current_guess = "LAMER"
-            elif feedback == "g_y__":
-                current_guess = "GAYER"
-            elif feedback == "g_yy_":
-                current_guess = "GAMER"
-            elif feedback == "y_y__":
-                current_guess = "ARERE"
-            elif feedback == "y_y_y":
-                current_guess = "PAGER"
-            elif feedback == "yyy__":
-                current_guess = "LAGER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLAND":
-            if feedback == "__g__":
-                current_guess = "KACHA"
-            elif feedback == "__g_y":
-                current_guess = "EVADE"
-            elif feedback == "__gg_":
-                current_guess = "INANE"
-            elif feedback == "__gy_":
-                current_guess = "KNAVE"
-            elif feedback == "__y__":
-                current_guess = "ABOVE"
-            elif feedback == "__y_y":
-                current_guess = "ABIDE"
-            elif feedback == "__yy_":
-                current_guess = "ANIME"
-            elif feedback == "__yyy":
-                current_guess = "ANODE"
-            elif feedback == "_gg__":
-                current_guess = "CHIMB"
-            elif feedback == "_gg_y":
-                current_guess = "BLADE"
-            elif feedback == "_ggg_":
-                current_guess = "PLANE"
-            elif feedback == "_gy__":
-                current_guess = "ALIKE"
-            elif feedback == "_gyg_":
-                current_guess = "ALONE"
-            elif feedback == "_yg__":
-                current_guess = "LEAVE"
-            elif feedback == "_yy__":
-                current_guess = "AMBLE"
-            elif feedback == "_yy_y":
-                current_guess = "ADDLE"
-            elif feedback == "_yyy_":
-                current_guess = "ANKLE"
-            elif feedback == "ggg__":
-                current_guess = "GLACE"
-            elif feedback == "ggg_y":
-                current_guess = "GLADE"
-            elif feedback == "y_g__":
-                current_guess = "AGAPE"
-            elif feedback == "y_g_y":
-                current_guess = "ADAGE"
-            elif feedback == "ygy__":
-                current_guess = "ALGAE"
-            elif feedback == "yyy__":
-                current_guess = "AGILE"
-            elif feedback == "yyyy_":
-                current_guess = "ANGLE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLIDE":
-            if feedback == "gyg_g":
-                current_guess = "GUILE"
-            elif feedback == "yyy_g":
-                current_guess = "BILGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLOBE":
-            if feedback == "ggg_g":
-                current_guess = "GLOVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLOOM":
-            if feedback == "gg___":
-                current_guess = "GLYPH"
-            elif feedback == "ggg__":
-                current_guess = "GLOWY"
-            elif feedback == "gggg_":
-                current_guess = "GLOOP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLUEY":
-            if feedback == "_y_gg":
-                current_guess = "HOLEY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GLUME":
-            if feedback == "_____":
-                current_guess = "JAZZY"
-            elif feedback == "___g_":
-                current_guess = "JAMMY"
-            elif feedback == "___y_":
-                current_guess = "VAMPY"
-            elif feedback == "_y___":
-                current_guess = "BALKY"
-            elif feedback == "_y_g_":
-                current_guess = "BALMY"
-            elif feedback == "g____":
-                current_guess = "GABBY"
-            elif feedback == "g_g__":
-                current_guess = "GAUZY"
-            elif feedback == "gy___":
-                current_guess = "GAILY"
-            elif feedback == "y____":
-                current_guess = "BAGGY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GNARL":
-            if feedback == "_yyyy":
-                current_guess = "LUNAR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GONAD":
-            if feedback == "_gygg":
-                current_guess = "NOMAD"
-            elif feedback == "gggy_":
-                current_guess = "GONNA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GOOFY":
-            if feedback == "ggg_g":
-                current_guess = "GOOPY"
-            elif feedback == "ggy__":
-                current_guess = "GONZO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GRAFT":
-            if feedback == "ggg_g":
-                current_guess = "GRANT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GRAND":
-            if feedback == "_gg__":
-                current_guess = "VOCAB"
-            elif feedback == "_gg_y":
-                current_guess = "DRAKE"
-            elif feedback == "_ggg_":
-                current_guess = "CRANE"
-            elif feedback == "_yg__":
-                current_guess = "BLARE"
-            elif feedback == "_yy__":
-                current_guess = "AFIRE"
-            elif feedback == "_yy_y":
-                current_guess = "ADORE"
-            elif feedback == "ggg__":
-                current_guess = "CAPIZ"
-            elif feedback == "ggg_y":
-                current_guess = "GRADE"
-            elif feedback == "gyg__":
-                current_guess = "GLARE"
-            elif feedback == "ygy__":
-                current_guess = "ARGUE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GROOM":
-            if feedback == "_gggg":
-                current_guess = "VROOM"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GROWL":
-            if feedback == "_gg__":
-                current_guess = "PROXY"
-            elif feedback == "_gg_g":
-                current_guess = "BROIL"
-            elif feedback == "_gggg":
-                current_guess = "PROWL"
-            elif feedback == "_gy__":
-                current_guess = "PRIMO"
-            elif feedback == "_yg__":
-                current_guess = "IVORY"
-            elif feedback == "_yg_y":
-                current_guess = "FLOUR"
-            elif feedback == "_ygyg":
-                current_guess = "WHORL"
-            elif feedback == "ggg__":
-                current_guess = "GROUP"
-            elif feedback == "gyg_y":
-                current_guess = "GLORY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GUAVA":
-            if feedback == "__y__":
-                current_guess = "BYWAY"
-            elif feedback == "_gg__":
-                current_guess = "QUAFF"
-            elif feedback == "_yy__":
-                current_guess = "ABUZZ"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GUILD":
-            if feedback == "_____":
-                current_guess = "WHOMP"
-            elif feedback == "____y":
-                current_guess = "HOWDY"
-            elif feedback == "___g_":
-                current_guess = "LOWLY"
-            elif feedback == "___gy":
-                current_guess = "DOLLY"
-            elif feedback == "___y_":
-                current_guess = "POBOY"
-            elif feedback == "___yg":
-                current_guess = "BLOND"
-            elif feedback == "___yy":
-                current_guess = "MOLDY"
-            elif feedback == "__g__":
-                current_guess = "COMFY"
-            elif feedback == "__g_y":
-                current_guess = "IDIOM"
-            elif feedback == "__gg_":
-                current_guess = "CHILI"
-            elif feedback == "__ggg":
-                current_guess = "CHILD"
-            elif feedback == "__ggy":
-                current_guess = "DOILY"
-            elif feedback == "__gy_":
-                current_guess = "FLICK"
-            elif feedback == "__gyg":
-                current_guess = "BLIND"
-            elif feedback == "__y__":
-                current_guess = "NYMPH"
-            elif feedback == "__y_g":
-                current_guess = "BIPOD"
-            elif feedback == "__y_y":
-                current_guess = "DEVON"
-            elif feedback == "__yg_":
-                current_guess = "ABLOW"
-            elif feedback == "__ygy":
-                current_guess = "DILLY"
-            elif feedback == "__yy_":
-                current_guess = "COMFY"
-            elif feedback == "__yyg":
-                current_guess = "LIPID"
-            elif feedback == "_g___":
-                current_guess = "BUMPH"
-            elif feedback == "_g__y":
-                current_guess = "DUMMY"
-            elif feedback == "_g_g_":
-                current_guess = "BULLY"
-            elif feedback == "_g_gy":
-                current_guess = "DULLY"
-            elif feedback == "_g_y_":
-                current_guess = "BULKY"
-            elif feedback == "_gg__":
-                current_guess = "JUICY"
-            elif feedback == "_ggg_":
-                current_guess = "QUILL"
-            elif feedback == "_gggg":
-                current_guess = "BUILD"
-            elif feedback == "_gy__":
-                current_guess = "CUBIC"
-            elif feedback == "_gy_g":
-                current_guess = "CUPID"
-            elif feedback == "_gyy_":
-                current_guess = "PUPIL"
-            elif feedback == "_gyyg":
-                current_guess = "LUCID"
-            elif feedback == "_y___":
-                current_guess = "COPEN"
-            elif feedback == "_y__g":
-                current_guess = "BUMPH"
-            elif feedback == "_y_gg":
-                current_guess = "ACMES"
-            elif feedback == "_y_y_":
-                current_guess = "PLUCK"
-            elif feedback == "_y_yg":
-                current_guess = "CLOUD"
-            elif feedback == "_yg__":
-                current_guess = "OPIUM"
-            elif feedback == "_yy__":
-                current_guess = "UNHIP"
-            elif feedback == "_yy_g":
-                current_guess = "UNDID"
-            elif feedback == "_yyyg":
-                current_guess = "FLUID"
-            elif feedback == "g____":
-                current_guess = "GOOFY"
-            elif feedback == "g___y":
-                current_guess = "GOODY"
-            elif feedback == "g__g_":
-                current_guess = "GOLLY"
-            elif feedback == "g__gy":
-                current_guess = "GODLY"
-            elif feedback == "g__y_":
-                current_guess = "GLOOM"
-            elif feedback == "g_g__":
-                current_guess = "GOING"
-            elif feedback == "g_y__":
-                current_guess = "GIZMO"
-            elif feedback == "g_y_y":
-                current_guess = "GIDDY"
-            elif feedback == "gg___":
-                current_guess = "AMBAN"
-            elif feedback == "gg_g_":
-                current_guess = "GULLY"
-            elif feedback == "gg_y_":
-                current_guess = "GULCH"
-            elif feedback == "gy_y_":
-                current_guess = "GHOUL"
-            elif feedback == "y____":
-                current_guess = "BOGGY"
-            elif feedback == "y___y":
-                current_guess = "DODGY"
-            elif feedback == "y__y_":
-                current_guess = "LOGON"
-            elif feedback == "y_g__":
-                current_guess = "BICCY"
-            elif feedback == "y_g_y":
-                current_guess = "DOING"
-            elif feedback == "y_gy_":
-                current_guess = "BACCY"
-            elif feedback == "y_y__":
-                current_guess = "BINGO"
-            elif feedback == "y_y_y":
-                current_guess = "DINGO"
-            elif feedback == "y_yy_":
-                current_guess = "LINGO"
-            elif feedback == "yg___":
-                current_guess = "ABHOR"
-            elif feedback == "yg__y":
-                current_guess = "AFLAJ"
-            elif feedback == "yg_y_":
-                current_guess = "BULGY"
-            elif feedback == "ygg__":
-                current_guess = "CUING"
-            elif feedback == "ygy__":
-                current_guess = "FUNGI"
-            elif feedback == "yy___":
-                current_guess = "BOUGH"
-            elif feedback == "yy__y":
-                current_guess = "DOUGH"
-            elif feedback == "yy_y_":
-                current_guess = "CLUNG"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GULCH":
-            if feedback == "_____":
-                current_guess = "ADMIN"
-            elif feedback == "___g_":
-                current_guess = "DANCE"
-            elif feedback == "___y_":
-                current_guess = "CANOE"
-            elif feedback == "___yy":
-                current_guess = "CACHE"
-            elif feedback == "__g__":
-                current_guess = "VALVE"
-            elif feedback == "__g_y":
-                current_guess = "HALVE"
-            elif feedback == "__gy_":
-                current_guess = "CALVE"
-            elif feedback == "__y__":
-                current_guess = "ABYSM"
-            elif feedback == "__yg_":
-                current_guess = "LANCE"
-            elif feedback == "__yy_":
-                current_guess = "CABLE"
-            elif feedback == "_y___":
-                current_guess = "MAUVE"
-            elif feedback == "_yg__":
-                current_guess = "VALUE"
-            elif feedback == "g____":
-                current_guess = "GAFFE"
-            elif feedback == "g_y__":
-                current_guess = "GABLE"
-            elif feedback == "gy___":
-                current_guess = "GAUGE"
-            elif feedback == "y____":
-                current_guess = "BADGE"
-            elif feedback == "y__y_":
-                current_guess = "CADGE"
-            elif feedback == "y_y__":
-                current_guess = "EAGLE"
-            elif feedback == "yy___":
-                current_guess = "VAGUE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GUNKY":
-            if feedback == "_____":
-                current_guess = "BOXER"
-            elif feedback == "____y":
-                current_guess = "FOYER"
-            elif feedback == "___y_":
-                current_guess = "JOKER"
-            elif feedback == "__g__":
-                current_guess = "BONER"
-            elif feedback == "g____":
-                current_guess = "GOFER"
-            elif feedback == "g_g__":
-                current_guess = "GONER"
-            elif feedback == "y____":
-                current_guess = "ROGER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "GUSTY":
-            if feedback == "_gggg":
-                current_guess = "MUSTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HAIKU":
-            if feedback == "gg___":
-                current_guess = "HALAL"
-            elif feedback == "yg__y":
-                current_guess = "LAUGH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HAMMY":
-            if feedback == "gg__g":
-                current_guess = "HAPPY"
-            elif feedback == "yg__y":
-                current_guess = "YAHOO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HARSH":
-            if feedback == "_gggg":
-                current_guess = "MARSH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HAVOC":
-            if feedback == "yg_yy":
-                current_guess = "MACHO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HIDER":
-            if feedback == "_gggg":
-                current_guess = "RIDER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HIJAB":
-            if feedback == "_g_y_":
-                current_guess = "PIZZA"
-            elif feedback == "_y_y_":
-                current_guess = "UMAMI"
-            elif feedback == "yy_y_":
-                current_guess = "KHAKI"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HIMBO":
-            if feedback == "_____":
-                current_guess = "GUTSY"
-            elif feedback == "____g":
-                current_guess = "NUTSO"
-            elif feedback == "____y":
-                current_guess = "JOUST"
-            elif feedback == "___yy":
-                current_guess = "BOOST"
-            elif feedback == "_g___":
-                current_guess = "DITSY"
-            elif feedback == "_g_y_":
-                current_guess = "BITSY"
-            elif feedback == "_gy__":
-                current_guess = "MIDST"
-            elif feedback == "_y__y":
-                current_guess = "FOIST"
-            elif feedback == "_yy_y":
-                current_guess = "MOIST"
-            elif feedback == "gy__y":
-                current_guess = "HOIST"
-            elif feedback == "y___y":
-                current_guess = "GHOST"
-            elif feedback == "yy___":
-                current_guess = "WHIST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HITCH":
-            if feedback == "_gggg":
-                current_guess = "PITCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HOARY":
-            if feedback == "_ygg_":
-                current_guess = "AMARO"
-            elif feedback == "_yggg":
-                current_guess = "OVARY"
-            elif feedback == "_yyy_":
-                current_guess = "ARMOR"
-            elif feedback == "yggy_":
-                current_guess = "ROACH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HOKUM":
-            if feedback == "_____":
-                current_guess = "TRILL"
-            elif feedback == "___y_":
-                current_guess = "TRULY"
-            elif feedback == "___yy":
-                current_guess = "TRUMP"
-            elif feedback == "__y__":
-                current_guess = "TRICK"
-            elif feedback == "__yy_":
-                current_guess = "TRUCK"
-            elif feedback == "_y___":
-                current_guess = "TROLL"
-            elif feedback == "_y__y":
-                current_guess = "TROMP"
-            elif feedback == "_y_g_":
-                current_guess = "TROUT"
-            elif feedback == "_y_y_":
-                current_guess = "TUTOR"
-            elif feedback == "_y_yy":
-                current_guess = "TUMOR"
-            elif feedback == "y____":
-                current_guess = "THIRD"
-            elif feedback == "y__y_":
-                current_guess = "TRUTH"
-            elif feedback == "yy___":
-                current_guess = "THORN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HONED":
-            if feedback == "___g_":
-                current_guess = "TWEET"
-            elif feedback == "___gg":
-                current_guess = "TWEED"
-            elif feedback == "___y_":
-                current_guess = "TEMPT"
-            elif feedback == "___yg":
-                current_guess = "TEPID"
-            elif feedback == "___yy":
-                current_guess = "TEDDY"
-            elif feedback == "__gg_":
-                current_guess = "TENET"
-            elif feedback == "__yg_":
-                current_guess = "TWEEN"
-            elif feedback == "__yy_":
-                current_guess = "TEENY"
-            elif feedback == "_g_g_":
-                current_guess = "TOTEM"
-            elif feedback == "_ggg_":
-                current_guess = "TONEY"
-            elif feedback == "_gyg_":
-                current_guess = "TOKEN"
-            elif feedback == "_y_y_":
-                current_guess = "TEMPO"
-            elif feedback == "y__g_":
-                current_guess = "THIEF"
-            elif feedback == "y__y_":
-                current_guess = "TEETH"
-            elif feedback == "y_gy_":
-                current_guess = "TENTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HONKY":
-            if feedback == "_____":
-                current_guess = "SPURT"
-            elif feedback == "____g":
-                current_guess = "RUSTY"
-            elif feedback == "___y_":
-                current_guess = "SKIRT"
-            elif feedback == "_y___":
-                current_guess = "SPORT"
-            elif feedback == "_y__g":
-                current_guess = "STORY"
-            elif feedback == "_y_y_":
-                current_guess = "STORK"
-            elif feedback == "_yy__":
-                current_guess = "SNORT"
-            elif feedback == "y____":
-                current_guess = "SHIRT"
-            elif feedback == "yy___":
-                current_guess = "SHORT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HOOCH":
-            if feedback == "ggg__":
-                current_guess = "HOOKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HOTEL":
-            if feedback == "__ggg":
-                current_guess = "BETEL"
-            elif feedback == "__ygy":
-                current_guess = "FLEET"
-            elif feedback == "_gggg":
-                current_guess = "MOTEL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HOUSE":
-            if feedback == "_gggg":
-                current_guess = "MOUSE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HOWDY":
-            if feedback == "_g_g_":
-                current_guess = "CONDO"
-            elif feedback == "_g_gg":
-                current_guess = "MOODY"
-            elif feedback == "_g_yg":
-                current_guess = "DOOZY"
-            elif feedback == "_gggg":
-                current_guess = "DOWDY"
-            elif feedback == "_ggyg":
-                current_guess = "DOWNY"
-            elif feedback == "_gygg":
-                current_guess = "WOODY"
-            elif feedback == "gg_gg":
-                current_guess = "HOODY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HUFFY":
-            if feedback == "gg__g":
-                current_guess = "HUNKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "HUMUS":
-            if feedback == "ygy_y":
-                current_guess = "MUSHY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "IMPEL":
-            if feedback == "y_ygg":
-                current_guess = "PIXEL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "INCEL":
-            if feedback == "_g_gg":
-                current_guess = "KNEEL"
-            elif feedback == "_y_gg":
-                current_guess = "NOVEL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "INFER":
-            if feedback == "yy_yy":
-                current_guess = "REIGN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "INPUT":
-            if feedback == "_g_gg":
-                current_guess = "UNCUT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ISLET":
-            if feedback == "_yyyg":
-                current_guess = "SMELT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ISSUE":
-            if feedback == "yy__g":
-                current_guess = "SIEVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "JAUNT":
-            if feedback == "_gggg":
-                current_guess = "VAUNT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "JAZZY":
-            if feedback == "_g__g":
-                current_guess = "YAPPY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "JETTY":
-            if feedback == "_g_g_":
-                current_guess = "BENTO"
-            elif feedback == "_g_gg":
-                current_guess = "HEFTY"
-            elif feedback == "_gg__":
-                current_guess = "FETCH"
-            elif feedback == "_gy__":
-                current_guess = "BEGOT"
-            elif feedback == "_yy__":
-                current_guess = "EVENT"
-            elif feedback == "yyy__":
-                current_guess = "EJECT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "JOINT":
-            if feedback == "_gggg":
-                current_guess = "POINT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "JUICY":
-            if feedback == "_ggg_":
-                current_guess = "QUICK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "KACHA":
-            if feedback == "_y___":
-                current_guess = "WEAVE"
-            elif feedback == "_y__y":
-                current_guess = "AMAZE"
-            elif feedback == "_y_y_":
-                current_guess = "HEAVE"
-            elif feedback == "_yy__":
-                current_guess = "PEACE"
-            elif feedback == "_yy_y":
-                current_guess = "APACE"
-            elif feedback == "_yyy_":
-                current_guess = "CHAFE"
-            elif feedback == "yy___":
-                current_guess = "QUAKE"
-            elif feedback == "yy__y":
-                current_guess = "AWAKE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "KEMPS":
-            if feedback == "_y___":
-                current_guess = "TATER"
-            elif feedback == "_y_y_":
-                current_guess = "TAPER"
-            elif feedback == "_yg__":
-                current_guess = "TAMER"
-            elif feedback == "yy___":
-                current_guess = "TAKER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "KLETT":
-            if feedback == "__yg_":
-                current_guess = "SPATE"
-            elif feedback == "__ygy":
-                current_guess = "STATE"
-            elif feedback == "__yy_":
-                current_guess = "STAGE"
-            elif feedback == "_gyg_":
-                current_guess = "SLATE"
-            elif feedback == "_yyy_":
-                current_guess = "STALE"
-            elif feedback == "y_yg_":
-                current_guess = "SKATE"
-            elif feedback == "y_yy_":
-                current_guess = "STAKE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "KNACK":
-            if feedback == "_gyy_":
-                current_guess = "UNCAP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "KVELL":
-            if feedback == "__ggg":
-                current_guess = "QUELL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LABEL":
-            if feedback == "gg_g_":
-                current_guess = "LADEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LAYUP":
-            if feedback == "_gg__":
-                current_guess = "KAYAK"
-            elif feedback == "_ggy_":
-                current_guess = "BAYOU"
-            elif feedback == "ygg__":
-                current_guess = "GAYLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LEAFY":
-            if feedback == "ggg__":
-                current_guess = "LEACH"
-            elif feedback == "ggg_g":
-                current_guess = "LEAKY"
-            elif feedback == "ygyy_":
-                current_guess = "FELLA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LEARN":
-            if feedback == "_ggg_":
-                current_guess = "WEARY"
-            elif feedback == "_gggg":
-                current_guess = "YEARN"
-            elif feedback == "_ggy_":
-                current_guess = "REACH"
-            elif feedback == "yggg_":
-                current_guess = "PEARL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LEAVE":
-            if feedback == "y_g_g":
-                current_guess = "WHALE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LEMED":
-            if feedback == "___g_":
-                current_guess = "FACET"
-            elif feedback == "___gg":
-                current_guess = "GATED"
-            elif feedback == "___gy":
-                current_guess = "CADET"
-            elif feedback == "__yg_":
-                current_guess = "MATEY"
-            elif feedback == "_y_g_":
-                current_guess = "EATEN"
-            elif feedback == "g__g_":
-                current_guess = "LATEX"
-            elif feedback == "y__g_":
-                current_guess = "VALET"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LIKEN":
-            if feedback == "g__gg":
-                current_guess = "LUMEN"
-            elif feedback == "gg_gg":
-                current_guess = "LIVEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LINGO":
-            if feedback == "gy_yy":
-                current_guess = "LOGIC"
-            elif feedback == "gyyyy":
-                current_guess = "LOGIN"
-            elif feedback == "yg_y_":
-                current_guess = "VIGIL"
-            elif feedback == "yy_yg":
-                current_guess = "IGLOO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LINKY":
-            if feedback == "_____":
-                current_guess = "TABOO"
-            elif feedback == "____g":
-                current_guess = "ABAFT"
-            elif feedback == "___gg":
-                current_guess = "TACKY"
-            elif feedback == "__g__":
-                current_guess = "TANGO"
-            elif feedback == "__g_g":
-                current_guess = "TANGY"
-            elif feedback == "__y__":
-                current_guess = "TAUNT"
-            elif feedback == "__y_g":
-                current_guess = "TAWNY"
-            elif feedback == "_y___":
-                current_guess = "TACIT"
-            elif feedback == "_yy__":
-                current_guess = "TAINT"
-            elif feedback == "y___g":
-                current_guess = "TALLY"
-            elif feedback == "y__gg":
-                current_guess = "TALKY"
-            elif feedback == "y_y__":
-                current_guess = "TALON"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LIPID":
-            if feedback == "gg_gg":
-                current_guess = "LIVID"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LOAMY":
-            if feedback == "ggy_y":
-                current_guess = "LOYAL"
-            elif feedback == "ygg__":
-                current_guess = "KOALA"
-            elif feedback == "ygy__":
-                current_guess = "DOULA"
-            elif feedback == "ygyy_":
-                current_guess = "MODAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LOATH":
-            if feedback == "yyyy_":
-                current_guess = "OCTAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LOGIN":
-            if feedback == "_____":
-                current_guess = "EMCEE"
-            elif feedback == "____y":
-                current_guess = "CHEEP"
-            elif feedback == "___g_":
-                current_guess = "PIXIE"
-            elif feedback == "___gy":
-                current_guess = "INDIE"
-            elif feedback == "___y_":
-                current_guess = "DUMPS"
-            elif feedback == "___yy":
-                current_guess = "WINCE"
-            elif feedback == "__g__":
-                current_guess = "FUGUE"
-            elif feedback == "__y__":
-                current_guess = "BUMPH"
-            elif feedback == "__y_y":
-                current_guess = "NUDGE"
-            elif feedback == "__ygy":
-                current_guess = "GENIE"
-            elif feedback == "__yy_":
-                current_guess = "BEIGE"
-            elif feedback == "__yyy":
-                current_guess = "BINGE"
-            elif feedback == "_g___":
-                current_guess = "BOCCE"
-            elif feedback == "_g_g_":
-                current_guess = "MOVIE"
-            elif feedback == "_g_y_":
-                current_guess = "VOICE"
-            elif feedback == "_gg__":
-                current_guess = "VOGUE"
-            elif feedback == "_ggg_":
-                current_guess = "BOGIE"
-            elif feedback == "_gy__":
-                current_guess = "DODGE"
-            elif feedback == "_y___":
-                current_guess = "CHOKE"
-            elif feedback == "_y__y":
-                current_guess = "OUNCE"
-            elif feedback == "_y_y_":
-                current_guess = "BIOME"
-            elif feedback == "_y_yy":
-                current_guess = "OPINE"
-            elif feedback == "_yy__":
-                current_guess = "GEODE"
-            elif feedback == "_yy_y":
-                current_guess = "GNOME"
-            elif feedback == "g____":
-                current_guess = "LEVEE"
-            elif feedback == "g_y__":
-                current_guess = "LEDGE"
-            elif feedback == "g_y_y":
-                current_guess = "LUNGE"
-            elif feedback == "g_yy_":
-                current_guess = "LIEGE"
-            elif feedback == "gg___":
-                current_guess = "LOUPE"
-            elif feedback == "ggy__":
-                current_guess = "LODGE"
-            elif feedback == "y____":
-                current_guess = "DUMPY"
-            elif feedback == "y___y":
-                current_guess = "UNCLE"
-            elif feedback == "y__g_":
-                current_guess = "BELIE"
-            elif feedback == "y__y_":
-                current_guess = "CHILE"
-            elif feedback == "y_g__":
-                current_guess = "BUGLE"
-            elif feedback == "y_y__":
-                current_guess = "BULGE"
-            elif feedback == "y_yy_":
-                current_guess = "GLIDE"
-            elif feedback == "yg___":
-                current_guess = "BOULE"
-            elif feedback == "yg__y":
-                current_guess = "NOBLE"
-            elif feedback == "yg_y_":
-                current_guess = "VOILE"
-            elif feedback == "yy___":
-                current_guess = "BECAP"
-            elif feedback == "yy__y":
-                current_guess = "CLONE"
-            elif feedback == "yy_g_":
-                current_guess = "OLDIE"
-            elif feedback == "yy_y_":
-                current_guess = "OLIVE"
-            elif feedback == "yyy__":
-                current_guess = "GLOBE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LORDY":
-            if feedback == "ggg_g":
-                current_guess = "LORRY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LOWLY":
-            if feedback == "_g_gg":
-                current_guess = "COYLY"
-            elif feedback == "_gggg":
-                current_guess = "JOWLY"
-            elif feedback == "_gygg":
-                current_guess = "WOOLY"
-            elif feedback == "gg_gg":
-                current_guess = "LOLLY"
-            elif feedback == "yg_gg":
-                current_guess = "FEHME"
-            elif feedback == "yy_g_":
-                current_guess = "KNOLL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LUPIN":
-            if feedback == "_____":
-                current_guess = "MASSE"
-            elif feedback == "____y":
-                current_guess = "MANSE"
-            elif feedback == "__y__":
-                current_guess = "PASSE"
-            elif feedback == "_y___":
-                current_guess = "CAUSE"
-            elif feedback == "_yy__":
-                current_guess = "PAUSE"
-            elif feedback == "g_g__":
-                current_guess = "LAPSE"
-            elif feedback == "y____":
-                current_guess = "FALSE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "LYMPH":
-            if feedback == "_____":
-                current_guess = "OAKEN"
-            elif feedback == "____y":
-                current_guess = "HAVEN"
-            elif feedback == "___y_":
-                current_guess = "PAEAN"
-            elif feedback == "__g__":
-                current_guess = "CAMEO"
-            elif feedback == "__y__":
-                current_guess = "MAVEN"
-            elif feedback == "_y___":
-                current_guess = "CAGEY"
-            elif feedback == "_yg__":
-                current_guess = "GAMEY"
-            elif feedback == "g____":
-                current_guess = "LABEL"
-            elif feedback == "g__y_":
-                current_guess = "LAPEL"
-            elif feedback == "gy___":
-                current_guess = "LACEY"
-            elif feedback == "y____":
-                current_guess = "BAGEL"
-            elif feedback == "y___y":
-                current_guess = "HAZEL"
-            elif feedback == "y__y_":
-                current_guess = "PANEL"
-            elif feedback == "y_g__":
-                current_guess = "CAMEL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MAGIC":
-            if feedback == "_g__y":
-                current_guess = "WACKO"
-            elif feedback == "gg__y":
-                current_guess = "MACAW"
-            elif feedback == "gg_gg":
-                current_guess = "MALIC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MAKER":
-            if feedback == "yg_gy":
-                current_guess = "RAMEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MAMBA":
-            if feedback == "_g___":
-                current_guess = "KAZOO"
-            elif feedback == "_g__g":
-                current_guess = "KAPPA"
-            elif feedback == "_g__y":
-                current_guess = "PAPAL"
-            elif feedback == "_g_y_":
-                current_guess = "KABOB"
-            elif feedback == "_g_yg":
-                current_guess = "BABKA"
-            elif feedback == "gg__g":
-                current_guess = "MAFIA"
-            elif feedback == "ggg_g":
-                current_guess = "MAMMA"
-            elif feedback == "gggg_":
-                current_guess = "MAMBO"
-            elif feedback == "ggy__":
-                current_guess = "MAXIM"
-            elif feedback == "ggy_g":
-                current_guess = "MAGMA"
-            elif feedback == "ygg_g":
-                current_guess = "GAMMA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MANIC":
-            if feedback == "_gggg":
-                current_guess = "PANIC"
-            elif feedback == "_gy_y":
-                current_guess = "BACON"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MANLY":
-            if feedback == "_gg_g":
-                current_guess = "JANKY"
-            elif feedback == "_gggg":
-                current_guess = "WANLY"
-            elif feedback == "_ggyg":
-                current_guess = "LANKY"
-            elif feedback == "_gy_g":
-                current_guess = "NAGGY"
-            elif feedback == "ggg_g":
-                current_guess = "MANGY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MEDAL":
-            if feedback == "_g_g_":
-                current_guess = "BEGAN"
-            elif feedback == "_g_gg":
-                current_guess = "APING"
-            elif feedback == "_g_gy":
-                current_guess = "BELAY"
-            elif feedback == "_g_y_":
-                current_guess = "BEACH"
-            elif feedback == "_g_yy":
-                current_guess = "LEAFY"
-            elif feedback == "_gggg":
-                current_guess = "PEDAL"
-            elif feedback == "_gyg_":
-                current_guess = "DECAF"
-            elif feedback == "_gygg":
-                current_guess = "DECAL"
-            elif feedback == "_gygy":
-                current_guess = "DELAY"
-            elif feedback == "_gyy_":
-                current_guess = "BEADY"
-            elif feedback == "_y_g_":
-                current_guess = "CHEAP"
-            elif feedback == "_y_gg":
-                current_guess = "EQUAL"
-            elif feedback == "_y_gy":
-                current_guess = "CLEAN"
-            elif feedback == "_y_y_":
-                current_guess = "ANNEX"
-            elif feedback == "_y_yg":
-                current_guess = "ANGEL"
-            elif feedback == "_y_yy":
-                current_guess = "ALIEN"
-            elif feedback == "_yyg_":
-                current_guess = "AHEAD"
-            elif feedback == "_yygg":
-                current_guess = "IDEAL"
-            elif feedback == "_yygy":
-                current_guess = "PLEAD"
-            elif feedback == "_yyy_":
-                current_guess = "ADIEU"
-            elif feedback == "gg_y_":
-                current_guess = "MECCA"
-            elif feedback == "gg_yy":
-                current_guess = "MEALY"
-            elif feedback == "gggy_":
-                current_guess = "MEDIA"
-            elif feedback == "yg_yy":
-                current_guess = "LEMMA"
-            elif feedback == "yy_gy":
-                current_guess = "GLEAM"
-            elif feedback == "yy_y_":
-                current_guess = "ENEMA"
-            elif feedback == "yy_yg":
-                current_guess = "EMAIL"
-            elif feedback == "yyyy_":
-                current_guess = "AMEND"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MERGE":
-            if feedback == "_gggg":
-                current_guess = "VERGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MESHY":
-            if feedback == "_gg_g":
-                current_guess = "PESKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "METRO":
-            if feedback == "_gggg":
-                current_guess = "RETRO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MICRO":
-            if feedback == "__gyy":
-                current_guess = "OCCUR"
-            elif feedback == "__yyy":
-                current_guess = "FROCK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MILKO":
-            if feedback == "____y":
-                current_guess = "STONE"
-            elif feedback == "___gy":
-                current_guess = "STOKE"
-            elif feedback == "__y__":
-                current_guess = "STELE"
-            elif feedback == "__y_y":
-                current_guess = "STOLE"
-            elif feedback == "_g___":
-                current_guess = "PISTE"
-            elif feedback == "_y___":
-                current_guess = "SPITE"
-            elif feedback == "_yy__":
-                current_guess = "STILE"
-            elif feedback == "y___y":
-                current_guess = "SMOTE"
-            elif feedback == "yy___":
-                current_guess = "SMITE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MINOR":
-            if feedback == "____g":
-                current_guess = "TRUER"
-            elif feedback == "____y":
-                current_guess = "TWERK"
-            elif feedback == "___yg":
-                current_guess = "TOWER"
-            elif feedback == "__g_g":
-                current_guess = "TUNER"
-            elif feedback == "__ggg":
-                current_guess = "TENOR"
-            elif feedback == "__gyg":
-                current_guess = "TONER"
-            elif feedback == "__y_y":
-                current_guess = "TREND"
-            elif feedback == "_g__g":
-                current_guess = "TIGER"
-            elif feedback == "_y__g":
-                current_guess = "THEIR"
-            elif feedback == "_y__y":
-                current_guess = "TRIED"
-            elif feedback == "yg__g":
-                current_guess = "TIMER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MINTY":
-            if feedback == "_ggg_":
-                current_guess = "NINTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MINUS":
-            if feedback == "__ggg":
-                current_guess = "BONUS"
-            elif feedback == "_gggg":
-                current_guess = "SINUS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MISER":
-            if feedback == "__ggg":
-                current_guess = "LOSER"
-            elif feedback == "__ygg":
-                current_guess = "SOBER"
-            elif feedback == "_gggg":
-                current_guess = "RISER"
-            elif feedback == "_gggy":
-                current_guess = "RISEN"
-            elif feedback == "_yygg":
-                current_guess = "SKIER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MOCHA":
-            if feedback == "_gyyy":
-                current_guess = "POACH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MOLAR":
-            if feedback == "_gggg":
-                current_guess = "POLAR"
-            elif feedback == "_gygy":
-                current_guess = "ROYAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MOPED":
-            if feedback == "___gg":
-                current_guess = "IVIED"
-            elif feedback == "__ggg":
-                current_guess = "BIPED"
-            elif feedback == "_g_gy":
-                current_guess = "CODEX"
-            elif feedback == "_y_gy":
-                current_guess = "VIDEO"
-            elif feedback == "gg_gy":
-                current_guess = "MODEM"
-            elif feedback == "y__gg":
-                current_guess = "EMBED"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MOTOR":
-            if feedback == "_gggg":
-                current_guess = "ROTOR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MOURN":
-            if feedback == "_g_yg":
-                current_guess = "ROBIN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MOVIE":
-            if feedback == "gg_gg":
-                current_guess = "MOXIE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MULCH":
-            if feedback == "_____":
-                current_guess = "ABYSS"
-            elif feedback == "____g":
-                current_guess = "AWASH"
-            elif feedback == "__y__":
-                current_guess = "FLASK"
-            elif feedback == "__y_g":
-                current_guess = "FLASH"
-            elif feedback == "__yy_":
-                current_guess = "CLASP"
-            elif feedback == "__yyg":
-                current_guess = "CLASH"
-            elif feedback == "_g___":
-                current_guess = "QUASI"
-            elif feedback == "_g__g":
-                current_guess = "QUASH"
-            elif feedback == "y____":
-                current_guess = "AMASS"
-            elif feedback == "y___g":
-                current_guess = "SMASH"
-            elif feedback == "y__yy":
-                current_guess = "CHASM"
-            elif feedback == "y_y__":
-                current_guess = "PLASM"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MUMMY":
-            if feedback == "_gggg":
-                current_guess = "YUMMY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "MURAL":
-            if feedback == "_gggg":
-                current_guess = "RURAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NAGGY":
-            if feedback == "gg__g":
-                current_guess = "NAPPY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NERDY":
-            if feedback == "ggg_g":
-                current_guess = "NERVY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NEWEL":
-            if feedback == "___g_":
-                current_guess = "SHIED"
-            elif feedback == "___gg":
-                current_guess = "SPIEL"
-            elif feedback == "_g___":
-                current_guess = "MESHY"
-            elif feedback == "_g__y":
-                current_guess = "LEXIS"
-            elif feedback == "_g_g_":
-                current_guess = "FECES"
-            elif feedback == "_g_y_":
-                current_guess = "SEEDY"
-            elif feedback == "_y___":
-                current_guess = "SHEIK"
-            elif feedback == "_y__g":
-                current_guess = "APHID"
-            elif feedback == "_y__y":
-                current_guess = "SHELF"
-            elif feedback == "_y_g_":
-                current_guess = "SHEEP"
-            elif feedback == "_y_gy":
-                current_guess = "SLEEK"
-            elif feedback == "_yy_g":
-                current_guess = "SWELL"
-            elif feedback == "_yyg_":
-                current_guess = "SWEEP"
-            elif feedback == "g__g_":
-                current_guess = "NOSEY"
-            elif feedback == "gg___":
-                current_guess = "NEXUS"
-            elif feedback == "y_yg_":
-                current_guess = "SINEW"
-            elif feedback == "yg___":
-                current_guess = "GENUS"
-            elif feedback == "yg_g_":
-                current_guess = "SEVEN"
-            elif feedback == "yy___":
-                current_guess = "SKEIN"
-            elif feedback == "yy_g_":
-                current_guess = "SHEEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NODAL":
-            if feedback == "yg_gg":
-                current_guess = "ZONAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NOISE":
-            if feedback == "_g_gg":
-                current_guess = "POSSE"
-            elif feedback == "_gggg":
-                current_guess = "POISE"
-            elif feedback == "_y_gg":
-                current_guess = "OBESE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NORTH":
-            if feedback == "_gggg":
-                current_guess = "WORTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NURSE":
-            if feedback == "_gggg":
-                current_guess = "PURSE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NUTTY":
-            if feedback == "yy_gg":
-                current_guess = "UNITY"
-            elif feedback == "yyg__":
-                current_guess = "UNTIL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "NYMPH":
-            if feedback == "_____":
-                current_guess = "CIVIC"
-            elif feedback == "___gy":
-                current_guess = "HIPPO"
-            elif feedback == "__g__":
-                current_guess = "COMIC"
-            elif feedback == "__y_y":
-                current_guess = "MOCHI"
-            elif feedback == "_y___":
-                current_guess = "FIZZY"
-            elif feedback == "_y_g_":
-                current_guess = "ZIPPY"
-            elif feedback == "_y_gy":
-                current_guess = "HIPPY"
-            elif feedback == "_y_y_":
-                current_guess = "PICKY"
-            elif feedback == "_yg__":
-                current_guess = "JIMMY"
-            elif feedback == "_ygg_":
-                current_guess = "WIMPY"
-            elif feedback == "gy___":
-                current_guess = "NINNY"
-            elif feedback == "gy_g_":
-                current_guess = "NIPPY"
-            elif feedback == "y____":
-                current_guess = "CONIC"
-            elif feedback == "y___g":
-                current_guess = "AFLOW"
-            elif feedback == "y__yg":
-                current_guess = "PINCH"
-            elif feedback == "y_y__":
-                current_guess = "MINIM"
-            elif feedback == "yg___":
-                current_guess = "CYNIC"
-            elif feedback == "yy___":
-                current_guess = "KINKY"
-            elif feedback == "yy__y":
-                current_guess = "HINKY"
-            elif feedback == "yy_y_":
-                current_guess = "PINKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OAKEN":
-            if feedback == "_g_g_":
-                current_guess = "JADED"
-            elif feedback == "_g_gg":
-                current_guess = "WAXEN"
-            elif feedback == "_ggg_":
-                current_guess = "BAKED"
-            elif feedback == "_gggg":
-                current_guess = "WAKEN"
-            elif feedback == "_gggy":
-                current_guess = "NAKED"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OCHER":
-            if feedback == "yy_yy":
-                current_guess = "RECON"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ODDER":
-            if feedback == "g_ggg":
-                current_guess = "ORDER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OFFER":
-            if feedback == "g__gg":
-                current_guess = "OWNER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OPINE":
-            if feedback == "g_ggg":
-                current_guess = "OVINE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OPIUM":
-            if feedback == "__gy_":
-                current_guess = "UNIFY"
-            elif feedback == "y_gy_":
-                current_guess = "UNION"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OTHER":
-            if feedback == "gg_gg":
-                current_guess = "OTTER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OUNCE":
-            if feedback == "g_y_g":
-                current_guess = "OZONE"
-            elif feedback == "y_y_g":
-                current_guess = "PHONE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "OUTGO":
-            if feedback == "ygy__":
-                current_guess = "QUOTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PANTY":
-            if feedback == "gg_gg":
-                current_guess = "PATTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PARER":
-            if feedback == "_gggg":
-                current_guess = "RARER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PARRY":
-            if feedback == "_gg_g":
-                current_guess = "HARDY"
-            elif feedback == "_gggg":
-                current_guess = "HARRY"
-            elif feedback == "ygg_g":
-                current_guess = "HARPY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PASTE":
-            if feedback == "_gggg":
-                current_guess = "WASTE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PATSY":
-            if feedback == "_gyg_":
-                current_guess = "WAIST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PERIL":
-            if feedback == "gyg__":
-                current_guess = "PURER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PHISH":
-            if feedback == "_ggg_":
-                current_guess = "WHISK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PHLOX":
-            if feedback == "__gg_":
-                current_guess = "BELOW"
-            elif feedback == "__gy_":
-                current_guess = "CELLO"
-            elif feedback == "__y__":
-                current_guess = "FLECK"
-            elif feedback == "__yg_":
-                current_guess = "ELBOW"
-            elif feedback == "_gy__":
-                current_guess = "WHELK"
-            elif feedback == "_yg__":
-                current_guess = "BELCH"
-            elif feedback == "_yg_g":
-                current_guess = "HELIX"
-            elif feedback == "_ygy_":
-                current_guess = "HELLO"
-            elif feedback == "_yy__":
-                current_guess = "LEECH"
-            elif feedback == "ygy__":
-                current_guess = "WHELP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PILAF":
-            if feedback == "_ggy_":
-                current_guess = "VILLA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PILED":
-            if feedback == "___g_":
-                current_guess = "COMET"
-            elif feedback == "___gy":
-                current_guess = "DUVET"
-            elif feedback == "___y_":
-                current_guess = "JETTY"
-            elif feedback == "___yy":
-                current_guess = "DEBUT"
-            elif feedback == "__gy_":
-                current_guess = "MELTY"
-            elif feedback == "__gyy":
-                current_guess = "VELDT"
-            elif feedback == "__yg_":
-                current_guess = "HOTEL"
-            elif feedback == "__yy_":
-                current_guess = "EXULT"
-            elif feedback == "__yyy":
-                current_guess = "DWELT"
-            elif feedback == "_g_g_":
-                current_guess = "CIVET"
-            elif feedback == "_g_gy":
-                current_guess = "BIDET"
-            elif feedback == "_g_y_":
-                current_guess = "EIGHT"
-            elif feedback == "_ggg_":
-                current_guess = "FILET"
-            elif feedback == "_y_g_":
-                current_guess = "QUIET"
-            elif feedback == "_y_y_":
-                current_guess = "BEFIT"
-            elif feedback == "_y_yg":
-                current_guess = "FETID"
-            elif feedback == "_y_yy":
-                current_guess = "DEBIT"
-            elif feedback == "_ygg_":
-                current_guess = "INLET"
-            elif feedback == "_yyg_":
-                current_guess = "INTEL"
-            elif feedback == "_yyy_":
-                current_guess = "LEGIT"
-            elif feedback == "g__y_":
-                current_guess = "PETTY"
-            elif feedback == "gg_g_":
-                current_guess = "PIPET"
-            elif feedback == "gg_y_":
-                current_guess = "PIETY"
-            elif feedback == "gy_y_":
-                current_guess = "PETIT"
-            elif feedback == "y__y_":
-                current_guess = "EMPTY"
-            elif feedback == "y__yy":
-                current_guess = "DEPOT"
-            elif feedback == "y_yy_":
-                current_guess = "LETUP"
-            elif feedback == "yy_y_":
-                current_guess = "INEPT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PILOT":
-            if feedback == "_g_gg":
-                current_guess = "BIGOT"
-            elif feedback == "gg_gg":
-                current_guess = "PIVOT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PINCH":
-            if feedback == "_____":
-                current_guess = "SWORE"
-            elif feedback == "____y":
-                current_guess = "SHORE"
-            elif feedback == "___y_":
-                current_guess = "SCORE"
-            elif feedback == "__y__":
-                current_guess = "SNORE"
-            elif feedback == "_y__y":
-                current_guess = "SHIRE"
-            elif feedback == "y____":
-                current_guess = "SPORE"
-            elif feedback == "yy___":
-                current_guess = "SPIRE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PINKY":
-            if feedback == "_g___":
-                current_guess = "REFIX"
-            elif feedback == "_g__g":
-                current_guess = "FIERY"
-            elif feedback == "_g_y_":
-                current_guess = "BIKER"
-            elif feedback == "_gg__":
-                current_guess = "FINER"
-            elif feedback == "_gy__":
-                current_guess = "RIVEN"
-            elif feedback == "_y___":
-                current_guess = "BRIEF"
-            elif feedback == "_y__g":
-                current_guess = "REIFY"
-            elif feedback == "_y_y_":
-                current_guess = "KEFIR"
-            elif feedback == "_yg__":
-                current_guess = "INNER"
-            elif feedback == "_yy__":
-                current_guess = "INFER"
-            elif feedback == "gg___":
-                current_guess = "PIPER"
-            elif feedback == "gg_y_":
-                current_guess = "PIKER"
-            elif feedback == "yg___":
-                current_guess = "ADVEW"
-            elif feedback == "ygy__":
-                current_guess = "RIPEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PIOUS":
-            if feedback == "g__yy":
-                current_guess = "PUSHY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLANC":
-            if feedback == "__g__":
-                current_guess = "DEATH"
-            elif feedback == "__g_y":
-                current_guess = "EXACT"
-            elif feedback == "__gg_":
-                current_guess = "MEANT"
-            elif feedback == "__gy_":
-                current_guess = "SNAFU"
-            elif feedback == "__gyy":
-                current_guess = "ENACT"
-            elif feedback == "__y__":
-                current_guess = "BEGAT"
-            elif feedback == "__y_g":
-                current_guess = "SUMAC"
-            elif feedback == "__y_y":
-                current_guess = "CHEAT"
-            elif feedback == "__yg_":
-                current_guess = "AGENT"
-            elif feedback == "__yy_":
-                current_guess = "UNSAY"
-            elif feedback == "_gg_y":
-                current_guess = "SLACK"
-            elif feedback == "_ggg_":
-                current_guess = "SLANG"
-            elif feedback == "_ggy_":
-                current_guess = "SLAIN"
-            elif feedback == "_gy__":
-                current_guess = "BLEAT"
-            elif feedback == "_gy_y":
-                current_guess = "CLEAT"
-            elif feedback == "_yg__":
-                current_guess = "DEALT"
-            elif feedback == "_yg_y":
-                current_guess = "SCALD"
-            elif feedback == "_ygg_":
-                current_guess = "LEANT"
-            elif feedback == "_ygy_":
-                current_guess = "SNAIL"
-            elif feedback == "_yy__":
-                current_guess = "FETAL"
-            elif feedback == "_yy_y":
-                current_guess = "ECLAT"
-            elif feedback == "g_g__":
-                current_guess = "PEATY"
-            elif feedback == "ggy__":
-                current_guess = "PLEAT"
-            elif feedback == "gyg__":
-                current_guess = "PSALM"
-            elif feedback == "gyy__":
-                current_guess = "PETAL"
-            elif feedback == "y_g__":
-                current_guess = "SOAPY"
-            elif feedback == "y_g_y":
-                current_guess = "SCAMP"
-            elif feedback == "y_gg_":
-                current_guess = "SPANK"
-            elif feedback == "y_gy_":
-                current_guess = "SPAWN"
-            elif feedback == "y_y__":
-                current_guess = "ADEPT"
-            elif feedback == "y_y_g":
-                current_guess = "ASPIC"
-            elif feedback == "yyg__":
-                current_guess = "LEAPT"
-            elif feedback == "yyg_y":
-                current_guess = "SCALP"
-            elif feedback == "yyy__":
-                current_guess = "SPLAY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLING":
-            if feedback == "_____":
-                current_guess = "SHOVE"
-            elif feedback == "____y":
-                current_guess = "SEDGE"
-            elif feedback == "___g_":
-                current_guess = "SCENE"
-            elif feedback == "___y_":
-                current_guess = "ENSUE"
-            elif feedback == "__g__":
-                current_guess = "SEIZE"
-            elif feedback == "__gg_":
-                current_guess = "SHINE"
-            elif feedback == "__gy_":
-                current_guess = "SNIDE"
-            elif feedback == "__y__":
-                current_guess = "ISSUE"
-            elif feedback == "__y_y":
-                current_guess = "SIEGE"
-            elif feedback == "__yy_":
-                current_guess = "SINCE"
-            elif feedback == "__yyy":
-                current_guess = "SINGE"
-            elif feedback == "_gg__":
-                current_guess = "ADEEM"
-            elif feedback == "_y___":
-                current_guess = "SOLVE"
-            elif feedback == "_yg__":
-                current_guess = "SMILE"
-            elif feedback == "_yy__":
-                current_guess = "SIDLE"
-            elif feedback == "y____":
-                current_guess = "SCOPE"
-            elif feedback == "y_g__":
-                current_guess = "SPICE"
-            elif feedback == "y_gg_":
-                current_guess = "SPINE"
-            elif feedback == "y_gy_":
-                current_guess = "SNIPE"
-            elif feedback == "yg___":
-                current_guess = "SLOPE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLOIT":
-            if feedback == "____g":
-                current_guess = "CHANT"
-            elif feedback == "____y":
-                current_guess = "AUNTY"
-            elif feedback == "___gg":
-                current_guess = "ADMIT"
-            elif feedback == "___gy":
-                current_guess = "ANTIC"
-            elif feedback == "___yg":
-                current_guess = "GIANT"
-            elif feedback == "___yy":
-                current_guess = "AGITA"
-            elif feedback == "__g_g":
-                current_guess = "ABOUT"
-            elif feedback == "__g_y":
-                current_guess = "QUOTA"
-            elif feedback == "__y_g":
-                current_guess = "ABBOT"
-            elif feedback == "__y_y":
-                current_guess = "GOTTA"
-            elif feedback == "__yyy":
-                current_guess = "COATI"
-            elif feedback == "_gg_g":
-                current_guess = "ABAFT"
-            elif feedback == "_gy_g":
-                current_guess = "ALLOT"
-            elif feedback == "_y__g":
-                current_guess = "ADULT"
-            elif feedback == "_y_yy":
-                current_guess = "VITAL"
-            elif feedback == "_yg_y":
-                current_guess = "ATOLL"
-            elif feedback == "_yy_y":
-                current_guess = "LOATH"
-            elif feedback == "gg__g":
-                current_guess = "PLANT"
-            elif feedback == "gg_gg":
-                current_guess = "PLAIT"
-            elif feedback == "y___g":
-                current_guess = "ADAPT"
-            elif feedback == "y__yg":
-                current_guess = "INAPT"
-            elif feedback == "y_g_g":
-                current_guess = "ADOPT"
-            elif feedback == "yy__y":
-                current_guess = "APTLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLUCK":
-            if feedback == "_gg__":
-                current_guess = "BLUFF"
-            elif feedback == "_gg_g":
-                current_guess = "FLUNK"
-            elif feedback == "_gg_y":
-                current_guess = "FLUKY"
-            elif feedback == "_gggg":
-                current_guess = "CLUCK"
-            elif feedback == "_ggyg":
-                current_guess = "CLUNK"
-            elif feedback == "ggg__":
-                current_guess = "PLUMB"
-            elif feedback == "ggg_g":
-                current_guess = "PLUNK"
-            elif feedback == "yggy_":
-                current_guess = "CLUMP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLUMB":
-            if feedback == "gggg_":
-                current_guess = "PLUMP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLUNK":
-            if feedback == "_____":
-                current_guess = "DISHY"
-            elif feedback == "____g":
-                current_guess = "SHOCK"
-            elif feedback == "____y":
-                current_guess = "SKIFF"
-            elif feedback == "___g_":
-                current_guess = "SHINY"
-            elif feedback == "___y_":
-                current_guess = "BISON"
-            elif feedback == "__g__":
-                current_guess = "SQUIB"
-            elif feedback == "__g_g":
-                current_guess = "SHUCK"
-            elif feedback == "__gg_":
-                current_guess = "SOUND"
-            elif feedback == "__ggg":
-                current_guess = "SKUNK"
-            elif feedback == "__gy_":
-                current_guess = "SNUFF"
-            elif feedback == "__gyg":
-                current_guess = "SNUCK"
-            elif feedback == "__y__":
-                current_guess = "CHIMB"
-            elif feedback == "__y_y":
-                current_guess = "ADSUM"
-            elif feedback == "__yg_":
-                current_guess = "SUING"
-            elif feedback == "__yy_":
-                current_guess = "MINUS"
-            elif feedback == "_g___":
-                current_guess = "SLIMY"
-            elif feedback == "_g__g":
-                current_guess = "SLICK"
-            elif feedback == "_g_g_":
-                current_guess = "SLING"
-            elif feedback == "_g_gg":
-                current_guess = "SLINK"
-            elif feedback == "_ggg_":
-                current_guess = "SLUNG"
-            elif feedback == "_gggg":
-                current_guess = "SLUNK"
-            elif feedback == "_y___":
-                current_guess = "SHILL"
-            elif feedback == "_y__y":
-                current_guess = "SILKY"
-            elif feedback == "_yg__":
-                current_guess = "SCULL"
-            elif feedback == "_yg_g":
-                current_guess = "SKULK"
-            elif feedback == "_yg_y":
-                current_guess = "SKULL"
-            elif feedback == "_yy__":
-                current_guess = "BOLUS"
-            elif feedback == "_yy_y":
-                current_guess = "SULKY"
-            elif feedback == "g____":
-                current_guess = "PSYCH"
-            elif feedback == "g_y__":
-                current_guess = "PIOUS"
-            elif feedback == "gy___":
-                current_guess = "POLIS"
-            elif feedback == "y____":
-                current_guess = "SCOOP"
-            elif feedback == "y___g":
-                current_guess = "SPOOK"
-            elif feedback == "y___y":
-                current_guess = "SKIMP"
-            elif feedback == "y__g_":
-                current_guess = "SPINY"
-            elif feedback == "y__y_":
-                current_guess = "SNOOP"
-            elif feedback == "y_g__":
-                current_guess = "SOUPY"
-            elif feedback == "y_ggg":
-                current_guess = "SPUNK"
-            elif feedback == "y_yy_":
-                current_guess = "SUNUP"
-            elif feedback == "yg___":
-                current_guess = "SLOOP"
-            elif feedback == "ygg__":
-                current_guess = "SLUMP"
-            elif feedback == "yy___":
-                current_guess = "SPILL"
-            elif feedback == "yyy__":
-                current_guess = "LUPUS"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PLUOT":
-            if feedback == "____g":
-                current_guess = "CHEEK"
-            elif feedback == "____y":
-                current_guess = "STEED"
-            elif feedback == "___gg":
-                current_guess = "BESOT"
-            elif feedback == "___gy":
-                current_guess = "ETHOS"
-            elif feedback == "___yg":
-                current_guess = "ONSET"
-            elif feedback == "___yy":
-                current_guess = "STENO"
-            elif feedback == "__y_g":
-                current_guess = "UNSET"
-            elif feedback == "__y_y":
-                current_guess = "FETUS"
-            elif feedback == "_g__g":
-                current_guess = "SLEET"
-            elif feedback == "_y__g":
-                current_guess = "ISLET"
-            elif feedback == "_y__y":
-                current_guess = "STEEL"
-            elif feedback == "g__yy":
-                current_guess = "PESTO"
-            elif feedback == "y___g":
-                current_guess = "SPENT"
-            elif feedback == "y___y":
-                current_guess = "STEEP"
-            elif feedback == "y_y_g":
-                current_guess = "UPSET"
-            elif feedback == "y_y_y":
-                current_guess = "SETUP"
-            elif feedback == "yg__g":
-                current_guess = "SLEPT"
-            elif feedback == "yy__g":
-                current_guess = "SPELT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "POBOY":
-            if feedback == "___gy":
-                current_guess = "NYLON"
-            elif feedback == "__y_g":
-                current_guess = "FLYBY"
-            elif feedback == "_g__g":
-                current_guess = "FOLKY"
-            elif feedback == "_g_g_":
-                current_guess = "COLON"
-            elif feedback == "_g_yg":
-                current_guess = "LOONY"
-            elif feedback == "_gg_g":
-                current_guess = "LOBBY"
-            elif feedback == "_y___":
-                current_guess = "CLOCK"
-            elif feedback == "_y__g":
-                current_guess = "FLOWY"
-            elif feedback == "_yy__":
-                current_guess = "BLOCK"
-            elif feedback == "_yyg_":
-                current_guess = "BLOOM"
-            elif feedback == "g__gy":
-                current_guess = "PYLON"
-            elif feedback == "gg__y":
-                current_guess = "POLYP"
-            elif feedback == "gy___":
-                current_guess = "PLONK"
-            elif feedback == "y___y":
-                current_guess = "LYMPH"
-            elif feedback == "yg_yg":
-                current_guess = "LOOPY"
-            elif feedback == "yy___":
-                current_guess = "CLOMP"
-            elif feedback == "yyyg_":
-                current_guess = "BLOOP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "POIND":
-            if feedback == "_____":
-                current_guess = "CREME"
-            elif feedback == "____y":
-                current_guess = "CRUDE"
-            elif feedback == "___y_":
-                current_guess = "GENRE"
-            elif feedback == "__g__":
-                current_guess = "CRIME"
-            elif feedback == "__g_y":
-                current_guess = "BRIDE"
-            elif feedback == "__gg_":
-                current_guess = "BRINE"
-            elif feedback == "__y__":
-                current_guess = "RIFLE"
-            elif feedback == "__y_y":
-                current_guess = "RIDGE"
-            elif feedback == "__yy_":
-                current_guess = "INURE"
-            elif feedback == "_g___":
-                current_guess = "ROGUE"
-            elif feedback == "_y___":
-                current_guess = "BHANG"
-            elif feedback == "_y__y":
-                current_guess = "DROVE"
-            elif feedback == "_y_g_":
-                current_guess = "CRONE"
-            elif feedback == "_y_gy":
-                current_guess = "DRONE"
-            elif feedback == "g___y":
-                current_guess = "PRUDE"
-            elif feedback == "g__g_":
-                current_guess = "PRUNE"
-            elif feedback == "g_g__":
-                current_guess = "ACMES"
-            elif feedback == "g_g_y":
-                current_guess = "PRIDE"
-            elif feedback == "gy___":
-                current_guess = "ABLET"
-            elif feedback == "gy_g_":
-                current_guess = "PRONE"
-            elif feedback == "y____":
-                current_guess = "CREPE"
-            elif feedback == "y_g__":
-                current_guess = "GRIPE"
-            elif feedback == "yy___":
-                current_guess = "GROPE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "POKER":
-            if feedback == "yg_gg":
-                current_guess = "ROPER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PONCY":
-            if feedback == "_____":
-                current_guess = "HIRER"
-            elif feedback == "____g":
-                current_guess = "AMBRY"
-            elif feedback == "____y":
-                current_guess = "BERYL"
-            elif feedback == "___g_":
-                current_guess = "MERCH"
-            elif feedback == "___gg":
-                current_guess = "MERCY"
-            elif feedback == "___y_":
-                current_guess = "CURER"
-            elif feedback == "__y__":
-                current_guess = "RERUN"
-            elif feedback == "__y_g":
-                current_guess = "NERDY"
-            elif feedback == "_g___":
-                current_guess = "BORED"
-            elif feedback == "_g_y_":
-                current_guess = "CORER"
-            elif feedback == "_y___":
-                current_guess = "ERROR"
-            elif feedback == "_yy__":
-                current_guess = "HERON"
-            elif feedback == "g____":
-                current_guess = "PERIL"
-            elif feedback == "g___g":
-                current_guess = "PERKY"
-            elif feedback == "g__g_":
-                current_guess = "PERCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "POSER":
-            if feedback == "y_ygg":
-                current_guess = "SUPER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PRICK":
-            if feedback == "_g___":
-                current_guess = "TROVE"
-            elif feedback == "_g_g_":
-                current_guess = "TRUCE"
-            elif feedback == "_gg__":
-                current_guess = "TRIBE"
-            elif feedback == "_gg_y":
-                current_guess = "TRIKE"
-            elif feedback == "_ggg_":
-                current_guess = "TRICE"
-            elif feedback == "_y___":
-                current_guess = "THERE"
-            elif feedback == "yg___":
-                current_guess = "TROPE"
-            elif feedback == "ygg__":
-                current_guess = "TRIPE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PRIMP":
-            if feedback == "_yg__":
-                current_guess = "WHIRR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PRIOR":
-            if feedback == "___gg":
-                current_guess = "HUMOR"
-            elif feedback == "__ygg":
-                current_guess = "VIGOR"
-            elif feedback == "_y_gg":
-                current_guess = "RUMOR"
-            elif feedback == "_yygg":
-                current_guess = "RIGOR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PRONG":
-            if feedback == "_ggg_":
-                current_guess = "IRONY"
-            elif feedback == "_gggg":
-                current_guess = "WRONG"
-            elif feedback == "_yyg_":
-                current_guess = "RHINO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PSHAW":
-            if feedback == "_g_y_":
-                current_guess = "ASKER"
-            elif feedback == "_y_g_":
-                current_guess = "SMEAR"
-            elif feedback == "_y_gg":
-                current_guess = "RESAW"
-            elif feedback == "_y_gy":
-                current_guess = "SWEAR"
-            elif feedback == "_yyg_":
-                current_guess = "SHEAR"
-            elif feedback == "yy_g_":
-                current_guess = "SPEAR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PUBIC":
-            if feedback == "_____":
-                current_guess = "SORRY"
-            elif feedback == "____y":
-                current_guess = "SCROD"
-            elif feedback == "___g_":
-                current_guess = "LORIS"
-            elif feedback == "___gy":
-                current_guess = "SCRIM"
-            elif feedback == "_g___":
-                current_guess = "SURLY"
-            elif feedback == "_y___":
-                current_guess = "SHRUG"
-            elif feedback == "_y__y":
-                current_guess = "SCRUM"
-            elif feedback == "_y_y_":
-                current_guess = "VIRUS"
-            elif feedback == "_yy__":
-                current_guess = "SHRUB"
-            elif feedback == "_yy_y":
-                current_guess = "SCRUB"
-            elif feedback == "y___y":
-                current_guess = "CORPS"
-            elif feedback == "y__g_":
-                current_guess = "SPRIG"
-            elif feedback == "y__gy":
-                current_guess = "SCRIP"
-            elif feedback == "yy___":
-                current_guess = "SYRUP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PUNKY":
-            if feedback == "gg__g":
-                current_guess = "PUFFY"
-            elif feedback == "ggg_g":
-                current_guess = "PUNNY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "PYLON":
-            if feedback == "_____":
-                current_guess = "BASIC"
-            elif feedback == "____g":
-                current_guess = "BASIN"
-            elif feedback == "____y":
-                current_guess = "SAUNA"
-            elif feedback == "___gg":
-                current_guess = "MASON"
-            elif feedback == "___y_":
-                current_guess = "OASIS"
-            elif feedback == "__g__":
-                current_guess = "SALAD"
-            elif feedback == "__ggg":
-                current_guess = "SALON"
-            elif feedback == "__gy_":
-                current_guess = "SALVO"
-            elif feedback == "__y__":
-                current_guess = "BASAL"
-            elif feedback == "__y_y":
-                current_guess = "NASAL"
-            elif feedback == "_y___":
-                current_guess = "AGUED"
-            elif feedback == "_y__y":
-                current_guess = "SANDY"
-            elif feedback == "_y_g_":
-                current_guess = "SAVOY"
-            elif feedback == "_yg__":
-                current_guess = "SALLY"
-            elif feedback == "_yy__":
-                current_guess = "SADLY"
-            elif feedback == "yy___":
-                current_guess = "SAPPY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RABID":
-            if feedback == "gg_gg":
-                current_guess = "RAPID"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RADAR":
-            if feedback == "ggg__":
-                current_guess = "RADII"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RAJAH":
-            if feedback == "gg___":
-                current_guess = "RABBI"
-            elif feedback == "gg__g":
-                current_guess = "RALPH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RASPY":
-            if feedback == "ygy__":
-                current_guess = "SAVOR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RAVER":
-            if feedback == "_g_gg":
-                current_guess = "BAKER"
-            elif feedback == "_gggg":
-                current_guess = "WAVER"
-            elif feedback == "gg_gg":
-                current_guess = "RACER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "REALM":
-            if feedback == "ggg_g":
-                current_guess = "REARM"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "REBAR":
-            if feedback == "ggyg_":
-                current_guess = "REHAB"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "REBUS":
-            if feedback == "gg__y":
-                current_guess = "RESIN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "REFER":
-            if feedback == "gg_g_":
-                current_guess = "RENEW"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "REFIX":
-            if feedback == "gy_y_":
-                current_guess = "RIVER"
-            elif feedback == "yy_y_":
-                current_guess = "GIVER"
-            elif feedback == "yy_yy":
-                current_guess = "MIXER"
-            elif feedback == "yyyy_":
-                current_guess = "FIBER"
-            elif feedback == "yyyyy":
-                current_guess = "FIXER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RODNY":
-            if feedback == "g____":
-                current_guess = "RAJAH"
-            elif feedback == "g___g":
-                current_guess = "RALLY"
-            elif feedback == "g__gg":
-                current_guess = "RAINY"
-            elif feedback == "g__y_":
-                current_guess = "RANCH"
-            elif feedback == "g__yg":
-                current_guess = "RANGY"
-            elif feedback == "g_g__":
-                current_guess = "RADAR"
-            elif feedback == "g_y__":
-                current_guess = "RABID"
-            elif feedback == "g_yyg":
-                current_guess = "RANDY"
-            elif feedback == "gy___":
-                current_guess = "RAZOR"
-            elif feedback == "gy_yy":
-                current_guess = "RAYON"
-            elif feedback == "gyg__":
-                current_guess = "RADIO"
-            elif feedback == "gygy_":
-                current_guess = "RADON"
-            elif feedback == "y____":
-                current_guess = "CAPRI"
-            elif feedback == "y___g":
-                current_guess = "FAIRY"
-            elif feedback == "y__y_":
-                current_guess = "CAIRN"
-            elif feedback == "y_gy_":
-                current_guess = "NADIR"
-            elif feedback == "y_y_g":
-                current_guess = "DAIRY"
-            elif feedback == "yy___":
-                current_guess = "VALOR"
-            elif feedback == "yy__y":
-                current_guess = "MAYOR"
-            elif feedback == "yy_y_":
-                current_guess = "MANOR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "ROGUE":
-            if feedback == "ggyyg":
-                current_guess = "ROUGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RUDER":
-            if feedback == "_yggg":
-                current_guess = "UDDER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RUMBA":
-            if feedback == "yyyyg":
-                current_guess = "UMBRA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "RUMPY":
-            if feedback == "g____":
-                current_guess = "REFER"
-            elif feedback == "g___g":
-                current_guess = "REFRY"
-            elif feedback == "gy__g":
-                current_guess = "REBUY"
-            elif feedback == "gyy__":
-                current_guess = "RHEUM"
-            elif feedback == "y____":
-                current_guess = "FEVER"
-            elif feedback == "y___g":
-                current_guess = "EVERY"
-            elif feedback == "y___y":
-                current_guess = "FRYER"
-            elif feedback == "y__y_":
-                current_guess = "PREEN"
-            elif feedback == "y__yy":
-                current_guess = "HYPER"
-            elif feedback == "y_y__":
-                current_guess = "EMBER"
-            elif feedback == "y_y_g":
-                current_guess = "EMERY"
-            elif feedback == "yg___":
-                current_guess = "QUEER"
-            elif feedback == "yg__g":
-                current_guess = "QUERY"
-            elif feedback == "yg__y":
-                current_guess = "BUYER"
-            elif feedback == "yy___":
-                current_guess = "EXURB"
-            elif feedback == "yy_y_":
-                current_guess = "UPPER"
-            elif feedback == "yyg__":
-                current_guess = "FEMUR"
-            elif feedback == "yyy__":
-                current_guess = "UMBER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SABER":
-            if feedback == "gg_gg":
-                current_guess = "SAFER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SABLE":
-            if feedback == "gg__g":
-                current_guess = "SAUCE"
-            elif feedback == "gg_yg":
-                current_guess = "SALVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SALPS":
-            if feedback == "gg__y":
-                current_guess = "SASSY"
-            elif feedback == "ggg_y":
-                current_guess = "SALSA"
-            elif feedback == "yg___":
-                current_guess = "DAISY"
-            elif feedback == "yg__y":
-                current_guess = "GASSY"
-            elif feedback == "yg_y_":
-                current_guess = "PANSY"
-            elif feedback == "ygg__":
-                current_guess = "BALSA"
-            elif feedback == "yggy_":
-                current_guess = "PALSY"
-            elif feedback == "ygy_y":
-                current_guess = "LASSO"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SAPAN":
-            if feedback == "gg___":
-                current_guess = "SALTY"
-            elif feedback == "gg__g":
-                current_guess = "SATIN"
-            elif feedback == "gg__y":
-                current_guess = "SAINT"
-            elif feedback == "gg_g_":
-                current_guess = "SATAY"
-            elif feedback == "yg___":
-                current_guess = "HASTY"
-            elif feedback == "yg__y":
-                current_guess = "NASTY"
-            elif feedback == "ygy__":
-                current_guess = "PASTY"
-            elif feedback == "ygyy_":
-                current_guess = "PASTA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCALD":
-            if feedback == "gggg_":
-                current_guess = "SCALY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCAPE":
-            if feedback == "gygyg":
-                current_guess = "SPACE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCARF":
-            if feedback == "gggg_":
-                current_guess = "SCARY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCENE":
-            if feedback == "g__gg":
-                current_guess = "SHONE"
-            elif feedback == "gg_gg":
-                current_guess = "SCONE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCHWA":
-            if feedback == "gg__g":
-                current_guess = "SCUBA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCOOP":
-            if feedback == "g___y":
-                current_guess = "SPIFF"
-            elif feedback == "g_ggg":
-                current_guess = "SWOOP"
-            elif feedback == "g_ggy":
-                current_guess = "SPOOF"
-            elif feedback == "g_y_y":
-                current_guess = "SOPPY"
-            elif feedback == "gy__y":
-                current_guess = "SPICY"
-            elif feedback == "y___y":
-                current_guess = "WISPY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCOOT":
-            if feedback == "g_ggg":
-                current_guess = "SHOOT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCOPE":
-            if feedback == "g__yg":
-                current_guess = "SPUME"
-            elif feedback == "g_gyg":
-                current_guess = "SPOKE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCRAM":
-            if feedback == "g_gg_":
-                current_guess = "SPRAY"
-            elif feedback == "gggg_":
-                current_guess = "SCRAP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SCREE":
-            if feedback == "g_g_g":
-                current_guess = "SURGE"
-            elif feedback == "g_ggg":
-                current_guess = "SPREE"
-            elif feedback == "g_gyg":
-                current_guess = "SERVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SEDER":
-            if feedback == "gg_gg":
-                current_guess = "SEVER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SEDGE":
-            if feedback == "gg_yg":
-                current_guess = "SEGUE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHADY":
-            if feedback == "g_g__":
-                current_guess = "SWAMI"
-            elif feedback == "ggg_g":
-                current_guess = "SHAKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHALL":
-            if feedback == "g_ggg":
-                current_guess = "SMALL"
-            elif feedback == "ggg_g":
-                current_guess = "SHAWL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHANK":
-            if feedback == "g_gg_":
-                current_guess = "SWANG"
-            elif feedback == "g_ggg":
-                current_guess = "SWANK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHARK":
-            if feedback == "g_gg_":
-                current_guess = "SNARF"
-            elif feedback == "g_ggg":
-                current_guess = "SNARK"
-            elif feedback == "gggg_":
-                current_guess = "SHARD"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHEEP":
-            if feedback == "g_ggy":
-                current_guess = "SPEED"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHEIK":
-            if feedback == "g_g_g":
-                current_guess = "SPECK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHIED":
-            if feedback == "g_ggg":
-                current_guess = "SPIED"
-            elif feedback == "y__g_":
-                current_guess = "MOSEY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHIFT":
-            if feedback == "g_ggg":
-                current_guess = "SWIFT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHILL":
-            if feedback == "g___g":
-                current_guess = "SCOWL"
-            elif feedback == "g__g_":
-                current_guess = "SCOLD"
-            elif feedback == "g_ggg":
-                current_guess = "SWILL"
-            elif feedback == "g_ygy":
-                current_guess = "SILLY"
-            elif feedback == "g_yy_":
-                current_guess = "SOLID"
-            elif feedback == "gg_g_":
-                current_guess = "SHYLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHIMS":
-            if feedback == "g___y":
-                current_guess = "SUDSY"
-            elif feedback == "g_y_y":
-                current_guess = "SISSY"
-            elif feedback == "gg__y":
-                current_guess = "SHUSH"
-            elif feedback == "gy__y":
-                current_guess = "SLOSH"
-            elif feedback == "gy_yy":
-                current_guess = "SMUSH"
-            elif feedback == "gyg_y":
-                current_guess = "SWISH"
-            elif feedback == "y____":
-                current_guess = "LOUSY"
-            elif feedback == "y___g":
-                current_guess = "FLOSS"
-            elif feedback == "y___y":
-                current_guess = "FUSSY"
-            elif feedback == "y__y_":
-                current_guess = "MOUSY"
-            elif feedback == "y__yy":
-                current_guess = "MOSSY"
-            elif feedback == "y_g__":
-                current_guess = "NOISY"
-            elif feedback == "y_g_g":
-                current_guess = "BLISS"
-            elif feedback == "y_y__":
-                current_guess = "KIOSK"
-            elif feedback == "y_y_y":
-                current_guess = "KISSY"
-            elif feedback == "y_yyy":
-                current_guess = "MISSY"
-            elif feedback == "ygg__":
-                current_guess = "PHISH"
-            elif feedback == "yy___":
-                current_guess = "ABAFT"
-            elif feedback == "yy__y":
-                current_guess = "HUSSY"
-            elif feedback == "yyg__":
-                current_guess = "KNISH"
-            elif feedback == "yyy_y":
-                current_guess = "HISSY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHINE":
-            if feedback == "g_ggg":
-                current_guess = "SWINE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHINY":
-            if feedback == "g_gg_":
-                current_guess = "SWING"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHIRK":
-            if feedback == "g_ggg":
-                current_guess = "SMIRK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHOAL":
-            if feedback == "y__gg":
-                current_guess = "USUAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHOCK":
-            if feedback == "g_ggg":
-                current_guess = "SMOCK"
-            elif feedback == "ggg_g":
-                current_guess = "SHOOK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHORN":
-            if feedback == "g_ggg":
-                current_guess = "SWORN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHOVE":
-            if feedback == "g___g":
-                current_guess = "SUEDE"
-            elif feedback == "g_g_g":
-                current_guess = "SMOKE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SHUNT":
-            if feedback == "g_ggg":
-                current_guess = "STUNT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SILKY":
-            if feedback == "gyyy_":
-                current_guess = "SKILL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SILTY":
-            if feedback == "gg_g_":
-                current_guess = "SIXTH"
-            elif feedback == "gg_gg":
-                current_guess = "SIXTY"
-            elif feedback == "gy_g_":
-                current_guess = "SMITH"
-            elif feedback == "gy_y_":
-                current_guess = "STICK"
-            elif feedback == "gyyy_":
-                current_guess = "STILL"
-            elif feedback == "yg_gg":
-                current_guess = "MISTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SKEIN":
-            if feedback == "g_g_y":
-                current_guess = "SPEND"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SKIFF":
-            if feedback == "gy___":
-                current_guess = "SMOKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SKIMP":
-            if feedback == "gyg_y":
-                current_guess = "SPIKY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SLEEK":
-            if feedback == "gggg_":
-                current_guess = "SLEEP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SLIMY":
-            if feedback == "gg__g":
-                current_guess = "SLYLY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SLOSH":
-            if feedback == "gg_gg":
-                current_guess = "SLUSH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SMARM":
-            if feedback == "g_ggg":
-                current_guess = "SWARM"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SMART":
-            if feedback == "g_ggg":
-                current_guess = "START"
-            elif feedback == "g_ggy":
-                current_guess = "STARK"
-            elif feedback == "g_gyy":
-                current_guess = "STAIR"
-            elif feedback == "g_yyy":
-                current_guess = "SITAR"
-            elif feedback == "y_yyy":
-                current_guess = "ASTIR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SNAFU":
-            if feedback == "ggg__":
-                current_guess = "SNAKY"
-            elif feedback == "gyg__":
-                current_guess = "SWAIN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SNIPY":
-            if feedback == "g____":
-                current_guess = "SHEAF"
-            elif feedback == "g___g":
-                current_guess = "SEAMY"
-            elif feedback == "g__y_":
-                current_guess = "SPEAK"
-            elif feedback == "g_yy_":
-                current_guess = "SEPIA"
-            elif feedback == "gg___":
-                current_guess = "SNEAK"
-            elif feedback == "gy___":
-                current_guess = "SEDAN"
-            elif feedback == "y____":
-                current_guess = "ASKEW"
-            elif feedback == "y___g":
-                current_guess = "ESSAY"
-            elif feedback == "y_y__":
-                current_guess = "AEGIS"
-            elif feedback == "yy___":
-                current_guess = "ASHEN"
-            elif feedback == "yy_y_":
-                current_guess = "ASPEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SNOOP":
-            if feedback == "gyggy":
-                current_guess = "SPOON"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SOAPY":
+        elif current_state == "CHALK_3":
             if feedback == "g_gy_":
-                current_guess = "SWAMP"
+                current_state = "CLAMP_4"
+            elif feedback == "g_gyg":
+                current_state = "CLACK_4"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
-        elif current_guess == "SOOTH":
-            if feedback == "gggg_":
-                current_guess = "SOOTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SOUND":
-            if feedback == "g_gg_":
-                current_guess = "SWUNG"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPADE":
-            if feedback == "g_g_g":
-                current_guess = "SUAVE"
-            elif feedback == "y_g_g":
-                current_guess = "USAGE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPENT":
-            if feedback == "gyg_g":
-                current_guess = "SWEPT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPICE":
-            if feedback == "ggg_g":
-                current_guess = "SPIKE"
-            elif feedback == "gyg_g":
-                current_guess = "SWIPE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPILL":
-            if feedback == "gg__g":
-                current_guess = "SPOOL"
-            elif feedback == "ggy_g":
-                current_guess = "SPOIL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPILT":
-            if feedback == "g_ggg":
-                current_guess = "STILT"
-            elif feedback == "g_y_g":
-                current_guess = "SIGHT"
-            elif feedback == "ggyyg":
-                current_guess = "SPLIT"
-            elif feedback == "y_y_g":
-                current_guess = "VISIT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPITE":
-            if feedback == "g_ggg":
-                current_guess = "SUITE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SPORT":
-            if feedback == "g_ggy":
-                current_guess = "STORM"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SQUIB":
-            if feedback == "g_g__":
-                current_guess = "SCUFF"
-            elif feedback == "gggg_":
-                current_guess = "SQUID"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STAGE":
-            if feedback == "ggg_g":
-                current_guess = "STAVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STALK":
-            if feedback == "gggg_":
-                current_guess = "STALL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STAND":
-            if feedback == "ggg__":
-                current_guess = "STAFF"
-            elif feedback == "ggg_g":
-                current_guess = "STAID"
-            elif feedback == "gggg_":
-                current_guess = "STANK"
-            elif feedback == "gggy_":
-                current_guess = "STAIN"
-            elif feedback == "gyg__":
-                current_guess = "SWATH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STEAK":
-            if feedback == "gggg_":
-                current_guess = "STEAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STEED":
-            if feedback == "ggg__":
-                current_guess = "STEIN"
-            elif feedback == "yyy__":
-                current_guess = "ZESTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STELE":
-            if feedback == "gg_gg":
-                current_guess = "STYLE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STING":
-            if feedback == "gggg_":
-                current_guess = "STINK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STOMA":
-            if feedback == "yy__g":
-                current_guess = "VISTA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STONE":
-            if feedback == "ggg_g":
-                current_guess = "STOVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STREP":
-            if feedback == "gggg_":
-                current_guess = "STREW"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STRUM":
-            if feedback == "ggg__":
-                current_guess = "STRIP"
-            elif feedback == "gggg_":
-                current_guess = "STRUT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "STUNG":
-            if feedback == "gggg_":
-                current_guess = "STUNK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "SUING":
-            if feedback == "gg_g_":
-                current_guess = "SUNNY"
-            elif feedback == "yyggg":
-                current_guess = "USING"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TABLE":
-            if feedback == "gg__g":
-                current_guess = "TAUPE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TALUS":
-            if feedback == "gg__y":
-                current_guess = "TASTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TARDY":
-            if feedback == "ggg__":
-                current_guess = "TAROT"
-            elif feedback == "ggg_g":
-                current_guess = "TARRY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TARSE":
-            if feedback == "_____":
-                current_guess = "GUILD"
-            elif feedback == "____g":
-                current_guess = "LOGIN"
-            elif feedback == "____y":
-                current_guess = "DYNEL"
-            elif feedback == "___g_":
-                current_guess = "SHIMS"
-            elif feedback == "___gg":
-                current_guess = "CLOUD"
-            elif feedback == "___gy":
-                current_guess = "COWLS"
-            elif feedback == "___y_":
-                current_guess = "PLUNK"
-            elif feedback == "___yg":
-                current_guess = "PLING"
-            elif feedback == "___yy":
-                current_guess = "NEWEL"
-            elif feedback == "__g__":
-                current_guess = "CYMOL"
-            elif feedback == "__g_g":
-                current_guess = "GENIO"
-            elif feedback == "__g_y":
-                current_guess = "PONCY"
-            elif feedback == "__ggg":
-                current_guess = "COUGH"
-            elif feedback == "__ggy":
-                current_guess = "VERSO"
-            elif feedback == "__gy_":
-                current_guess = "PUBIC"
-            elif feedback == "__gyg":
-                current_guess = "SCREE"
-            elif feedback == "__gyy":
-                current_guess = "CIDER"
-            elif feedback == "__y__":
-                current_guess = "CODON"
-            elif feedback == "__y_g":
-                current_guess = "POIND"
-            elif feedback == "__y_y":
-                current_guess = "DOLCI"
-            elif feedback == "__yg_":
-                current_guess = "CHIMB"
-            elif feedback == "__ygg":
-                current_guess = "APIOL"
-            elif feedback == "__ygy":
-                current_guess = "ACHED"
-            elif feedback == "__yy_":
-                current_guess = "CLONK"
-            elif feedback == "__yyg":
-                current_guess = "PINCH"
-            elif feedback == "__yyy":
-                current_guess = "WHEEP"
-            elif feedback == "_g___":
-                current_guess = "CHYND"
-            elif feedback == "_g__g":
-                current_guess = "GULCH"
-            elif feedback == "_g__y":
-                current_guess = "LYMPH"
-            elif feedback == "_g_g_":
-                current_guess = "SALPS"
-            elif feedback == "_g_gg":
-                current_guess = "LUPIN"
-            elif feedback == "_g_y_":
-                current_guess = "PYLON"
-            elif feedback == "_g_yg":
-                current_guess = "SABLE"
-            elif feedback == "_g_yy":
-                current_guess = "EASEL"
-            elif feedback == "_gg__":
-                current_guess = "CYMOL"
-            elif feedback == "_gg_g":
-                current_guess = "BEFOG"
-            elif feedback == "_gg_y":
-                current_guess = "BELCH"
-            elif feedback == "_ggg_":
-                current_guess = "HARSH"
-            elif feedback == "_gggg":
-                current_guess = "PARSE"
-            elif feedback == "_gy__":
-                current_guess = "RODNY"
-            elif feedback == "_gy_g":
-                current_guess = "CADRE"
-            elif feedback == "_gy_y":
-                current_guess = "GLAMP"
-            elif feedback == "_gygg":
-                current_guess = "RAISE"
-            elif feedback == "_gyy_":
-                current_guess = "RASPY"
-            elif feedback == "_gyyg":
-                current_guess = "SABRE"
-            elif feedback == "_gyyy":
-                current_guess = "ANVIL"
-            elif feedback == "_y___":
-                current_guess = "COLIN"
-            elif feedback == "_y__g":
-                current_guess = "GLAND"
-            elif feedback == "_y__y":
-                current_guess = "MEDAL"
-            elif feedback == "_y_g_":
-                current_guess = "MULCH"
-            elif feedback == "_y_gg":
-                current_guess = "BIACH"
-            elif feedback == "_y_gy":
-                current_guess = "LEASH"
-            elif feedback == "_y_y_":
-                current_guess = "PLANC"
-            elif feedback == "_y_yg":
-                current_guess = "CHALK"
-            elif feedback == "_y_yy":
-                current_guess = "SNIPY"
-            elif feedback == "_yg__":
-                current_guess = "ALOIN"
-            elif feedback == "_yg_g":
-                current_guess = "AERIE"
-            elif feedback == "_yg_y":
-                current_guess = "FERAL"
-            elif feedback == "_ygg_":
-                current_guess = "BURSA"
-            elif feedback == "_ygy_":
-                current_guess = "SCRAM"
-            elif feedback == "_yy__":
-                current_guess = "BLOND"
-            elif feedback == "_yy_g":
-                current_guess = "GRAND"
-            elif feedback == "_yy_y":
-                current_guess = "BEMAD"
-            elif feedback == "_yyg_":
-                current_guess = "ABACS"
-            elif feedback == "_yygg":
-                current_guess = "ARISE"
-            elif feedback == "_yyy_":
-                current_guess = "CLAMP"
-            elif feedback == "_yyyg":
-                current_guess = "ANCHO"
-            elif feedback == "_yyyy":
-                current_guess = "PSHAW"
-            elif feedback == "g____":
-                current_guess = "CUING"
-            elif feedback == "g___g":
-                current_guess = "CHILD"
-            elif feedback == "g___y":
-                current_guess = "HONED"
-            elif feedback == "g__g_":
-                current_guess = "TIPSY"
-            elif feedback == "g__gg":
-                current_guess = "TENSE"
-            elif feedback == "g__yy":
-                current_guess = "TELOS"
-            elif feedback == "g_g__":
-                current_guess = "THROB"
-            elif feedback == "g_g_g":
-                current_guess = "THREE"
-            elif feedback == "g_g_y":
-                current_guess = "THREW"
-            elif feedback == "g_gg_":
-                current_guess = "TORSO"
-            elif feedback == "g_ggg":
-                current_guess = "TERSE"
-            elif feedback == "g_gy_":
-                current_guess = "TORUS"
-            elif feedback == "g_y__":
-                current_guess = "HOKUM"
-            elif feedback == "g_y_g":
-                current_guess = "PRICK"
-            elif feedback == "g_y_y":
-                current_guess = "MINOR"
-            elif feedback == "g_yg_":
-                current_guess = "TRUSS"
-            elif feedback == "g_ygy":
-                current_guess = "TRESS"
-            elif feedback == "gg___":
-                current_guess = "LINKY"
-            elif feedback == "gg__g":
-                current_guess = "TABLE"
-            elif feedback == "gg__y":
-                current_guess = "TAKEN"
-            elif feedback == "gg_y_":
-                current_guess = "TALUS"
-            elif feedback == "gg_yg":
-                current_guess = "TASTE"
-            elif feedback == "ggg__":
-                current_guess = "TARDY"
-            elif feedback == "ggy__":
-                current_guess = "TAPIR"
-            elif feedback == "ggy_y":
-                current_guess = "KEMPS"
-            elif feedback == "ggyyy":
-                current_guess = "TASER"
-            elif feedback == "gy___":
-                current_guess = "DOGAN"
-            elif feedback == "gy__y":
-                current_guess = "TEACH"
-            elif feedback == "gy_g_":
-                current_guess = "TOAST"
-            elif feedback == "gy_gg":
-                current_guess = "TEASE"
-            elif feedback == "gyg__":
-                current_guess = "TORAH"
-            elif feedback == "gyg_y":
-                current_guess = "TERRA"
-            elif feedback == "gyy__":
-                current_guess = "CLINT"
-            elif feedback == "gyy_g":
-                current_guess = "TRACE"
-            elif feedback == "gyy_y":
-                current_guess = "TETRA"
-            elif feedback == "gyyg_":
-                current_guess = "TRASH"
-            elif feedback == "gyyy_":
-                current_guess = "TRANS"
-            elif feedback == "y____":
-                current_guess = "DONUT"
-            elif feedback == "y___g":
-                current_guess = "BUILD"
-            elif feedback == "y___y":
-                current_guess = "PILED"
-            elif feedback == "y__g_":
-                current_guess = "HIMBO"
-            elif feedback == "y__gy":
-                current_guess = "DIGHT"
-            elif feedback == "y__y_":
-                current_guess = "FOUNT"
-            elif feedback == "y__yg":
-                current_guess = "MILKO"
-            elif feedback == "y__yy":
-                current_guess = "PLUOT"
-            elif feedback == "y_g__":
-                current_guess = "BIFFY"
-            elif feedback == "y_g_g":
-                current_guess = "FORTE"
-            elif feedback == "y_g_y":
-                current_guess = "BERET"
-            elif feedback == "y_gg_":
-                current_guess = "WURST"
-            elif feedback == "y_gy_":
-                current_guess = "STRUM"
-            elif feedback == "y_gyy":
-                current_guess = "STREP"
-            elif feedback == "y_y__":
-                current_guess = "BIONT"
-            elif feedback == "y_y_g":
-                current_guess = "BIOTA"
-            elif feedback == "y_y_y":
-                current_guess = "COURT"
-            elif feedback == "y_yg_":
-                current_guess = "BOGUE"
-            elif feedback == "y_ygy":
-                current_guess = "CREST"
-            elif feedback == "y_yy_":
-                current_guess = "HONKY"
-            elif feedback == "y_yyg":
-                current_guess = "STORE"
-            elif feedback == "y_yyy":
-                current_guess = "ESTER"
-            elif feedback == "yg___":
-                current_guess = "CLIPT"
-            elif feedback == "yg__g":
-                current_guess = "CLOTH"
-            elif feedback == "yg__y":
-                current_guess = "LEMED"
-            elif feedback == "yg_g_":
-                current_guess = "PATSY"
-            elif feedback == "yg_y_":
-                current_guess = "SAPAN"
-            elif feedback == "yg_yg":
-                current_guess = "BUCHU"
-            elif feedback == "ygg__":
-                current_guess = "APACE"
-            elif feedback == "ygg_g":
-                current_guess = "CARTE"
-            elif feedback == "ygg_y":
-                current_guess = "CARET"
-            elif feedback == "ygy__":
-                current_guess = "GATOR"
-            elif feedback == "ygy_y":
-                current_guess = "CHAWL"
-            elif feedback == "ygyy_":
-                current_guess = "SATYR"
-            elif feedback == "yy___":
-                current_guess = "PLOIT"
-            elif feedback == "yy__g":
-                current_guess = "ABOMA"
-            elif feedback == "yy__y":
-                current_guess = "PLANC"
-            elif feedback == "yy_g_":
-                current_guess = "BOAST"
-            elif feedback == "yy_gy":
-                current_guess = "AFFLY"
-            elif feedback == "yy_y_":
-                current_guess = "CLAPT"
-            elif feedback == "yy_yg":
-                current_guess = "KLETT"
-            elif feedback == "yy_yy":
-                current_guess = "ADMIT"
-            elif feedback == "yyg__":
-                current_guess = "AORTA"
-            elif feedback == "yygy_":
-                current_guess = "APAYD"
-            elif feedback == "yyy__":
-                current_guess = "ARGOT"
-            elif feedback == "yyy_g":
-                current_guess = "ACING"
-            elif feedback == "yyy_y":
-                current_guess = "ALERT"
-            elif feedback == "yyyg_":
-                current_guess = "ARTSY"
-            elif feedback == "yyyy_":
-                current_guess = "SMART"
-            elif feedback == "yyyyg":
-                current_guess = "STARE"
-            elif feedback == "yyyyy":
-                current_guess = "ASTER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TEACH":
-            if feedback == "gyy__":
-                current_guess = "TWEAK"
-            elif feedback == "gyy_y":
-                current_guess = "THETA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TEETH":
-            if feedback == "g_gyy":
-                current_guess = "THEFT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TELOS":
-            if feedback == "gg__y":
-                current_guess = "TESTY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TENSE":
-            if feedback == "g__gg":
-                current_guess = "THOSE"
-            elif feedback == "gy_gg":
-                current_guess = "THESE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TETRA":
-            if feedback == "gg_gy":
-                current_guess = "TEARY"
-            elif feedback == "gy_yy":
-                current_guess = "TREAD"
-            elif feedback == "gyyyy":
-                current_guess = "TREAT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THEIR":
-            if feedback == "g_yyg":
-                current_guess = "TRIER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THEME":
-            if feedback == "gg_gg":
-                current_guess = "THYME"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THING":
-            if feedback == "g_ggg":
-                current_guess = "TYING"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THREE":
-            if feedback == "g_g_g":
-                current_guess = "TORTE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THREW":
-            if feedback == "g_gg_":
-                current_guess = "TIRED"
-            elif feedback == "g_gy_":
-                current_guess = "TERRY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THROB":
-            if feedback == "g_gyy":
-                current_guess = "TURBO"
-            elif feedback == "ggg__":
-                current_guess = "THRUM"
-            elif feedback == "gggg_":
-                current_guess = "THROW"
-            elif feedback == "gygy_":
-                current_guess = "TORCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "THUMB":
-            if feedback == "gggg_":
-                current_guess = "THUMP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TIGER":
-            if feedback == "gg_gg":
-                current_guess = "TITER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TIMID":
-            if feedback == "gg___":
-                current_guess = "TIZZY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TIPSY":
-            if feedback == "gy_g_":
-                current_guess = "TWIST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TODDY":
-            if feedback == "gg___":
-                current_guess = "TOOTH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TOPAZ":
-            if feedback == "gg_g_":
-                current_guess = "TOTAL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TOPIC":
-            if feedback == "gg_gg":
-                current_guess = "TOXIC"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TORAH":
-            if feedback == "gggy_":
-                current_guess = "TORTA"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TOTEM":
-            if feedback == "gg_g_":
-                current_guess = "TOWEL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TRACE":
-            if feedback == "ggg_g":
-                current_guess = "TRADE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TRIBE":
-            if feedback == "ggg_g":
-                current_guess = "TRITE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TRILL":
-            if feedback == "gyg_g":
-                current_guess = "TWIRL"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TROLL":
-            if feedback == "ggg__":
-                current_guess = "TROOP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TRUCK":
-            if feedback == "ggg_g":
-                current_guess = "TRUNK"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TRUER":
-            if feedback == "g_ygg":
-                current_guess = "TUBER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TRUSS":
-            if feedback == "gg_g_":
-                current_guess = "TRYST"
-            elif feedback == "gggg_":
-                current_guess = "TRUST"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TWERK":
-            if feedback == "gggg_":
-                current_guess = "TWERP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "TWILL":
-            if feedback == "ggg__":
-                current_guess = "TWIXT"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "UNFED":
-            if feedback == "_g_gy":
-                current_guess = "INDEX"
-            elif feedback == "_y_gy":
-                current_guess = "WIDEN"
-            elif feedback == "gg_gg":
-                current_guess = "UNWED"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "UNHIP":
-            if feedback == "gg_gg":
-                current_guess = "UNZIP"
-            elif feedback == "gg_gy":
-                current_guess = "UNPIN"
-            elif feedback == "y__yg":
-                current_guess = "MIXUP"
-            elif feedback == "yy_yg":
-                current_guess = "PINUP"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "USURP":
-            if feedback == "gggg_":
-                current_guess = "USURY"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "VALID":
-            if feedback == "gg_gg":
-                current_guess = "VAPID"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "VALOR":
-            if feedback == "_g_gg":
-                current_guess = "MAJOR"
-            elif feedback == "_g_yy":
-                current_guess = "MACRO"
-            elif feedback == "_gygg":
-                current_guess = "LABOR"
-            elif feedback == "gg_gg":
-                current_guess = "VAPOR"
-            elif feedback == "yg_gg":
-                current_guess = "FAVOR"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "VENOM":
-            if feedback == "_gg__":
-                current_guess = "BENCH"
-            elif feedback == "_ggg_":
-                current_guess = "XENON"
-            elif feedback == "_yg__":
-                current_guess = "ENNUI"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "VOCAB":
-            if feedback == "___y_":
-                current_guess = "FRAME"
-            elif feedback == "___yy":
-                current_guess = "BRAKE"
-            elif feedback == "__yy_":
-                current_guess = "CRAZE"
-            elif feedback == "__yyy":
-                current_guess = "BRACE"
-            elif feedback == "y__yy":
-                current_guess = "BRAVE"
-            elif feedback == "y_yy_":
-                current_guess = "CRAVE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "WHEEP":
-            if feedback == "___g_":
-                current_guess = "MISER"
-            elif feedback == "___gy":
-                current_guess = "POSER"
-            elif feedback == "__g_y":
-                current_guess = "SPERM"
-            elif feedback == "__gg_":
-                current_guess = "SNEER"
-            elif feedback == "__y__":
-                current_guess = "REBUS"
-            elif feedback == "__yg_":
-                current_guess = "SEDER"
-            elif feedback == "_g_g_":
-                current_guess = "SHYER"
-            elif feedback == "_ggg_":
-                current_guess = "SHEER"
-            elif feedback == "_y_g_":
-                current_guess = "USHER"
-            elif feedback == "g__g_":
-                current_guess = "WISER"
-            elif feedback == "y__g_":
-                current_guess = "SOWER"
-            elif feedback == "y_yg_":
-                current_guess = "SEWER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "WHOMP":
-            if feedback == "__g__":
-                current_guess = "BOOBY"
-            elif feedback == "__g_y":
-                current_guess = "POOFY"
-            elif feedback == "__gy_":
-                current_guess = "MOONY"
-            elif feedback == "__y__":
-                current_guess = "GUNKY"
-            elif feedback == "__y_y":
-                current_guess = "POKER"
-            elif feedback == "__yg_":
-                current_guess = "MOMMY"
-            elif feedback == "__yy_":
-                current_guess = "MOVER"
-            elif feedback == "__yyy":
-                current_guess = "MOPER"
-            elif feedback == "_gg__":
-                current_guess = "CHOCK"
-            elif feedback == "_gg_y":
-                current_guess = "PHONY"
-            elif feedback == "_gggg":
-                current_guess = "CHOMP"
-            elif feedback == "_y_yy":
-                current_guess = "NYMPH"
-            elif feedback == "_yg__":
-                current_guess = "HOOCH"
-            elif feedback == "_yg_y":
-                current_guess = "POOCH"
-            elif feedback == "_ygy_":
-                current_guess = "MOOCH"
-            elif feedback == "_yy__":
-                current_guess = "HOVER"
-            elif feedback == "_yy_y":
-                current_guess = "HOPPY"
-            elif feedback == "_yyy_":
-                current_guess = "HOMER"
-            elif feedback == "_yyyy":
-                current_guess = "OOMPH"
-            elif feedback == "g_g__":
-                current_guess = "WOOER"
-            elif feedback == "g_y__":
-                current_guess = "WONKY"
-            elif feedback == "ggg_g":
-                current_guess = "WHOOP"
-            elif feedback == "y_g__":
-                current_guess = "KNOWN"
-            elif feedback == "y_y__":
-                current_guess = "BOWER"
-            elif feedback == "y_y_y":
-                current_guess = "POWER"
-            elif feedback == "y_yy_":
-                current_guess = "MOWER"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "WIFTY":
-            if feedback == "_g_gg":
-                current_guess = "BITTY"
-            elif feedback == "_g_y_":
-                current_guess = "HITCH"
-            elif feedback == "_g_yg":
-                current_guess = "PITHY"
-            elif feedback == "_ggg_":
-                current_guess = "FIFTH"
-            elif feedback == "_gggg":
-                current_guess = "FIFTY"
-            elif feedback == "_gyg_":
-                current_guess = "FILTH"
-            elif feedback == "_y_g_":
-                current_guess = "BLITZ"
-            elif feedback == "_y_yg":
-                current_guess = "ITCHY"
-            elif feedback == "gg_gg":
-                current_guess = "WITTY"
-            elif feedback == "gg_y_":
-                current_guess = "WITCH"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "WINCE":
-            if feedback == "_gggg":
-                current_guess = "MINCE"
-            elif feedback == "_gygg":
-                current_guess = "NIECE"
-            elif feedback == "_gyyg":
-                current_guess = "NICHE"
-            elif feedback == "_yy_g":
-                current_guess = "KNIFE"
-            elif feedback == "gyy_g":
-                current_guess = "WHINE"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "WOKEN":
-            if feedback == "gg_gg":
-                current_guess = "WOMEN"
-            else:
-                print("Pattern variant not found in tree paths.")
-                return
-        elif current_guess == "WURST":
+        elif current_state == "CHANT_3":
             if feedback == "__ggg":
-                current_guess = "FIRST"
+                current_state = "QUANT_4"
+            elif feedback == "y_y_g":
+                current_state = "DUCAT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHAOS_3":
+            if feedback == "y_g_y":
+                current_state = "SMACK_4"
+            elif feedback == "ygg_y":
+                current_state = "SHACK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHARM_3":
+            if feedback == "__gg_":
+                current_state = "QUARK_4"
+            elif feedback == "__gy_":
+                current_state = "GRAVY_4"
+            elif feedback == "__yy_":
+                current_state = "AUGUR_4"
+            elif feedback == "__yyy":
+                current_state = "PRIMA_4"
+            elif feedback == "_ggg_":
+                current_state = "WHARF_4"
+            elif feedback == "_ygy_":
+                current_state = "GRAPH_4"
+            elif feedback == "g_gy_":
+                current_state = "CRACK_4"
+            elif feedback == "g_gyy":
+                current_state = "CRAMP_4"
+            elif feedback == "g_yy_":
+                current_state = "CIGAR_4"
+            elif feedback == "gggg_":
+                current_state = "CHARY_4"
+            elif feedback == "gggy_":
+                current_state = "CHAIR_4"
+            elif feedback == "y_gy_":
+                current_state = "FRACK_4"
+            elif feedback == "y_yy_":
+                current_state = "VICAR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHART_3":
+            if feedback == "__ggg":
+                current_state = "QUART_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHAWL_2":
+            if feedback == "__y__":
+                current_state = "ADEEM_3"
+            elif feedback == "__y_y":
+                current_state = "LATER_3"
+            elif feedback == "__yy_":
+                current_state = "WATER_3"
+            elif feedback == "_yy__":
+                current_state = "HATER_3"
+            elif feedback == "g_y__":
+                current_state = "CATER_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHEAP_3":
+            if feedback == "y_gg_":
+                current_state = "OCEAN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHEEK_3":
+            if feedback == "___g_":
+                current_state = "INSET_4"
+            elif feedback == "__g__":
+                current_state = "STENT_4"
+            elif feedback == "__gg_":
+                current_state = "SWEET_4"
+            elif feedback == "__ggy":
+                current_state = "SKEET_4"
+            elif feedback == "__yg_":
+                current_state = "BESET_4"
+            elif feedback == "_ggg_":
+                current_state = "SHEET_4"
+            elif feedback == "y_g__":
+                current_state = "SCENT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHEEP_3":
+            if feedback == "__y__":
+                current_state = "UNDUE_4"
+            elif feedback == "__yy_":
+                current_state = "VENUE_4"
+            elif feedback == "__yyy":
+                current_state = "PENNE_4"
+            elif feedback == "y_y__":
+                current_state = "DUNCE_4"
+            elif feedback == "y_yy_":
+                current_state = "FENCE_4"
+            elif feedback == "y_yyy":
+                current_state = "PENCE_4"
+            elif feedback == "yyyy_":
+                current_state = "HENCE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHILD_2":
+            if feedback == "_____":
+                current_state = "TEPEE_3"
+            elif feedback == "___g_":
+                current_state = "TULLE_3"
+            elif feedback == "__g__":
+                current_state = "TWINE_3"
+            elif feedback == "__y__":
+                current_state = "TINGE_3"
+            elif feedback == "__yg_":
+                current_state = "TITLE_3"
+            elif feedback == "__yyy":
+                current_state = "TILDE_3"
+            elif feedback == "_g___":
+                current_state = "THEME_3"
+            elif feedback == "_gg__":
+                current_state = "THINE_3"
+            elif feedback == "_yy__":
+                current_state = "TITHE_3"
+            elif feedback == "y_g__":
+                current_state = "TWICE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHILE_3":
+            if feedback == "__ggg":
+                current_state = "EXILE_4"
+            elif feedback == "__gyg":
+                current_state = "ELIDE_4"
+            elif feedback == "__ygg":
+                current_state = "BIBLE_4"
             elif feedback == "_gggg":
-                current_guess = "BURST"
+                current_state = "WHILE_4"
+            elif feedback == "g_gyg":
+                current_state = "CLIME_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHILI_3":
+            if feedback == "gggg_":
+                current_state = "CHILL_4"
+            elif feedback == "y_ggy":
+                current_state = "ICILY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHIMB_2":
+            if feedback == "_____":
+                current_state = "DROSS_3"
+            elif feedback == "____y":
+                current_state = "BRUSK_3"
+            elif feedback == "__g__":
+                current_state = "FRISK_3"
+            elif feedback == "__g_y":
+                current_state = "BRISK_3"
+            elif feedback == "__gy_":
+                current_state = "PRISM_3"
+            elif feedback == "_y___":
+                current_state = "FROSH_3"
+            elif feedback == "_y__y":
+                current_state = "BRUSH_3"
+            elif feedback == "g____":
+                current_state = "CROSS_3"
+            elif feedback == "g_g__":
+                current_state = "CRISP_3"
+            elif feedback == "gy___":
+                current_state = "CRUSH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHIMB_3":
+            if feedback == "_____":
+                current_state = "FLAKE_4"
+            elif feedback == "____y":
+                current_state = "BLAZE_4"
+            elif feedback == "___g_":
+                current_state = "FLAME_4"
+            elif feedback == "___gy":
+                current_state = "BLAME_4"
+            elif feedback == "___y_":
+                current_state = "MODUS_4"
+            elif feedback == "_y___":
+                current_state = "GUSHY_4"
+            elif feedback == "_y__y":
+                current_state = "BUSHY_4"
+            elif feedback == "_y_y_":
+                current_state = "HUMUS_4"
+            elif feedback == "_yy__":
+                current_state = "SUSHI_4"
+            elif feedback == "g____":
+                current_state = "CLAVE_4"
+            elif feedback == "gy___":
+                current_state = "CUSHY_4"
+            elif feedback == "y____":
+                current_state = "PLACE_4"
+            elif feedback == "y__y_":
+                current_state = "MUCUS_4"
+            elif feedback == "y_y__":
+                current_state = "FICUS_4"
+            elif feedback == "y_yy_":
+                current_state = "MUSIC_4"
+            elif feedback == "yy___":
+                current_state = "HOCUS_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHIRP_3":
+            if feedback == "g__y_":
+                current_state = "CRUMB_4"
+            elif feedback == "g__yg":
+                current_state = "CRUMP_4"
+            elif feedback == "g_gy_":
+                current_state = "CRICK_4"
+            elif feedback == "g_gyg":
+                current_state = "CRIMP_4"
+            elif feedback == "gg_g_":
+                current_state = "CHURL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHOKE_3":
+            if feedback == "__ggg":
+                current_state = "EVOKE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHOMP_3":
+            if feedback == "__g__":
+                current_state = "GOOEY_4"
+            elif feedback == "__y__":
+                current_state = "BOGEY_4"
+            elif feedback == "__y_y":
+                current_state = "POKEY_4"
+            elif feedback == "__yyy":
+                current_state = "MOPEY_4"
+            elif feedback == "_yg__":
+                current_state = "HOOEY_4"
+            elif feedback == "_yy__":
+                current_state = "HOKEY_4"
+            elif feedback == "_yyy_":
+                current_state = "HOMEY_4"
+            elif feedback == "g_y__":
+                current_state = "COVEY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHORD_3":
+            if feedback == "g_gyg":
+                current_state = "CROWD_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CHYND_2":
+            if feedback == "_____":
+                current_state = "MAMBA_3"
+            elif feedback == "____g":
+                current_state = "VALID_3"
+            elif feedback == "____y":
+                current_state = "MADAM_3"
+            elif feedback == "___g_":
+                current_state = "FAUNA_3"
+            elif feedback == "___y_":
+                current_state = "BAGUA_3"
+            elif feedback == "___yy":
+                current_state = "PANDA_3"
+            elif feedback == "__g__":
+                current_state = "LAYUP_3"
+            elif feedback == "__y__":
+                current_state = "GLUME_3"
+            elif feedback == "__y_y":
+                current_state = "DALED_3"
+            elif feedback == "__yg_":
+                current_state = "NANNY_3"
+            elif feedback == "__yy_":
+                current_state = "MANLY_3"
+            elif feedback == "__yyy":
+                current_state = "BANDY_3"
+            elif feedback == "_y___":
+                current_state = "HAIKU_3"
+            elif feedback == "_yy__":
+                current_state = "HAMMY_3"
+            elif feedback == "_yyy_":
+                current_state = "HANKY_3"
+            elif feedback == "_yyyy":
+                current_state = "HANDY_3"
+            elif feedback == "g____":
+                current_state = "CABAL_3"
+            elif feedback == "g__y_":
+                current_state = "CANON_3"
+            elif feedback == "g_y__":
+                current_state = "CABBY_3"
+            elif feedback == "g_y_y":
+                current_state = "CADDY_3"
+            elif feedback == "g_yg_":
+                current_state = "CANNY_3"
+            elif feedback == "g_yyy":
+                current_state = "CANDY_3"
+            elif feedback == "y____":
+                current_state = "MAGIC_3"
+            elif feedback == "y__y_":
+                current_state = "MANIC_3"
+            elif feedback == "y_y__":
+                current_state = "WACKY_3"
+            elif feedback == "y_yy_":
+                current_state = "FANCY_3"
+            elif feedback == "yy___":
+                current_state = "HAVOC_3"
+            elif feedback == "yy__y":
+                current_state = "DACHA_3"
+            elif feedback == "yy_y_":
+                current_state = "NACHO_3"
+            elif feedback == "yyy__":
+                current_state = "HACKY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CIDER_2":
+            if feedback == "___gg":
+                current_state = "SURER_3"
+            elif feedback == "___gy":
+                current_state = "SHREW_3"
+            elif feedback == "___yy":
+                current_state = "SERUM_3"
+            elif feedback == "__ygy":
+                current_state = "SHRED_3"
+            elif feedback == "_g_gy":
+                current_state = "SIREN_3"
+            elif feedback == "_y_yy":
+                current_state = "SERIF_3"
+            elif feedback == "y__gy":
+                current_state = "SCREW_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CIDER_3":
+            if feedback == "gyygy":
+                current_state = "CRIED_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLAMP_2":
+            if feedback == "__g__":
+                current_state = "SHARK_3"
+            elif feedback == "__g_g":
+                current_state = "SHARP_3"
+            elif feedback == "__g_y":
+                current_state = "SPARK_3"
+            elif feedback == "__gy_":
+                current_state = "SMARM_3"
+            elif feedback == "__y__":
+                current_state = "ARSON_3"
+            elif feedback == "_yg__":
+                current_state = "SNARL_3"
+            elif feedback == "_yy__":
+                current_state = "SOLAR_3"
+            elif feedback == "y_g__":
+                current_state = "SCARF_3"
+            elif feedback == "y_g_g":
+                current_state = "SCARP_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLANG_3":
+            if feedback == "gggg_":
+                current_state = "CLANK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLAPT_2":
+            if feedback == "__g_g":
+                current_state = "SHAFT_3"
+            elif feedback == "__g_y":
+                current_state = "STAND_3"
+            elif feedback == "__ggy":
+                current_state = "STAPH_3"
+            elif feedback == "__gyy":
+                current_state = "STAMP_3"
+            elif feedback == "__y_g":
+                current_state = "SQUAT_3"
+            elif feedback == "__y_y":
+                current_state = "STOMA_3"
+            elif feedback == "_gg_g":
+                current_state = "SLANT_3"
+            elif feedback == "_yg_g":
+                current_state = "SHALT_3"
+            elif feedback == "_yg_y":
+                current_state = "STALK_3"
+            elif feedback == "_yy_y":
+                current_state = "ATLAS_3"
+            elif feedback == "_yyyg":
+                current_state = "SPLAT_3"
+            elif feedback == "y_g_g":
+                current_state = "SCANT_3"
+            elif feedback == "y_g_y":
+                current_state = "STACK_3"
+            elif feedback == "y_y_g":
+                current_state = "ASCOT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLASP_3":
+            if feedback == "gggg_":
+                current_state = "CLASS_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLEAN_3":
+            if feedback == "_ggg_":
+                current_state = "BLEAK_4"
+            elif feedback == "_gggg":
+                current_state = "GLEAN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLERK_3":
+            if feedback == "gyyy_":
+                current_state = "CRUEL_4"
+            elif feedback == "ygyy_":
+                current_state = "ULCER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLINT_2":
+            if feedback == "____y":
+                current_state = "TRAMP_3"
+            elif feedback == "__g_y":
+                current_state = "TRIAD_3"
+            elif feedback == "__y_g":
+                current_state = "TRAIT_3"
+            elif feedback == "__y_y":
+                current_state = "TIARA_3"
+            elif feedback == "__yyy":
+                current_state = "TRAIN_3"
+            elif feedback == "_y__y":
+                current_state = "TRAWL_3"
+            elif feedback == "_yg_y":
+                current_state = "TRIAL_3"
+            elif feedback == "_yy_y":
+                current_state = "TRAIL_3"
+            elif feedback == "y___g":
+                current_state = "TRACT_3"
+            elif feedback == "y___y":
+                current_state = "TRACK_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLIPT_2":
+            if feedback == "____g":
+                current_state = "DOUGH_3"
+            elif feedback == "____y":
+                current_state = "BOOFY_3"
+            elif feedback == "___yg":
+                current_state = "KAPUT_3"
+            elif feedback == "___yy":
+                current_state = "PANTY_3"
+            elif feedback == "__g_g":
+                current_state = "FAINT_3"
+            elif feedback == "__g_y":
+                current_state = "FAITH_3"
+            elif feedback == "__gyg":
+                current_state = "PAINT_3"
+            elif feedback == "__y_g":
+                current_state = "HABIT_3"
+            elif feedback == "__y_y":
+                current_state = "BATIK_3"
+            elif feedback == "__yyy":
+                current_state = "PATIO_3"
+            elif feedback == "_y__g":
+                current_state = "FAULT_3"
+            elif feedback == "_y__y":
+                current_state = "AFOAM_3"
+            elif feedback == "_yg_y":
+                current_state = "LAITY_3"
+            elif feedback == "g___y":
+                current_state = "CATCH_3"
+            elif feedback == "g__yg":
+                current_state = "CAPUT_3"
+            elif feedback == "g_y_y":
+                current_state = "CACTI_3"
+            elif feedback == "y___g":
+                current_state = "YACHT_3"
+            elif feedback == "y___y":
+                current_state = "EMBOW_3"
+            elif feedback == "y__yy":
+                current_state = "PATCH_3"
+            elif feedback == "yy__y":
+                current_state = "LATCH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLOCK_4":
+            if feedback == "_gg__":
+                current_state = "FLOWN_5"
+            elif feedback == "_gggg":
+                current_state = "FLOCK_5"
+            elif feedback == "ggg__":
+                current_state = "CLOWN_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLONK_2":
+            if feedback == "_____":
+                current_state = "USURP_3"
+            elif feedback == "____g":
+                current_state = "SHIRK_3"
+            elif feedback == "____y":
+                current_state = "RISKY_3"
+            elif feedback == "___y_":
+                current_state = "SPURN_3"
+            elif feedback == "__g__":
+                current_state = "SWORD_3"
+            elif feedback == "__g_g":
+                current_state = "SPORK_3"
+            elif feedback == "__gy_":
+                current_state = "SHORN_3"
+            elif feedback == "__y__":
+                current_state = "VISOR_3"
+            elif feedback == "__yy_":
+                current_state = "ROSIN_3"
+            elif feedback == "_g___":
+                current_state = "SLURP_3"
+            elif feedback == "_y___":
+                current_state = "SWIRL_3"
+            elif feedback == "y_g__":
+                current_state = "SCOUR_3"
+            elif feedback == "y_gy_":
+                current_state = "SCORN_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLOTH_2":
+            if feedback == "___g_":
+                current_state = "MATTE_3"
+            elif feedback == "___gy":
+                current_state = "HAUTE_3"
+            elif feedback == "___yy":
+                current_state = "BATHE_3"
+            elif feedback == "_y_g_":
+                current_state = "LATTE_3"
+            elif feedback == "_y_y_":
+                current_state = "LATKE_3"
+            elif feedback == "_y_yy":
+                current_state = "LATHE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLOTH_3":
+            if feedback == "__ggy":
+                current_state = "PHOTO_4"
+            elif feedback == "y_yy_":
+                current_state = "OPTIC_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLOUD_2":
+            if feedback == "_____":
+                current_state = "GEESE_3"
+            elif feedback == "____y":
+                current_state = "DENSE_3"
+            elif feedback == "___y_":
+                current_state = "GUISE_3"
+            elif feedback == "__g__":
+                current_state = "AHING_3"
+            elif feedback == "__y__":
+                current_state = "NOISE_3"
+            elif feedback == "__y_y":
+                current_state = "DOWSE_3"
+            elif feedback == "__yy_":
+                current_state = "HOUSE_3"
+            elif feedback == "__yyy":
+                current_state = "DOUSE_3"
+            elif feedback == "_y_y_":
+                current_state = "PULSE_3"
+            elif feedback == "_yg__":
+                current_state = "LOOSE_3"
+            elif feedback == "_yyy_":
+                current_state = "LOUSE_3"
+            elif feedback == "g_g__":
+                current_state = "CHOSE_3"
+            elif feedback == "g_y__":
+                current_state = "COPSE_3"
+            elif feedback == "ggg__":
+                current_state = "CLOSE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLOUT_3":
+            if feedback == "_gggg":
+                current_state = "FLOUT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CLUNG_3":
+            if feedback == "_gggg":
+                current_state = "FLUNG_4"
+            elif feedback == "_yy_y":
+                current_state = "MOGUL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COCOA_3":
+            if feedback == "gg__g":
+                current_state = "COMMA_4"
+            elif feedback == "gg__y":
+                current_state = "COPAY_4"
+            elif feedback == "ggy_y":
+                current_state = "COACH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CODON_2":
+            if feedback == "_____":
+                current_state = "FUGLY_3"
+            elif feedback == "____g":
+                current_state = "BRUIN_3"
+            elif feedback == "____y":
+                current_state = "BUGGY_3"
+            elif feedback == "___g_":
+                current_state = "PRIOR_3"
+            elif feedback == "___gg":
+                current_state = "PRION_3"
+            elif feedback == "___gy":
+                current_state = "MINOR_3"
+            elif feedback == "__g__":
+                current_state = "RUDDY_3"
+            elif feedback == "__y__":
+                current_state = "DRILL_3"
+            elif feedback == "__y_y":
+                current_state = "DRINK_3"
+            elif feedback == "_g___":
+                current_state = "ROUGH_3"
+            elif feedback == "_g__g":
+                current_state = "MOURN_3"
+            elif feedback == "_g_gy":
+                current_state = "HONOR_3"
+            elif feedback == "_g_y_":
+                current_state = "ROOMY_3"
+            elif feedback == "_gy__":
+                current_state = "DOWRY_3"
+            elif feedback == "_gy_y":
+                current_state = "ROUND_3"
+            elif feedback == "_gygy":
+                current_state = "DONOR_3"
+            elif feedback == "_y___":
+                current_state = "GROWL_3"
+            elif feedback == "_y__g":
+                current_state = "BAGIE_3"
+            elif feedback == "_y__y":
+                current_state = "PRONG_3"
+            elif feedback == "_y_g_":
+                current_state = "BROOM_3"
+            elif feedback == "_y_y_":
+                current_state = "PROMO_3"
+            elif feedback == "_yg__":
+                current_state = "HYDRO_3"
+            elif feedback == "_yy__":
+                current_state = "DROID_3"
+            elif feedback == "_yy_g":
+                current_state = "DROWN_3"
+            elif feedback == "_yy_y":
+                current_state = "FROND_3"
+            elif feedback == "_yyg_":
+                current_state = "DROOL_3"
+            elif feedback == "g____":
+                current_state = "CHIRP_3"
+            elif feedback == "g___g":
+                current_state = "CHURN_3"
+            elif feedback == "gg_g_":
+                current_state = "COLOR_3"
+            elif feedback == "gy___":
+                current_state = "CROCK_3"
+            elif feedback == "gy__g":
+                current_state = "CROWN_3"
+            elif feedback == "gy__y":
+                current_state = "CRONY_3"
+            elif feedback == "gy_g_":
+                current_state = "CROOK_3"
+            elif feedback == "gy_gg":
+                current_state = "CROON_3"
+            elif feedback == "gyy__":
+                current_state = "CHORD_3"
+            elif feedback == "y____":
+                current_state = "BRICK_3"
+            elif feedback == "y___g":
+                current_state = "RICIN_3"
+            elif feedback == "y___y":
+                current_state = "INCUR_3"
+            elif feedback == "yg___":
+                current_state = "ROCKY_3"
+            elif feedback == "yy___":
+                current_state = "MICRO_3"
+            elif feedback == "yy__y":
+                current_state = "BRONC_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COLIN_2":
+            if feedback == "_____":
+                current_state = "GUAVA_3"
+            elif feedback == "____g":
+                current_state = "HUMAN_3"
+            elif feedback == "____y":
+                current_state = "UNJAM_3"
+            elif feedback == "___g_":
+                current_state = "AFFIX_3"
+            elif feedback == "___gg":
+                current_state = "ADMIN_3"
+            elif feedback == "___y_":
+                current_state = "HIJAB_3"
+            elif feedback == "___yg":
+                current_state = "AVIAN_3"
+            elif feedback == "___yy":
+                current_state = "ADAPT_3"
+            elif feedback == "__g__":
+                current_state = "ALLAY_3"
+            elif feedback == "__gy_":
+                current_state = "PILAF_3"
+            elif feedback == "__gyy":
+                current_state = "INLAY_3"
+            elif feedback == "__y__":
+                current_state = "AMPLY_3"
+            elif feedback == "__y_y":
+                current_state = "ABACK_3"
+            elif feedback == "__yg_":
+                current_state = "ABJUD_3"
+            elif feedback == "__ygg":
+                current_state = "PLAIN_3"
+            elif feedback == "__ygy":
+                current_state = "ANVIL_3"
+            elif feedback == "__yy_":
+                current_state = "ALIBI_3"
+            elif feedback == "__yyg":
+                current_state = "ALIGN_3"
+            elif feedback == "__yyy":
+                current_state = "FINAL_3"
+            elif feedback == "_g___":
+                current_state = "DOGMA_3"
+            elif feedback == "_g__g":
+                current_state = "WOMAN_3"
+            elif feedback == "_g__y":
+                current_state = "GONAD_3"
+            elif feedback == "_gg__":
+                current_state = "POLKA_3"
+            elif feedback == "_gy__":
+                current_state = "LOAMY_3"
+            elif feedback == "_gy_y":
+                current_state = "NODAL_3"
+            elif feedback == "_gyy_":
+                current_state = "VOILA_3"
+            elif feedback == "_y___":
+                current_state = "ADOBO_3"
+            elif feedback == "_y__y":
+                current_state = "AGONY_3"
+            elif feedback == "_y_g_":
+                current_state = "AUDIO_3"
+            elif feedback == "_y_y_":
+                current_state = "AMIGO_3"
+            elif feedback == "_y_yg":
+                current_state = "AXION_3"
+            elif feedback == "_y_yy":
+                current_state = "AMINO_3"
+            elif feedback == "_yg__":
+                current_state = "AGLOW_3"
+            elif feedback == "_yy__":
+                current_state = "AFALD_3"
+            elif feedback == "_yy_y":
+                current_state = "ALONG_3"
+            elif feedback == "_yyg_":
+                current_state = "ABOIL_3"
+            elif feedback == "_yyy_":
+                current_state = "AIOLI_3"
+            elif feedback == "g____":
+                current_state = "CHAFF_3"
+            elif feedback == "g__gg":
+                current_state = "CHAIN_3"
+            elif feedback == "g__yy":
+                current_state = "CHINA_3"
+            elif feedback == "g_gg_":
+                current_state = "CILIA_3"
+            elif feedback == "g_y__":
+                current_state = "CHALK_3"
+            elif feedback == "g_y_y":
+                current_state = "CLANG_3"
+            elif feedback == "g_yg_":
+                current_state = "CLAIM_3"
+            elif feedback == "gg___":
+                current_state = "COCOA_3"
+            elif feedback == "gg__y":
+                current_state = "CONGA_3"
+            elif feedback == "gyy__":
+                current_state = "CLOAK_3"
+            elif feedback == "y____":
+                current_state = "AMUCK_3"
+            elif feedback == "y___y":
+                current_state = "KNACK_3"
+            elif feedback == "y__yy":
+                current_state = "ACING_3"
+            elif feedback == "y_gy_":
+                current_state = "LILAC_3"
+            elif feedback == "y_y__":
+                current_state = "BLACK_3"
+            elif feedback == "y_yy_":
+                current_state = "ILIAC_3"
+            elif feedback == "yg___":
+                current_state = "MOCHA_3"
+            elif feedback == "ygy__":
+                current_state = "FALLS_3"
+            elif feedback == "yy___":
+                current_state = "ACHOO_3"
+            elif feedback == "yy__y":
+                current_state = "ANCHO_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COMBO_4":
+            if feedback == "ggg__":
+                current_state = "COMFY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COMET_3":
+            if feedback == "___gg":
+                current_state = "BEGET_4"
+            elif feedback == "__ggg":
+                current_state = "UNMET_4"
+            elif feedback == "_y_gy":
+                current_state = "OFTEN_4"
+            elif feedback == "gg_gg":
+                current_state = "COVET_4"
+            elif feedback == "yy_gg":
+                current_state = "OCTET_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COMFY_3":
+            if feedback == "_____":
+                current_state = "WHIZZ_4"
+            elif feedback == "____g":
+                current_state = "WHINY_4"
+            elif feedback == "____y":
+                current_state = "VINYL_4"
+            elif feedback == "___g_":
+                current_state = "WHIFF_4"
+            elif feedback == "__y_g":
+                current_state = "MILKY_4"
+            elif feedback == "__yyg":
+                current_state = "FILMY_4"
+            elif feedback == "_g___":
+                current_state = "POLIO_4"
+            elif feedback == "_g_y_":
+                current_state = "FOLIO_4"
+            elif feedback == "_y___":
+                current_state = "ONION_4"
+            elif feedback == "_yg__":
+                current_state = "LIMBO_4"
+            elif feedback == "g____":
+                current_state = "CHICK_4"
+            elif feedback == "g_y__":
+                current_state = "CHIMP_4"
+            elif feedback == "gg___":
+                current_state = "COLIC_4"
+            elif feedback == "gy___":
+                current_state = "CHINO_4"
+            elif feedback == "y____":
+                current_state = "WHICH_4"
+            elif feedback == "y__y_":
+                current_state = "FILCH_4"
+            elif feedback == "yg_y_":
+                current_state = "FOLIC_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COMIC_4":
+            if feedback == "__ggg":
+                current_state = "MIMIC_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CONCH_4":
+            if feedback == "_g__y":
+                current_state = "HOBBY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CONIC_4":
+            if feedback == "_gggg":
+                current_state = "IONIC_5"
+            elif feedback == "_yyy_":
+                current_state = "INBOX_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COOLY_3":
+            if feedback == "_g___":
+                current_state = "MOTIF_4"
+            elif feedback == "_g__g":
+                current_state = "POTTY_4"
+            elif feedback == "_g_gg":
+                current_state = "HOTLY_4"
+            elif feedback == "_g_yg":
+                current_state = "LOFTY_4"
+            elif feedback == "_gg__":
+                current_state = "BOOTH_4"
+            elif feedback == "_gg_g":
+                current_state = "BOOTY_4"
+            elif feedback == "_gy__":
+                current_state = "MOTTO_4"
+            elif feedback == "_gyy_":
+                current_state = "LOTTO_4"
+            elif feedback == "yg___":
+                current_state = "BOTCH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COPEN_3":
+            if feedback == "_g___":
+                current_state = "HOKUM_4"
+            elif feedback == "_gg__":
+                current_state = "POPUP_4"
+            elif feedback == "_y__y":
+                current_state = "UNBOX_4"
+            elif feedback == "g____":
+                current_state = "CHUCK_4"
+            elif feedback == "g___y":
+                current_state = "CHUNK_4"
+            elif feedback == "g_y__":
+                current_state = "CHUMP_4"
+            elif feedback == "gg___":
+                current_state = "COUCH_4"
+            elif feedback == "gy___":
+                current_state = "CHOUX_4"
+            elif feedback == "yg___":
+                current_state = "VOUCH_4"
+            elif feedback == "ygy__":
+                current_state = "POUCH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CORAL_3":
+            if feedback == "_gggg":
+                current_state = "MORAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CORGI_3":
+            if feedback == "gyg_y":
+                current_state = "CURIO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CORKY_3":
+            if feedback == "ggg_g":
+                current_state = "CORNY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COUGH_2":
+            if feedback == "_____":
+                current_state = "VERSE_3"
+            elif feedback == "__y__":
+                current_state = "NURSE_3"
+            elif feedback == "_g___":
+                current_state = "WORSE_3"
+            elif feedback == "_g__y":
+                current_state = "HORSE_3"
+            elif feedback == "_g_y_":
+                current_state = "GORSE_3"
+            elif feedback == "g_y__":
+                current_state = "CURSE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COURT_2":
+            if feedback == "___gg":
+                current_state = "EVERT_3"
+            elif feedback == "___gy":
+                current_state = "ENTRY_3"
+            elif feedback == "___yg":
+                current_state = "AUMIL_3"
+            elif feedback == "___yy":
+                current_state = "DENIM_3"
+            elif feedback == "__gyg":
+                current_state = "ERUPT_3"
+            elif feedback == "__yyg":
+                current_state = "REBUT_3"
+            elif feedback == "__yyy":
+                current_state = "UTTER_3"
+            elif feedback == "_g_yy":
+                current_state = "VOTER_3"
+            elif feedback == "_y_gg":
+                current_state = "OVERT_3"
+            elif feedback == "_y_gy":
+                current_state = "METRO_3"
+            elif feedback == "_y_yg":
+                current_state = "REPOT_3"
+            elif feedback == "_y_yy":
+                current_state = "OTHER_3"
+            elif feedback == "_yyyy":
+                current_state = "OUTER_3"
+            elif feedback == "g__yg":
+                current_state = "CREPT_3"
+            elif feedback == "g_gyg":
+                current_state = "CRUET_3"
+            elif feedback == "g_yyy":
+                current_state = "CUTER_3"
+            elif feedback == "y__yg":
+                current_state = "ERECT_3"
+            elif feedback == "y__yy":
+                current_state = "RETCH_3"
+            elif feedback == "y_yyg":
+                current_state = "RECUT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COVEN_3":
+            if feedback == "___gg":
+                current_state = "QUEEN_4"
+            elif feedback == "__ggg":
+                current_state = "GIVEN_4"
+            elif feedback == "__ygg":
+                current_state = "VIXEN_4"
+            elif feedback == "_g_gg":
+                current_state = "WOKEN_4"
+            elif feedback == "_gggg":
+                current_state = "WOVEN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COVER_3":
+            if feedback == "gg_gg":
+                current_state = "COWER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COWLS_2":
+            if feedback == "____g":
+                current_state = "GUESS_3"
+            elif feedback == "____y":
+                current_state = "MESSY_3"
+            elif feedback == "___yg":
+                current_state = "BLESS_3"
+            elif feedback == "___yy":
+                current_state = "FLESH_3"
+            elif feedback == "__g_y":
+                current_state = "NEWSY_3"
+            elif feedback == "_g__y":
+                current_state = "POESY_3"
+            elif feedback == "_g_yg":
+                current_state = "LOESS_3"
+            elif feedback == "_y__y":
+                current_state = "QUESO_3"
+            elif feedback == "g___g":
+                current_state = "CHESS_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "COYLY_4":
+            if feedback == "_g_gg":
+                current_state = "NOBLY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CRACK_4":
+            if feedback == "ggg__":
+                current_state = "CRAZY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CRAFT_3":
+            if feedback == "_gggg":
+                current_state = "DRAFT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CREEK_3":
+            if feedback == "gggg_":
+                current_state = "CREEP_4"
+            elif feedback == "gy_g_":
+                current_state = "CYBER_4"
+            elif feedback == "gygg_":
+                current_state = "CHEER_4"
+            elif feedback == "yyy__":
+                current_state = "RECUR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CREME_3":
+            if feedback == "_y__g":
+                current_state = "RUBLE_4"
+            elif feedback == "_y_gg":
+                current_state = "RHYME_4"
+            elif feedback == "_yg_g":
+                current_state = "WHERE_4"
+            elif feedback == "_yy_g":
+                current_state = "REVUE_4"
+            elif feedback == "yy__g":
+                current_state = "LUCRE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CREPE_3":
+            if feedback == "_yyyg":
+                current_state = "RUPEE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CREST_2":
+            if feedback == "_gggg":
+                current_state = "WREST_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CRIER_3":
+            if feedback == "y_ggg":
+                current_state = "ICIER_4"
+            elif feedback == "y_ygg":
+                current_state = "NICER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CRIME_3":
+            if feedback == "_gg_g":
+                current_state = "BRIBE_4"
+            elif feedback == "_gggg":
+                current_state = "GRIME_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CROCK_3":
+            if feedback == "ggg__":
+                current_state = "CROUP_4"
+            elif feedback == "gyg__":
+                current_state = "CHOIR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CUBIC_3":
+            if feedback == "_gggg":
+                current_state = "PUBIC_4"
+            elif feedback == "gg_g_":
+                current_state = "CUMIN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CUING_2":
+            if feedback == "_____":
+                current_state = "TODDY_3"
+            elif feedback == "___gg":
+                current_state = "THONG_3"
+            elif feedback == "__g__":
+                current_state = "TWILL_3"
+            elif feedback == "__g_y":
+                current_state = "THIGH_3"
+            elif feedback == "__gg_":
+                current_state = "THINK_3"
+            elif feedback == "__ggg":
+                current_state = "THING_3"
+            elif feedback == "__y__":
+                current_state = "TIMID_3"
+            elif feedback == "__y_y":
+                current_state = "TIGHT_3"
+            elif feedback == "__yg_":
+                current_state = "TINNY_3"
+            elif feedback == "__yy_":
+                current_state = "TOXIN_3"
+            elif feedback == "_g___":
+                current_state = "ABETS_3"
+            elif feedback == "_gy__":
+                current_state = "TULIP_3"
+            elif feedback == "_y___":
+                current_state = "THUMB_3"
+            elif feedback == "_y__y":
+                current_state = "TOUGH_3"
+            elif feedback == "y_g__":
+                current_state = "THICK_3"
+            elif feedback == "y_y__":
+                current_state = "TOPIC_3"
+            elif feedback == "y_yy_":
+                current_state = "TONIC_3"
+            elif feedback == "ygyy_":
+                current_state = "TUNIC_3"
+            elif feedback == "yy___":
+                current_state = "TOUCH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CUPID_3":
+            if feedback == "_g_gg":
+                current_state = "HUMID_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CURRY_3":
+            if feedback == "ggg_g":
+                current_state = "CURVY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CURVE_3":
+            if feedback == "_gg_g":
+                current_state = "PUREE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "CYMOL_2":
+            if feedback == "_____":
+                current_state = "PARKA_3"
+            elif feedback == "____y":
+                current_state = "LARVA_3"
+            elif feedback == "___g_":
+                current_state = "BARON_3"
+            elif feedback == "___y_":
+                current_state = "BURRO_3"
+            elif feedback == "___yy":
+                current_state = "WORLD_3"
+            elif feedback == "__y__":
+                current_state = "KARMA_3"
+            elif feedback == "__yg_":
+                current_state = "MORON_3"
+            elif feedback == "__yy_":
+                current_state = "FORUM_3"
+            elif feedback == "_gy__":
+                current_state = "MYRRH_3"
+            elif feedback == "_y___":
+                current_state = "PARRY_3"
+            elif feedback == "_y__y":
+                current_state = "BURLY_3"
+            elif feedback == "_y_y_":
+                current_state = "DWANG_3"
+            elif feedback == "_y_yy":
+                current_state = "LORDY_3"
+            elif feedback == "_yy__":
+                current_state = "MARRY_3"
+            elif feedback == "_yyy_":
+                current_state = "WORMY_3"
+            elif feedback == "g__g_":
+                current_state = "CAROB_3"
+            elif feedback == "g__gg":
+                current_state = "CAROL_3"
+            elif feedback == "g__y_":
+                current_state = "CARGO_3"
+            elif feedback == "g_yg_":
+                current_state = "CAROM_3"
+            elif feedback == "gy___":
+                current_state = "CARNY_3"
+            elif feedback == "gy__y":
+                current_state = "CURLY_3"
+            elif feedback == "gy_y_":
+                current_state = "CORKY_3"
+            elif feedback == "y____":
+                current_state = "PARCH_3"
+            elif feedback == "y___y":
+                current_state = "LARCH_3"
+            elif feedback == "y__y_":
+                current_state = "BORIC_3"
+            elif feedback == "y_y__":
+                current_state = "MARCH_3"
+            elif feedback == "yg__y":
+                current_state = "LYRIC_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DALED_3":
+            if feedback == "gg___":
+                current_state = "DAFFY_4"
+            elif feedback == "gg__y":
+                current_state = "DADDY_4"
+            elif feedback == "ggg__":
+                current_state = "DALLY_4"
+            elif feedback == "ggy__":
+                current_state = "DAILY_4"
+            elif feedback == "yg___":
+                current_state = "BAWDY_4"
+            elif feedback == "yg__y":
+                current_state = "PADDY_4"
+            elif feedback == "ygg__":
+                current_state = "BALDY_4"
+            elif feedback == "ygy__":
+                current_state = "BADLY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEALT_3":
+            if feedback == "_yggg":
+                current_state = "EXALT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEATH_3":
+            if feedback == "_ggg_":
+                current_state = "MEATY_4"
+            elif feedback == "_gggg":
+                current_state = "HEATH_4"
+            elif feedback == "_ggy_":
+                current_state = "BEAUT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEBIT_3":
+            if feedback == "gg_yy":
+                current_state = "DEITY_4"
+            elif feedback == "yy_yg":
+                current_state = "EDICT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEBUG_3":
+            if feedback == "gg__g":
+                current_state = "DEFOG_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEBUT_3":
+            if feedback == "gg__y":
+                current_state = "DETOX_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DECAF_3":
+            if feedback == "gggg_":
+                current_state = "DECAY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DECOY_3":
+            if feedback == "gg__g":
+                current_state = "DEIFY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEFER_3":
+            if feedback == "g__gg":
+                current_state = "DRYER_4"
+            elif feedback == "gg__g":
+                current_state = "DEMUR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEIGN_3":
+            if feedback == "gg__g":
+                current_state = "DEMON_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DENIM_3":
+            if feedback == "_g___":
+                current_state = "PETER_4"
+            elif feedback == "_g__y":
+                current_state = "METER_4"
+            elif feedback == "_y___":
+                current_state = "ETHER_4"
+            elif feedback == "_y_y_":
+                current_state = "BITER_4"
+            elif feedback == "_y_yy":
+                current_state = "MITER_4"
+            elif feedback == "_yy__":
+                current_state = "ENTER_4"
+            elif feedback == "_yyy_":
+                current_state = "INTER_4"
+            elif feedback == "gg___":
+                current_state = "DETER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEPOT_3":
+            if feedback == "ggg_y":
+                current_state = "DEPTH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEVIL_3":
+            if feedback == "gy__g":
+                current_state = "DWELL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DEVON_3":
+            if feedback == "g____":
+                current_state = "DIPPY_4"
+            elif feedback == "g___y":
+                current_state = "DINKY_4"
+            elif feedback == "g_g__":
+                current_state = "DIVVY_4"
+            elif feedback == "y____":
+                current_state = "BIDDY_4"
+            elif feedback == "y___y":
+                current_state = "WINDY_4"
+            elif feedback == "y__g_":
+                current_state = "WIDOW_4"
+            elif feedback == "y__y_":
+                current_state = "KIDDO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DIARY_3":
+            if feedback == "g_gg_":
+                current_state = "DWARF_4"
+            elif feedback == "g_gy_":
+                current_state = "DRAMA_4"
+            elif feedback == "y_ygy":
+                current_state = "HYDRA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DICEY_3":
+            if feedback == "g__gg":
+                current_state = "DOPEY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DIGHT_2":
+            if feedback == "____g":
+                current_state = "QUEST_3"
+            elif feedback == "___yg":
+                current_state = "CHEST_3"
+            elif feedback == "__y_g":
+                current_state = "GUEST_3"
+            elif feedback == "_y__g":
+                current_state = "EXIST_3"
+            elif feedback == "_y_yg":
+                current_state = "HEIST_3"
+            elif feedback == "gy__g":
+                current_state = "DEIST_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DILLY_3":
+            if feedback == "gg_gg":
+                current_state = "DIMLY_4"
+            elif feedback == "yyygy":
+                current_state = "IDYLL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DINER_3":
+            if feedback == "gg_gg":
+                current_state = "DIVER_4"
+            elif feedback == "gy_gg":
+                current_state = "DRIER_4"
+            elif feedback == "gy_gy":
+                current_state = "DRIED_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DINGO_3":
+            if feedback == "gggg_":
+                current_state = "DINGY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DIPPY_4":
+            if feedback == "gg__g":
+                current_state = "DIZZY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DISHY_3":
+            if feedback == "__g__":
+                current_state = "BOSOM_4"
+            elif feedback == "__y__":
+                current_state = "SCOFF_4"
+            elif feedback == "__y_g":
+                current_state = "SOGGY_4"
+            elif feedback == "__yyg":
+                current_state = "SHOWY_4"
+            elif feedback == "_gggg":
+                current_state = "FISHY_4"
+            elif feedback == "ggg__":
+                current_state = "DISCO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DITTY_3":
+            if feedback == "ggg__":
+                current_state = "DITCH_4"
+            elif feedback == "ggg_g":
+                current_state = "DITZY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DODGE_3":
+            if feedback == "_g_gg":
+                current_state = "GOUGE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DODGY_3":
+            if feedback == "gg_gg":
+                current_state = "DOGGY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOGAN_2":
+            if feedback == "___g_":
+                current_state = "TUBAL_3"
+            elif feedback == "___gg":
+                current_state = "TITAN_3"
+            elif feedback == "___y_":
+                current_state = "TIBIA_3"
+            elif feedback == "___yg":
+                current_state = "TWAIN_3"
+            elif feedback == "___yy":
+                current_state = "THANK_3"
+            elif feedback == "__yyy":
+                current_state = "TWANG_3"
+            elif feedback == "_g_g_":
+                current_state = "TOPAZ_3"
+            elif feedback == "_g_gy":
+                current_state = "TONAL_3"
+            elif feedback == "_gyyy":
+                current_state = "TONGA_3"
+            elif feedback == "y__g_":
+                current_state = "TIDAL_3"
+            elif feedback == "yg_g_":
+                current_state = "TODAY_3"
+            elif feedback == "yg_y_":
+                current_state = "TOADY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOGMA_3":
+            if feedback == "_g_gg":
+                current_state = "MOMMA_4"
+            elif feedback == "_g_gy":
+                current_state = "FOAMY_4"
+            elif feedback == "yg__g":
+                current_state = "VODKA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOING_3":
+            if feedback == "g_ggg":
+                current_state = "DYING_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOLCI_2":
+            if feedback == "_____":
+                current_state = "RUMPY_3"
+            elif feedback == "____g":
+                current_state = "REIKI_3"
+            elif feedback == "____y":
+                current_state = "PINKY_3"
+            elif feedback == "___g_":
+                current_state = "WRECK_3"
+            elif feedback == "___y_":
+                current_state = "CREEK_3"
+            elif feedback == "___yy":
+                current_state = "CRIER_3"
+            elif feedback == "__g__":
+                current_state = "RULER_3"
+            elif feedback == "__g_y":
+                current_state = "FILER_3"
+            elif feedback == "__gyy":
+                current_state = "RELIC_3"
+            elif feedback == "__y__":
+                current_state = "BEVER_3"
+            elif feedback == "__y_y":
+                current_state = "AFION_3"
+            elif feedback == "__yy_":
+                current_state = "CLERK_3"
+            elif feedback == "_g___":
+                current_state = "WHOMP_3"
+            elif feedback == "_g_y_":
+                current_state = "COVER_3"
+            elif feedback == "_gy__":
+                current_state = "ADVEW_3"
+            elif feedback == "_y___":
+                current_state = "OFFER_3"
+            elif feedback == "_y_y_":
+                current_state = "OCHER_3"
+            elif feedback == "_yg__":
+                current_state = "OGLER_3"
+            elif feedback == "_yg_y":
+                current_state = "OILER_3"
+            elif feedback == "g____":
+                current_state = "DEFER_3"
+            elif feedback == "g___y":
+                current_state = "DINER_3"
+            elif feedback == "g__g_":
+                current_state = "DRECK_3"
+            elif feedback == "g__y_":
+                current_state = "DECRY_3"
+            elif feedback == "g__yy":
+                current_state = "DICER_3"
+            elif feedback == "gg___":
+                current_state = "DOPER_3"
+            elif feedback == "gy_y_":
+                current_state = "DECOR_3"
+            elif feedback == "y____":
+                current_state = "BEGUN_3"
+            elif feedback == "y___y":
+                current_state = "BEDEW_3"
+            elif feedback == "y__y_":
+                current_state = "CREED_3"
+            elif feedback == "y__yy":
+                current_state = "CIDER_3"
+            elif feedback == "y_g_y":
+                current_state = "IDLER_3"
+            elif feedback == "y_y__":
+                current_state = "ELDER_3"
+            elif feedback == "yg___":
+                current_state = "RODEO_3"
+            elif feedback == "yg_y_":
+                current_state = "CODER_3"
+            elif feedback == "yy___":
+                current_state = "ODDER_3"
+            elif feedback == "yy_y_":
+                current_state = "CREDO_3"
+            elif feedback == "yyy__":
+                current_state = "OLDER_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOLLY_3":
+            if feedback == "yy_gg":
+                current_state = "ODDLY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOMED_3":
+            if feedback == "g__g_":
+                current_state = "DWEEB_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DONUT_2":
+            if feedback == "____g":
+                current_state = "FILMI_3"
+            elif feedback == "____y":
+                current_state = "WIFTY_3"
+            elif feedback == "___gy":
+                current_state = "CUTUP_3"
+            elif feedback == "___yg":
+                current_state = "AGBAS_3"
+            elif feedback == "___yy":
+                current_state = "BIGLY_3"
+            elif feedback == "__g_y":
+                current_state = "MINTY_3"
+            elif feedback == "__y_g":
+                current_state = "FLINT_3"
+            elif feedback == "__y_y":
+                current_state = "NIFTY_3"
+            elif feedback == "__ygg":
+                current_state = "INPUT_3"
+            elif feedback == "__yyg":
+                current_state = "BLUNT_3"
+            elif feedback == "__yyy":
+                current_state = "NUTTY_3"
+            elif feedback == "_g__g":
+                current_state = "VOMIT_3"
+            elif feedback == "_g__y":
+                current_state = "COOLY_3"
+            elif feedback == "_g_yg":
+                current_state = "MOULT_3"
+            elif feedback == "_g_yy":
+                current_state = "ACCOY_3"
+            elif feedback == "_gg_y":
+                current_state = "MONTH_3"
+            elif feedback == "_gy_g":
+                current_state = "JOINT_3"
+            elif feedback == "_gy_y":
+                current_state = "NOTCH_3"
+            elif feedback == "_gyyg":
+                current_state = "ACMES_3"
+            elif feedback == "_y__g":
+                current_state = "PILOT_3"
+            elif feedback == "_y__y":
+                current_state = "CLOTH_3"
+            elif feedback == "_y_gg":
+                current_state = "CLOUT_3"
+            elif feedback == "_y_yg":
+                current_state = "OUGHT_3"
+            elif feedback == "_y_yy":
+                current_state = "OUTGO_3"
+            elif feedback == "_yg_g":
+                current_state = "PINOT_3"
+            elif feedback == "_yg_y":
+                current_state = "PINTO_3"
+            elif feedback == "_ygyy":
+                current_state = "JUNTO_3"
+            elif feedback == "_yy_g":
+                current_state = "INGOT_3"
+            elif feedback == "_yyyy":
+                current_state = "FUTON_3"
+            elif feedback == "g___g":
+                current_state = "DIGIT_3"
+            elif feedback == "g___y":
+                current_state = "DITTY_3"
+            elif feedback == "g__yy":
+                current_state = "DUTCH_3"
+            elif feedback == "gg__y":
+                current_state = "DOTTY_3"
+            elif feedback == "gg_yg":
+                current_state = "DOUBT_3"
+            elif feedback == "gy__g":
+                current_state = "DIVOT_3"
+            elif feedback == "gy__y":
+                current_state = "DITTO_3"
+            elif feedback == "y___y":
+                current_state = "WIDTH_3"
+            elif feedback == "yy__g":
+                current_state = "IDIOT_3"
+            elif feedback == "yy_yy":
+                current_state = "OUTDO_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOPER_3":
+            if feedback == "gg_gg":
+                current_state = "DOZER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOUGH_3":
+            if feedback == "__g__":
+                current_state = "JAUNT_4"
+            elif feedback == "__g_y":
+                current_state = "HAUNT_4"
+            elif feedback == "__gy_":
+                current_state = "GAUNT_4"
+            elif feedback == "__yy_":
+                current_state = "GAMUT_4"
+            elif feedback == "g_g__":
+                current_state = "DAUNT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DOWRY_3":
+            if feedback == "yg_g_":
+                current_state = "GOURD_4"
+            elif feedback == "yggyg":
+                current_state = "ROWDY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DRAIN_3":
+            if feedback == "ggg_g":
+                current_state = "DRAWN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DRAKE_3":
+            if feedback == "ggg_g":
+                current_state = "DRAPE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DRIFT_3":
+            if feedback == "_gggg":
+                current_state = "GRIFT_4"
+            elif feedback == "_gyyg":
+                current_state = "FRUIT_4"
+            elif feedback == "_ygyg":
+                current_state = "FLIRT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DRILL_3":
+            if feedback == "gg_g_":
+                current_state = "DRYLY_4"
+            elif feedback == "ggy__":
+                current_state = "DRUID_4"
+            elif feedback == "yyy__":
+                current_state = "RIGID_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DRINK_3":
+            if feedback == "gg_gg":
+                current_state = "DRUNK_4"
+            elif feedback == "yggg_":
+                current_state = "GRIND_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DROID_3":
+            if feedback == "_gg_g":
+                current_state = "PROUD_4"
+            elif feedback == "_yg_g":
+                current_state = "FJORD_4"
+            elif feedback == "ggg__":
+                current_state = "DROLL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DROOL_3":
+            if feedback == "gggg_":
+                current_state = "DROOP_4"
+            elif feedback == "yggg_":
+                current_state = "BROOD_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DROSS_3":
+            if feedback == "_gggg":
+                current_state = "GROSS_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DROVE_3":
+            if feedback == "ygg_g":
+                current_state = "ERODE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DUCHY_4":
+            if feedback == "ggg_g":
+                current_state = "DUCKY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DUMMY_3":
+            if feedback == "gg__g":
+                current_state = "DUCHY_4"
+            elif feedback == "ggg_g":
+                current_state = "DUMPY_4"
+            elif feedback == "yg___":
+                current_state = "KUDZU_4"
+            elif feedback == "yg__g":
+                current_state = "BUDDY_4"
+            elif feedback == "ygy_g":
+                current_state = "MUDDY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DUMPS_3":
+            if feedback == "_____":
+                current_state = "CHIVE_4"
+            elif feedback == "___y_":
+                current_state = "PIECE_4"
+            elif feedback == "__y__":
+                current_state = "CHIME_4"
+            elif feedback == "_g___":
+                current_state = "JUICE_4"
+            elif feedback == "_y_y_":
+                current_state = "PIQUE_4"
+            elif feedback == "_yy__":
+                current_state = "IMBUE_4"
+            elif feedback == "y____":
+                current_state = "CHIDE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DUMPY_3":
+            if feedback == "_____":
+                current_state = "BELLE_4"
+            elif feedback == "____y":
+                current_state = "CYCLE_4"
+            elif feedback == "___y_":
+                current_state = "PLEBE_4"
+            elif feedback == "__y__":
+                current_state = "MELEE_4"
+            elif feedback == "_y___":
+                current_state = "FLUKE_4"
+            elif feedback == "_yy__":
+                current_state = "FLUME_4"
+            elif feedback == "_yyy_":
+                current_state = "PLUME_4"
+            elif feedback == "g____":
+                current_state = "DELVE_4"
+            elif feedback == "yy___":
+                current_state = "ELUDE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DWANG_3":
+            if feedback == "_____":
+                current_state = "PORKY_4"
+            elif feedback == "____y":
+                current_state = "PORGY_4"
+            elif feedback == "___g_":
+                current_state = "HORNY_4"
+            elif feedback == "_y___":
+                current_state = "WORRY_4"
+            elif feedback == "g____":
+                current_state = "DORKY_4"
+            elif feedback == "yy___":
+                current_state = "WORDY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "DYNEL_2":
+            if feedback == "___g_":
+                current_state = "BICEP_3"
+            elif feedback == "___gg":
+                current_state = "BEVUE_3"
+            elif feedback == "___gy":
+                current_state = "BLEEP_3"
+            elif feedback == "___y_":
+                current_state = "GECKO_3"
+            elif feedback == "___yg":
+                current_state = "KVELL_3"
+            elif feedback == "___yy":
+                current_state = "PHLOX_3"
+            elif feedback == "__ggy":
+                current_state = "LINEN_3"
+            elif feedback == "__gy_":
+                current_state = "VENOM_3"
+            elif feedback == "__yg_":
+                current_state = "COVEN_3"
+            elif feedback == "__ygg":
+                current_state = "INCEL_3"
+            elif feedback == "__ygy":
+                current_state = "LIKEN_3"
+            elif feedback == "__yy_":
+                current_state = "BEGIN_3"
+            elif feedback == "__yyg":
+                current_state = "KNELL_3"
+            elif feedback == "__yyy":
+                current_state = "FELON_3"
+            elif feedback == "_gyg_":
+                current_state = "HYMEN_3"
+            elif feedback == "_gyy_":
+                current_state = "EYING_3"
+            elif feedback == "_y_g_":
+                current_state = "CHOMP_3"
+            elif feedback == "_y_gg":
+                current_state = "YOKEL_3"
+            elif feedback == "_y_gy":
+                current_state = "GLUEY_3"
+            elif feedback == "_y_y_":
+                current_state = "APEEK_3"
+            elif feedback == "_y_yy":
+                current_state = "BELLY_3"
+            elif feedback == "_ygg_":
+                current_state = "BLIMP_3"
+            elif feedback == "_ygy_":
+                current_state = "PENNY_3"
+            elif feedback == "_yyy_":
+                current_state = "ENJOY_3"
+            elif feedback == "_yyyy":
+                current_state = "NEWLY_3"
+            elif feedback == "g__g_":
+                current_state = "DOMED_3"
+            elif feedback == "g__gg":
+                current_state = "DOWEL_3"
+            elif feedback == "g__y_":
+                current_state = "DEBUG_3"
+            elif feedback == "g__yg":
+                current_state = "DEVIL_3"
+            elif feedback == "g_gy_":
+                current_state = "DENIM_3"
+            elif feedback == "g_yg_":
+                current_state = "DOZEN_3"
+            elif feedback == "g_yy_":
+                current_state = "DEIGN_3"
+            elif feedback == "gy_g_":
+                current_state = "DICEY_3"
+            elif feedback == "gy_y_":
+                current_state = "DECOY_3"
+            elif feedback == "y__g_":
+                current_state = "MOPED_3"
+            elif feedback == "y__gg":
+                current_state = "MODEL_3"
+            elif feedback == "y__gy":
+                current_state = "BLEED_3"
+            elif feedback == "y__y_":
+                current_state = "MEDIC_3"
+            elif feedback == "y__yy":
+                current_state = "FIELD_3"
+            elif feedback == "y_yg_":
+                current_state = "UNFED_3"
+            elif feedback == "y_ygy":
+                current_state = "OLDEN_3"
+            elif feedback == "y_yy_":
+                current_state = "FIEND_3"
+            elif feedback == "y_yyy":
+                current_state = "BLEND_3"
+            elif feedback == "yy_gg":
+                current_state = "YODEL_3"
+            elif feedback == "yy_y_":
+                current_state = "EDIFY_3"
+            elif feedback == "yy_yy":
+                current_state = "YIELD_3"
+            elif feedback == "yygy_":
+                current_state = "BENDY_3"
+            elif feedback == "yyyy_":
+                current_state = "NEEDY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EASEL_2":
+            if feedback == "_gyg_":
+                current_state = "SAMEY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EDIFY_3":
+            if feedback == "yy__g":
+                current_state = "WEEDY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ELATE_3":
+            if feedback == "_gggg":
+                current_state = "PLATE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EMBOW_3":
+            if feedback == "_____":
+                current_state = "HATCH_4"
+            elif feedback == "____y":
+                current_state = "WATCH_4"
+            elif feedback == "__y__":
+                current_state = "BATCH_4"
+            elif feedback == "_y___":
+                current_state = "MATCH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EMCEE_3":
+            if feedback == "g___g":
+                current_state = "EXUDE_4"
+            elif feedback == "g_y_g":
+                current_state = "EDUCE_4"
+            elif feedback == "y___g":
+                current_state = "QUEUE_4"
+            elif feedback == "y__yg":
+                current_state = "PEEVE_4"
+            elif feedback == "y_y_g":
+                current_state = "DEUCE_4"
+            elif feedback == "yy__g":
+                current_state = "FEMME_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EMPTY_3":
+            if feedback == "y_yy_":
+                current_state = "GETUP_4"
+            elif feedback == "yyyy_":
+                current_state = "KEMPT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ENEMA_3":
+            if feedback == "__gyg":
+                current_state = "OMEGA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ENJOY_3":
+            if feedback == "gg__g":
+                current_state = "ENEMY_4"
+            elif feedback == "gg_gg":
+                current_state = "ENVOY_4"
+            elif feedback == "gy_yg":
+                current_state = "EBONY_4"
+            elif feedback == "yy__g":
+                current_state = "VEINY_4"
+            elif feedback == "yy_yg":
+                current_state = "PEONY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ENSUE_3":
+            if feedback == "yggyg":
+                current_state = "UNSEE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ENTRY_3":
+            if feedback == "y_gg_":
+                current_state = "PETRI_4"
+            elif feedback == "y_ggg":
+                current_state = "RETRY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ESTER_2":
+            if feedback == "yyy_y":
+                current_state = "STERN_3"
+            elif feedback == "yyygg":
+                current_state = "STEER_3"
+            elif feedback == "yyygy":
+                current_state = "RESET_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EVERT_3":
+            if feedback == "__ggg":
+                current_state = "INERT_4"
             elif feedback == "g_ggg":
-                current_guess = "WORST"
+                current_state = "EXERT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EXCEL_4":
+            if feedback == "gg_gg":
+                current_state = "EXPEL_5"
+            elif feedback == "y__gg":
+                current_state = "WHEEL_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "EXULT_3":
+            if feedback == "g__yg":
+                current_state = "ELECT_4"
+            elif feedback == "g__yy":
+                current_state = "ETHYL_4"
+            elif feedback == "gg_yy":
+                current_state = "EXTOL_4"
+            elif feedback == "y__gg":
+                current_state = "KNELT_4"
+            elif feedback == "y__yg":
+                current_state = "CLEFT_4"
+            elif feedback == "y__yy":
+                current_state = "LEFTY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FADER_3":
+            if feedback == "_g_gg":
+                current_state = "RAVER_4"
+            elif feedback == "_g_gy":
+                current_state = "RAVEN_4"
+            elif feedback == "_gggg":
+                current_state = "WADER_4"
+            elif feedback == "gg_gg":
+                current_state = "FAKER_4"
+            elif feedback == "yg_gg":
+                current_state = "WAFER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FAIRY_3":
+            if feedback == "_gggg":
+                current_state = "HAIRY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FALLS_3":
+            if feedback == "_yy__":
+                current_state = "VOCAL_4"
+            elif feedback == "_yyy_":
+                current_state = "LOCAL_4"
+            elif feedback == "gyy__":
+                current_state = "FOCAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FAULT_3":
+            if feedback == "_gggg":
+                current_state = "VAULT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FAUNA_3":
+            if feedback == "_g_gg":
+                current_state = "MANNA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FEHME_4":
+            if feedback == "_____":
+                current_state = "JOLLY_5"
+            elif feedback == "___y_":
+                current_state = "MOLLY_5"
+            elif feedback == "__y__":
+                current_state = "HOLLY_5"
+            elif feedback == "g____":
+                current_state = "FOLLY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FELON_3":
+            if feedback == "_gggg":
+                current_state = "MELON_4"
+            elif feedback == "_gygg":
+                current_state = "LEMON_4"
+            elif feedback == "yyy_g":
+                current_state = "ELFIN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FERAL_2":
+            if feedback == "_ggg_":
+                current_state = "RERAN_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FETAL_3":
+            if feedback == "_gggg":
+                current_state = "METAL_4"
+            elif feedback == "_gyyy":
+                current_state = "DELTA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FEVER_4":
+            if feedback == "_g_gg":
+                current_state = "NEWER_5"
+            elif feedback == "_gggg":
+                current_state = "NEVER_5"
+            elif feedback == "_y_gy":
+                current_state = "GREEN_5"
+            elif feedback == "gg_gg":
+                current_state = "FEWER_5"
+            elif feedback == "gy_gg":
+                current_state = "FREER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FIELD_3":
+            if feedback == "_gggg":
+                current_state = "WIELD_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FIEND_3":
+            if feedback == "__ggg":
+                current_state = "UPEND_4"
+            elif feedback == "__yyy":
+                current_state = "ENDOW_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FILER_3":
+            if feedback == "_gggg":
+                current_state = "MILER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FILLY_4":
+            if feedback == "_gggg":
+                current_state = "HILLY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FILMI_3":
+            if feedback == "_g___":
+                current_state = "WIGHT_4"
+            elif feedback == "_g_y_":
+                current_state = "MIGHT_4"
+            elif feedback == "_gy__":
+                current_state = "LIGHT_4"
+            elif feedback == "_gy_y":
+                current_state = "LICIT_4"
+            elif feedback == "_gyyy":
+                current_state = "LIMIT_4"
+            elif feedback == "gg___":
+                current_state = "FIGHT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FINER_4":
+            if feedback == "_gggg":
+                current_state = "MINER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FIZZY_4":
+            if feedback == "yg__g":
+                current_state = "JIFFY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLANK_4":
+            if feedback == "_gggg":
+                current_state = "PLANK_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLASH_3":
+            if feedback == "_gggg":
+                current_state = "SLASH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLASK_3":
+            if feedback == "_ggg_":
+                current_state = "GLASS_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLICK_3":
+            if feedback == "_gg__":
+                current_state = "BLIMP_4"
+            elif feedback == "_gg_g":
+                current_state = "BLINK_4"
+            elif feedback == "_gggg":
+                current_state = "CLICK_4"
+            elif feedback == "_ggy_":
+                current_state = "CLIMB_4"
+            elif feedback == "_ggyg":
+                current_state = "CLINK_4"
+            elif feedback == "yggy_":
+                current_state = "CLIFF_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLINT_3":
+            if feedback == "__yyg":
+                current_state = "NIGHT_4"
+            elif feedback == "_gggg":
+                current_state = "GLINT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLOSS_3":
+            if feedback == "_gggg":
+                current_state = "GLOSS_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLUTE_3":
+            if feedback == "_gggg":
+                current_state = "GLUTE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FLYER_4":
+            if feedback == "_y_gg":
+                current_state = "LUGER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FOIST_3":
+            if feedback == "_gggg":
+                current_state = "JOIST_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FORAY_3":
+            if feedback == "_ggg_":
+                current_state = "BORAX_4"
+            elif feedback == "_gggg":
+                current_state = "MORAY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FORCE_3":
+            if feedback == "_gg_g":
+                current_state = "HORDE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FORUM_3":
+            if feedback == "_gg_y":
+                current_state = "MORPH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FOUND_4":
+            if feedback == "_gggg":
+                current_state = "WOUND_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FOUNT_2":
+            if feedback == "____g":
+                current_state = "SPILT_3"
+            elif feedback == "____y":
+                current_state = "SILTY_3"
+            elif feedback == "___gg":
+                current_state = "STINT_3"
+            elif feedback == "___gy":
+                current_state = "STING_3"
+            elif feedback == "___yy":
+                current_state = "SYNTH_3"
+            elif feedback == "__g_y":
+                current_state = "ADEEM_3"
+            elif feedback == "__ggg":
+                current_state = "SHUNT_3"
+            elif feedback == "__ggy":
+                current_state = "STUNG_3"
+            elif feedback == "__y_y":
+                current_state = "ADLIB_3"
+            elif feedback == "_g__g":
+                current_state = "POSIT_3"
+            elif feedback == "_g__y":
+                current_state = "SOOTH_3"
+            elif feedback == "_gg_y":
+                current_state = "SOUTH_3"
+            elif feedback == "_gy_y":
+                current_state = "LOTUS_3"
+            elif feedback == "_y__g":
+                current_state = "SCOOT_3"
+            elif feedback == "_y__y":
+                current_state = "APIOL_3"
+            elif feedback == "_y_gy":
+                current_state = "STONY_3"
+            elif feedback == "_y_yg":
+                current_state = "SNOOT_3"
+            elif feedback == "_yy_g":
+                current_state = "CAPHS_3"
+            elif feedback == "_yy_y":
+                current_state = "GUSTO_3"
+            elif feedback == "_yyyg":
+                current_state = "SNOUT_3"
+            elif feedback == "g_y_y":
+                current_state = "FUSTY_3"
+            elif feedback == "y___g":
+                current_state = "SHIFT_3"
+            elif feedback == "y___y":
+                current_state = "STIFF_3"
+            elif feedback == "y_g_y":
+                current_state = "STUFF_3"
+            elif feedback == "yg__y":
+                current_state = "SOFTY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FRACK_4":
+            if feedback == "_gggg":
+                current_state = "WRACK_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FRAIL_3":
+            if feedback == "_gg_g":
+                current_state = "CRAWL_4"
+            elif feedback == "_gggg":
+                current_state = "GRAIL_4"
+            elif feedback == "_yyyg":
+                current_state = "RIVAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FRANC_3":
+            if feedback == "_ggg_":
+                current_state = "PRANK_4"
+            elif feedback == "_gggy":
+                current_state = "CRANK_4"
+            elif feedback == "gggg_":
+                current_state = "FRANK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FRIED_4":
+            if feedback == "_gggg":
+                current_state = "PRIED_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FUDGE_4":
+            if feedback == "_gggg":
+                current_state = "JUDGE_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FUGLY_3":
+            if feedback == "_____":
+                current_state = "PRIMP_4"
+            elif feedback == "____g":
+                current_state = "PRIVY_4"
+            elif feedback == "___g_":
+                current_state = "KRILL_4"
+            elif feedback == "___gg":
+                current_state = "WRYLY_4"
+            elif feedback == "___y_":
+                current_state = "WHIRL_4"
+            elif feedback == "__y_g":
+                current_state = "GRIMY_4"
+            elif feedback == "__yg_":
+                current_state = "GRILL_4"
+            elif feedback == "_g___":
+                current_state = "QUIRK_4"
+            elif feedback == "_g__g":
+                current_state = "RUMMY_4"
+            elif feedback == "_gg_g":
+                current_state = "RUGBY_4"
+            elif feedback == "_y_y_":
+                current_state = "BLURB_4"
+            elif feedback == "_yy__":
+                current_state = "GRUMP_4"
+            elif feedback == "g____":
+                current_state = "FRIZZ_4"
+            elif feedback == "g__g_":
+                current_state = "FRILL_4"
+            elif feedback == "gy___":
+                current_state = "FRUMP_4"
+            elif feedback == "yyy__":
+                current_state = "GRUFF_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FUNKY_4":
+            if feedback == "_g_gg":
+                current_state = "YUCKY_5"
+            elif feedback == "_gggg":
+                current_state = "JUNKY_5"
+            elif feedback == "gg__g":
+                current_state = "FUZZY_5"
+            elif feedback == "ggg_g":
+                current_state = "FUNNY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FUROR_3":
+            if feedback == "__gg_":
+                current_state = "BORON_4"
+            elif feedback == "_gggg":
+                current_state = "JUROR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FURRY_3":
+            if feedback == "_gggg":
+                current_state = "HURRY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "FUSSY_3":
+            if feedback == "__ggg":
+                current_state = "BOSSY_4"
+            elif feedback == "_gggg":
+                current_state = "GUSSY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GABBY_4":
+            if feedback == "gg__g":
+                current_state = "GAWKY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GATOR_2":
+            if feedback == "_gg_y":
+                current_state = "RATTY_3"
+            elif feedback == "_ggyy":
+                current_state = "RATIO_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GAUGE_3":
+            if feedback == "ggg_g":
+                current_state = "GAUZE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GAYER_3":
+            if feedback == "gg_gg":
+                current_state = "GAZER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GECKO_3":
+            if feedback == "_g__g":
+                current_state = "MEZZO_4"
+            elif feedback == "_g__y":
+                current_state = "BEBOP_4"
+            elif feedback == "_gy__":
+                current_state = "BEECH_4"
+            elif feedback == "_y___":
+                current_state = "EQUIP_4"
+            elif feedback == "_y__y":
+                current_state = "EMOJI_4"
+            elif feedback == "_y_yy":
+                current_state = "EBOOK_4"
+            elif feedback == "_yy_g":
+                current_state = "CHEMO_4"
+            elif feedback == "_yy_y":
+                current_state = "EPOCH_4"
+            elif feedback == "_yyy_":
+                current_state = "CHECK_4"
+            elif feedback == "yg___":
+                current_state = "WEIGH_4"
+            elif feedback == "yg__y":
+                current_state = "BEFOG_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GEESE_3":
+            if feedback == "_g_gg":
+                current_state = "SENSE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GENIO_2":
+            if feedback == "_g___":
+                current_state = "VERVE_3"
+            elif feedback == "_g_g_":
+                current_state = "EERIE_3"
+            elif feedback == "_gy__":
+                current_state = "NERVE_3"
+            elif feedback == "_y___":
+                current_state = "CURVE_3"
+            elif feedback == "_y__y":
+                current_state = "FORCE_3"
+            elif feedback == "_yy_y":
+                current_state = "BORNE_3"
+            elif feedback == "gy__y":
+                current_state = "GORGE_3"
+            elif feedback == "yg___":
+                current_state = "MERGE_3"
+            elif feedback == "yy___":
+                current_state = "PURGE_3"
+            elif feedback == "yy__y":
+                current_state = "FORGE_3"
+            elif feedback == "yy_y_":
+                current_state = "DIRGE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GIRTH_3":
+            if feedback == "_gggg":
+                current_state = "MIRTH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLACE_3":
+            if feedback == "ggg_g":
+                current_state = "GLAZE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLAMP_2":
+            if feedback == "__y__":
+                current_state = "FADER_3"
+            elif feedback == "__y_y":
+                current_state = "CARVY_3"
+            elif feedback == "__yy_":
+                current_state = "MAKER_3"
+            elif feedback == "_yy__":
+                current_state = "BALER_3"
+            elif feedback == "_yy_y":
+                current_state = "PALER_3"
+            elif feedback == "_yyy_":
+                current_state = "LAMER_3"
+            elif feedback == "g_y__":
+                current_state = "GAYER_3"
+            elif feedback == "g_yy_":
+                current_state = "GAMER_3"
+            elif feedback == "y_y__":
+                current_state = "ARERE_3"
+            elif feedback == "y_y_y":
+                current_state = "PAGER_3"
+            elif feedback == "yyy__":
+                current_state = "LAGER_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLAND_2":
+            if feedback == "__g__":
+                current_state = "KACHA_3"
+            elif feedback == "__g_y":
+                current_state = "EVADE_3"
+            elif feedback == "__gg_":
+                current_state = "INANE_3"
+            elif feedback == "__gy_":
+                current_state = "KNAVE_3"
+            elif feedback == "__y__":
+                current_state = "ABOVE_3"
+            elif feedback == "__y_y":
+                current_state = "ABIDE_3"
+            elif feedback == "__yy_":
+                current_state = "ANIME_3"
+            elif feedback == "__yyy":
+                current_state = "ANODE_3"
+            elif feedback == "_gg__":
+                current_state = "CHIMB_3"
+            elif feedback == "_gg_y":
+                current_state = "BLADE_3"
+            elif feedback == "_ggg_":
+                current_state = "PLANE_3"
+            elif feedback == "_gy__":
+                current_state = "ALIKE_3"
+            elif feedback == "_gyg_":
+                current_state = "ALONE_3"
+            elif feedback == "_yg__":
+                current_state = "LEAVE_3"
+            elif feedback == "_yy__":
+                current_state = "AMBLE_3"
+            elif feedback == "_yy_y":
+                current_state = "ADDLE_3"
+            elif feedback == "_yyy_":
+                current_state = "ANKLE_3"
+            elif feedback == "ggg__":
+                current_state = "GLACE_3"
+            elif feedback == "ggg_y":
+                current_state = "GLADE_3"
+            elif feedback == "y_g__":
+                current_state = "AGAPE_3"
+            elif feedback == "y_g_y":
+                current_state = "ADAGE_3"
+            elif feedback == "ygy__":
+                current_state = "ALGAE_3"
+            elif feedback == "yyy__":
+                current_state = "AGILE_3"
+            elif feedback == "yyyy_":
+                current_state = "ANGLE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLIDE_3":
+            if feedback == "gyg_g":
+                current_state = "GUILE_4"
+            elif feedback == "yyy_g":
+                current_state = "BILGE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLOBE_3":
+            if feedback == "ggg_g":
+                current_state = "GLOVE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLOOM_3":
+            if feedback == "gg___":
+                current_state = "GLYPH_4"
+            elif feedback == "ggg__":
+                current_state = "GLOWY_4"
+            elif feedback == "gggg_":
+                current_state = "GLOOP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLUEY_3":
+            if feedback == "_y_gg":
+                current_state = "HOLEY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GLUME_3":
+            if feedback == "_____":
+                current_state = "JAZZY_4"
+            elif feedback == "___g_":
+                current_state = "JAMMY_4"
+            elif feedback == "___y_":
+                current_state = "VAMPY_4"
+            elif feedback == "_y___":
+                current_state = "BALKY_4"
+            elif feedback == "_y_g_":
+                current_state = "BALMY_4"
+            elif feedback == "g____":
+                current_state = "GABBY_4"
+            elif feedback == "g_g__":
+                current_state = "GAUZY_4"
+            elif feedback == "gy___":
+                current_state = "GAILY_4"
+            elif feedback == "y____":
+                current_state = "BAGGY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GNARL_3":
+            if feedback == "_yyyy":
+                current_state = "LUNAR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GONAD_3":
+            if feedback == "_gygg":
+                current_state = "NOMAD_4"
+            elif feedback == "gggy_":
+                current_state = "GONNA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GOOFY_3":
+            if feedback == "ggg_g":
+                current_state = "GOOPY_4"
+            elif feedback == "ggy__":
+                current_state = "GONZO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GRAFT_3":
+            if feedback == "ggg_g":
+                current_state = "GRANT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GRAND_2":
+            if feedback == "_gg__":
+                current_state = "VOCAB_3"
+            elif feedback == "_gg_y":
+                current_state = "DRAKE_3"
+            elif feedback == "_ggg_":
+                current_state = "CRANE_3"
+            elif feedback == "_yg__":
+                current_state = "BLARE_3"
+            elif feedback == "_yy__":
+                current_state = "AFIRE_3"
+            elif feedback == "_yy_y":
+                current_state = "ADORE_3"
+            elif feedback == "ggg__":
+                current_state = "CAPIZ_3"
+            elif feedback == "ggg_y":
+                current_state = "GRADE_3"
+            elif feedback == "gyg__":
+                current_state = "GLARE_3"
+            elif feedback == "ygy__":
+                current_state = "ARGUE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GROOM_4":
+            if feedback == "_gggg":
+                current_state = "VROOM_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GROWL_3":
+            if feedback == "_gg__":
+                current_state = "PROXY_4"
+            elif feedback == "_gg_g":
+                current_state = "BROIL_4"
+            elif feedback == "_gggg":
+                current_state = "PROWL_4"
+            elif feedback == "_gy__":
+                current_state = "PRIMO_4"
+            elif feedback == "_yg__":
+                current_state = "IVORY_4"
+            elif feedback == "_yg_y":
+                current_state = "FLOUR_4"
+            elif feedback == "_ygyg":
+                current_state = "WHORL_4"
+            elif feedback == "ggg__":
+                current_state = "GROUP_4"
+            elif feedback == "gyg_y":
+                current_state = "GLORY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GUAVA_3":
+            if feedback == "__y__":
+                current_state = "BYWAY_4"
+            elif feedback == "_gg__":
+                current_state = "QUAFF_4"
+            elif feedback == "_yy__":
+                current_state = "ABUZZ_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GUILD_2":
+            if feedback == "_____":
+                current_state = "WHOMP_3"
+            elif feedback == "____y":
+                current_state = "HOWDY_3"
+            elif feedback == "___g_":
+                current_state = "LOWLY_3"
+            elif feedback == "___gy":
+                current_state = "DOLLY_3"
+            elif feedback == "___y_":
+                current_state = "POBOY_3"
+            elif feedback == "___yg":
+                current_state = "BLOND_3"
+            elif feedback == "___yy":
+                current_state = "MOLDY_3"
+            elif feedback == "__g__":
+                current_state = "COMFY_3"
+            elif feedback == "__g_y":
+                current_state = "IDIOM_3"
+            elif feedback == "__gg_":
+                current_state = "CHILI_3"
+            elif feedback == "__ggg":
+                current_state = "CHILD_3"
+            elif feedback == "__ggy":
+                current_state = "DOILY_3"
+            elif feedback == "__gy_":
+                current_state = "FLICK_3"
+            elif feedback == "__gyg":
+                current_state = "BLIND_3"
+            elif feedback == "__y__":
+                current_state = "NYMPH_3"
+            elif feedback == "__y_g":
+                current_state = "BIPOD_3"
+            elif feedback == "__y_y":
+                current_state = "DEVON_3"
+            elif feedback == "__yg_":
+                current_state = "ABLOW_3"
+            elif feedback == "__ygy":
+                current_state = "DILLY_3"
+            elif feedback == "__yy_":
+                current_state = "COMFY_3"
+            elif feedback == "__yyg":
+                current_state = "LIPID_3"
+            elif feedback == "_g___":
+                current_state = "BUMPH_3"
+            elif feedback == "_g__y":
+                current_state = "DUMMY_3"
+            elif feedback == "_g_g_":
+                current_state = "BULLY_3"
+            elif feedback == "_g_gy":
+                current_state = "DULLY_3"
+            elif feedback == "_g_y_":
+                current_state = "BULKY_3"
+            elif feedback == "_gg__":
+                current_state = "JUICY_3"
+            elif feedback == "_ggg_":
+                current_state = "QUILL_3"
+            elif feedback == "_gggg":
+                current_state = "BUILD_3"
+            elif feedback == "_gy__":
+                current_state = "CUBIC_3"
+            elif feedback == "_gy_g":
+                current_state = "CUPID_3"
+            elif feedback == "_gyy_":
+                current_state = "PUPIL_3"
+            elif feedback == "_gyyg":
+                current_state = "LUCID_3"
+            elif feedback == "_y___":
+                current_state = "COPEN_3"
+            elif feedback == "_y__g":
+                current_state = "BUMPH_3"
+            elif feedback == "_y_gg":
+                current_state = "ACMES_3"
+            elif feedback == "_y_y_":
+                current_state = "PLUCK_3"
+            elif feedback == "_y_yg":
+                current_state = "CLOUD_3"
+            elif feedback == "_yg__":
+                current_state = "OPIUM_3"
+            elif feedback == "_yy__":
+                current_state = "UNHIP_3"
+            elif feedback == "_yy_g":
+                current_state = "UNDID_3"
+            elif feedback == "_yyyg":
+                current_state = "FLUID_3"
+            elif feedback == "g____":
+                current_state = "GOOFY_3"
+            elif feedback == "g___y":
+                current_state = "GOODY_3"
+            elif feedback == "g__g_":
+                current_state = "GOLLY_3"
+            elif feedback == "g__gy":
+                current_state = "GODLY_3"
+            elif feedback == "g__y_":
+                current_state = "GLOOM_3"
+            elif feedback == "g_g__":
+                current_state = "GOING_3"
+            elif feedback == "g_y__":
+                current_state = "GIZMO_3"
+            elif feedback == "g_y_y":
+                current_state = "GIDDY_3"
+            elif feedback == "gg___":
+                current_state = "AMBAN_3"
+            elif feedback == "gg_g_":
+                current_state = "GULLY_3"
+            elif feedback == "gg_y_":
+                current_state = "GULCH_3"
+            elif feedback == "gy_y_":
+                current_state = "GHOUL_3"
+            elif feedback == "y____":
+                current_state = "BOGGY_3"
+            elif feedback == "y___y":
+                current_state = "DODGY_3"
+            elif feedback == "y__y_":
+                current_state = "LOGON_3"
+            elif feedback == "y_g__":
+                current_state = "BICCY_3"
+            elif feedback == "y_g_y":
+                current_state = "DOING_3"
+            elif feedback == "y_gy_":
+                current_state = "BACCY_3"
+            elif feedback == "y_y__":
+                current_state = "BINGO_3"
+            elif feedback == "y_y_y":
+                current_state = "DINGO_3"
+            elif feedback == "y_yy_":
+                current_state = "LINGO_3"
+            elif feedback == "yg___":
+                current_state = "ABHOR_3"
+            elif feedback == "yg__y":
+                current_state = "AFLAJ_3"
+            elif feedback == "yg_y_":
+                current_state = "BULGY_3"
+            elif feedback == "ygg__":
+                current_state = "CUING_3"
+            elif feedback == "ygy__":
+                current_state = "FUNGI_3"
+            elif feedback == "yy___":
+                current_state = "BOUGH_3"
+            elif feedback == "yy__y":
+                current_state = "DOUGH_3"
+            elif feedback == "yy_y_":
+                current_state = "CLUNG_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GULCH_2":
+            if feedback == "_____":
+                current_state = "ADMIN_3"
+            elif feedback == "___g_":
+                current_state = "DANCE_3"
+            elif feedback == "___y_":
+                current_state = "CANOE_3"
+            elif feedback == "___yy":
+                current_state = "CACHE_3"
+            elif feedback == "__g__":
+                current_state = "VALVE_3"
+            elif feedback == "__g_y":
+                current_state = "HALVE_3"
+            elif feedback == "__gy_":
+                current_state = "CALVE_3"
+            elif feedback == "__y__":
+                current_state = "ABYSM_3"
+            elif feedback == "__yg_":
+                current_state = "LANCE_3"
+            elif feedback == "__yy_":
+                current_state = "CABLE_3"
+            elif feedback == "_y___":
+                current_state = "MAUVE_3"
+            elif feedback == "_yg__":
+                current_state = "VALUE_3"
+            elif feedback == "g____":
+                current_state = "GAFFE_3"
+            elif feedback == "g_y__":
+                current_state = "GABLE_3"
+            elif feedback == "gy___":
+                current_state = "GAUGE_3"
+            elif feedback == "y____":
+                current_state = "BADGE_3"
+            elif feedback == "y__y_":
+                current_state = "CADGE_3"
+            elif feedback == "y_y__":
+                current_state = "EAGLE_3"
+            elif feedback == "yy___":
+                current_state = "VAGUE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GUNKY_4":
+            if feedback == "_____":
+                current_state = "BOXER_5"
+            elif feedback == "____y":
+                current_state = "FOYER_5"
+            elif feedback == "___y_":
+                current_state = "JOKER_5"
+            elif feedback == "__g__":
+                current_state = "BONER_5"
+            elif feedback == "g____":
+                current_state = "GOFER_5"
+            elif feedback == "g_g__":
+                current_state = "GONER_5"
+            elif feedback == "y____":
+                current_state = "ROGER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "GUSTY_4":
+            if feedback == "_gggg":
+                current_state = "MUSTY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HAIKU_3":
+            if feedback == "gg___":
+                current_state = "HALAL_4"
+            elif feedback == "yg__y":
+                current_state = "LAUGH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HAMMY_3":
+            if feedback == "gg__g":
+                current_state = "HAPPY_4"
+            elif feedback == "yg__y":
+                current_state = "YAHOO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HARSH_2":
+            if feedback == "_gggg":
+                current_state = "MARSH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HAVOC_3":
+            if feedback == "yg_yy":
+                current_state = "MACHO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HIDER_4":
+            if feedback == "_gggg":
+                current_state = "RIDER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HIJAB_3":
+            if feedback == "_g_y_":
+                current_state = "PIZZA_4"
+            elif feedback == "_y_y_":
+                current_state = "UMAMI_4"
+            elif feedback == "yy_y_":
+                current_state = "KHAKI_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HIMBO_2":
+            if feedback == "_____":
+                current_state = "GUTSY_3"
+            elif feedback == "____g":
+                current_state = "NUTSO_3"
+            elif feedback == "____y":
+                current_state = "JOUST_3"
+            elif feedback == "___yy":
+                current_state = "BOOST_3"
+            elif feedback == "_g___":
+                current_state = "DITSY_3"
+            elif feedback == "_g_y_":
+                current_state = "BITSY_3"
+            elif feedback == "_gy__":
+                current_state = "MIDST_3"
+            elif feedback == "_y__y":
+                current_state = "FOIST_3"
+            elif feedback == "_yy_y":
+                current_state = "MOIST_3"
+            elif feedback == "gy__y":
+                current_state = "HOIST_3"
+            elif feedback == "y___y":
+                current_state = "GHOST_3"
+            elif feedback == "yy___":
+                current_state = "WHIST_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HITCH_4":
+            if feedback == "_gggg":
+                current_state = "PITCH_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HOARY_3":
+            if feedback == "_ygg_":
+                current_state = "AMARO_4"
+            elif feedback == "_yggg":
+                current_state = "OVARY_4"
+            elif feedback == "_yyy_":
+                current_state = "ARMOR_4"
+            elif feedback == "yggy_":
+                current_state = "ROACH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HOKUM_2":
+            if feedback == "_____":
+                current_state = "TRILL_3"
+            elif feedback == "___y_":
+                current_state = "TRULY_3"
+            elif feedback == "___yy":
+                current_state = "TRUMP_3"
+            elif feedback == "__y__":
+                current_state = "TRICK_3"
+            elif feedback == "__yy_":
+                current_state = "TRUCK_3"
+            elif feedback == "_y___":
+                current_state = "TROLL_3"
+            elif feedback == "_y__y":
+                current_state = "TROMP_3"
+            elif feedback == "_y_g_":
+                current_state = "TROUT_3"
+            elif feedback == "_y_y_":
+                current_state = "TUTOR_3"
+            elif feedback == "_y_yy":
+                current_state = "TUMOR_3"
+            elif feedback == "y____":
+                current_state = "THIRD_3"
+            elif feedback == "y__y_":
+                current_state = "TRUTH_3"
+            elif feedback == "yy___":
+                current_state = "THORN_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HONED_2":
+            if feedback == "___g_":
+                current_state = "TWEET_3"
+            elif feedback == "___gg":
+                current_state = "TWEED_3"
+            elif feedback == "___y_":
+                current_state = "TEMPT_3"
+            elif feedback == "___yg":
+                current_state = "TEPID_3"
+            elif feedback == "___yy":
+                current_state = "TEDDY_3"
+            elif feedback == "__gg_":
+                current_state = "TENET_3"
+            elif feedback == "__yg_":
+                current_state = "TWEEN_3"
+            elif feedback == "__yy_":
+                current_state = "TEENY_3"
+            elif feedback == "_g_g_":
+                current_state = "TOTEM_3"
+            elif feedback == "_ggg_":
+                current_state = "TONEY_3"
+            elif feedback == "_gyg_":
+                current_state = "TOKEN_3"
+            elif feedback == "_y_y_":
+                current_state = "TEMPO_3"
+            elif feedback == "y__g_":
+                current_state = "THIEF_3"
+            elif feedback == "y__y_":
+                current_state = "TEETH_3"
+            elif feedback == "y_gy_":
+                current_state = "TENTH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HONKY_2":
+            if feedback == "_____":
+                current_state = "SPURT_3"
+            elif feedback == "____g":
+                current_state = "RUSTY_3"
+            elif feedback == "___y_":
+                current_state = "SKIRT_3"
+            elif feedback == "_y___":
+                current_state = "SPORT_3"
+            elif feedback == "_y__g":
+                current_state = "STORY_3"
+            elif feedback == "_y_y_":
+                current_state = "STORK_3"
+            elif feedback == "_yy__":
+                current_state = "SNORT_3"
+            elif feedback == "y____":
+                current_state = "SHIRT_3"
+            elif feedback == "yy___":
+                current_state = "SHORT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HOOCH_4":
+            if feedback == "ggg__":
+                current_state = "HOOKY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HOTEL_3":
+            if feedback == "__ggg":
+                current_state = "BETEL_4"
+            elif feedback == "__ygy":
+                current_state = "FLEET_4"
+            elif feedback == "_gggg":
+                current_state = "MOTEL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HOUSE_3":
+            if feedback == "_gggg":
+                current_state = "MOUSE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HOWDY_3":
+            if feedback == "_g_g_":
+                current_state = "CONDO_4"
+            elif feedback == "_g_gg":
+                current_state = "MOODY_4"
+            elif feedback == "_g_yg":
+                current_state = "DOOZY_4"
+            elif feedback == "_gggg":
+                current_state = "DOWDY_4"
+            elif feedback == "_ggyg":
+                current_state = "DOWNY_4"
+            elif feedback == "_gygg":
+                current_state = "WOODY_4"
+            elif feedback == "gg_gg":
+                current_state = "HOODY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HUFFY_4":
+            if feedback == "gg__g":
+                current_state = "HUNKY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "HUMUS_4":
+            if feedback == "ygy_y":
+                current_state = "MUSHY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "IMPEL_4":
+            if feedback == "y_ygg":
+                current_state = "PIXEL_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "INCEL_3":
+            if feedback == "_g_gg":
+                current_state = "KNEEL_4"
+            elif feedback == "_y_gg":
+                current_state = "NOVEL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "INFER_4":
+            if feedback == "yy_yy":
+                current_state = "REIGN_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "INPUT_3":
+            if feedback == "_g_gg":
+                current_state = "UNCUT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ISLET_3":
+            if feedback == "_yyyg":
+                current_state = "SMELT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ISSUE_3":
+            if feedback == "yy__g":
+                current_state = "SIEVE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "JAUNT_4":
+            if feedback == "_gggg":
+                current_state = "VAUNT_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "JAZZY_4":
+            if feedback == "_g__g":
+                current_state = "YAPPY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "JETTY_3":
+            if feedback == "_g_g_":
+                current_state = "BENTO_4"
+            elif feedback == "_g_gg":
+                current_state = "HEFTY_4"
+            elif feedback == "_gg__":
+                current_state = "FETCH_4"
+            elif feedback == "_gy__":
+                current_state = "BEGOT_4"
+            elif feedback == "_yy__":
+                current_state = "EVENT_4"
+            elif feedback == "yyy__":
+                current_state = "EJECT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "JOINT_3":
+            if feedback == "_gggg":
+                current_state = "POINT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "JUICY_3":
+            if feedback == "_ggg_":
+                current_state = "QUICK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "KACHA_3":
+            if feedback == "_y___":
+                current_state = "WEAVE_4"
+            elif feedback == "_y__y":
+                current_state = "AMAZE_4"
+            elif feedback == "_y_y_":
+                current_state = "HEAVE_4"
+            elif feedback == "_yy__":
+                current_state = "PEACE_4"
+            elif feedback == "_yy_y":
+                current_state = "APACE_4"
+            elif feedback == "_yyy_":
+                current_state = "CHAFE_4"
+            elif feedback == "yy___":
+                current_state = "QUAKE_4"
+            elif feedback == "yy__y":
+                current_state = "AWAKE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "KEMPS_2":
+            if feedback == "_y___":
+                current_state = "TATER_3"
+            elif feedback == "_y_y_":
+                current_state = "TAPER_3"
+            elif feedback == "_yg__":
+                current_state = "TAMER_3"
+            elif feedback == "yy___":
+                current_state = "TAKER_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "KLETT_2":
+            if feedback == "__yg_":
+                current_state = "SPATE_3"
+            elif feedback == "__ygy":
+                current_state = "STATE_3"
+            elif feedback == "__yy_":
+                current_state = "STAGE_3"
+            elif feedback == "_gyg_":
+                current_state = "SLATE_3"
+            elif feedback == "_yyy_":
+                current_state = "STALE_3"
+            elif feedback == "y_yg_":
+                current_state = "SKATE_3"
+            elif feedback == "y_yy_":
+                current_state = "STAKE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "KNACK_3":
+            if feedback == "_gyy_":
+                current_state = "UNCAP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "KVELL_3":
+            if feedback == "__ggg":
+                current_state = "QUELL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LABEL_3":
+            if feedback == "gg_g_":
+                current_state = "LADEN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LAYUP_3":
+            if feedback == "_gg__":
+                current_state = "KAYAK_4"
+            elif feedback == "_ggy_":
+                current_state = "BAYOU_4"
+            elif feedback == "ygg__":
+                current_state = "GAYLY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LEAFY_3":
+            if feedback == "ggg__":
+                current_state = "LEACH_4"
+            elif feedback == "ggg_g":
+                current_state = "LEAKY_4"
+            elif feedback == "ygyy_":
+                current_state = "FELLA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LEARN_3":
+            if feedback == "_ggg_":
+                current_state = "WEARY_4"
+            elif feedback == "_gggg":
+                current_state = "YEARN_4"
+            elif feedback == "_ggy_":
+                current_state = "REACH_4"
+            elif feedback == "yggg_":
+                current_state = "PEARL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LEAVE_3":
+            if feedback == "y_g_g":
+                current_state = "WHALE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LEMED_2":
+            if feedback == "___g_":
+                current_state = "FACET_3"
+            elif feedback == "___gg":
+                current_state = "GATED_3"
+            elif feedback == "___gy":
+                current_state = "CADET_3"
+            elif feedback == "__yg_":
+                current_state = "MATEY_3"
+            elif feedback == "_y_g_":
+                current_state = "EATEN_3"
+            elif feedback == "g__g_":
+                current_state = "LATEX_3"
+            elif feedback == "y__g_":
+                current_state = "VALET_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LIKEN_3":
+            if feedback == "g__gg":
+                current_state = "LUMEN_4"
+            elif feedback == "gg_gg":
+                current_state = "LIVEN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LINGO_3":
+            if feedback == "gy_yy":
+                current_state = "LOGIC_4"
+            elif feedback == "gyyyy":
+                current_state = "LOGIN_4"
+            elif feedback == "yg_y_":
+                current_state = "VIGIL_4"
+            elif feedback == "yy_yg":
+                current_state = "IGLOO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LINKY_2":
+            if feedback == "_____":
+                current_state = "TABOO_3"
+            elif feedback == "____g":
+                current_state = "ABAFT_3"
+            elif feedback == "___gg":
+                current_state = "TACKY_3"
+            elif feedback == "__g__":
+                current_state = "TANGO_3"
+            elif feedback == "__g_g":
+                current_state = "TANGY_3"
+            elif feedback == "__y__":
+                current_state = "TAUNT_3"
+            elif feedback == "__y_g":
+                current_state = "TAWNY_3"
+            elif feedback == "_y___":
+                current_state = "TACIT_3"
+            elif feedback == "_yy__":
+                current_state = "TAINT_3"
+            elif feedback == "y___g":
+                current_state = "TALLY_3"
+            elif feedback == "y__gg":
+                current_state = "TALKY_3"
+            elif feedback == "y_y__":
+                current_state = "TALON_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LIPID_3":
+            if feedback == "gg_gg":
+                current_state = "LIVID_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LOAMY_3":
+            if feedback == "ggy_y":
+                current_state = "LOYAL_4"
+            elif feedback == "ygg__":
+                current_state = "KOALA_4"
+            elif feedback == "ygy__":
+                current_state = "DOULA_4"
+            elif feedback == "ygyy_":
+                current_state = "MODAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LOATH_3":
+            if feedback == "yyyy_":
+                current_state = "OCTAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LOGIN_2":
+            if feedback == "_____":
+                current_state = "EMCEE_3"
+            elif feedback == "____y":
+                current_state = "CHEEP_3"
+            elif feedback == "___g_":
+                current_state = "PIXIE_3"
+            elif feedback == "___gy":
+                current_state = "INDIE_3"
+            elif feedback == "___y_":
+                current_state = "DUMPS_3"
+            elif feedback == "___yy":
+                current_state = "WINCE_3"
+            elif feedback == "__g__":
+                current_state = "FUGUE_3"
+            elif feedback == "__y__":
+                current_state = "BUMPH_3"
+            elif feedback == "__y_y":
+                current_state = "NUDGE_3"
+            elif feedback == "__ygy":
+                current_state = "GENIE_3"
+            elif feedback == "__yy_":
+                current_state = "BEIGE_3"
+            elif feedback == "__yyy":
+                current_state = "BINGE_3"
+            elif feedback == "_g___":
+                current_state = "BOCCE_3"
+            elif feedback == "_g_g_":
+                current_state = "MOVIE_3"
+            elif feedback == "_g_y_":
+                current_state = "VOICE_3"
+            elif feedback == "_gg__":
+                current_state = "VOGUE_3"
+            elif feedback == "_ggg_":
+                current_state = "BOGIE_3"
+            elif feedback == "_gy__":
+                current_state = "DODGE_3"
+            elif feedback == "_y___":
+                current_state = "CHOKE_3"
+            elif feedback == "_y__y":
+                current_state = "OUNCE_3"
+            elif feedback == "_y_y_":
+                current_state = "BIOME_3"
+            elif feedback == "_y_yy":
+                current_state = "OPINE_3"
+            elif feedback == "_yy__":
+                current_state = "GEODE_3"
+            elif feedback == "_yy_y":
+                current_state = "GNOME_3"
+            elif feedback == "g____":
+                current_state = "LEVEE_3"
+            elif feedback == "g_y__":
+                current_state = "LEDGE_3"
+            elif feedback == "g_y_y":
+                current_state = "LUNGE_3"
+            elif feedback == "g_yy_":
+                current_state = "LIEGE_3"
+            elif feedback == "gg___":
+                current_state = "LOUPE_3"
+            elif feedback == "ggy__":
+                current_state = "LODGE_3"
+            elif feedback == "y____":
+                current_state = "DUMPY_3"
+            elif feedback == "y___y":
+                current_state = "UNCLE_3"
+            elif feedback == "y__g_":
+                current_state = "BELIE_3"
+            elif feedback == "y__y_":
+                current_state = "CHILE_3"
+            elif feedback == "y_g__":
+                current_state = "BUGLE_3"
+            elif feedback == "y_y__":
+                current_state = "BULGE_3"
+            elif feedback == "y_yy_":
+                current_state = "GLIDE_3"
+            elif feedback == "yg___":
+                current_state = "BOULE_3"
+            elif feedback == "yg__y":
+                current_state = "NOBLE_3"
+            elif feedback == "yg_y_":
+                current_state = "VOILE_3"
+            elif feedback == "yy___":
+                current_state = "BECAP_3"
+            elif feedback == "yy__y":
+                current_state = "CLONE_3"
+            elif feedback == "yy_g_":
+                current_state = "OLDIE_3"
+            elif feedback == "yy_y_":
+                current_state = "OLIVE_3"
+            elif feedback == "yyy__":
+                current_state = "GLOBE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LORDY_3":
+            if feedback == "ggg_g":
+                current_state = "LORRY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LOWLY_3":
+            if feedback == "_g_gg":
+                current_state = "COYLY_4"
+            elif feedback == "_gggg":
+                current_state = "JOWLY_4"
+            elif feedback == "_gygg":
+                current_state = "WOOLY_4"
+            elif feedback == "gg_gg":
+                current_state = "LOLLY_4"
+            elif feedback == "yg_gg":
+                current_state = "FEHME_4"
+            elif feedback == "yy_g_":
+                current_state = "KNOLL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LUPIN_2":
+            if feedback == "_____":
+                current_state = "MASSE_3"
+            elif feedback == "____y":
+                current_state = "MANSE_3"
+            elif feedback == "__y__":
+                current_state = "PASSE_3"
+            elif feedback == "_y___":
+                current_state = "CAUSE_3"
+            elif feedback == "_yy__":
+                current_state = "PAUSE_3"
+            elif feedback == "g_g__":
+                current_state = "LAPSE_3"
+            elif feedback == "y____":
+                current_state = "FALSE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "LYMPH_2":
+            if feedback == "_____":
+                current_state = "OAKEN_3"
+            elif feedback == "____y":
+                current_state = "HAVEN_3"
+            elif feedback == "___y_":
+                current_state = "PAEAN_3"
+            elif feedback == "__g__":
+                current_state = "CAMEO_3"
+            elif feedback == "__y__":
+                current_state = "MAVEN_3"
+            elif feedback == "_y___":
+                current_state = "CAGEY_3"
+            elif feedback == "_yg__":
+                current_state = "GAMEY_3"
+            elif feedback == "g____":
+                current_state = "LABEL_3"
+            elif feedback == "g__y_":
+                current_state = "LAPEL_3"
+            elif feedback == "gy___":
+                current_state = "LACEY_3"
+            elif feedback == "y____":
+                current_state = "BAGEL_3"
+            elif feedback == "y___y":
+                current_state = "HAZEL_3"
+            elif feedback == "y__y_":
+                current_state = "PANEL_3"
+            elif feedback == "y_g__":
+                current_state = "CAMEL_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MAGIC_3":
+            if feedback == "_g__y":
+                current_state = "WACKO_4"
+            elif feedback == "gg__y":
+                current_state = "MACAW_4"
+            elif feedback == "gg_gg":
+                current_state = "MALIC_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MAKER_3":
+            if feedback == "yg_gy":
+                current_state = "RAMEN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MAMBA_3":
+            if feedback == "_g___":
+                current_state = "KAZOO_4"
+            elif feedback == "_g__g":
+                current_state = "KAPPA_4"
+            elif feedback == "_g__y":
+                current_state = "PAPAL_4"
+            elif feedback == "_g_y_":
+                current_state = "KABOB_4"
+            elif feedback == "_g_yg":
+                current_state = "BABKA_4"
+            elif feedback == "gg__g":
+                current_state = "MAFIA_4"
+            elif feedback == "ggg_g":
+                current_state = "MAMMA_4"
+            elif feedback == "gggg_":
+                current_state = "MAMBO_4"
+            elif feedback == "ggy__":
+                current_state = "MAXIM_4"
+            elif feedback == "ggy_g":
+                current_state = "MAGMA_4"
+            elif feedback == "ygg_g":
+                current_state = "GAMMA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MANIC_3":
+            if feedback == "_gggg":
+                current_state = "PANIC_4"
+            elif feedback == "_gy_y":
+                current_state = "BACON_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MANLY_3":
+            if feedback == "_gg_g":
+                current_state = "JANKY_4"
+            elif feedback == "_gggg":
+                current_state = "WANLY_4"
+            elif feedback == "_ggyg":
+                current_state = "LANKY_4"
+            elif feedback == "_gy_g":
+                current_state = "NAGGY_4"
+            elif feedback == "ggg_g":
+                current_state = "MANGY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MEDAL_2":
+            if feedback == "_g_g_":
+                current_state = "BEGAN_3"
+            elif feedback == "_g_gg":
+                current_state = "APING_3"
+            elif feedback == "_g_gy":
+                current_state = "BELAY_3"
+            elif feedback == "_g_y_":
+                current_state = "BEACH_3"
+            elif feedback == "_g_yy":
+                current_state = "LEAFY_3"
+            elif feedback == "_gggg":
+                current_state = "PEDAL_3"
+            elif feedback == "_gyg_":
+                current_state = "DECAF_3"
+            elif feedback == "_gygg":
+                current_state = "DECAL_3"
+            elif feedback == "_gygy":
+                current_state = "DELAY_3"
+            elif feedback == "_gyy_":
+                current_state = "BEADY_3"
+            elif feedback == "_y_g_":
+                current_state = "CHEAP_3"
+            elif feedback == "_y_gg":
+                current_state = "EQUAL_3"
+            elif feedback == "_y_gy":
+                current_state = "CLEAN_3"
+            elif feedback == "_y_y_":
+                current_state = "ANNEX_3"
+            elif feedback == "_y_yg":
+                current_state = "ANGEL_3"
+            elif feedback == "_y_yy":
+                current_state = "ALIEN_3"
+            elif feedback == "_yyg_":
+                current_state = "AHEAD_3"
+            elif feedback == "_yygg":
+                current_state = "IDEAL_3"
+            elif feedback == "_yygy":
+                current_state = "PLEAD_3"
+            elif feedback == "_yyy_":
+                current_state = "ADIEU_3"
+            elif feedback == "gg_y_":
+                current_state = "MECCA_3"
+            elif feedback == "gg_yy":
+                current_state = "MEALY_3"
+            elif feedback == "gggy_":
+                current_state = "MEDIA_3"
+            elif feedback == "yg_yy":
+                current_state = "LEMMA_3"
+            elif feedback == "yy_gy":
+                current_state = "GLEAM_3"
+            elif feedback == "yy_y_":
+                current_state = "ENEMA_3"
+            elif feedback == "yy_yg":
+                current_state = "EMAIL_3"
+            elif feedback == "yyyy_":
+                current_state = "AMEND_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MERGE_3":
+            if feedback == "_gggg":
+                current_state = "VERGE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MESHY_3":
+            if feedback == "_gg_g":
+                current_state = "PESKY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "METRO_3":
+            if feedback == "_gggg":
+                current_state = "RETRO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MICRO_3":
+            if feedback == "__gyy":
+                current_state = "OCCUR_4"
+            elif feedback == "__yyy":
+                current_state = "FROCK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MILKO_2":
+            if feedback == "____y":
+                current_state = "STONE_3"
+            elif feedback == "___gy":
+                current_state = "STOKE_3"
+            elif feedback == "__y__":
+                current_state = "STELE_3"
+            elif feedback == "__y_y":
+                current_state = "STOLE_3"
+            elif feedback == "_g___":
+                current_state = "PISTE_3"
+            elif feedback == "_y___":
+                current_state = "SPITE_3"
+            elif feedback == "_yy__":
+                current_state = "STILE_3"
+            elif feedback == "y___y":
+                current_state = "SMOTE_3"
+            elif feedback == "yy___":
+                current_state = "SMITE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MINOR_2":
+            if feedback == "____g":
+                current_state = "TRUER_3"
+            elif feedback == "____y":
+                current_state = "TWERK_3"
+            elif feedback == "___yg":
+                current_state = "TOWER_3"
+            elif feedback == "__g_g":
+                current_state = "TUNER_3"
+            elif feedback == "__ggg":
+                current_state = "TENOR_3"
+            elif feedback == "__gyg":
+                current_state = "TONER_3"
+            elif feedback == "__y_y":
+                current_state = "TREND_3"
+            elif feedback == "_g__g":
+                current_state = "TIGER_3"
+            elif feedback == "_y__g":
+                current_state = "THEIR_3"
+            elif feedback == "_y__y":
+                current_state = "TRIED_3"
+            elif feedback == "yg__g":
+                current_state = "TIMER_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MINTY_3":
+            if feedback == "_ggg_":
+                current_state = "NINTH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MINUS_3":
+            if feedback == "__ggg":
+                current_state = "BONUS_4"
+            elif feedback == "_gggg":
+                current_state = "SINUS_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MISER_3":
+            if feedback == "__ggg":
+                current_state = "LOSER_4"
+            elif feedback == "__ygg":
+                current_state = "SOBER_4"
+            elif feedback == "_gggg":
+                current_state = "RISER_4"
+            elif feedback == "_gggy":
+                current_state = "RISEN_4"
+            elif feedback == "_yygg":
+                current_state = "SKIER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MOCHA_3":
+            if feedback == "_gyyy":
+                current_state = "POACH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MOLAR_3":
+            if feedback == "_gggg":
+                current_state = "POLAR_4"
+            elif feedback == "_gygy":
+                current_state = "ROYAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MOPED_3":
+            if feedback == "___gg":
+                current_state = "IVIED_4"
+            elif feedback == "__ggg":
+                current_state = "BIPED_4"
+            elif feedback == "_g_gy":
+                current_state = "CODEX_4"
+            elif feedback == "_y_gy":
+                current_state = "VIDEO_4"
+            elif feedback == "gg_gy":
+                current_state = "MODEM_4"
+            elif feedback == "y__gg":
+                current_state = "EMBED_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MOTOR_3":
+            if feedback == "_gggg":
+                current_state = "ROTOR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MOURN_3":
+            if feedback == "_g_yg":
+                current_state = "ROBIN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MOVIE_3":
+            if feedback == "gg_gg":
+                current_state = "MOXIE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MULCH_2":
+            if feedback == "_____":
+                current_state = "ABYSS_3"
+            elif feedback == "____g":
+                current_state = "AWASH_3"
+            elif feedback == "__y__":
+                current_state = "FLASK_3"
+            elif feedback == "__y_g":
+                current_state = "FLASH_3"
+            elif feedback == "__yy_":
+                current_state = "CLASP_3"
+            elif feedback == "__yyg":
+                current_state = "CLASH_3"
+            elif feedback == "_g___":
+                current_state = "QUASI_3"
+            elif feedback == "_g__g":
+                current_state = "QUASH_3"
+            elif feedback == "y____":
+                current_state = "AMASS_3"
+            elif feedback == "y___g":
+                current_state = "SMASH_3"
+            elif feedback == "y__yy":
+                current_state = "CHASM_3"
+            elif feedback == "y_y__":
+                current_state = "PLASM_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MUMMY_4":
+            if feedback == "_gggg":
+                current_state = "YUMMY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "MURAL_3":
+            if feedback == "_gggg":
+                current_state = "RURAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NAGGY_4":
+            if feedback == "gg__g":
+                current_state = "NAPPY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NERDY_3":
+            if feedback == "ggg_g":
+                current_state = "NERVY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NEWEL_2":
+            if feedback == "___g_":
+                current_state = "SHIED_3"
+            elif feedback == "___gg":
+                current_state = "SPIEL_3"
+            elif feedback == "_g___":
+                current_state = "MESHY_3"
+            elif feedback == "_g__y":
+                current_state = "LEXIS_3"
+            elif feedback == "_g_g_":
+                current_state = "FECES_3"
+            elif feedback == "_g_y_":
+                current_state = "SEEDY_3"
+            elif feedback == "_y___":
+                current_state = "SHEIK_3"
+            elif feedback == "_y__g":
+                current_state = "APHID_3"
+            elif feedback == "_y__y":
+                current_state = "SHELF_3"
+            elif feedback == "_y_g_":
+                current_state = "SHEEP_3"
+            elif feedback == "_y_gy":
+                current_state = "SLEEK_3"
+            elif feedback == "_yy_g":
+                current_state = "SWELL_3"
+            elif feedback == "_yyg_":
+                current_state = "SWEEP_3"
+            elif feedback == "g__g_":
+                current_state = "NOSEY_3"
+            elif feedback == "gg___":
+                current_state = "NEXUS_3"
+            elif feedback == "y_yg_":
+                current_state = "SINEW_3"
+            elif feedback == "yg___":
+                current_state = "GENUS_3"
+            elif feedback == "yg_g_":
+                current_state = "SEVEN_3"
+            elif feedback == "yy___":
+                current_state = "SKEIN_3"
+            elif feedback == "yy_g_":
+                current_state = "SHEEN_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NODAL_3":
+            if feedback == "yg_gg":
+                current_state = "ZONAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NOISE_3":
+            if feedback == "_g_gg":
+                current_state = "POSSE_4"
+            elif feedback == "_gggg":
+                current_state = "POISE_4"
+            elif feedback == "_y_gg":
+                current_state = "OBESE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NORTH_3":
+            if feedback == "_gggg":
+                current_state = "WORTH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NURSE_3":
+            if feedback == "_gggg":
+                current_state = "PURSE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NUTTY_3":
+            if feedback == "yy_gg":
+                current_state = "UNITY_4"
+            elif feedback == "yyg__":
+                current_state = "UNTIL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "NYMPH_3":
+            if feedback == "_____":
+                current_state = "CIVIC_4"
+            elif feedback == "___gy":
+                current_state = "HIPPO_4"
+            elif feedback == "__g__":
+                current_state = "COMIC_4"
+            elif feedback == "__y_y":
+                current_state = "MOCHI_4"
+            elif feedback == "_y___":
+                current_state = "FIZZY_4"
+            elif feedback == "_y_g_":
+                current_state = "ZIPPY_4"
+            elif feedback == "_y_gy":
+                current_state = "HIPPY_4"
+            elif feedback == "_y_y_":
+                current_state = "PICKY_4"
+            elif feedback == "_yg__":
+                current_state = "JIMMY_4"
+            elif feedback == "_ygg_":
+                current_state = "WIMPY_4"
+            elif feedback == "gy___":
+                current_state = "NINNY_4"
+            elif feedback == "gy_g_":
+                current_state = "NIPPY_4"
+            elif feedback == "y____":
+                current_state = "CONIC_4"
+            elif feedback == "y___g":
+                current_state = "AFLOW_4"
+            elif feedback == "y__yg":
+                current_state = "PINCH_4"
+            elif feedback == "y_y__":
+                current_state = "MINIM_4"
+            elif feedback == "yg___":
+                current_state = "CYNIC_4"
+            elif feedback == "yy___":
+                current_state = "KINKY_4"
+            elif feedback == "yy__y":
+                current_state = "HINKY_4"
+            elif feedback == "yy_y_":
+                current_state = "PINKY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OAKEN_3":
+            if feedback == "_g_g_":
+                current_state = "JADED_4"
+            elif feedback == "_g_gg":
+                current_state = "WAXEN_4"
+            elif feedback == "_ggg_":
+                current_state = "BAKED_4"
+            elif feedback == "_gggg":
+                current_state = "WAKEN_4"
+            elif feedback == "_gggy":
+                current_state = "NAKED_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OCHER_3":
+            if feedback == "yy_yy":
+                current_state = "RECON_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ODDER_3":
+            if feedback == "g_ggg":
+                current_state = "ORDER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OFFER_3":
+            if feedback == "g__gg":
+                current_state = "OWNER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OPINE_3":
+            if feedback == "g_ggg":
+                current_state = "OVINE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OPIUM_3":
+            if feedback == "__gy_":
+                current_state = "UNIFY_4"
+            elif feedback == "y_gy_":
+                current_state = "UNION_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OTHER_3":
+            if feedback == "gg_gg":
+                current_state = "OTTER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OUNCE_3":
+            if feedback == "g_y_g":
+                current_state = "OZONE_4"
+            elif feedback == "y_y_g":
+                current_state = "PHONE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "OUTGO_3":
+            if feedback == "ygy__":
+                current_state = "QUOTH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PANTY_3":
+            if feedback == "gg_gg":
+                current_state = "PATTY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PARER_3":
+            if feedback == "_gggg":
+                current_state = "RARER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PARRY_3":
+            if feedback == "_gg_g":
+                current_state = "HARDY_4"
+            elif feedback == "_gggg":
+                current_state = "HARRY_4"
+            elif feedback == "ygg_g":
+                current_state = "HARPY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PASTE_3":
+            if feedback == "_gggg":
+                current_state = "WASTE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PATSY_2":
+            if feedback == "_gyg_":
+                current_state = "WAIST_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PERIL_3":
+            if feedback == "gyg__":
+                current_state = "PURER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PHISH_3":
+            if feedback == "_ggg_":
+                current_state = "WHISK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PHLOX_3":
+            if feedback == "__gg_":
+                current_state = "BELOW_4"
+            elif feedback == "__gy_":
+                current_state = "CELLO_4"
+            elif feedback == "__y__":
+                current_state = "FLECK_4"
+            elif feedback == "__yg_":
+                current_state = "ELBOW_4"
+            elif feedback == "_gy__":
+                current_state = "WHELK_4"
+            elif feedback == "_yg__":
+                current_state = "BELCH_4"
+            elif feedback == "_yg_g":
+                current_state = "HELIX_4"
+            elif feedback == "_ygy_":
+                current_state = "HELLO_4"
+            elif feedback == "_yy__":
+                current_state = "LEECH_4"
+            elif feedback == "ygy__":
+                current_state = "WHELP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PILAF_3":
+            if feedback == "_ggy_":
+                current_state = "VILLA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PILED_2":
+            if feedback == "___g_":
+                current_state = "COMET_3"
+            elif feedback == "___gy":
+                current_state = "DUVET_3"
+            elif feedback == "___y_":
+                current_state = "JETTY_3"
+            elif feedback == "___yy":
+                current_state = "DEBUT_3"
+            elif feedback == "__gy_":
+                current_state = "MELTY_3"
+            elif feedback == "__gyy":
+                current_state = "VELDT_3"
+            elif feedback == "__yg_":
+                current_state = "HOTEL_3"
+            elif feedback == "__yy_":
+                current_state = "EXULT_3"
+            elif feedback == "__yyy":
+                current_state = "DWELT_3"
+            elif feedback == "_g_g_":
+                current_state = "CIVET_3"
+            elif feedback == "_g_gy":
+                current_state = "BIDET_3"
+            elif feedback == "_g_y_":
+                current_state = "EIGHT_3"
+            elif feedback == "_ggg_":
+                current_state = "FILET_3"
+            elif feedback == "_y_g_":
+                current_state = "QUIET_3"
+            elif feedback == "_y_y_":
+                current_state = "BEFIT_3"
+            elif feedback == "_y_yg":
+                current_state = "FETID_3"
+            elif feedback == "_y_yy":
+                current_state = "DEBIT_3"
+            elif feedback == "_ygg_":
+                current_state = "INLET_3"
+            elif feedback == "_yyg_":
+                current_state = "INTEL_3"
+            elif feedback == "_yyy_":
+                current_state = "LEGIT_3"
+            elif feedback == "g__y_":
+                current_state = "PETTY_3"
+            elif feedback == "gg_g_":
+                current_state = "PIPET_3"
+            elif feedback == "gg_y_":
+                current_state = "PIETY_3"
+            elif feedback == "gy_y_":
+                current_state = "PETIT_3"
+            elif feedback == "y__y_":
+                current_state = "EMPTY_3"
+            elif feedback == "y__yy":
+                current_state = "DEPOT_3"
+            elif feedback == "y_yy_":
+                current_state = "LETUP_3"
+            elif feedback == "yy_y_":
+                current_state = "INEPT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PILOT_3":
+            if feedback == "_g_gg":
+                current_state = "BIGOT_4"
+            elif feedback == "gg_gg":
+                current_state = "PIVOT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PINCH_2":
+            if feedback == "_____":
+                current_state = "SWORE_3"
+            elif feedback == "____y":
+                current_state = "SHORE_3"
+            elif feedback == "___y_":
+                current_state = "SCORE_3"
+            elif feedback == "__y__":
+                current_state = "SNORE_3"
+            elif feedback == "_y__y":
+                current_state = "SHIRE_3"
+            elif feedback == "y____":
+                current_state = "SPORE_3"
+            elif feedback == "yy___":
+                current_state = "SPIRE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PINKY_3":
+            if feedback == "_g___":
+                current_state = "REFIX_4"
+            elif feedback == "_g__g":
+                current_state = "FIERY_4"
+            elif feedback == "_g_y_":
+                current_state = "BIKER_4"
+            elif feedback == "_gg__":
+                current_state = "FINER_4"
+            elif feedback == "_gy__":
+                current_state = "RIVEN_4"
+            elif feedback == "_y___":
+                current_state = "BRIEF_4"
+            elif feedback == "_y__g":
+                current_state = "REIFY_4"
+            elif feedback == "_y_y_":
+                current_state = "KEFIR_4"
+            elif feedback == "_yg__":
+                current_state = "INNER_4"
+            elif feedback == "_yy__":
+                current_state = "INFER_4"
+            elif feedback == "gg___":
+                current_state = "PIPER_4"
+            elif feedback == "gg_y_":
+                current_state = "PIKER_4"
+            elif feedback == "yg___":
+                current_state = "ADVEW_4"
+            elif feedback == "ygy__":
+                current_state = "RIPEN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PIOUS_3":
+            if feedback == "g__yy":
+                current_state = "PUSHY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLANC_2":
+            if feedback == "__g__":
+                current_state = "DEATH_3"
+            elif feedback == "__g_y":
+                current_state = "EXACT_3"
+            elif feedback == "__gg_":
+                current_state = "MEANT_3"
+            elif feedback == "__gy_":
+                current_state = "SNAFU_3"
+            elif feedback == "__gyy":
+                current_state = "ENACT_3"
+            elif feedback == "__y__":
+                current_state = "BEGAT_3"
+            elif feedback == "__y_g":
+                current_state = "SUMAC_3"
+            elif feedback == "__y_y":
+                current_state = "CHEAT_3"
+            elif feedback == "__yg_":
+                current_state = "AGENT_3"
+            elif feedback == "__yy_":
+                current_state = "UNSAY_3"
+            elif feedback == "_gg_y":
+                current_state = "SLACK_3"
+            elif feedback == "_ggg_":
+                current_state = "SLANG_3"
+            elif feedback == "_ggy_":
+                current_state = "SLAIN_3"
+            elif feedback == "_gy__":
+                current_state = "BLEAT_3"
+            elif feedback == "_gy_y":
+                current_state = "CLEAT_3"
+            elif feedback == "_yg__":
+                current_state = "DEALT_3"
+            elif feedback == "_yg_y":
+                current_state = "SCALD_3"
+            elif feedback == "_ygg_":
+                current_state = "LEANT_3"
+            elif feedback == "_ygy_":
+                current_state = "SNAIL_3"
+            elif feedback == "_yy__":
+                current_state = "FETAL_3"
+            elif feedback == "_yy_y":
+                current_state = "ECLAT_3"
+            elif feedback == "g_g__":
+                current_state = "PEATY_3"
+            elif feedback == "ggy__":
+                current_state = "PLEAT_3"
+            elif feedback == "gyg__":
+                current_state = "PSALM_3"
+            elif feedback == "gyy__":
+                current_state = "PETAL_3"
+            elif feedback == "y_g__":
+                current_state = "SOAPY_3"
+            elif feedback == "y_g_y":
+                current_state = "SCAMP_3"
+            elif feedback == "y_gg_":
+                current_state = "SPANK_3"
+            elif feedback == "y_gy_":
+                current_state = "SPAWN_3"
+            elif feedback == "y_y__":
+                current_state = "ADEPT_3"
+            elif feedback == "y_y_g":
+                current_state = "ASPIC_3"
+            elif feedback == "yyg__":
+                current_state = "LEAPT_3"
+            elif feedback == "yyg_y":
+                current_state = "SCALP_3"
+            elif feedback == "yyy__":
+                current_state = "SPLAY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLING_2":
+            if feedback == "_____":
+                current_state = "SHOVE_3"
+            elif feedback == "____y":
+                current_state = "SEDGE_3"
+            elif feedback == "___g_":
+                current_state = "SCENE_3"
+            elif feedback == "___y_":
+                current_state = "ENSUE_3"
+            elif feedback == "__g__":
+                current_state = "SEIZE_3"
+            elif feedback == "__gg_":
+                current_state = "SHINE_3"
+            elif feedback == "__gy_":
+                current_state = "SNIDE_3"
+            elif feedback == "__y__":
+                current_state = "ISSUE_3"
+            elif feedback == "__y_y":
+                current_state = "SIEGE_3"
+            elif feedback == "__yy_":
+                current_state = "SINCE_3"
+            elif feedback == "__yyy":
+                current_state = "SINGE_3"
+            elif feedback == "_gg__":
+                current_state = "ADEEM_3"
+            elif feedback == "_y___":
+                current_state = "SOLVE_3"
+            elif feedback == "_yg__":
+                current_state = "SMILE_3"
+            elif feedback == "_yy__":
+                current_state = "SIDLE_3"
+            elif feedback == "y____":
+                current_state = "SCOPE_3"
+            elif feedback == "y_g__":
+                current_state = "SPICE_3"
+            elif feedback == "y_gg_":
+                current_state = "SPINE_3"
+            elif feedback == "y_gy_":
+                current_state = "SNIPE_3"
+            elif feedback == "yg___":
+                current_state = "SLOPE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLOIT_2":
+            if feedback == "____g":
+                current_state = "CHANT_3"
+            elif feedback == "____y":
+                current_state = "AUNTY_3"
+            elif feedback == "___gg":
+                current_state = "ADMIT_3"
+            elif feedback == "___gy":
+                current_state = "ANTIC_3"
+            elif feedback == "___yg":
+                current_state = "GIANT_3"
+            elif feedback == "___yy":
+                current_state = "AGITA_3"
+            elif feedback == "__g_g":
+                current_state = "ABOUT_3"
+            elif feedback == "__g_y":
+                current_state = "QUOTA_3"
+            elif feedback == "__y_g":
+                current_state = "ABBOT_3"
+            elif feedback == "__y_y":
+                current_state = "GOTTA_3"
+            elif feedback == "__yyy":
+                current_state = "COATI_3"
+            elif feedback == "_gg_g":
+                current_state = "ABAFT_3"
+            elif feedback == "_gy_g":
+                current_state = "ALLOT_3"
+            elif feedback == "_y__g":
+                current_state = "ADULT_3"
+            elif feedback == "_y_yy":
+                current_state = "VITAL_3"
+            elif feedback == "_yg_y":
+                current_state = "ATOLL_3"
+            elif feedback == "_yy_y":
+                current_state = "LOATH_3"
+            elif feedback == "gg__g":
+                current_state = "PLANT_3"
+            elif feedback == "gg_gg":
+                current_state = "PLAIT_3"
+            elif feedback == "y___g":
+                current_state = "ADAPT_3"
+            elif feedback == "y__yg":
+                current_state = "INAPT_3"
+            elif feedback == "y_g_g":
+                current_state = "ADOPT_3"
+            elif feedback == "yy__y":
+                current_state = "APTLY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLUCK_3":
+            if feedback == "_gg__":
+                current_state = "BLUFF_4"
+            elif feedback == "_gg_g":
+                current_state = "FLUNK_4"
+            elif feedback == "_gg_y":
+                current_state = "FLUKY_4"
+            elif feedback == "_gggg":
+                current_state = "CLUCK_4"
+            elif feedback == "_ggyg":
+                current_state = "CLUNK_4"
+            elif feedback == "ggg__":
+                current_state = "PLUMB_4"
+            elif feedback == "ggg_g":
+                current_state = "PLUNK_4"
+            elif feedback == "yggy_":
+                current_state = "CLUMP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLUMB_4":
+            if feedback == "gggg_":
+                current_state = "PLUMP_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLUNK_2":
+            if feedback == "_____":
+                current_state = "DISHY_3"
+            elif feedback == "____g":
+                current_state = "SHOCK_3"
+            elif feedback == "____y":
+                current_state = "SKIFF_3"
+            elif feedback == "___g_":
+                current_state = "SHINY_3"
+            elif feedback == "___y_":
+                current_state = "BISON_3"
+            elif feedback == "__g__":
+                current_state = "SQUIB_3"
+            elif feedback == "__g_g":
+                current_state = "SHUCK_3"
+            elif feedback == "__gg_":
+                current_state = "SOUND_3"
+            elif feedback == "__ggg":
+                current_state = "SKUNK_3"
+            elif feedback == "__gy_":
+                current_state = "SNUFF_3"
+            elif feedback == "__gyg":
+                current_state = "SNUCK_3"
+            elif feedback == "__y__":
+                current_state = "CHIMB_3"
+            elif feedback == "__y_y":
+                current_state = "ADSUM_3"
+            elif feedback == "__yg_":
+                current_state = "SUING_3"
+            elif feedback == "__yy_":
+                current_state = "MINUS_3"
+            elif feedback == "_g___":
+                current_state = "SLIMY_3"
+            elif feedback == "_g__g":
+                current_state = "SLICK_3"
+            elif feedback == "_g_g_":
+                current_state = "SLING_3"
+            elif feedback == "_g_gg":
+                current_state = "SLINK_3"
+            elif feedback == "_ggg_":
+                current_state = "SLUNG_3"
+            elif feedback == "_gggg":
+                current_state = "SLUNK_3"
+            elif feedback == "_y___":
+                current_state = "SHILL_3"
+            elif feedback == "_y__y":
+                current_state = "SILKY_3"
+            elif feedback == "_yg__":
+                current_state = "SCULL_3"
+            elif feedback == "_yg_g":
+                current_state = "SKULK_3"
+            elif feedback == "_yg_y":
+                current_state = "SKULL_3"
+            elif feedback == "_yy__":
+                current_state = "BOLUS_3"
+            elif feedback == "_yy_y":
+                current_state = "SULKY_3"
+            elif feedback == "g____":
+                current_state = "PSYCH_3"
+            elif feedback == "g_y__":
+                current_state = "PIOUS_3"
+            elif feedback == "gy___":
+                current_state = "POLIS_3"
+            elif feedback == "y____":
+                current_state = "SCOOP_3"
+            elif feedback == "y___g":
+                current_state = "SPOOK_3"
+            elif feedback == "y___y":
+                current_state = "SKIMP_3"
+            elif feedback == "y__g_":
+                current_state = "SPINY_3"
+            elif feedback == "y__y_":
+                current_state = "SNOOP_3"
+            elif feedback == "y_g__":
+                current_state = "SOUPY_3"
+            elif feedback == "y_ggg":
+                current_state = "SPUNK_3"
+            elif feedback == "y_yy_":
+                current_state = "SUNUP_3"
+            elif feedback == "yg___":
+                current_state = "SLOOP_3"
+            elif feedback == "ygg__":
+                current_state = "SLUMP_3"
+            elif feedback == "yy___":
+                current_state = "SPILL_3"
+            elif feedback == "yyy__":
+                current_state = "LUPUS_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PLUOT_2":
+            if feedback == "____g":
+                current_state = "CHEEK_3"
+            elif feedback == "____y":
+                current_state = "STEED_3"
+            elif feedback == "___gg":
+                current_state = "BESOT_3"
+            elif feedback == "___gy":
+                current_state = "ETHOS_3"
+            elif feedback == "___yg":
+                current_state = "ONSET_3"
+            elif feedback == "___yy":
+                current_state = "STENO_3"
+            elif feedback == "__y_g":
+                current_state = "UNSET_3"
+            elif feedback == "__y_y":
+                current_state = "FETUS_3"
+            elif feedback == "_g__g":
+                current_state = "SLEET_3"
+            elif feedback == "_y__g":
+                current_state = "ISLET_3"
+            elif feedback == "_y__y":
+                current_state = "STEEL_3"
+            elif feedback == "g__yy":
+                current_state = "PESTO_3"
+            elif feedback == "y___g":
+                current_state = "SPENT_3"
+            elif feedback == "y___y":
+                current_state = "STEEP_3"
+            elif feedback == "y_y_g":
+                current_state = "UPSET_3"
+            elif feedback == "y_y_y":
+                current_state = "SETUP_3"
+            elif feedback == "yg__g":
+                current_state = "SLEPT_3"
+            elif feedback == "yy__g":
+                current_state = "SPELT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "POBOY_3":
+            if feedback == "___gy":
+                current_state = "NYLON_4"
+            elif feedback == "__y_g":
+                current_state = "FLYBY_4"
+            elif feedback == "_g__g":
+                current_state = "FOLKY_4"
+            elif feedback == "_g_g_":
+                current_state = "COLON_4"
+            elif feedback == "_g_yg":
+                current_state = "LOONY_4"
+            elif feedback == "_gg_g":
+                current_state = "LOBBY_4"
+            elif feedback == "_y___":
+                current_state = "CLOCK_4"
+            elif feedback == "_y__g":
+                current_state = "FLOWY_4"
+            elif feedback == "_yy__":
+                current_state = "BLOCK_4"
+            elif feedback == "_yyg_":
+                current_state = "BLOOM_4"
+            elif feedback == "g__gy":
+                current_state = "PYLON_4"
+            elif feedback == "gg__y":
+                current_state = "POLYP_4"
+            elif feedback == "gy___":
+                current_state = "PLONK_4"
+            elif feedback == "y___y":
+                current_state = "LYMPH_4"
+            elif feedback == "yg_yg":
+                current_state = "LOOPY_4"
+            elif feedback == "yy___":
+                current_state = "CLOMP_4"
+            elif feedback == "yyyg_":
+                current_state = "BLOOP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "POIND_2":
+            if feedback == "_____":
+                current_state = "CREME_3"
+            elif feedback == "____y":
+                current_state = "CRUDE_3"
+            elif feedback == "___y_":
+                current_state = "GENRE_3"
+            elif feedback == "__g__":
+                current_state = "CRIME_3"
+            elif feedback == "__g_y":
+                current_state = "BRIDE_3"
+            elif feedback == "__gg_":
+                current_state = "BRINE_3"
+            elif feedback == "__y__":
+                current_state = "RIFLE_3"
+            elif feedback == "__y_y":
+                current_state = "RIDGE_3"
+            elif feedback == "__yy_":
+                current_state = "INURE_3"
+            elif feedback == "_g___":
+                current_state = "ROGUE_3"
+            elif feedback == "_y___":
+                current_state = "BHANG_3"
+            elif feedback == "_y__y":
+                current_state = "DROVE_3"
+            elif feedback == "_y_g_":
+                current_state = "CRONE_3"
+            elif feedback == "_y_gy":
+                current_state = "DRONE_3"
+            elif feedback == "g___y":
+                current_state = "PRUDE_3"
+            elif feedback == "g__g_":
+                current_state = "PRUNE_3"
+            elif feedback == "g_g__":
+                current_state = "ACMES_3"
+            elif feedback == "g_g_y":
+                current_state = "PRIDE_3"
+            elif feedback == "gy___":
+                current_state = "ABLET_3"
+            elif feedback == "gy_g_":
+                current_state = "PRONE_3"
+            elif feedback == "y____":
+                current_state = "CREPE_3"
+            elif feedback == "y_g__":
+                current_state = "GRIPE_3"
+            elif feedback == "yy___":
+                current_state = "GROPE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "POKER_4":
+            if feedback == "yg_gg":
+                current_state = "ROPER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PONCY_2":
+            if feedback == "_____":
+                current_state = "HIRER_3"
+            elif feedback == "____g":
+                current_state = "AMBRY_3"
+            elif feedback == "____y":
+                current_state = "BERYL_3"
+            elif feedback == "___g_":
+                current_state = "MERCH_3"
+            elif feedback == "___gg":
+                current_state = "MERCY_3"
+            elif feedback == "___y_":
+                current_state = "CURER_3"
+            elif feedback == "__y__":
+                current_state = "RERUN_3"
+            elif feedback == "__y_g":
+                current_state = "NERDY_3"
+            elif feedback == "_g___":
+                current_state = "BORED_3"
+            elif feedback == "_g_y_":
+                current_state = "CORER_3"
+            elif feedback == "_y___":
+                current_state = "ERROR_3"
+            elif feedback == "_yy__":
+                current_state = "HERON_3"
+            elif feedback == "g____":
+                current_state = "PERIL_3"
+            elif feedback == "g___g":
+                current_state = "PERKY_3"
+            elif feedback == "g__g_":
+                current_state = "PERCH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "POSER_3":
+            if feedback == "y_ygg":
+                current_state = "SUPER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PRICK_2":
+            if feedback == "_g___":
+                current_state = "TROVE_3"
+            elif feedback == "_g_g_":
+                current_state = "TRUCE_3"
+            elif feedback == "_gg__":
+                current_state = "TRIBE_3"
+            elif feedback == "_gg_y":
+                current_state = "TRIKE_3"
+            elif feedback == "_ggg_":
+                current_state = "TRICE_3"
+            elif feedback == "_y___":
+                current_state = "THERE_3"
+            elif feedback == "yg___":
+                current_state = "TROPE_3"
+            elif feedback == "ygg__":
+                current_state = "TRIPE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PRIMP_4":
+            if feedback == "_yg__":
+                current_state = "WHIRR_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PRIOR_3":
+            if feedback == "___gg":
+                current_state = "HUMOR_4"
+            elif feedback == "__ygg":
+                current_state = "VIGOR_4"
+            elif feedback == "_y_gg":
+                current_state = "RUMOR_4"
+            elif feedback == "_yygg":
+                current_state = "RIGOR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PRONG_3":
+            if feedback == "_ggg_":
+                current_state = "IRONY_4"
+            elif feedback == "_gggg":
+                current_state = "WRONG_4"
+            elif feedback == "_yyg_":
+                current_state = "RHINO_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PSHAW_2":
+            if feedback == "_g_y_":
+                current_state = "ASKER_3"
+            elif feedback == "_y_g_":
+                current_state = "SMEAR_3"
+            elif feedback == "_y_gg":
+                current_state = "RESAW_3"
+            elif feedback == "_y_gy":
+                current_state = "SWEAR_3"
+            elif feedback == "_yyg_":
+                current_state = "SHEAR_3"
+            elif feedback == "yy_g_":
+                current_state = "SPEAR_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PUBIC_2":
+            if feedback == "_____":
+                current_state = "SORRY_3"
+            elif feedback == "____y":
+                current_state = "SCROD_3"
+            elif feedback == "___g_":
+                current_state = "LORIS_3"
+            elif feedback == "___gy":
+                current_state = "SCRIM_3"
+            elif feedback == "_g___":
+                current_state = "SURLY_3"
+            elif feedback == "_y___":
+                current_state = "SHRUG_3"
+            elif feedback == "_y__y":
+                current_state = "SCRUM_3"
+            elif feedback == "_y_y_":
+                current_state = "VIRUS_3"
+            elif feedback == "_yy__":
+                current_state = "SHRUB_3"
+            elif feedback == "_yy_y":
+                current_state = "SCRUB_3"
+            elif feedback == "y___y":
+                current_state = "CORPS_3"
+            elif feedback == "y__g_":
+                current_state = "SPRIG_3"
+            elif feedback == "y__gy":
+                current_state = "SCRIP_3"
+            elif feedback == "yy___":
+                current_state = "SYRUP_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PUNKY_4":
+            if feedback == "gg__g":
+                current_state = "PUFFY_5"
+            elif feedback == "ggg_g":
+                current_state = "PUNNY_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "PYLON_2":
+            if feedback == "_____":
+                current_state = "BASIC_3"
+            elif feedback == "____g":
+                current_state = "BASIN_3"
+            elif feedback == "____y":
+                current_state = "SAUNA_3"
+            elif feedback == "___gg":
+                current_state = "MASON_3"
+            elif feedback == "___y_":
+                current_state = "OASIS_3"
+            elif feedback == "__g__":
+                current_state = "SALAD_3"
+            elif feedback == "__ggg":
+                current_state = "SALON_3"
+            elif feedback == "__gy_":
+                current_state = "SALVO_3"
+            elif feedback == "__y__":
+                current_state = "BASAL_3"
+            elif feedback == "__y_y":
+                current_state = "NASAL_3"
+            elif feedback == "_y___":
+                current_state = "AGUED_3"
+            elif feedback == "_y__y":
+                current_state = "SANDY_3"
+            elif feedback == "_y_g_":
+                current_state = "SAVOY_3"
+            elif feedback == "_yg__":
+                current_state = "SALLY_3"
+            elif feedback == "_yy__":
+                current_state = "SADLY_3"
+            elif feedback == "yy___":
+                current_state = "SAPPY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RABID_3":
+            if feedback == "gg_gg":
+                current_state = "RAPID_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RADAR_3":
+            if feedback == "ggg__":
+                current_state = "RADII_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RAJAH_3":
+            if feedback == "gg___":
+                current_state = "RABBI_4"
+            elif feedback == "gg__g":
+                current_state = "RALPH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RASPY_2":
+            if feedback == "ygy__":
+                current_state = "SAVOR_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RAVER_4":
+            if feedback == "_g_gg":
+                current_state = "BAKER_5"
+            elif feedback == "_gggg":
+                current_state = "WAVER_5"
+            elif feedback == "gg_gg":
+                current_state = "RACER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "REALM_3":
+            if feedback == "ggg_g":
+                current_state = "REARM_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "REBAR_3":
+            if feedback == "ggyg_":
+                current_state = "REHAB_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "REBUS_3":
+            if feedback == "gg__y":
+                current_state = "RESIN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "REFER_4":
+            if feedback == "gg_g_":
+                current_state = "RENEW_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "REFIX_4":
+            if feedback == "gy_y_":
+                current_state = "RIVER_5"
+            elif feedback == "yy_y_":
+                current_state = "GIVER_5"
+            elif feedback == "yy_yy":
+                current_state = "MIXER_5"
+            elif feedback == "yyyy_":
+                current_state = "FIBER_5"
+            elif feedback == "yyyyy":
+                current_state = "FIXER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RODNY_2":
+            if feedback == "g____":
+                current_state = "RAJAH_3"
+            elif feedback == "g___g":
+                current_state = "RALLY_3"
+            elif feedback == "g__gg":
+                current_state = "RAINY_3"
+            elif feedback == "g__y_":
+                current_state = "RANCH_3"
+            elif feedback == "g__yg":
+                current_state = "RANGY_3"
+            elif feedback == "g_g__":
+                current_state = "RADAR_3"
+            elif feedback == "g_y__":
+                current_state = "RABID_3"
+            elif feedback == "g_yyg":
+                current_state = "RANDY_3"
+            elif feedback == "gy___":
+                current_state = "RAZOR_3"
+            elif feedback == "gy_yy":
+                current_state = "RAYON_3"
+            elif feedback == "gyg__":
+                current_state = "RADIO_3"
+            elif feedback == "gygy_":
+                current_state = "RADON_3"
+            elif feedback == "y____":
+                current_state = "CAPRI_3"
+            elif feedback == "y___g":
+                current_state = "FAIRY_3"
+            elif feedback == "y__y_":
+                current_state = "CAIRN_3"
+            elif feedback == "y_gy_":
+                current_state = "NADIR_3"
+            elif feedback == "y_y_g":
+                current_state = "DAIRY_3"
+            elif feedback == "yy___":
+                current_state = "VALOR_3"
+            elif feedback == "yy__y":
+                current_state = "MAYOR_3"
+            elif feedback == "yy_y_":
+                current_state = "MANOR_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "ROGUE_3":
+            if feedback == "ggyyg":
+                current_state = "ROUGE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RUDER_4":
+            if feedback == "_yggg":
+                current_state = "UDDER_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RUMBA_3":
+            if feedback == "yyyyg":
+                current_state = "UMBRA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "RUMPY_3":
+            if feedback == "g____":
+                current_state = "REFER_4"
+            elif feedback == "g___g":
+                current_state = "REFRY_4"
+            elif feedback == "gy__g":
+                current_state = "REBUY_4"
+            elif feedback == "gyy__":
+                current_state = "RHEUM_4"
+            elif feedback == "y____":
+                current_state = "FEVER_4"
+            elif feedback == "y___g":
+                current_state = "EVERY_4"
+            elif feedback == "y___y":
+                current_state = "FRYER_4"
+            elif feedback == "y__y_":
+                current_state = "PREEN_4"
+            elif feedback == "y__yy":
+                current_state = "HYPER_4"
+            elif feedback == "y_y__":
+                current_state = "EMBER_4"
+            elif feedback == "y_y_g":
+                current_state = "EMERY_4"
+            elif feedback == "yg___":
+                current_state = "QUEER_4"
+            elif feedback == "yg__g":
+                current_state = "QUERY_4"
+            elif feedback == "yg__y":
+                current_state = "BUYER_4"
+            elif feedback == "yy___":
+                current_state = "EXURB_4"
+            elif feedback == "yy_y_":
+                current_state = "UPPER_4"
+            elif feedback == "yyg__":
+                current_state = "FEMUR_4"
+            elif feedback == "yyy__":
+                current_state = "UMBER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SABER_3":
+            if feedback == "gg_gg":
+                current_state = "SAFER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SABLE_2":
+            if feedback == "gg__g":
+                current_state = "SAUCE_3"
+            elif feedback == "gg_yg":
+                current_state = "SALVE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SALPS_2":
+            if feedback == "gg__y":
+                current_state = "SASSY_3"
+            elif feedback == "ggg_y":
+                current_state = "SALSA_3"
+            elif feedback == "yg___":
+                current_state = "DAISY_3"
+            elif feedback == "yg__y":
+                current_state = "GASSY_3"
+            elif feedback == "yg_y_":
+                current_state = "PANSY_3"
+            elif feedback == "ygg__":
+                current_state = "BALSA_3"
+            elif feedback == "yggy_":
+                current_state = "PALSY_3"
+            elif feedback == "ygy_y":
+                current_state = "LASSO_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SAPAN_2":
+            if feedback == "gg___":
+                current_state = "SALTY_3"
+            elif feedback == "gg__g":
+                current_state = "SATIN_3"
+            elif feedback == "gg__y":
+                current_state = "SAINT_3"
+            elif feedback == "gg_g_":
+                current_state = "SATAY_3"
+            elif feedback == "yg___":
+                current_state = "HASTY_3"
+            elif feedback == "yg__y":
+                current_state = "NASTY_3"
+            elif feedback == "ygy__":
+                current_state = "PASTY_3"
+            elif feedback == "ygyy_":
+                current_state = "PASTA_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCALD_3":
+            if feedback == "gggg_":
+                current_state = "SCALY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCAPE_3":
+            if feedback == "gygyg":
+                current_state = "SPACE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCARF_3":
+            if feedback == "gggg_":
+                current_state = "SCARY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCENE_3":
+            if feedback == "g__gg":
+                current_state = "SHONE_4"
+            elif feedback == "gg_gg":
+                current_state = "SCONE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCHWA_3":
+            if feedback == "gg__g":
+                current_state = "SCUBA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCOOP_3":
+            if feedback == "g___y":
+                current_state = "SPIFF_4"
+            elif feedback == "g_ggg":
+                current_state = "SWOOP_4"
+            elif feedback == "g_ggy":
+                current_state = "SPOOF_4"
+            elif feedback == "g_y_y":
+                current_state = "SOPPY_4"
+            elif feedback == "gy__y":
+                current_state = "SPICY_4"
+            elif feedback == "y___y":
+                current_state = "WISPY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCOOT_3":
+            if feedback == "g_ggg":
+                current_state = "SHOOT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCOPE_3":
+            if feedback == "g__yg":
+                current_state = "SPUME_4"
+            elif feedback == "g_gyg":
+                current_state = "SPOKE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCRAM_2":
+            if feedback == "g_gg_":
+                current_state = "SPRAY_3"
+            elif feedback == "gggg_":
+                current_state = "SCRAP_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SCREE_2":
+            if feedback == "g_g_g":
+                current_state = "SURGE_3"
+            elif feedback == "g_ggg":
+                current_state = "SPREE_3"
+            elif feedback == "g_gyg":
+                current_state = "SERVE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SEDER_3":
+            if feedback == "gg_gg":
+                current_state = "SEVER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SEDGE_3":
+            if feedback == "gg_yg":
+                current_state = "SEGUE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHADY_3":
+            if feedback == "g_g__":
+                current_state = "SWAMI_4"
+            elif feedback == "ggg_g":
+                current_state = "SHAKY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHALL_3":
+            if feedback == "g_ggg":
+                current_state = "SMALL_4"
+            elif feedback == "ggg_g":
+                current_state = "SHAWL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHANK_3":
+            if feedback == "g_gg_":
+                current_state = "SWANG_4"
+            elif feedback == "g_ggg":
+                current_state = "SWANK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHARK_3":
+            if feedback == "g_gg_":
+                current_state = "SNARF_4"
+            elif feedback == "g_ggg":
+                current_state = "SNARK_4"
+            elif feedback == "gggg_":
+                current_state = "SHARD_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHEEP_3":
+            if feedback == "g_ggy":
+                current_state = "SPEED_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHEIK_3":
+            if feedback == "g_g_g":
+                current_state = "SPECK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHIED_3":
+            if feedback == "g_ggg":
+                current_state = "SPIED_4"
+            elif feedback == "y__g_":
+                current_state = "MOSEY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHIFT_3":
+            if feedback == "g_ggg":
+                current_state = "SWIFT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHILL_3":
+            if feedback == "g___g":
+                current_state = "SCOWL_4"
+            elif feedback == "g__g_":
+                current_state = "SCOLD_4"
+            elif feedback == "g_ggg":
+                current_state = "SWILL_4"
+            elif feedback == "g_ygy":
+                current_state = "SILLY_4"
+            elif feedback == "g_yy_":
+                current_state = "SOLID_4"
+            elif feedback == "gg_g_":
+                current_state = "SHYLY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHIMS_2":
+            if feedback == "g___y":
+                current_state = "SUDSY_3"
+            elif feedback == "g_y_y":
+                current_state = "SISSY_3"
+            elif feedback == "gg__y":
+                current_state = "SHUSH_3"
+            elif feedback == "gy__y":
+                current_state = "SLOSH_3"
+            elif feedback == "gy_yy":
+                current_state = "SMUSH_3"
+            elif feedback == "gyg_y":
+                current_state = "SWISH_3"
+            elif feedback == "y____":
+                current_state = "LOUSY_3"
+            elif feedback == "y___g":
+                current_state = "FLOSS_3"
+            elif feedback == "y___y":
+                current_state = "FUSSY_3"
+            elif feedback == "y__y_":
+                current_state = "MOUSY_3"
+            elif feedback == "y__yy":
+                current_state = "MOSSY_3"
+            elif feedback == "y_g__":
+                current_state = "NOISY_3"
+            elif feedback == "y_g_g":
+                current_state = "BLISS_3"
+            elif feedback == "y_y__":
+                current_state = "KIOSK_3"
+            elif feedback == "y_y_y":
+                current_state = "KISSY_3"
+            elif feedback == "y_yyy":
+                current_state = "MISSY_3"
+            elif feedback == "ygg__":
+                current_state = "PHISH_3"
+            elif feedback == "yy___":
+                current_state = "ABAFT_3"
+            elif feedback == "yy__y":
+                current_state = "HUSSY_3"
+            elif feedback == "yyg__":
+                current_state = "KNISH_3"
+            elif feedback == "yyy_y":
+                current_state = "HISSY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHINE_3":
+            if feedback == "g_ggg":
+                current_state = "SWINE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHINY_3":
+            if feedback == "g_gg_":
+                current_state = "SWING_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHIRK_3":
+            if feedback == "g_ggg":
+                current_state = "SMIRK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHOAL_3":
+            if feedback == "y__gg":
+                current_state = "USUAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHOCK_3":
+            if feedback == "g_ggg":
+                current_state = "SMOCK_4"
+            elif feedback == "ggg_g":
+                current_state = "SHOOK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHORN_3":
+            if feedback == "g_ggg":
+                current_state = "SWORN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHOVE_3":
+            if feedback == "g___g":
+                current_state = "SUEDE_4"
+            elif feedback == "g_g_g":
+                current_state = "SMOKE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SHUNT_3":
+            if feedback == "g_ggg":
+                current_state = "STUNT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SILKY_3":
+            if feedback == "gyyy_":
+                current_state = "SKILL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SILTY_3":
+            if feedback == "gg_g_":
+                current_state = "SIXTH_4"
+            elif feedback == "gg_gg":
+                current_state = "SIXTY_4"
+            elif feedback == "gy_g_":
+                current_state = "SMITH_4"
+            elif feedback == "gy_y_":
+                current_state = "STICK_4"
+            elif feedback == "gyyy_":
+                current_state = "STILL_4"
+            elif feedback == "yg_gg":
+                current_state = "MISTY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SKEIN_3":
+            if feedback == "g_g_y":
+                current_state = "SPEND_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SKIFF_3":
+            if feedback == "gy___":
+                current_state = "SMOKY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SKIMP_3":
+            if feedback == "gyg_y":
+                current_state = "SPIKY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SLEEK_3":
+            if feedback == "gggg_":
+                current_state = "SLEEP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SLIMY_3":
+            if feedback == "gg__g":
+                current_state = "SLYLY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SLOSH_3":
+            if feedback == "gg_gg":
+                current_state = "SLUSH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SMARM_3":
+            if feedback == "g_ggg":
+                current_state = "SWARM_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SMART_2":
+            if feedback == "g_ggg":
+                current_state = "START_3"
+            elif feedback == "g_ggy":
+                current_state = "STARK_3"
+            elif feedback == "g_gyy":
+                current_state = "STAIR_3"
+            elif feedback == "g_yyy":
+                current_state = "SITAR_3"
+            elif feedback == "y_yyy":
+                current_state = "ASTIR_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SNAFU_3":
+            if feedback == "ggg__":
+                current_state = "SNAKY_4"
+            elif feedback == "gyg__":
+                current_state = "SWAIN_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SNIPY_2":
+            if feedback == "g____":
+                current_state = "SHEAF_3"
+            elif feedback == "g___g":
+                current_state = "SEAMY_3"
+            elif feedback == "g__y_":
+                current_state = "SPEAK_3"
+            elif feedback == "g_yy_":
+                current_state = "SEPIA_3"
+            elif feedback == "gg___":
+                current_state = "SNEAK_3"
+            elif feedback == "gy___":
+                current_state = "SEDAN_3"
+            elif feedback == "y____":
+                current_state = "ASKEW_3"
+            elif feedback == "y___g":
+                current_state = "ESSAY_3"
+            elif feedback == "y_y__":
+                current_state = "AEGIS_3"
+            elif feedback == "yy___":
+                current_state = "ASHEN_3"
+            elif feedback == "yy_y_":
+                current_state = "ASPEN_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SNOOP_3":
+            if feedback == "gyggy":
+                current_state = "SPOON_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SOAPY_3":
+            if feedback == "g_gy_":
+                current_state = "SWAMP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SOOTH_3":
+            if feedback == "gggg_":
+                current_state = "SOOTY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SOUND_3":
+            if feedback == "g_gg_":
+                current_state = "SWUNG_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPADE_3":
+            if feedback == "g_g_g":
+                current_state = "SUAVE_4"
+            elif feedback == "y_g_g":
+                current_state = "USAGE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPENT_3":
+            if feedback == "gyg_g":
+                current_state = "SWEPT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPICE_3":
+            if feedback == "ggg_g":
+                current_state = "SPIKE_4"
+            elif feedback == "gyg_g":
+                current_state = "SWIPE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPILL_3":
+            if feedback == "gg__g":
+                current_state = "SPOOL_4"
+            elif feedback == "ggy_g":
+                current_state = "SPOIL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPILT_3":
+            if feedback == "g_ggg":
+                current_state = "STILT_4"
+            elif feedback == "g_y_g":
+                current_state = "SIGHT_4"
+            elif feedback == "ggyyg":
+                current_state = "SPLIT_4"
+            elif feedback == "y_y_g":
+                current_state = "VISIT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPITE_3":
+            if feedback == "g_ggg":
+                current_state = "SUITE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SPORT_3":
+            if feedback == "g_ggy":
+                current_state = "STORM_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SQUIB_3":
+            if feedback == "g_g__":
+                current_state = "SCUFF_4"
+            elif feedback == "gggg_":
+                current_state = "SQUID_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STAGE_3":
+            if feedback == "ggg_g":
+                current_state = "STAVE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STALK_3":
+            if feedback == "gggg_":
+                current_state = "STALL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STAND_3":
+            if feedback == "ggg__":
+                current_state = "STAFF_4"
+            elif feedback == "ggg_g":
+                current_state = "STAID_4"
+            elif feedback == "gggg_":
+                current_state = "STANK_4"
+            elif feedback == "gggy_":
+                current_state = "STAIN_4"
+            elif feedback == "gyg__":
+                current_state = "SWATH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STEAK_3":
+            if feedback == "gggg_":
+                current_state = "STEAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STEED_3":
+            if feedback == "ggg__":
+                current_state = "STEIN_4"
+            elif feedback == "yyy__":
+                current_state = "ZESTY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STELE_3":
+            if feedback == "gg_gg":
+                current_state = "STYLE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STING_3":
+            if feedback == "gggg_":
+                current_state = "STINK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STOMA_3":
+            if feedback == "yy__g":
+                current_state = "VISTA_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STONE_3":
+            if feedback == "ggg_g":
+                current_state = "STOVE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STREP_2":
+            if feedback == "gggg_":
+                current_state = "STREW_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STRUM_2":
+            if feedback == "ggg__":
+                current_state = "STRIP_3"
+            elif feedback == "gggg_":
+                current_state = "STRUT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "STUNG_3":
+            if feedback == "gggg_":
+                current_state = "STUNK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "SUING_3":
+            if feedback == "gg_g_":
+                current_state = "SUNNY_4"
+            elif feedback == "yyggg":
+                current_state = "USING_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TABLE_2":
+            if feedback == "gg__g":
+                current_state = "TAUPE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TALUS_2":
+            if feedback == "gg__y":
+                current_state = "TASTY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TARDY_2":
+            if feedback == "ggg__":
+                current_state = "TAROT_3"
+            elif feedback == "ggg_g":
+                current_state = "TARRY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TARSE_1":
+            if feedback == "_____":
+                current_state = "GUILD_2"
+            elif feedback == "____g":
+                current_state = "LOGIN_2"
+            elif feedback == "____y":
+                current_state = "DYNEL_2"
+            elif feedback == "___g_":
+                current_state = "SHIMS_2"
+            elif feedback == "___gg":
+                current_state = "CLOUD_2"
+            elif feedback == "___gy":
+                current_state = "COWLS_2"
+            elif feedback == "___y_":
+                current_state = "PLUNK_2"
+            elif feedback == "___yg":
+                current_state = "PLING_2"
+            elif feedback == "___yy":
+                current_state = "NEWEL_2"
+            elif feedback == "__g__":
+                current_state = "CYMOL_2"
+            elif feedback == "__g_g":
+                current_state = "GENIO_2"
+            elif feedback == "__g_y":
+                current_state = "PONCY_2"
+            elif feedback == "__ggg":
+                current_state = "COUGH_2"
+            elif feedback == "__ggy":
+                current_state = "VERSO_2"
+            elif feedback == "__gy_":
+                current_state = "PUBIC_2"
+            elif feedback == "__gyg":
+                current_state = "SCREE_2"
+            elif feedback == "__gyy":
+                current_state = "CIDER_2"
+            elif feedback == "__y__":
+                current_state = "CODON_2"
+            elif feedback == "__y_g":
+                current_state = "POIND_2"
+            elif feedback == "__y_y":
+                current_state = "DOLCI_2"
+            elif feedback == "__yg_":
+                current_state = "CHIMB_2"
+            elif feedback == "__ygg":
+                current_state = "APIOL_2"
+            elif feedback == "__ygy":
+                current_state = "ACHED_2"
+            elif feedback == "__yy_":
+                current_state = "CLONK_2"
+            elif feedback == "__yyg":
+                current_state = "PINCH_2"
+            elif feedback == "__yyy":
+                current_state = "WHEEP_2"
+            elif feedback == "_g___":
+                current_state = "CHYND_2"
+            elif feedback == "_g__g":
+                current_state = "GULCH_2"
+            elif feedback == "_g__y":
+                current_state = "LYMPH_2"
+            elif feedback == "_g_g_":
+                current_state = "SALPS_2"
+            elif feedback == "_g_gg":
+                current_state = "LUPIN_2"
+            elif feedback == "_g_y_":
+                current_state = "PYLON_2"
+            elif feedback == "_g_yg":
+                current_state = "SABLE_2"
+            elif feedback == "_g_yy":
+                current_state = "EASEL_2"
+            elif feedback == "_gg__":
+                current_state = "CYMOL_2"
+            elif feedback == "_gg_g":
+                current_state = "BEFOG_2"
+            elif feedback == "_gg_y":
+                current_state = "BELCH_2"
+            elif feedback == "_ggg_":
+                current_state = "HARSH_2"
+            elif feedback == "_gggg":
+                current_state = "PARSE_2"
+            elif feedback == "_gy__":
+                current_state = "RODNY_2"
+            elif feedback == "_gy_g":
+                current_state = "CADRE_2"
+            elif feedback == "_gy_y":
+                current_state = "GLAMP_2"
+            elif feedback == "_gygg":
+                current_state = "RAISE_2"
+            elif feedback == "_gyy_":
+                current_state = "RASPY_2"
+            elif feedback == "_gyyg":
+                current_state = "SABRE_2"
+            elif feedback == "_gyyy":
+                current_state = "ANVIL_2"
+            elif feedback == "_y___":
+                current_state = "COLIN_2"
+            elif feedback == "_y__g":
+                current_state = "GLAND_2"
+            elif feedback == "_y__y":
+                current_state = "MEDAL_2"
+            elif feedback == "_y_g_":
+                current_state = "MULCH_2"
+            elif feedback == "_y_gg":
+                current_state = "BIACH_2"
+            elif feedback == "_y_gy":
+                current_state = "LEASH_2"
+            elif feedback == "_y_y_":
+                current_state = "PLANC_2"
+            elif feedback == "_y_yg":
+                current_state = "CHALK_2"
+            elif feedback == "_y_yy":
+                current_state = "SNIPY_2"
+            elif feedback == "_yg__":
+                current_state = "ALOIN_2"
+            elif feedback == "_yg_g":
+                current_state = "AERIE_2"
+            elif feedback == "_yg_y":
+                current_state = "FERAL_2"
+            elif feedback == "_ygg_":
+                current_state = "BURSA_2"
+            elif feedback == "_ygy_":
+                current_state = "SCRAM_2"
+            elif feedback == "_yy__":
+                current_state = "BLOND_2"
+            elif feedback == "_yy_g":
+                current_state = "GRAND_2"
+            elif feedback == "_yy_y":
+                current_state = "BEMAD_2"
+            elif feedback == "_yyg_":
+                current_state = "ABACS_2"
+            elif feedback == "_yygg":
+                current_state = "ARISE_2"
+            elif feedback == "_yyy_":
+                current_state = "CLAMP_2"
+            elif feedback == "_yyyg":
+                current_state = "ANCHO_2"
+            elif feedback == "_yyyy":
+                current_state = "PSHAW_2"
+            elif feedback == "g____":
+                current_state = "CUING_2"
+            elif feedback == "g___g":
+                current_state = "CHILD_2"
+            elif feedback == "g___y":
+                current_state = "HONED_2"
+            elif feedback == "g__g_":
+                current_state = "TIPSY_2"
+            elif feedback == "g__gg":
+                current_state = "TENSE_2"
+            elif feedback == "g__yy":
+                current_state = "TELOS_2"
+            elif feedback == "g_g__":
+                current_state = "THROB_2"
+            elif feedback == "g_g_g":
+                current_state = "THREE_2"
+            elif feedback == "g_g_y":
+                current_state = "THREW_2"
+            elif feedback == "g_gg_":
+                current_state = "TORSO_2"
+            elif feedback == "g_ggg":
+                current_state = "TERSE_2"
+            elif feedback == "g_gy_":
+                current_state = "TORUS_2"
+            elif feedback == "g_y__":
+                current_state = "HOKUM_2"
+            elif feedback == "g_y_g":
+                current_state = "PRICK_2"
+            elif feedback == "g_y_y":
+                current_state = "MINOR_2"
+            elif feedback == "g_yg_":
+                current_state = "TRUSS_2"
+            elif feedback == "g_ygy":
+                current_state = "TRESS_2"
+            elif feedback == "gg___":
+                current_state = "LINKY_2"
+            elif feedback == "gg__g":
+                current_state = "TABLE_2"
+            elif feedback == "gg__y":
+                current_state = "TAKEN_2"
+            elif feedback == "gg_y_":
+                current_state = "TALUS_2"
+            elif feedback == "gg_yg":
+                current_state = "TASTE_2"
+            elif feedback == "ggg__":
+                current_state = "TARDY_2"
+            elif feedback == "ggy__":
+                current_state = "TAPIR_2"
+            elif feedback == "ggy_y":
+                current_state = "KEMPS_2"
+            elif feedback == "ggyyy":
+                current_state = "TASER_2"
+            elif feedback == "gy___":
+                current_state = "DOGAN_2"
+            elif feedback == "gy__y":
+                current_state = "TEACH_2"
+            elif feedback == "gy_g_":
+                current_state = "TOAST_2"
+            elif feedback == "gy_gg":
+                current_state = "TEASE_2"
+            elif feedback == "gyg__":
+                current_state = "TORAH_2"
+            elif feedback == "gyg_y":
+                current_state = "TERRA_2"
+            elif feedback == "gyy__":
+                current_state = "CLINT_2"
+            elif feedback == "gyy_g":
+                current_state = "TRACE_2"
+            elif feedback == "gyy_y":
+                current_state = "TETRA_2"
+            elif feedback == "gyyg_":
+                current_state = "TRASH_2"
+            elif feedback == "gyyy_":
+                current_state = "TRANS_2"
+            elif feedback == "y____":
+                current_state = "DONUT_2"
+            elif feedback == "y___g":
+                current_state = "BUILD_2"
+            elif feedback == "y___y":
+                current_state = "PILED_2"
+            elif feedback == "y__g_":
+                current_state = "HIMBO_2"
+            elif feedback == "y__gy":
+                current_state = "DIGHT_2"
+            elif feedback == "y__y_":
+                current_state = "FOUNT_2"
+            elif feedback == "y__yg":
+                current_state = "MILKO_2"
+            elif feedback == "y__yy":
+                current_state = "PLUOT_2"
+            elif feedback == "y_g__":
+                current_state = "BIFFY_2"
+            elif feedback == "y_g_g":
+                current_state = "FORTE_2"
+            elif feedback == "y_g_y":
+                current_state = "BERET_2"
+            elif feedback == "y_gg_":
+                current_state = "WURST_2"
+            elif feedback == "y_gy_":
+                current_state = "STRUM_2"
+            elif feedback == "y_gyy":
+                current_state = "STREP_2"
+            elif feedback == "y_y__":
+                current_state = "BIONT_2"
+            elif feedback == "y_y_g":
+                current_state = "BIOTA_2"
+            elif feedback == "y_y_y":
+                current_state = "COURT_2"
+            elif feedback == "y_yg_":
+                current_state = "BOGUE_2"
+            elif feedback == "y_ygy":
+                current_state = "CREST_2"
+            elif feedback == "y_yy_":
+                current_state = "HONKY_2"
+            elif feedback == "y_yyg":
+                current_state = "STORE_2"
+            elif feedback == "y_yyy":
+                current_state = "ESTER_2"
+            elif feedback == "yg___":
+                current_state = "CLIPT_2"
+            elif feedback == "yg__g":
+                current_state = "CLOTH_2"
+            elif feedback == "yg__y":
+                current_state = "LEMED_2"
+            elif feedback == "yg_g_":
+                current_state = "PATSY_2"
+            elif feedback == "yg_y_":
+                current_state = "SAPAN_2"
+            elif feedback == "yg_yg":
+                current_state = "BUCHU_2"
+            elif feedback == "ygg__":
+                current_state = "APACE_2"
+            elif feedback == "ygg_g":
+                current_state = "CARTE_2"
+            elif feedback == "ygg_y":
+                current_state = "CARET_2"
+            elif feedback == "ygy__":
+                current_state = "GATOR_2"
+            elif feedback == "ygy_y":
+                current_state = "CHAWL_2"
+            elif feedback == "ygyy_":
+                current_state = "SATYR_2"
+            elif feedback == "yy___":
+                current_state = "PLOIT_2"
+            elif feedback == "yy__g":
+                current_state = "ABOMA_2"
+            elif feedback == "yy__y":
+                current_state = "PLANC_2"
+            elif feedback == "yy_g_":
+                current_state = "BOAST_2"
+            elif feedback == "yy_gy":
+                current_state = "AFFLY_2"
+            elif feedback == "yy_y_":
+                current_state = "CLAPT_2"
+            elif feedback == "yy_yg":
+                current_state = "KLETT_2"
+            elif feedback == "yy_yy":
+                current_state = "ADMIT_2"
+            elif feedback == "yyg__":
+                current_state = "AORTA_2"
+            elif feedback == "yygy_":
+                current_state = "APAYD_2"
+            elif feedback == "yyy__":
+                current_state = "ARGOT_2"
+            elif feedback == "yyy_g":
+                current_state = "ACING_2"
+            elif feedback == "yyy_y":
+                current_state = "ALERT_2"
+            elif feedback == "yyyg_":
+                current_state = "ARTSY_2"
+            elif feedback == "yyyy_":
+                current_state = "SMART_2"
+            elif feedback == "yyyyg":
+                current_state = "STARE_2"
+            elif feedback == "yyyyy":
+                current_state = "ASTER_2"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TEACH_2":
+            if feedback == "gyy__":
+                current_state = "TWEAK_3"
+            elif feedback == "gyy_y":
+                current_state = "THETA_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TEETH_3":
+            if feedback == "g_gyy":
+                current_state = "THEFT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TELOS_2":
+            if feedback == "gg__y":
+                current_state = "TESTY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TENSE_2":
+            if feedback == "g__gg":
+                current_state = "THOSE_3"
+            elif feedback == "gy_gg":
+                current_state = "THESE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TETRA_2":
+            if feedback == "gg_gy":
+                current_state = "TEARY_3"
+            elif feedback == "gy_yy":
+                current_state = "TREAD_3"
+            elif feedback == "gyyyy":
+                current_state = "TREAT_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THEIR_3":
+            if feedback == "g_yyg":
+                current_state = "TRIER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THEME_3":
+            if feedback == "gg_gg":
+                current_state = "THYME_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THING_3":
+            if feedback == "g_ggg":
+                current_state = "TYING_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THREE_2":
+            if feedback == "g_g_g":
+                current_state = "TORTE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THREW_2":
+            if feedback == "g_gg_":
+                current_state = "TIRED_3"
+            elif feedback == "g_gy_":
+                current_state = "TERRY_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THROB_2":
+            if feedback == "g_gyy":
+                current_state = "TURBO_3"
+            elif feedback == "ggg__":
+                current_state = "THRUM_3"
+            elif feedback == "gggg_":
+                current_state = "THROW_3"
+            elif feedback == "gygy_":
+                current_state = "TORCH_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "THUMB_3":
+            if feedback == "gggg_":
+                current_state = "THUMP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TIGER_3":
+            if feedback == "gg_gg":
+                current_state = "TITER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TIMID_3":
+            if feedback == "gg___":
+                current_state = "TIZZY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TIPSY_2":
+            if feedback == "gy_g_":
+                current_state = "TWIST_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TODDY_3":
+            if feedback == "gg___":
+                current_state = "TOOTH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TOPAZ_3":
+            if feedback == "gg_g_":
+                current_state = "TOTAL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TOPIC_3":
+            if feedback == "gg_gg":
+                current_state = "TOXIC_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TORAH_2":
+            if feedback == "gggy_":
+                current_state = "TORTA_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TOTEM_3":
+            if feedback == "gg_g_":
+                current_state = "TOWEL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TRACE_2":
+            if feedback == "ggg_g":
+                current_state = "TRADE_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TRIBE_3":
+            if feedback == "ggg_g":
+                current_state = "TRITE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TRILL_3":
+            if feedback == "gyg_g":
+                current_state = "TWIRL_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TROLL_3":
+            if feedback == "ggg__":
+                current_state = "TROOP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TRUCK_3":
+            if feedback == "ggg_g":
+                current_state = "TRUNK_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TRUER_3":
+            if feedback == "g_ygg":
+                current_state = "TUBER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TRUSS_2":
+            if feedback == "gg_g_":
+                current_state = "TRYST_3"
+            elif feedback == "gggg_":
+                current_state = "TRUST_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TWERK_3":
+            if feedback == "gggg_":
+                current_state = "TWERP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "TWILL_3":
+            if feedback == "ggg__":
+                current_state = "TWIXT_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "UNFED_3":
+            if feedback == "_g_gy":
+                current_state = "INDEX_4"
+            elif feedback == "_y_gy":
+                current_state = "WIDEN_4"
+            elif feedback == "gg_gg":
+                current_state = "UNWED_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "UNHIP_3":
+            if feedback == "gg_gg":
+                current_state = "UNZIP_4"
+            elif feedback == "gg_gy":
+                current_state = "UNPIN_4"
+            elif feedback == "y__yg":
+                current_state = "MIXUP_4"
+            elif feedback == "yy_yg":
+                current_state = "PINUP_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "USURP_3":
+            if feedback == "gggg_":
+                current_state = "USURY_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "VALID_3":
+            if feedback == "gg_gg":
+                current_state = "VAPID_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "VALOR_3":
+            if feedback == "_g_gg":
+                current_state = "MAJOR_4"
+            elif feedback == "_g_yy":
+                current_state = "MACRO_4"
+            elif feedback == "_gygg":
+                current_state = "LABOR_4"
+            elif feedback == "gg_gg":
+                current_state = "VAPOR_4"
+            elif feedback == "yg_gg":
+                current_state = "FAVOR_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "VENOM_3":
+            if feedback == "_gg__":
+                current_state = "BENCH_4"
+            elif feedback == "_ggg_":
+                current_state = "XENON_4"
+            elif feedback == "_yg__":
+                current_state = "ENNUI_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "VOCAB_3":
+            if feedback == "___y_":
+                current_state = "FRAME_4"
+            elif feedback == "___yy":
+                current_state = "BRAKE_4"
+            elif feedback == "__yy_":
+                current_state = "CRAZE_4"
+            elif feedback == "__yyy":
+                current_state = "BRACE_4"
+            elif feedback == "y__yy":
+                current_state = "BRAVE_4"
+            elif feedback == "y_yy_":
+                current_state = "CRAVE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "WHEEP_2":
+            if feedback == "___g_":
+                current_state = "MISER_3"
+            elif feedback == "___gy":
+                current_state = "POSER_3"
+            elif feedback == "__g_y":
+                current_state = "SPERM_3"
+            elif feedback == "__gg_":
+                current_state = "SNEER_3"
+            elif feedback == "__y__":
+                current_state = "REBUS_3"
+            elif feedback == "__yg_":
+                current_state = "SEDER_3"
+            elif feedback == "_g_g_":
+                current_state = "SHYER_3"
+            elif feedback == "_ggg_":
+                current_state = "SHEER_3"
+            elif feedback == "_y_g_":
+                current_state = "USHER_3"
+            elif feedback == "g__g_":
+                current_state = "WISER_3"
+            elif feedback == "y__g_":
+                current_state = "SOWER_3"
+            elif feedback == "y_yg_":
+                current_state = "SEWER_3"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "WHOMP_3":
+            if feedback == "__g__":
+                current_state = "BOOBY_4"
+            elif feedback == "__g_y":
+                current_state = "POOFY_4"
+            elif feedback == "__gy_":
+                current_state = "MOONY_4"
+            elif feedback == "__y__":
+                current_state = "GUNKY_4"
+            elif feedback == "__y_y":
+                current_state = "POKER_4"
+            elif feedback == "__yg_":
+                current_state = "MOMMY_4"
+            elif feedback == "__yy_":
+                current_state = "MOVER_4"
+            elif feedback == "__yyy":
+                current_state = "MOPER_4"
+            elif feedback == "_gg__":
+                current_state = "CHOCK_4"
+            elif feedback == "_gg_y":
+                current_state = "PHONY_4"
+            elif feedback == "_gggg":
+                current_state = "CHOMP_4"
+            elif feedback == "_y_yy":
+                current_state = "NYMPH_4"
+            elif feedback == "_yg__":
+                current_state = "HOOCH_4"
+            elif feedback == "_yg_y":
+                current_state = "POOCH_4"
+            elif feedback == "_ygy_":
+                current_state = "MOOCH_4"
+            elif feedback == "_yy__":
+                current_state = "HOVER_4"
+            elif feedback == "_yy_y":
+                current_state = "HOPPY_4"
+            elif feedback == "_yyy_":
+                current_state = "HOMER_4"
+            elif feedback == "_yyyy":
+                current_state = "OOMPH_4"
+            elif feedback == "g_g__":
+                current_state = "WOOER_4"
+            elif feedback == "g_y__":
+                current_state = "WONKY_4"
+            elif feedback == "ggg_g":
+                current_state = "WHOOP_4"
+            elif feedback == "y_g__":
+                current_state = "KNOWN_4"
+            elif feedback == "y_y__":
+                current_state = "BOWER_4"
+            elif feedback == "y_y_y":
+                current_state = "POWER_4"
+            elif feedback == "y_yy_":
+                current_state = "MOWER_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "WIFTY_3":
+            if feedback == "_g_gg":
+                current_state = "BITTY_4"
+            elif feedback == "_g_y_":
+                current_state = "HITCH_4"
+            elif feedback == "_g_yg":
+                current_state = "PITHY_4"
+            elif feedback == "_ggg_":
+                current_state = "FIFTH_4"
+            elif feedback == "_gggg":
+                current_state = "FIFTY_4"
+            elif feedback == "_gyg_":
+                current_state = "FILTH_4"
+            elif feedback == "_y_g_":
+                current_state = "BLITZ_4"
+            elif feedback == "_y_yg":
+                current_state = "ITCHY_4"
+            elif feedback == "gg_gg":
+                current_state = "WITTY_4"
+            elif feedback == "gg_y_":
+                current_state = "WITCH_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "WINCE_3":
+            if feedback == "_gggg":
+                current_state = "MINCE_4"
+            elif feedback == "_gygg":
+                current_state = "NIECE_4"
+            elif feedback == "_gyyg":
+                current_state = "NICHE_4"
+            elif feedback == "_yy_g":
+                current_state = "KNIFE_4"
+            elif feedback == "gyy_g":
+                current_state = "WHINE_4"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "WOKEN_4":
+            if feedback == "gg_gg":
+                current_state = "WOMEN_5"
+            else:
+                print("Pattern variant not found in tree paths.")
+                return
+        elif current_state == "WURST_2":
+            if feedback == "__ggg":
+                current_state = "FIRST_3"
+            elif feedback == "_gggg":
+                current_state = "BURST_3"
+            elif feedback == "g_ggg":
+                current_state = "WORST_3"
             else:
                 print("Pattern variant not found in tree paths.")
                 return
