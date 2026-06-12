@@ -23,3 +23,4 @@ Easy mode (Guesses and answer = 2315)
 | CRATE    | 7976  / 3.4454 |
 | CRANE    | 7982  / 3.4479 |
 | SLANT    | 8003  / 3.4570 |
+| TRICE    | 8018  / 3.4635 |
