@@ -9,3 +9,4 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | SALET    | 10470 / 3.5205 |
 | REAST    | 10475 / 3.5222 |
 | CRATE    | 10496 / 3.5293 |
+| CRANE    | 10496 / 3.5293 |
