@@ -14,3 +14,9 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 
 Later, I'll test:
 CARLE, CARNE, CARSE, TRICE, TORSE, SATER, TASER, CARET, CARTE, TARED
+
+Easy mode (Guesses and answer = 2315)
+| Starters | Avg guesses    |
+| -------- | -------------- |
+| TRACE    | 7975  / 3.4449 |
+| CRATE    | 7976  / 3.4454 |
