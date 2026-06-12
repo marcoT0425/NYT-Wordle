@@ -11,3 +11,6 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | TRACE    | 10483 / 3.5249 |
 | CRATE    | 10496 / 3.5293 |
 | CRANE    | 10496 / 3.5293 |
+
+Later, I'll test:
+CARLE, CARNE, CARSE, TRICE, TORSE, SATER, TASER, CARET, CARTE, TARED
