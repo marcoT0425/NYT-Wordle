@@ -7,6 +7,7 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | TARSE    | 10442 / 3.5111 |
 | SLATE    | 10467 / 3.5195 |
 | SALET    | 10470 / 3.5205 |
+| CARLE    | 10473 / 3.5215 |
 | REAST    | 10475 / 3.5222 |
 | TRACE    | 10483 / 3.5249 |
 | CRATE    | 10496 / 3.5293 |
@@ -14,7 +15,7 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | SATER    | 10513 / 3.5350 |
 
 Later, I'll test:
-CARLE, CARNE, CARSE, TRICE, TORSE, TASER, CARET, CARTE, TARED
+CARNE, CARSE, TRICE, TORSE, TASER, CARET, CARTE, TARED
 
 Easy mode (Guesses and answer = 2315)
 | Starters | Avg guesses    |
