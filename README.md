@@ -11,9 +11,10 @@ Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | TRACE    | 10483 / 3.5249 |
 | CRATE    | 10496 / 3.5293 |
 | CRANE    | 10496 / 3.5293 |
+| SATER    | 10513 / 3.5350 |
 
 Later, I'll test:
-CARLE, CARNE, CARSE, TRICE, TORSE, SATER, TASER, CARET, CARTE, TARED
+CARLE, CARNE, CARSE, TRICE, TORSE, TASER, CARET, CARTE, TARED
 
 Easy mode (Guesses and answer = 2315)
 | Starters | Avg guesses    |
