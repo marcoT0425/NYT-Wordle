@@ -1,6 +1,8 @@
 # NYT-Wordle
 Re-evaluated wordle status
 
+Recommended to use Depth 50 Neighbour Prune with 150 limit.
+
 Easy mode (Renewed word lists NYT WordleBot answers with 14855 guesses)
 | Starters | Avg guesses    |
 | -------- | -------------- |
